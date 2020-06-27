@@ -58,6 +58,7 @@ Plug 'Yggdroot/LeaderF'					" internal: fzf Popup
 Plug 'Yggdroot/hiPairs'					" visual: parentheses
 Plug 'airblade/vim-gitgutter'				" internal: git Support
 Plug 'aonemd/kuroi.vim'					" visual: CS kuroi
+Plug 'kshenoy/vim-signature'            " visual: better marks
 Plug 'arzg/vim-corvine'					" visual: CS corvine
 Plug 'ayu-theme/ayu-vim'				" visual: ayu-vim
 Plug 'brianrodri/vim-sort-folds'			" internal: sort folds
