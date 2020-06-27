@@ -38,6 +38,7 @@ Plug 'kristijanhusak/vim-dadbod-ui'         " internal: databases (for vim-dadbo
 Plug 'Galicarnax/vim-regex-syntax'			" syntax: regex
 Plug 'Glench/Vim-Jinja2-Syntax'				" syntax: jinja2
 " Plug 'aserebryakov/filestyle' 	            " visual: trailing spaces, tabs, ...  
+Plug 'danilamihailov/beacon.nvim'           " visual: highlight cursor after move
 Plug 'google/vim-searchindex' 	            " visual: zeige, wie oft aktuelle Suche in Datei vorkommt
 Plug 'rhysd/clever-f.vim'                   " intern: erweitere f/F, t/T Funktion
 " Plug 'zenbro/mirror.vim'                    " intern: edit scp files etc.
