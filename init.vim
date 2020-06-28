@@ -39,6 +39,7 @@ call plug#begin('$HOME/.config/nvim/plugged')
 Plug 'ConradIrwin/vim-bracketed-paste'			" internal: vernünftiges Paste, ohne dass Zeilen verschoben werden
 Plug 'EVODelavega/vim-eazy-timer'			" internal: timer
 Plug 'Galicarnax/vim-regex-syntax'			" syntax: regex
+Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] } " nur bei Bedarf laden
 Plug 'Glench/Vim-Jinja2-Syntax'				" syntax: jinja2
 Plug 'LandonSchropp/vim-stamp'				" misc: mit bsp. `Siw` kopierten Text über aktuelles Wort schreiben
 Plug 'MattesGroeger/vim-bookmarks'			" visual: markierungen besser anzeigen
@@ -132,6 +133,7 @@ Plug 'vim-pandoc/vim-pandoc'				" internal: pandoc support
 Plug 'vim-pandoc/vim-pandoc-syntax'			" syntax: pandoc
 Plug 'vim-scripts/vim-auto-save'			" internal: auto save
 Plug 'whatyouhide/vim-gotham'				" visual: CS gotham
+Plug 'voldikss/vim-floaterm'
 Plug 'wsdjeg/notifications.vim'				" visual: floating notifications
 Plug 'xolox/vim-misc'					" misc: needed for vim-notes
 Plug 'xolox/vim-notes'					" internal: mit `:notes` Notizen schreiben
@@ -328,6 +330,8 @@ source $HOME/.config/nvim/config_split/ultisnips.vim
 source $HOME/.config/nvim/config_split/vimhopping.vim
 source $HOME/.config/nvim/config_split/dadbod.vim
 source $HOME/.config/nvim/config_split/vim-colors-xcode.vim
+source $HOME/.config/nvim/config_split/vim-floatterm.vim
+source $HOME/.config/nvim/config_split/vim-which-key.vim
 " }}}
 " Testkram {{{
 autocmd FileType vim let b:vcm_tab_complete = 'vim'
