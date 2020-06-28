@@ -42,6 +42,7 @@ Plug 'Galicarnax/vim-regex-syntax'			" syntax: regex
 Plug 'Glench/Vim-Jinja2-Syntax'				" syntax: jinja2
 Plug 'LandonSchropp/vim-stamp'				" misc: mit bsp. `Siw` kopierten Text über aktuelles Wort schreiben
 Plug 'MattesGroeger/vim-bookmarks'			" visual: markierungen besser anzeigen
+Plug 'unblevable/quick-scope'               " better f/F t/T movements
 Plug 'MikeDacre/tmux-zsh-vim-titles'			" internal: tmux-zsh-vim-titles
 Plug 'Rigellute/rigel'					" visual: CS rigel
 Plug 'TaDaa/vimade'					" visual: dimme inaktive Panes
