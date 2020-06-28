@@ -332,6 +332,8 @@ source $HOME/.config/nvim/config_split/dadbod.vim
 source $HOME/.config/nvim/config_split/vim-colors-xcode.vim
 source $HOME/.config/nvim/config_split/vim-floatterm.vim
 source $HOME/.config/nvim/config_split/vim-which-key.vim
+" NUR für OSX aktivieren
+" source $HOME/.config/nvim/config_split/osx_only.vim
 " }}}
 " Testkram {{{
 autocmd FileType vim let b:vcm_tab_complete = 'vim'
