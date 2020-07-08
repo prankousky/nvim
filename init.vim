@@ -59,7 +59,7 @@ Plug 'brianrodri/vim-sort-folds'			" internal: sort folds
 Plug 'chase/vim-ansible-yaml'				" visual: yaml indents
 Plug 'chengzeyi/fzf-preview.vim'			" visual: Dateiinhalt preview
 Plug 'chrisbra/colorizer'				" visual: mit ,c Farbwerte einblenden
-Plug 'chrisbra/csv.vim'					" internal: support für csv Dateien
+" Plug 'chrisbra/csv.vim'					" internal: support für csv Dateien
 Plug 'christoomey/vim-tmux-navigator'			" internal: tmux/vim zusammenspiel
 Plug 'crusoexia/vim-monokai'				" visual: CS monokai
 Plug 'ctrlpvim/ctrlp.vim'				" internal: fuzzy finder
@@ -175,6 +175,8 @@ autocmd BufEnter * colorscheme molokai
 autocmd BufEnter *.py colorscheme xcodewwdc
 autocmd BufEnter *.yaml colorscheme srcery
 autocmd BufEnter *.yml colorscheme srcery
+" für csv
+autocmd BufNewFile,BufRead *.csv set filetype=csv_semicolon
 "
 " KEINE Transparenz für vim
 " highlight Normal ctermbg=Black
