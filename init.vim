@@ -22,10 +22,10 @@ call plug#begin('$HOME/.config/nvim/plugged')
 " Plug 'flazz/vim-colorschemes'				" visual: colorschemes
 " Plug 'garbas/vim-snipmate'				" Snippets
 " Plug 'itchyny/vim-cursorword'				" visual: underline word underneath cursor
-" Plug 'kien/rainbow_parentheses.vim'			" auch farbige Klammern
+Plug 'kien/rainbow_parentheses.vim'			" auch farbige Klammern
 " Plug 'liuchengxu/vim-which-key'				" Keybindings anzeigen
 " Plug 'luisdavim/pretty-folds'				" internal: better folds
-" Plug 'luochen1990/rainbow'				" farbige {([])}
+Plug 'luochen1990/rainbow'				" farbige {([])}
 " Plug 'mattn/emmet-vim'					" ?
 " Plug 'mattn/emmet-vim'					" Abkürzungen (html, css, etc.) unterstützen
 " Plug 'mtth/scratch.vim'					" mit `gs` Scratchpad öffnen; noch recherchieren
@@ -59,7 +59,7 @@ Plug 'brianrodri/vim-sort-folds'			" internal: sort folds
 Plug 'chase/vim-ansible-yaml'				" visual: yaml indents
 Plug 'chengzeyi/fzf-preview.vim'			" visual: Dateiinhalt preview
 Plug 'chrisbra/colorizer'				" visual: mit ,c Farbwerte einblenden
-" Plug 'chrisbra/csv.vim'					" internal: support für csv Dateien
+Plug 'chrisbra/csv.vim'					" internal: support für csv Dateien
 Plug 'christoomey/vim-tmux-navigator'			" internal: tmux/vim zusammenspiel
 Plug 'crusoexia/vim-monokai'				" visual: CS monokai
 Plug 'ctrlpvim/ctrlp.vim'				" internal: fuzzy finder
@@ -173,10 +173,10 @@ set notermguicolors
 " verschiedenes Themes per Filetype
 autocmd BufEnter * colorscheme molokai
 autocmd BufEnter *.py colorscheme xcodewwdc
-autocmd BufEnter *.yaml colorscheme srcery
-autocmd BufEnter *.yml colorscheme srcery
+" autocmd BufEnter *.yaml colorscheme srcery
+" autocmd BufEnter *.yml colorscheme srcery
 " für csv
-autocmd BufNewFile,BufRead *.csv set filetype=csv_semicolon
+" autocmd BufNewFile,BufRead *.csv set filetype=csv_semicolon
 "
 " KEINE Transparenz für vim
 " highlight Normal ctermbg=Black
