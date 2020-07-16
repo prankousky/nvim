@@ -22,6 +22,7 @@ call plug#begin('$HOME/.config/nvim/plugged')
 " Plug 'flazz/vim-colorschemes'				" visual: colorschemes
 " Plug 'garbas/vim-snipmate'				" Snippets
 " Plug 'itchyny/vim-cursorword'				" visual: underline word underneath cursor
+Plug 'valloric/MatchTagAlways'              " HTML Tags immer farbig markieren
 Plug 'kien/rainbow_parentheses.vim'			" auch farbige Klammern
 " Plug 'liuchengxu/vim-which-key'				" Keybindings anzeigen
 " Plug 'luisdavim/pretty-folds'				" internal: better folds
