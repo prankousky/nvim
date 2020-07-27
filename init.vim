@@ -329,20 +329,21 @@ source $HOME/.config/nvim/config_split/templates.vim
 source $HOME/.config/nvim/config_split/tmuxcursor.vim
 " Plugins
 " source $HOME/.config/nvim/config_split/multiplecursors.vim
+source $HOME/.config/nvim/config_split/airline_lightline.vim
 source $HOME/.config/nvim/config_split/coc.vim
 source $HOME/.config/nvim/config_split/dadbod.vim
 source $HOME/.config/nvim/config_split/fzf.vim
 source $HOME/.config/nvim/config_split/indentguides.vim
 source $HOME/.config/nvim/config_split/limelight.vim
 source $HOME/.config/nvim/config_split/misc.vim
+source $HOME/.config/nvim/config_split/nerdtree.vim
 source $HOME/.config/nvim/config_split/startify.vim
 source $HOME/.config/nvim/config_split/ultisnips.vim
 source $HOME/.config/nvim/config_split/vim-colors-xcode.vim
+source $HOME/.config/nvim/config_split/vim-cpp-enhanced-highlight.vim
 source $HOME/.config/nvim/config_split/vim-floatterm.vim
 source $HOME/.config/nvim/config_split/vim-which-key.vim
 source $HOME/.config/nvim/config_split/vimhopping.vim
-source $HOME/.config/nvim/config_split/airline_lightline.vim
-source $HOME/.config/nvim/config_split/vim-cpp-enhanced-highlight.vim
 " NUR für OSX aktivieren
 " source $HOME/.config/nvim/config_split/osx_only.vim
 " }}}
