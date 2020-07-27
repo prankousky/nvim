@@ -19,4 +19,13 @@ autocmd bufwritepost init.vim source $MYVIMRC
 "
 autocmd bufwritepost *.css :CocCommand prettier.formatFile
 autocmd bufwritepost *.json :CocCommand prettier.formatFile
+
+" HTML ersetze Umlaute durch entsprechenden Code
+autocmd bufwritepost *.html :%s/Ü/\&Uuml;/g
+autocmd bufwritepost *.html :%s/Ä/\&Auml;/g
+autocmd bufwritepost *.html :%s/Ö/\&Ouml;/g
+autocmd bufwritepost *.html :%s/ß/\&szlig;/g
+autocmd bufwritepost *.html :%s/ä/\&auml;/g
+autocmd bufwritepost *.html :%s/ö/\&ouml;/g
+autocmd bufwritepost *.html :%s/ü/\&uuml;/g
 " }}}
