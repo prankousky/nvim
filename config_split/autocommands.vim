@@ -30,6 +30,7 @@ autocmd bufwritepost *.html :%s/ö/\&ouml;/g
 autocmd bufwritepost *.html :%s/ü/\&uuml;/g
 
 " Platformio
-" autocmd BufEnter platformio.ini :NERDTreeToggle :vs src/main.cpp<CR><ESC><C-w>h:vertical resize 35<CR><ESC><C-w>l
+autocmd BufRead platformio.ini NERDTreeToggle | vs src/main.cpp | wincmd l | vertical resize 30 | wincmd h | wincmd h | vertical resize 30 | wincmd l | set filetype=cpp
+autocmd BufRead *.cpp set filetype=cpp
 
 " }}}

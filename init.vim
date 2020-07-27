@@ -70,6 +70,7 @@ Plug 'elzr/vim-json'
 Plug 'embear/vim-localvimrc'
 Plug 'farmergreg/vim-lastplace'
 Plug 'felixhummel/setcolors.vim'
+Plug 'fszymanski/fzf-gitignore', {'do': ':UpdateRemotePlugins'}
 Plug 'gioele/vim-autoswap'
 Plug 'google/vim-searchindex' 
 Plug 'honza/vim-snippets'
@@ -83,7 +84,6 @@ Plug 'joshdick/onedark.vim'
 Plug 'juleswang/css.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'fszymanski/fzf-gitignore', {'do': ':UpdateRemotePlugins'}
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'junegunn/vim-easy-align'
@@ -108,6 +108,7 @@ Plug 'mileszs/ack.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'numirias/semshi' 
+Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'osyo-manga/vim-hopping'
 Plug 'raimon49/requirements.txt.vim' 
 Plug 'rhysd/clever-f.vim'
@@ -341,6 +342,7 @@ source $HOME/.config/nvim/config_split/vim-floatterm.vim
 source $HOME/.config/nvim/config_split/vim-which-key.vim
 source $HOME/.config/nvim/config_split/vimhopping.vim
 source $HOME/.config/nvim/config_split/airline_lightline.vim
+source $HOME/.config/nvim/config_split/vim-cpp-enhanced-highlight.vim
 " NUR für OSX aktivieren
 " source $HOME/.config/nvim/config_split/osx_only.vim
 " }}}
