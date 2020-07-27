@@ -11,141 +11,141 @@
 " }}}
 " Plugins hier laden {{{ 
 call plug#begin('$HOME/.config/nvim/plugged')
-" Plug 'AlphaMycelium/pathfinder.vim'			" zeige schnellste Movements
-" Plug 'Shougo/deoplete.nvim'				" TODO: erkunden
-" Plug 'Shougo/neosnippet.vim'				" internal: snippets
-" Plug 'ajh17/VimCompletesMe'				" Autocompletion
-" Plug 'andymass/vim-matchup'				" internal: vim-matchit replacement, more features
-" Plug 'aserebryakov/filestyle' 	            " visual: trailing spaces, tabs, ...  
-" Plug 'dhruvasagar/vim-zoom'				" einzelne Panes zoomen
-" Plug 'doums/coBra'					" {[()]}
-" Plug 'flazz/vim-colorschemes'				" visual: colorschemes
-" Plug 'garbas/vim-snipmate'				" Snippets
-" Plug 'itchyny/vim-cursorword'				" visual: underline word underneath cursor
-Plug 'embear/vim-localvimrc'
+" Plug 'AlphaMycelium/pathfinder.vim'
+" Plug 'Shougo/deoplete.nvim'
+" Plug 'Shougo/neosnippet.vim'
+" Plug 'ajh17/VimCompletesMe'
+" Plug 'andymass/vim-matchup'
+" Plug 'aserebryakov/filestyle' 
+" Plug 'dhruvasagar/vim-zoom'
+" Plug 'doums/coBra'
+" Plug 'flazz/vim-colorschemes'
+" Plug 'garbas/vim-snipmate'
+" Plug 'itchyny/vim-cursorword'
+" Plug 'liuchengxu/vim-which-key'
+" Plug 'luisdavim/pretty-folds'
+" Plug 'mattn/emmet-vim'
+" Plug 'mattn/emmet-vim'
+" Plug 'mtth/scratch.vim'
+" Plug 'nathanaelkane/vim-indent-guides'
+" Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+" Plug 'rrethy/vim-hexokinase'
+" Plug 'scuilion/markdown-drawer'
+" Plug 'terryma/vim-multiple-cursors'
+" Plug 'w0rp/ale'
+" Plug 'zenbro/mirror.vim'
+Plug 'ConradIrwin/vim-bracketed-paste'
+Plug 'EVODelavega/vim-eazy-timer'
+Plug 'Galicarnax/vim-regex-syntax'
+Plug 'Glench/Vim-Jinja2-Syntax'
+Plug 'LandonSchropp/vim-stamp'
+Plug 'MattesGroeger/vim-bookmarks'
+Plug 'MikeDacre/tmux-zsh-vim-titles'
+Plug 'Rigellute/rigel'
+Plug 'TaDaa/vimade'
+Plug 'Yggdroot/LeaderF'
+Plug 'Yggdroot/hiPairs'
+Plug 'Yggdroot/indentLine'
+Plug 'Yilin-Yang/vim-markbar'
+Plug 'airblade/vim-gitgutter'
+Plug 'aonemd/kuroi.vim'
+Plug 'arzg/vim-colors-xcode'
+Plug 'arzg/vim-corvine'
+Plug 'ayu-theme/ayu-vim'
+Plug 'brianrodri/vim-sort-folds'
+Plug 'chase/vim-ansible-yaml'
+Plug 'chengzeyi/fzf-preview.vim'
+Plug 'chrisbra/colorizer'
+Plug 'chrisbra/csv.vim'
+Plug 'christoomey/vim-tmux-navigator'
 Plug 'coddingtonbear/neomake-platformio'
-Plug 'valloric/MatchTagAlways'              " HTML Tags immer farbig markieren
-Plug 'vim-scripts/Arduino-syntax-file'
-Plug 'lfv89/vim-interestingwords'           " <leader>k zum markieren, n und N zum hin und her springen
-Plug 'kien/rainbow_parentheses.vim'			" auch farbige Klammern
-" Plug 'liuchengxu/vim-which-key'				" Keybindings anzeigen
-" Plug 'luisdavim/pretty-folds'				" internal: better folds
-Plug 'luochen1990/rainbow'				" farbige {([])}
-" Plug 'mattn/emmet-vim'					" ?
-" Plug 'mattn/emmet-vim'					" Abkürzungen (html, css, etc.) unterstützen
-" Plug 'mtth/scratch.vim'					" mit `gs` Scratchpad öffnen; noch recherchieren
-" Plug 'nathanaelkane/vim-indent-guides'			" visual: indents anzeigen
-" Plug 'prettier/vim-prettier', { 'do': 'yarn install' } " internal: auto style 
-" Plug 'rrethy/vim-hexokinase'				" auch Farbwerte (noch vergleichen)
-" Plug 'scuilion/markdown-drawer'				" Tab mit Markdown (schneller zu Bereichen springen)
-" Plug 'terryma/vim-multiple-cursors'			" mehrere Cursors (noch lernen)
-" Plug 'w0rp/ale'						" ALE
-" Plug 'zenbro/mirror.vim'                    " intern: edit scp files etc.
-Plug 'ConradIrwin/vim-bracketed-paste'			" internal: vernünftiges Paste, ohne dass Zeilen verschoben werden
-Plug 'EVODelavega/vim-eazy-timer'			" internal: timer
-Plug 'Galicarnax/vim-regex-syntax'			" syntax: regex
-Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] } " nur bei Bedarf laden
-Plug 'Glench/Vim-Jinja2-Syntax'				" syntax: jinja2
-Plug 'LandonSchropp/vim-stamp'				" misc: mit bsp. `Siw` kopierten Text über aktuelles Wort schreiben
-Plug 'MattesGroeger/vim-bookmarks'			" visual: markierungen besser anzeigen
-Plug 'unblevable/quick-scope'               " better f/F t/T movements
-Plug 'MikeDacre/tmux-zsh-vim-titles'			" internal: tmux-zsh-vim-titles
-Plug 'Rigellute/rigel'					" visual: CS rigel
-Plug 'TaDaa/vimade'					" visual: dimme inaktive Panes
-Plug 'Yggdroot/LeaderF'					" internal: fzf Popup
-Plug 'Yggdroot/hiPairs'					" visual: parentheses
-Plug 'Yggdroot/indentLine'                  " visual: indents
-Plug 'Yilin-Yang/vim-markbar'				" visual: marks übersichtlich darstellen
-Plug 'airblade/vim-gitgutter'				" internal: git Support
-Plug 'aonemd/kuroi.vim'					" visual: CS kuroi
-Plug 'arzg/vim-corvine'					" visual: CS corvine
-Plug 'ayu-theme/ayu-vim'				" visual: ayu-vim
-Plug 'brianrodri/vim-sort-folds'			" internal: sort folds
-Plug 'chase/vim-ansible-yaml'				" visual: yaml indents
-Plug 'chengzeyi/fzf-preview.vim'			" visual: Dateiinhalt preview
-Plug 'chrisbra/colorizer'				" visual: mit ,c Farbwerte einblenden
-Plug 'chrisbra/csv.vim'					" internal: support für csv Dateien
-Plug 'christoomey/vim-tmux-navigator'			" internal: tmux/vim zusammenspiel
-Plug 'crusoexia/vim-monokai'				" visual: CS monokai
-Plug 'ctrlpvim/ctrlp.vim'				" internal: fuzzy finder
-Plug 'danilamihailov/beacon.nvim'           " visual: highlight cursor after move
-Plug 'dhruvasagar/vim-table-mode'			" visual: markdown tables
-Plug 'easymotion/vim-easymotion'			" internal: <leader>w easy motion
-Plug 'ekalinin/Dockerfile.vim'				" syntax: docker file
-Plug 'elzr/vim-json'					" syntax: json
-Plug 'farmergreg/vim-lastplace'				" internal: remember position when exiting
-Plug 'felixhummel/setcolors.vim'			" visual: colorschemes
-Plug 'gioele/vim-autoswap'				" internal: manage swap
-Plug 'google/vim-searchindex' 	            " visual: zeige, wie oft aktuelle Suche in Datei vorkommt
-Plug 'honza/vim-snippets'				" misc: needed for 'sirver/ultisnips'
-Plug 'https://github.com/adelarsq/vim-matchit'		" visual: matche verschiedene Symbole
-Plug 'https://github.com/morhetz/gruvbox'		" visual: CS gruvbox
-Plug 'itchyny/lightline.vim'				" visual: status line
-Plug 'jcherven/jummidark.vim'				" visual: CS jummidark
-Plug 'jiangmiao/auto-pairs'				" visual: auch matchen? (noch vergleichen)
-Plug 'jistr/vim-nerdtree-tabs'				" misc: tabview in `nerdtree`
-Plug 'joshdick/onedark.vim'				" visual: CS onedark
-Plug 'juleswang/css.vim'				" internal: css
+Plug 'crusoexia/vim-monokai'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'danilamihailov/beacon.nvim'
+Plug 'davidhalter/jedi-vim' 
+Plug 'dhruvasagar/vim-table-mode'
+Plug 'easymotion/vim-easymotion'
+Plug 'ekalinin/Dockerfile.vim'
+Plug 'elzr/vim-json'
+Plug 'embear/vim-localvimrc'
+Plug 'farmergreg/vim-lastplace'
+Plug 'felixhummel/setcolors.vim'
+Plug 'gioele/vim-autoswap'
+Plug 'google/vim-searchindex' 
+Plug 'honza/vim-snippets'
+Plug 'https://github.com/adelarsq/vim-matchit'
+Plug 'https://github.com/morhetz/gruvbox'
+Plug 'itchyny/lightline.vim'
+Plug 'jcherven/jummidark.vim'
+Plug 'jiangmiao/auto-pairs'
+Plug 'jistr/vim-nerdtree-tabs'
+Plug 'joshdick/onedark.vim'
+Plug 'juleswang/css.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'junegunn/goyo.vim'				" visual: mit ,G 'Schreibmodus'
-Plug 'junegunn/limelight.vim'				" visual: highlighting einzelner Bereiche (:Limelight)
-Plug 'junegunn/vim-easy-align'				" internal: ausrichten (noch lernen)
-Plug 'junegunn/vim-peekaboo'				" visual: display registers
-Plug 'kovetskiy/sxhkd-vim'				" syntax: sxhkd
-Plug 'kristijanhusak/vim-dadbod-ui'         " internal: databases (for vim-dadbod) toggle ':DBUI'
-Plug 'kshenoy/vim-signature'            " visual: better marks
-Plug 'lervag/vimtex'					" misc: latex inkl. Preview in Zuthura
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
+Plug 'junegunn/vim-easy-align'
+Plug 'junegunn/vim-peekaboo'
+Plug 'kien/rainbow_parentheses.vim'
+Plug 'kovetskiy/sxhkd-vim'
+Plug 'kristijanhusak/vim-dadbod-ui'
+Plug 'kshenoy/vim-signature'
+Plug 'lervag/vimtex'
+Plug 'lfv89/vim-interestingwords'
+Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] } " nur bei Bedarf laden
+Plug 'luochen1990/rainbow'
+Plug 'machakann/vim-highlightedyank'
+Plug 'markonm/traces.vim'
+Plug 'mbbill/undotree'
+Plug 'mboughaba/i3config.vim'
+Plug 'mechatroner/rainbow_csv'
+Plug 'metakirby5/codi.vim'
+Plug 'mhinz/vim-signify'
+Plug 'mhinz/vim-startify'
+Plug 'mileszs/ack.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'numirias/semshi' 
+Plug 'osyo-manga/vim-hopping'
+Plug 'raimon49/requirements.txt.vim' 
+Plug 'rhysd/clever-f.vim'
+Plug 'roxma/vim-paste-easy'
+Plug 'rrethy/vim-illuminate'
+Plug 'ryanoasis/vim-devicons'
+Plug 'scrooloose/nerdtree'
+Plug 'sentientmachine/Pretty-Vim-Python'
+Plug 'sickill/vim-pasta'
+Plug 'sirver/ultisnips'
+Plug 'srcery-colors/srcery-vim'
+Plug 'stephpy/vim-yaml'
+Plug 'thalesmello/tabfold'
+Plug 'tomasr/molokai'
+Plug 'tpope/vim-characterize'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-dadbod'
+Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-speeddating'
+Plug 'tpope/vim-surround'
+Plug 'unblevable/quick-scope'
+Plug 'urbainvaes/vim-remembrall' 
+Plug 'valloric/MatchTagAlways'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-ctrlspace/vim-ctrlspace'
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
+Plug 'vim-scripts/Arduino-syntax-file'
+Plug 'vim-scripts/vim-auto-save'
 Plug 'vim-syntastic/syntastic'
-Plug 'machakann/vim-highlightedyank'			" visual: highlight yanked selection
-Plug 'markonm/traces.vim'				" internal: search and substitue preview
-Plug 'mbbill/undotree'					" internal: undo tree
-Plug 'mboughaba/i3config.vim'				" syntax: i3wm
-Plug 'mechatroner/rainbow_csv'				" visual: colorful csv (noch recherchieren)
-Plug 'metakirby5/codi.vim'				" internal: interaktive python shell
-Plug 'mhinz/vim-signify'				" misc: needed for vim-gitgutter
-Plug 'mhinz/vim-startify'				" internal: startpage
-Plug 'mileszs/ack.vim'					" internal: durchsuche Dateiinhalte (?)
-Plug 'neoclide/coc.nvim', {'branch': 'release'}		" internal: completion
-Plug 'numirias/semshi' 	                    " syntax: python
-Plug 'osyo-manga/vim-hopping'				" internal: preview search & replace
-Plug 'raimon49/requirements.txt.vim'        " syntax: python requirements.txt
-Plug 'rhysd/clever-f.vim'                   " intern: erweitere f/F, t/T Funktion
-Plug 'roxma/vim-paste-easy'				" internal: besseres paste
-Plug 'rrethy/vim-illuminate'                " visual: highlight word underneath cursor
-Plug 'davidhalter/jedi-vim'             " internal: python completion
-Plug 'arzg/vim-colors-xcode'            " visual: xcode color schemes
-Plug 'ryanoasis/vim-devicons'				" visual: icons
-Plug 'scrooloose/nerdtree'				" visual:
-Plug 'sentientmachine/Pretty-Vim-Python'    " syntax: python
-Plug 'sickill/vim-pasta'				" internal: besseres Paste
-Plug 'sirver/ultisnips'					" misc: Snippets NOCH LERNEN
-Plug 'srcery-colors/srcery-vim'				" visual: srcery-vim theme
-Plug 'stephpy/vim-yaml'					" internal: yaml support
-Plug 'thalesmello/tabfold'				" visual: toggle folds with <Tab>
-Plug 'ntpeters/vim-better-whitespace'  " visual: show whitespaces
-Plug 'tomasr/molokai'					" visual: CS molokai
-Plug 'tpope/vim-characterize'				" internal: mit 'ga' normalen Text zu decimal, octal, hex
-Plug 'tpope/vim-commentary'				" internal: toggle commands (mit 'gcc')
-Plug 'tpope/vim-dadbod'                     " internal: databases
-Plug 'tpope/vim-eunuch'					" sehr viel mit Dateien anstellen (:SudoWrite, :Rename, Chmod +x, etc.)
-Plug 'tpope/vim-speeddating'				" internal: <C-a> und <C-x> Zahlen (und Datum etc. erhöhen / verringern)
-Plug 'tpope/vim-surround'				" internal: umrandungen (quotes, single quotes, Klammer, etc.) automatisch ersetzen
-Plug 'urbainvaes/vim-remembrall' 	        " intern: zeige keymappings
-Plug 'vim-airline/vim-airline'			" visual: statusline für vim - bestes, schön übersichtlich :)
-Plug 'vim-airline/vim-airline-themes'			" visual: additional airline themes
-Plug 'vim-ctrlspace/vim-ctrlspace'          " intern: ctrl space menu
-Plug 'vim-pandoc/vim-pandoc'				" internal: pandoc support
-Plug 'vim-pandoc/vim-pandoc-syntax'			" syntax: pandoc
-Plug 'vim-scripts/vim-auto-save'			" internal: auto save
-Plug 'whatyouhide/vim-gotham'				" visual: CS gotham
 Plug 'voldikss/vim-floaterm'
-Plug 'wsdjeg/notifications.vim'				" visual: floating notifications
-Plug 'xolox/vim-misc'					" misc: needed for vim-notes
-Plug 'xolox/vim-notes'					" internal: mit `:notes` Notizen schreiben
-Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }	" internal: LaTeX preview
-Plug 'ymatz/vim-latex-completion'			" internal: LaTeX completion
-Plug 'zirrostig/vim-schlepp'				" internal: in visual mode mit Pfeiltasten Text bewegen
+Plug 'whatyouhide/vim-gotham'
+Plug 'wsdjeg/notifications.vim'
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-notes'
+Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
+Plug 'ymatz/vim-latex-completion'
+Plug 'zirrostig/vim-schlepp'
 call plug#end()
 " }}}
 " Theming {{{
@@ -168,7 +168,7 @@ set notermguicolors
 " colorscheme jummidark
 " colorscheme kuroi
 " colorscheme xcodewwdc
-" colorscheme monokai "  bestes, schön übersichtlich :)
+" colorscheme monokai "
 " colorscheme onedark
 " colorscheme srcery
 " colorscheme wal
@@ -213,7 +213,7 @@ set title titlestring=
 let g:autoswap_detect_tmux = 1
 "
 " Folding aktivieren
-set foldenable	" wird mit za getoggelt
+set foldenable
 " fold auch nach Einzug erkennen
 set foldmethod=marker
 " beim Öffnen zugeklappt
