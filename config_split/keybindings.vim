@@ -198,5 +198,8 @@ nnoremap <silent> <expr> ,? Remembrall(',')
 " Show visual mode mappings.
 vnoremap <silent> <expr> ? Remembrall('v', '')
 " }}}
-"
+" Platformio {{{
+nnoremap <C-b> :make upload<CR>
+" }}}
+
 " }}}

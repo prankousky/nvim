@@ -22,7 +22,10 @@ call plug#begin('$HOME/.config/nvim/plugged')
 " Plug 'flazz/vim-colorschemes'				" visual: colorschemes
 " Plug 'garbas/vim-snipmate'				" Snippets
 " Plug 'itchyny/vim-cursorword'				" visual: underline word underneath cursor
+Plug 'embear/vim-localvimrc'
+Plug 'coddingtonbear/neomake-platformio'
 Plug 'valloric/MatchTagAlways'              " HTML Tags immer farbig markieren
+Plug 'vim-scripts/Arduino-syntax-file'
 Plug 'lfv89/vim-interestingwords'           " <leader>k zum markieren, n und N zum hin und her springen
 Plug 'kien/rainbow_parentheses.vim'			" auch farbige Klammern
 " Plug 'liuchengxu/vim-which-key'				" Keybindings anzeigen
@@ -93,6 +96,7 @@ Plug 'kovetskiy/sxhkd-vim'				" syntax: sxhkd
 Plug 'kristijanhusak/vim-dadbod-ui'         " internal: databases (for vim-dadbod) toggle ':DBUI'
 Plug 'kshenoy/vim-signature'            " visual: better marks
 Plug 'lervag/vimtex'					" misc: latex inkl. Preview in Zuthura
+Plug 'vim-syntastic/syntastic'
 Plug 'machakann/vim-highlightedyank'			" visual: highlight yanked selection
 Plug 'markonm/traces.vim'				" internal: search and substitue preview
 Plug 'mbbill/undotree'					" internal: undo tree
