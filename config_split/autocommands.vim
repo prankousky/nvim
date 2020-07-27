@@ -28,4 +28,8 @@ autocmd bufwritepost *.html :%s/ß/\&szlig;/g
 autocmd bufwritepost *.html :%s/ä/\&auml;/g
 autocmd bufwritepost *.html :%s/ö/\&ouml;/g
 autocmd bufwritepost *.html :%s/ü/\&uuml;/g
+
+" Platformio
+" autocmd BufEnter platformio.ini :NERDTreeToggle :vs src/main.cpp<CR><ESC><C-w>h:vertical resize 35<CR><ESC><C-w>l
+
 " }}}

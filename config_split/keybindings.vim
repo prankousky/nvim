@@ -24,6 +24,8 @@ vnoremap < <gv
 
 " AckWindow
 nnoremap <leader>a <c-u>:FZFRg
+" FzfGitignore
+nnoremap <leader>gi <c-u>:FzfGitignore<CR>
 
 " für Kommentare `#` nutzen
 nnoremap <leader>+ :setlocal commentstring=#\ %s<CR> :echo "Raute wird verwendet!"<CR>
