@@ -23,7 +23,7 @@ vnoremap > >gv
 vnoremap < <gv
 
 " AckWindow
-nnoremap <leader>a <c-u>:FZFRg
+nnoremap <leader>F <c-u>:FZFRg<CR>
 " FzfGitignore
 nnoremap <leader>gi <c-u>:FzfGitignore<CR>
 
@@ -33,7 +33,7 @@ nnoremap <leader>+ :setlocal commentstring=#\ %s<CR> :echo "Raute wird verwendet
 " nach Yank dorthin, wo vorher gewesen
 nnoremap <leader>vy <c-u>y']<CR>
 " fzf
-nnoremap <leader>F <c-u>:FZF<CR>
+nnoremap <leader>a <c-u>:FZF<CR>
 " aktuelle Datei neu laden
 nnoremap <leader>rr <c-u>:e!<CR>
 " JSON schöner formatieren
