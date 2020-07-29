@@ -148,6 +148,9 @@ Plug 'xolox/vim-notes'
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 Plug 'ymatz/vim-latex-completion'
 Plug 'zirrostig/vim-schlepp'
+Plug 'francoiscabrol/ranger.vim'
+Plug 'vimwiki/vimwiki'
+Plug 'rbgrouleff/bclose.vim'
 call plug#end()
 " }}}
 " Theming {{{
@@ -344,6 +347,7 @@ source $HOME/.config/nvim/config_split/vim-cpp-enhanced-highlight.vim
 source $HOME/.config/nvim/config_split/vim-floatterm.vim
 source $HOME/.config/nvim/config_split/vim-which-key.vim
 source $HOME/.config/nvim/config_split/vimhopping.vim
+source $HOME/.config/nvim/config_split/vimwiki.vim
 " NUR für OSX aktivieren
 " source $HOME/.config/nvim/config_split/osx_only.vim
 " }}}
