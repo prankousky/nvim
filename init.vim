@@ -24,8 +24,7 @@ call plug#begin('$HOME/.config/nvim/plugged')
 " Plug 'itchyny/vim-cursorword'
 " Plug 'liuchengxu/vim-which-key'
 " Plug 'luisdavim/pretty-folds'
-" Plug 'mattn/emmet-vim'
-" Plug 'mattn/emmet-vim'
+Plug 'mattn/emmet-vim'
 " Plug 'mtth/scratch.vim'
 " Plug 'nathanaelkane/vim-indent-guides'
 " Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
