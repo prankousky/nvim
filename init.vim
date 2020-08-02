@@ -339,6 +339,7 @@ source $HOME/.config/nvim/config_split/airline_lightline.vim
 source $HOME/.config/nvim/config_split/coc.vim
 source $HOME/.config/nvim/config_split/dadbod.vim
 source $HOME/.config/nvim/config_split/fzf.vim
+source $HOME/.config/nvim/config_split/firenvim.vim
 source $HOME/.config/nvim/config_split/indentguides.vim
 source $HOME/.config/nvim/config_split/limelight.vim
 source $HOME/.config/nvim/config_split/misc.vim

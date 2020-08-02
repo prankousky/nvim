@@ -23,7 +23,7 @@ vnoremap > >gv
 vnoremap < <gv
 
 " AckWindow
-nnoremap <leader>F <c-u>:FZFRg<CR>
+nnoremap <leader>F <c-u>:Rg<CR>
 " FzfGitignore
 nnoremap <leader>gi <c-u>:FzfGitignore<CR>
 
