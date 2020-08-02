@@ -148,7 +148,7 @@ Plug 'whatyouhide/vim-gotham'
 Plug 'wsdjeg/notifications.vim'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-notes'
-Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
+" Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 Plug 'ymatz/vim-latex-completion'
 " Plug 'zirrostig/vim-schlepp'
 call plug#end()
