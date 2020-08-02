@@ -203,5 +203,6 @@ vnoremap <silent> <expr> ? Remembrall('v', '')
 " Platformio {{{
 nnoremap <C-b> :make upload<CR>
 " }}}
-
+" CHADExplorer
+nnoremap <leader>v <cmd>CHADopen<cr>
 " }}}

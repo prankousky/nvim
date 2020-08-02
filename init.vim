@@ -42,6 +42,7 @@ Plug 'Rigellute/rigel'
 Plug 'TaDaa/vimade'
 Plug 'Yggdroot/LeaderF'
 Plug 'Yggdroot/hiPairs'
+Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': ':UpdateRemotePlugins'}
 Plug 'Yggdroot/indentLine'
 Plug 'Yilin-Yang/vim-markbar'
 Plug 'airblade/vim-gitgutter'
