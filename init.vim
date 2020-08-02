@@ -34,6 +34,7 @@ call plug#begin('$HOME/.config/nvim/plugged')
 Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'EVODelavega/vim-eazy-timer'
 Plug 'Galicarnax/vim-regex-syntax'
+Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 Plug 'Glench/Vim-Jinja2-Syntax'
 Plug 'LandonSchropp/vim-stamp'
 Plug 'MattesGroeger/vim-bookmarks'
