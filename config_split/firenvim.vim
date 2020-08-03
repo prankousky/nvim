@@ -1,9 +1,11 @@
 if exists('g:started_by_firenvim')
   set laststatus=0
   set wrap
+  set showtabline=0
 else
   set laststatus=2
   set nowrap
+  set showtabline=2
 endif
 
 " Settings depending upon page/element being edited

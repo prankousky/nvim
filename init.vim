@@ -32,6 +32,7 @@ call plug#begin('$HOME/.config/nvim/plugged')
 " Plug 'zenbro/mirror.vim'
 " Plug 'zirrostig/vim-schlepp'
 Plug 'ConradIrwin/vim-bracketed-paste'
+Plug 'hardcoreplayers/dashboard-nvim'
 Plug 'EVODelavega/vim-eazy-timer'
 Plug 'Galicarnax/vim-regex-syntax'
 Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
@@ -338,6 +339,7 @@ source $HOME/.config/nvim/config_split/tmuxcursor.vim
 source $HOME/.config/nvim/config_split/airline_lightline.vim
 source $HOME/.config/nvim/config_split/coc.vim
 source $HOME/.config/nvim/config_split/dadbod.vim
+source $HOME/.config/nvim/config_split/dashboard-vim.vim
 source $HOME/.config/nvim/config_split/fzf.vim
 source $HOME/.config/nvim/config_split/firenvim.vim
 source $HOME/.config/nvim/config_split/indentguides.vim
