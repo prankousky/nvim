@@ -12,5 +12,6 @@ let g:indent_guides_auto_colors = 0
 
 " nicht in dashboard-vim anzeigen
 let g:indentLine_fileTypeExclude = ['dashboard']
+let g:indentLine_fileTypeExclude = ['startify']
 " }}}
 

@@ -32,7 +32,7 @@ call plug#begin('$HOME/.config/nvim/plugged')
 " Plug 'zenbro/mirror.vim'
 " Plug 'zirrostig/vim-schlepp'
 Plug 'ConradIrwin/vim-bracketed-paste'
-Plug 'hardcoreplayers/dashboard-nvim'
+" Plug 'hardcoreplayers/dashboard-nvim'
 Plug 'EVODelavega/vim-eazy-timer'
 Plug 'Galicarnax/vim-regex-syntax'
 Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
