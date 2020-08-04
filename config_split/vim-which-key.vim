@@ -1,6 +1,7 @@
 " nnoremap <silent> <leader>w :WhichKey ','<CR>
 " minimal configuration Vorlage
-let g:mapleader = "\<Space>"
+" let g:mapleader = "\<Space>"
+let g:mapleader = ","
 let g:maplocalleader = ','
 nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
 nnoremap <silent> <localleader> :<c-u>WhichKey  ','<CR>

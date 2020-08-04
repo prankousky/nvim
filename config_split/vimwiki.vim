@@ -1,5 +1,4 @@
-let g:vimwiki_list = [{'path': '$HOME/documents/vimwiki/wiki',
-            \ 'syntax': 'markdown', 'ext': '.md'}]
+let g:vimwiki_list = [{'path': '$HOME/documents/vimwiki/wiki'}]
 
 " für zweifisch/vimwiki-assets
 let vimwiki_path="$HOME/documents/vimwiki/wiki"

@@ -22,7 +22,8 @@ vnoremap > >gv
 vnoremap < <gv
 " edit vimrc
 nnoremap <leader>vv <c-u>:tabedit $MYVIMRC<CR>
-
+" Lösche gesamten Inhalt des Buffers
+nnoremap <leader>da ggdG
 " AckWindow
 nnoremap <leader>F <c-u>:Rg<CR>
 " FzfGitignore
