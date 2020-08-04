@@ -20,6 +20,9 @@ autocmd bufwritepost init.vim source $MYVIMRC
 autocmd bufwritepost *.css :CocCommand prettier.formatFile
 autocmd bufwritepost *.json :CocCommand prettier.formatFile
 
+" Immer vim-rainbow nutzen
+autocmd  VimEnter * :call rainbow#load()
+
 " HTML ersetze Umlaute durch entsprechenden Code
 autocmd bufwritepost *.html :%s/Ü/\&Uuml;/g
 autocmd bufwritepost *.html :%s/Ä/\&Auml;/g

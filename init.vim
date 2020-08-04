@@ -90,14 +90,15 @@ Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/vim-peekaboo'
-Plug 'kien/rainbow_parentheses.vim'
+" Plug 'kien/rainbow_parentheses.vim'
 Plug 'kovetskiy/sxhkd-vim'
 Plug 'kristijanhusak/vim-dadbod-ui'
 Plug 'kshenoy/vim-signature'
 Plug 'lervag/vimtex'
 Plug 'lfv89/vim-interestingwords'
 Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] } " nur bei Bedarf laden
-Plug 'luochen1990/rainbow'
+Plug 'frazrepo/vim-rainbow'
+" Plug 'luochen1990/rainbow'
 Plug 'machakann/vim-highlightedyank'
 Plug 'markonm/traces.vim'
 Plug 'mattn/emmet-vim'
@@ -350,6 +351,7 @@ source $HOME/.config/nvim/config_split/startify.vim
 source $HOME/.config/nvim/config_split/ultisnips.vim
 source $HOME/.config/nvim/config_split/vim-colors-xcode.vim
 source $HOME/.config/nvim/config_split/vim-cpp-enhanced-highlight.vim
+source $HOME/.config/nvim/config_split/vim-rainbow.vim
 source $HOME/.config/nvim/config_split/vim-floatterm.vim
 source $HOME/.config/nvim/config_split/vim-which-key.vim
 source $HOME/.config/nvim/config_split/vimhopping.vim
