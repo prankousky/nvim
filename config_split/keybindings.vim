@@ -20,6 +20,8 @@ nnoremap <C-H> <C-W><C-H>
 " mehr Geniales hier (https://vim.fandom.com/wiki/Shifting_blocks_visually)
 vnoremap > >gv
 vnoremap < <gv
+" edit vimrc
+nnoremap <leader>vv <c-u>:tabedit $MYVIMRC<CR>
 
 " AckWindow
 nnoremap <leader>F <c-u>:Rg<CR>
