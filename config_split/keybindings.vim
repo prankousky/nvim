@@ -1,4 +1,3 @@
-"  Keybindings {{{
 " Leader festlegen
 let mapleader =","
 
@@ -180,7 +179,6 @@ nnoremap <A-right> <C-W><C-L>
 nnoremap <A-left> <C-W><C-H>
 " Toggle filestyle (zeige/verstecke trailing spaces, tabs, etc.)
 nnoremap <leader>9 <Esc>:FileStyleToggle<CR>
-" Direkt in vim ausführen {{{
     " Python {{{
     autocmd FileType python map <buffer> <F5> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
     autocmd FileType python imap <buffer> <F5> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
@@ -205,4 +203,6 @@ nnoremap <C-b> :make upload<CR>
 " }}}
 " CHADExplorer
 nnoremap <leader>v <cmd>CHADopen<cr>
-" }}}
+" remap gf to create File if it does not already exist
+map gf :e <cfile><CR>
+
