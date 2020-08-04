@@ -39,6 +39,7 @@ Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 Plug 'Glench/Vim-Jinja2-Syntax'
 Plug 'LandonSchropp/vim-stamp'
 Plug 'MattesGroeger/vim-bookmarks'
+Plug 'zxqfl/tabnine-vim'
 Plug 'MikeDacre/tmux-zsh-vim-titles'
 Plug 'Rigellute/rigel'
 Plug 'TaDaa/vimade'
