@@ -57,7 +57,8 @@ Plug 'camspiers/animate.vim'
 Plug 'camspiers/lens.vim'
 Plug 'chase/vim-ansible-yaml'
 Plug 'chengzeyi/fzf-preview.vim'
-Plug 'chrisbra/colorizer'
+" Plug 'chrisbra/colorizer'
+Plug 'norcalli/nvim-colorizer.lua'
 Plug 'chrisbra/csv.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'coddingtonbear/neomake-platformio'
@@ -166,9 +167,9 @@ call plug#end()
 " 256 Farben festlegen; muss VOR colorscheme stehen
 set t_Co=256
 " colorscheme einstellen
-" set termguicolors
-set notermguicolors
-" set background=dark
+set termguicolors
+" set notermguicolors
+set background=dark
 " colorscheme molokai
 " colorscheme rigel
 " colorscheme gotham
@@ -357,6 +358,7 @@ source $HOME/.config/nvim/config_split/vim-floatterm.vim
 source $HOME/.config/nvim/config_split/vim-which-key.vim
 source $HOME/.config/nvim/config_split/vimhopping.vim
 source $HOME/.config/nvim/config_split/vimwiki.vim
+lua require'colorizer'.setup()
 " NUR für OSX aktivieren
 " source $HOME/.config/nvim/config_split/osx_only.vim
 " }}}
