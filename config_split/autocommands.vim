@@ -12,6 +12,7 @@ autocmd BufRead,BufNewFile filetype detect
 " VIMRC
 autocmd bufwritepost .vimrc source $MYVIMRC
 autocmd bufwritepost init.vim source $MYVIMRC
+
 " tmp Datei autosave
 " autocmd Vimenter /tmp/vimtemp.md :AutoSaveToggle
 " Lade sxhkd neu, sobald Datei geschrieben wurde
