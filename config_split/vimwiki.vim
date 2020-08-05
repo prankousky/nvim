@@ -25,3 +25,6 @@ for wiki_name in wikis
 	let wiki.diary_rel_path = 'diary/'
 	call add(g:vimwiki_list, wiki)
 endfor
+
+" NICHT jede Markdown Datei gehört zu vim-wiki
+let g:vimwiki_global_ext = 0
