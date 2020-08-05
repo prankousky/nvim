@@ -43,6 +43,7 @@ Plug 'Glench/Vim-Jinja2-Syntax'
 Plug 'LandonSchropp/vim-stamp'
 Plug 'MattesGroeger/vim-bookmarks'
 Plug 'MikeDacre/tmux-zsh-vim-titles'
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'Rigellute/rigel'
 Plug 'TaDaa/vimade'
 Plug 'Yggdroot/LeaderF'

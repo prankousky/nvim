@@ -118,7 +118,9 @@ nnoremap <leader>sf :Startify<CR>
 " nmap <Leader><Space> :nohl<cr>
 " in visueller Selektion suchen/ersetzen
 vmap <leader>V :s/\%V//g<left><left><left>
-" save / quit
+" vim-surround mit visueller Selektion
+vmap <leader>" ysi\%V"
+vmap <leader>' ysi\%V'
 " speichern
 map <C-s> <esc>:w<cr>
 " speichern
@@ -210,3 +212,5 @@ nnoremap <leader>v <cmd>CHADopen<cr>
 map gf :e <cfile><CR>
 " sortiere Plugins in $MYVIMRC
 nnoremap <silent>ss :/plug#begin/+1,/plug#end/-1sort<CR>
+" VISUAL SELECTION in `` bringen
+vnoremap <silent><leader>c S`
