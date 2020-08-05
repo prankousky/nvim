@@ -1,4 +1,4 @@
-" TextEdit might fail if hidden is not set
+"mehr TextEdit might fail if hidden is not set
 set hidden
 " Mehr Platz für Anzeigen der Nachrichten
 set cmdheight=2
@@ -34,7 +34,7 @@ function! s:check_back_space() abort
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Symbol renaming.
-nmap <leader>rn <Plug>(coc-rename)	
+nmap <leader>rn <Plug>(coc-rename)
 inoremap <silent><expr> <c-space> coc#refresh()
 
 " Prettier
