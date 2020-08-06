@@ -9,14 +9,14 @@
 " --> http://colorswat.ch/vim (ColorThemes)
 " --> https://vimgifs.com
 " }}}
-" Plugins hier laden {{{ 
+" Plugins hier laden {{{
 call plug#begin('$HOME/.config/nvim/plugged')
 " Plug 'AlphaMycelium/pathfinder.vim'
 " Plug 'Shougo/deoplete.nvim'
 " Plug 'Shougo/neosnippet.vim'
 " Plug 'ajh17/VimCompletesMe'
 " Plug 'andymass/vim-matchup'
-" Plug 'aserebryakov/filestyle' 
+" Plug 'aserebryakov/filestyle'
 " Plug 'chrisbra/colorizer'
 " Plug 'dhruvasagar/vim-zoom'
 " Plug 'doums/coBra'
@@ -66,7 +66,7 @@ Plug 'coddingtonbear/neomake-platformio'
 Plug 'crusoexia/vim-monokai'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'danilamihailov/beacon.nvim'
-Plug 'davidhalter/jedi-vim' 
+Plug 'davidhalter/jedi-vim'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'easymotion/vim-easymotion'
 Plug 'ekalinin/Dockerfile.vim'
@@ -79,7 +79,7 @@ Plug 'frazrepo/vim-rainbow'
 Plug 'fszymanski/fzf-gitignore', {'do': ':UpdateRemotePlugins'}
 Plug 'gioele/vim-autoswap'
 Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
-Plug 'google/vim-searchindex' 
+Plug 'google/vim-searchindex'
 Plug 'honza/vim-snippets'
 Plug 'https://github.com/adelarsq/vim-matchit'
 Plug 'https://github.com/morhetz/gruvbox'
@@ -115,11 +115,11 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neomake/neomake'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'ntpeters/vim-better-whitespace'
-Plug 'numirias/semshi' 
+Plug 'numirias/semshi'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'osyo-manga/vim-hopping'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-Plug 'raimon49/requirements.txt.vim' 
+Plug 'raimon49/requirements.txt.vim'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'rhysd/clever-f.vim'
 Plug 'roxma/vim-paste-easy'
@@ -141,7 +141,7 @@ Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-surround'
 Plug 'unblevable/quick-scope'
-Plug 'urbainvaes/vim-remembrall' 
+Plug 'urbainvaes/vim-remembrall'
 Plug 'valloric/MatchTagAlways'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
