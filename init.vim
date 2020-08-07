@@ -98,7 +98,7 @@ Plug 'junegunn/vim-peekaboo'
 Plug 'kovetskiy/sxhkd-vim'
 Plug 'kristijanhusak/vim-dadbod-ui'
 Plug 'kshenoy/vim-signature'
-Plug 'lervag/vimtex'
+" Plug 'lervag/vimtex'
 Plug 'lfv89/vim-interestingwords'
 Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] } " nur bei Bedarf laden
 Plug 'machakann/vim-highlightedyank'
