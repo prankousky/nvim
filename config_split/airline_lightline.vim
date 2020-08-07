@@ -1,5 +1,7 @@
 " Color Theme airine / lightline {{{
-let g:rigel_airline = 0
+" let g:rigel_airline = 0
+let g:lightline = { 'colorscheme': 'molokai'}
+" let g:airline_theme='molokai'
 let g:airline_theme='badwolf'
 " let g:rigel_lightline = 1
 " let g:lightline = { 'colorscheme': 'rigel' }

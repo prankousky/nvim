@@ -214,3 +214,5 @@ map gf :e <cfile><CR>
 nnoremap <silent>ss :/plug#begin/+1,/plug#end/-1sort<CR>
 " VISUAL SELECTION in `` bringen
 vnoremap <silent><leader>c S`
+" CocExplorer
+nmap <leader>e :CocCommand explorer<CR>

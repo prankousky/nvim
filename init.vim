@@ -25,6 +25,7 @@ call plug#begin('$HOME/.config/nvim/plugged')
 " Plug 'hardcoreplayers/dashboard-nvim'
 " Plug 'itchyny/vim-cursorword'
 " Plug 'kien/rainbow_parentheses.vim'
+" Plug 'lervag/vimtex'
 " Plug 'liuchengxu/vim-which-key'
 " Plug 'luisdavim/pretty-folds'
 " Plug 'luochen1990/rainbow'
@@ -43,7 +44,6 @@ Plug 'Glench/Vim-Jinja2-Syntax'
 Plug 'LandonSchropp/vim-stamp'
 Plug 'MattesGroeger/vim-bookmarks'
 Plug 'MikeDacre/tmux-zsh-vim-titles'
-Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'Rigellute/rigel'
 Plug 'TaDaa/vimade'
 Plug 'Yggdroot/LeaderF'
@@ -55,6 +55,7 @@ Plug 'aonemd/kuroi.vim'
 Plug 'arzg/vim-colors-xcode'
 Plug 'arzg/vim-corvine'
 Plug 'ayu-theme/ayu-vim'
+Plug 'bling/vim-bufferline'
 Plug 'brianrodri/vim-sort-folds'
 Plug 'camspiers/animate.vim'
 Plug 'camspiers/lens.vim'
@@ -77,6 +78,7 @@ Plug 'felixhummel/setcolors.vim'
 Plug 'francoiscabrol/ranger.vim'
 Plug 'frazrepo/vim-rainbow'
 Plug 'fszymanski/fzf-gitignore', {'do': ':UpdateRemotePlugins'}
+Plug 'gcmt/wildfire.vim'
 Plug 'gioele/vim-autoswap'
 Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 Plug 'google/vim-searchindex'
@@ -85,6 +87,7 @@ Plug 'https://github.com/adelarsq/vim-matchit'
 Plug 'https://github.com/morhetz/gruvbox'
 Plug 'itchyny/lightline.vim'
 Plug 'jcherven/jummidark.vim'
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'jiangmiao/auto-pairs'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'joshdick/onedark.vim'
@@ -98,7 +101,6 @@ Plug 'junegunn/vim-peekaboo'
 Plug 'kovetskiy/sxhkd-vim'
 Plug 'kristijanhusak/vim-dadbod-ui'
 Plug 'kshenoy/vim-signature'
-" Plug 'lervag/vimtex'
 Plug 'lfv89/vim-interestingwords'
 Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] } " nur bei Bedarf laden
 Plug 'machakann/vim-highlightedyank'
@@ -108,6 +110,7 @@ Plug 'mbbill/undotree'
 Plug 'mboughaba/i3config.vim'
 Plug 'mechatroner/rainbow_csv'
 Plug 'metakirby5/codi.vim'
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'mhinz/vim-signify'
 Plug 'mhinz/vim-startify'
 Plug 'mileszs/ack.vim'
@@ -128,6 +131,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'scrooloose/nerdtree'
 Plug 'scuilion/markdown-drawer'
 Plug 'sentientmachine/Pretty-Vim-Python'
+Plug 'severij/vadelma'
 Plug 'sickill/vim-pasta'
 Plug 'sirver/ultisnips'
 Plug 'srcery-colors/srcery-vim'
@@ -172,6 +176,7 @@ set termguicolors
 " set notermguicolors
 set background=dark
 colorscheme molokai
+" colorscheme vadelma
 " colorscheme rigel
 " colorscheme gotham
 " colorscheme ayu
@@ -256,7 +261,7 @@ set wildignore+=.pyc,.swp
 " beim Joinen von Zeilen ggf. Kommentarsymbole löschen
 set formatoptions+=j
 " }}}
-" diverse Einstellungen {{{ 
+" diverse Einstellungen {{{
 " yggdroot / indent
 let g:indentLine_color_term = 239
 " yggdroot / indent
@@ -302,7 +307,7 @@ set backspace=indent,eol,start
 " autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 " YAML andere Fold Method
 " autocmd FileType yaml set foldmethod=indent
-" # splits seitlicht 
+" # splits seitlicht
 set splitright
 " splits unterhalb
 set splitbelow
@@ -370,7 +375,7 @@ set listchars=extends:→
 " Show arrow if line continues leftwards
 set listchars+=precedes:←
 " sofort ESC annehmen ohne Verzögerung
-set timeoutlen=1000 ttimeoutlen=0 
+set timeoutlen=1000 ttimeoutlen=0
 " Kommentare kursiv drucken
 " funktioniert wohl nicht mit jedem colorscheme
 " highlight Comment cterm=italic gui=italic
