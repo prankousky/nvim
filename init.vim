@@ -38,8 +38,6 @@ call plug#begin('$HOME/.config/nvim/plugged')
 " Plug 'zirrostig/vim-schlepp'
 " Plug 'zxqfl/tabnine-vim' " Sowas wie COC
 Plug 'ConradIrwin/vim-bracketed-paste'
-Plug 'wellle/targets.vim'
-Plug 'EVODelavega/vim-eazy-timer'
 Plug 'Galicarnax/vim-regex-syntax'
 Plug 'Glench/Vim-Jinja2-Syntax'
 Plug 'LandonSchropp/vim-stamp'
@@ -83,6 +81,7 @@ Plug 'gcmt/wildfire.vim'
 Plug 'gioele/vim-autoswap'
 Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 Plug 'google/vim-searchindex'
+Plug 'hardcoreplayers/spaceline.vim'
 Plug 'honza/vim-snippets'
 Plug 'https://github.com/adelarsq/vim-matchit'
 Plug 'https://github.com/morhetz/gruvbox'
@@ -132,7 +131,6 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'scrooloose/nerdtree'
 Plug 'scuilion/markdown-drawer'
 Plug 'sentientmachine/Pretty-Vim-Python'
-Plug 'severij/vadelma'
 Plug 'sickill/vim-pasta'
 Plug 'sirver/ultisnips'
 Plug 'srcery-colors/srcery-vim'
@@ -143,6 +141,7 @@ Plug 'tpope/vim-characterize'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-dadbod'
 Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-surround'
 Plug 'unblevable/quick-scope'
@@ -150,7 +149,6 @@ Plug 'urbainvaes/vim-remembrall'
 Plug 'valloric/MatchTagAlways'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'tpope/vim-sleuth'
 Plug 'vim-ctrlspace/vim-ctrlspace'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
@@ -159,6 +157,7 @@ Plug 'vim-scripts/vim-auto-save'
 Plug 'vim-syntastic/syntastic'
 Plug 'vimwiki/vimwiki'
 Plug 'voldikss/vim-floaterm'
+Plug 'wellle/targets.vim'
 Plug 'whatyouhide/vim-gotham'
 Plug 'wsdjeg/notifications.vim'
 Plug 'xolox/vim-misc'
@@ -178,7 +177,6 @@ set termguicolors
 " set notermguicolors
 set background=dark
 colorscheme molokai
-" colorscheme vadelma
 " colorscheme rigel
 " colorscheme gotham
 " colorscheme ayu

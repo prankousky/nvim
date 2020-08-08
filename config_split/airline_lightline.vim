@@ -1,4 +1,3 @@
-" Color Theme airine / lightline {{{
 " let g:rigel_airline = 0
 let g:lightline = { 'colorscheme': 'molokai'}
 " let g:airline_theme='molokai'
@@ -20,4 +19,5 @@ let g:airline_left_sep = ""
 let g:airline_right_sep = ""
 let g:airline#extensions#tabline#left_sep = ''
 let g:airline#extensions#tabline#left_alt_sep = ''
-" }}}
+" Spaceline
+let g:spaceline_seperate_style = 'slant-cons'
