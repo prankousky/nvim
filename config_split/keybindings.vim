@@ -216,3 +216,5 @@ nnoremap <silent>ss :/plug#begin/+1,/plug#end/-1sort<CR>
 vnoremap <silent><leader>c S`
 " CocExplorer
 nmap <leader>e :CocCommand explorer<CR>
+" UndoTree
+nmap <leader>u :UndotreeToggle<CR>
