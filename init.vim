@@ -52,6 +52,7 @@ Plug 'Yilin-Yang/vim-markbar'
 Plug 'airblade/vim-gitgutter'
 Plug 'aonemd/kuroi.vim'
 Plug 'arzg/vim-colors-xcode'
+Plug 'pacha/vem-tabline'
 Plug 'arzg/vim-corvine'
 Plug 'ayu-theme/ayu-vim'
 Plug 'bling/vim-bufferline'
@@ -192,7 +193,7 @@ colorscheme molokai
 " colorscheme wal
 "
 " indents minimal visualisieren
-" set list lcs=tab:\|\ 
+" set list lcs=tab:\|\
 "
 " verschiedenes Themes per Filetype
 " autocmd BufEnter * colorscheme molokai
@@ -357,6 +358,7 @@ source $HOME/.config/nvim/config_split/misc.vim
 source $HOME/.config/nvim/config_split/nerdtree.vim
 source $HOME/.config/nvim/config_split/startify.vim
 source $HOME/.config/nvim/config_split/ultisnips.vim
+source $HOME/.config/nvim/config_split/vem-tabline.vim
 source $HOME/.config/nvim/config_split/vim-colors-xcode.vim
 source $HOME/.config/nvim/config_split/vim-cpp-enhanced-highlight.vim
 source $HOME/.config/nvim/config_split/vim-rainbow.vim
