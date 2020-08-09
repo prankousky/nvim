@@ -204,7 +204,8 @@ nnoremap <silent> <expr> ,? Remembrall(',')
 vnoremap <silent> <expr> ? Remembrall('v', '')
 " }}}
 " Platformio {{{
-nnoremap <C-b> :make upload<CR>
+" erstelle das Projekt und öffne `minicom`, um den Output zu debuggen
+nnoremap <C-b> :make upload<CR>:!tmux splitw -h<CR>:!tmux send-keys 'minicom 9600' Enter<CR>
 " }}}
 " CHADExplorer
 nnoremap <leader>v <cmd>CHADopen<cr>
