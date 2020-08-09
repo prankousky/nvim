@@ -211,7 +211,7 @@ nnoremap <leader>v <cmd>CHADopen<cr>
 " remap gf to create File if it does not already exist
 map gf :e <cfile><CR>
 " sortiere Plugins in $MYVIMRC
-nnoremap <silent>ss :/plug#begin/+1,/plug#end/-1sort<CR>
+nmap <silent>ss :/plug#begin/+1,/plug#end/-1sort<CR>
 " VISUAL SELECTION in `` bringen
 vnoremap <silent><leader>c S`
 " CocExplorer

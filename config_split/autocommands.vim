@@ -1,4 +1,3 @@
-" Autocommands {{{
 " Polybar Config
 autocmd BufRead,BufNewFile $HOME/.config/polybar/* set syntax=dosini
 " Xresources
@@ -37,4 +36,6 @@ autocmd bufwritepost *.html :%s/ü/\&uuml;/g
 autocmd BufRead platformio.ini NERDTreeToggle | vs src/main.cpp | wincmd l | vertical resize 30 | wincmd h | wincmd h | vertical resize 30 | wincmd l | set filetype=cpp
 autocmd BufRead *.cpp set filetype=cpp
 
-" }}}
+
+" Markdown Table
+autocmd BufEnter *.md TableModeEnable
