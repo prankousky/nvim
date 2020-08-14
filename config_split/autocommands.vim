@@ -7,7 +7,7 @@ autocmd BufRead,BufNewFile $HOME/.config/i3/* set syntax=i3config
 " polybar automatisch neu starten
 " autocmd BufWritePost bentest  !$HOME/bin/bens/launch_polybar.sh
 " alle anderen automatisch beim Speichern neu checken
-autocmd BufRead,BufNewFile filetype detect 
+autocmd BufRead,BufNewFile filetype detect
 " VIMRC
 autocmd bufwritepost .vimrc source $MYVIMRC
 autocmd bufwritepost init.vim source $MYVIMRC
@@ -33,7 +33,7 @@ autocmd bufwritepost *.html :%s/ö/\&ouml;/g
 autocmd bufwritepost *.html :%s/ü/\&uuml;/g
 
 " Platformio
-autocmd BufRead platformio.ini NERDTreeToggle | vs src/main.cpp | wincmd l | vertical resize 30 | wincmd h | wincmd h | vertical resize 30 | wincmd l | set filetype=cpp
+" autocmd BufRead platformio.ini NERDTreeToggle | vs src/main.cpp | wincmd l | vertical resize 30 | wincmd h | wincmd h | vertical resize 30 | wincmd l | set filetype=cpp
 autocmd BufRead *.cpp set filetype=cpp
 
 
