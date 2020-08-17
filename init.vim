@@ -367,6 +367,7 @@ source $HOME/.config/nvim/config_split/vim-rainbow.vim
 source $HOME/.config/nvim/config_split/vim-floatterm.vim
 source $HOME/.config/nvim/config_split/vim-which-key.vim
 source $HOME/.config/nvim/config_split/vim-closetag.vim
+source $HOME/.config/nvim/config_split/vim-easymotion.vim
 source $HOME/.config/nvim/config_split/vimhopping.vim
 source $HOME/.config/nvim/config_split/vimwiki.vim
 lua require'colorizer'.setup()
