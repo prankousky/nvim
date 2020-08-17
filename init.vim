@@ -55,6 +55,7 @@ Plug 'arzg/vim-colors-xcode'
 Plug 'arzg/vim-corvine'
 Plug 'ayu-theme/ayu-vim'
 Plug 'bling/vim-bufferline'
+Plug 'alvan/vim-closetag'
 Plug 'brianrodri/vim-sort-folds'
 Plug 'camspiers/animate.vim'
 Plug 'camspiers/lens.vim'
@@ -216,7 +217,7 @@ set ruler
 " Cursorline ==> deaktiveren
 set cursorline&
 " hi CursorLine ctermfg=162
-" magic ==> bei regex muss man so nicht sämtliche Sonderzeichen escapen 
+" magic ==> bei regex muss man so nicht sämtliche Sonderzeichen escapen
 set magic
 " Balken bei 80 Zeichen (Wert auf 80 stellen, is klar)
 " set textwidth=0
@@ -365,6 +366,7 @@ source $HOME/.config/nvim/config_split/vim-cpp-enhanced-highlight.vim
 source $HOME/.config/nvim/config_split/vim-rainbow.vim
 source $HOME/.config/nvim/config_split/vim-floatterm.vim
 source $HOME/.config/nvim/config_split/vim-which-key.vim
+source $HOME/.config/nvim/config_split/vim-closetag.vim
 source $HOME/.config/nvim/config_split/vimhopping.vim
 source $HOME/.config/nvim/config_split/vimwiki.vim
 lua require'colorizer'.setup()
