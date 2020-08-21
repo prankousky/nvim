@@ -1,5 +1,3 @@
-" Functions {{{
-"  markiere bestimmte Worte {{{
 " Kommando zum Ausführen
 " highlight HighWorte ctermbg=blue ctermfg=yellow
 " " Function mit Wortliste
@@ -10,5 +8,8 @@
 " nnoremap <leader>av :execute HighWorte()<CR>
 " " und eins zum ent-Highlighten
 " nnoremap <leader>ac :highlight HighWorte ctermbg=none ctermfg=none<CR>
-" -- }}}
-" }}}
+
+" NIS
+function Nis_reinigung(von, bis)
+    execute "normal! iReinigen der Energieanlagen im Energiebereich vom " . a:von. " - " .a:bis. " gemäß Wartungspläne"
+endfunction
