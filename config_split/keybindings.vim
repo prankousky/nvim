@@ -4,6 +4,7 @@ let mapleader =","
 " NIS Mapping {{{
 nnoremap 22 llct,
 nnoremap 00 0ct,
+nnoremap 44 :call Nis_energieanlagen("", "")<left><left><left><left><left><left>
 " }}}
 "
 " zeige / verstecke MarkBar
@@ -60,13 +61,13 @@ nnoremap <leader>7 :%s/\<<c-r><c-w>\>//g<left><left>
 
 " Zeilen hin- und her schieben
 " wenn die Zeilen automatisch eingezogen werden sollen,
-" hinter xnoreap (..) gv=gv eintragen, ansonsten nur gv 
+" hinter xnoreap (..) gv=gv eintragen, ansonsten nur gv
 xnoremap <A-K> :m-2<cr>gv
 xnoremap <A-J> :m'>+<cr>gv
 nnoremap <A-J> :m+<cr>==
 nnoremap <A-K> :m-2<cr>==
 
-" Zeile mit Dashes füllen 
+" Zeile mit Dashes füllen
 " pipe wird mir <bar> ersetzt, danach wechselt man in den insert mode (i),
 " dann geht man eine stelle nach rechts (right), dann wird eine neue zeile
 " eingefügt (CR)
@@ -101,7 +102,7 @@ map <leader>n :source ~/.vimrc<CR>
 " als root Schreiben
 nnoremap<leader>su :w !sudo tee %<CR>
 " Limelight toggeln
-nnoremap <leader>l :Limelight!!<CR> 
+nnoremap <leader>l :Limelight!!<CR>
 " mit F1 Helper anzeigen
 " :map #3 :!bat ~/.vim/vimhelp<CR>
 " mit F2 speichern

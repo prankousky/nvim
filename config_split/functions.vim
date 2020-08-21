@@ -10,6 +10,6 @@
 " nnoremap <leader>ac :highlight HighWorte ctermbg=none ctermfg=none<CR>
 
 " NIS
-function Nis_reinigung(von, bis)
-    execute "normal! iReinigen der Energieanlagen im Energiebereich vom " . a:von. " - " .a:bis. " gemäß Wartungspläne"
+function Nis_energieanlagen(von, bis)
+    execute "normal! iReinigen der Energieanlagen im Energiebereich vom " . a:von. "2020 - " .a:bis. " 2020 gemäß Wartungspläne"
 endfunction
