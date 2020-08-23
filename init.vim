@@ -17,12 +17,15 @@ call plug#begin('$HOME/.config/nvim/plugged')
 " Plug 'ajh17/VimCompletesMe'
 " Plug 'andymass/vim-matchup'
 " Plug 'aserebryakov/filestyle'
+" Plug 'camspiers/animate.vim'
+" Plug 'camspiers/lens.vim'
 " Plug 'chrisbra/colorizer'
 " Plug 'dhruvasagar/vim-zoom'
 " Plug 'doums/coBra'
 " Plug 'flazz/vim-colorschemes'
 " Plug 'garbas/vim-snipmate'
 " Plug 'hardcoreplayers/dashboard-nvim'
+" Plug 'hardcoreplayers/spaceline.vim'
 " Plug 'itchyny/vim-cursorword'
 " Plug 'kien/rainbow_parentheses.vim'
 " Plug 'lervag/vimtex'
@@ -31,6 +34,7 @@ call plug#begin('$HOME/.config/nvim/plugged')
 " Plug 'luochen1990/rainbow'
 " Plug 'mtth/scratch.vim'
 " Plug 'nathanaelkane/vim-indent-guides'
+" Plug 'pacha/vem-tabline'
 " Plug 'rrethy/vim-hexokinase'
 " Plug 'terryma/vim-multiple-cursors'
 " Plug 'w0rp/ale'
@@ -50,15 +54,13 @@ Plug 'Yggdroot/hiPairs'
 Plug 'Yggdroot/indentLine'
 Plug 'Yilin-Yang/vim-markbar'
 Plug 'airblade/vim-gitgutter'
+Plug 'alvan/vim-closetag'
 Plug 'aonemd/kuroi.vim'
 Plug 'arzg/vim-colors-xcode'
 Plug 'arzg/vim-corvine'
 Plug 'ayu-theme/ayu-vim'
 Plug 'bling/vim-bufferline'
-Plug 'alvan/vim-closetag'
 Plug 'brianrodri/vim-sort-folds'
-Plug 'camspiers/animate.vim'
-Plug 'camspiers/lens.vim'
 Plug 'chase/vim-ansible-yaml'
 Plug 'chengzeyi/fzf-preview.vim'
 Plug 'chrisbra/csv.vim'
@@ -82,7 +84,6 @@ Plug 'gcmt/wildfire.vim'
 Plug 'gioele/vim-autoswap'
 Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 Plug 'google/vim-searchindex'
-" Plug 'hardcoreplayers/spaceline.vim'
 Plug 'honza/vim-snippets'
 Plug 'https://github.com/adelarsq/vim-matchit'
 Plug 'https://github.com/morhetz/gruvbox'
@@ -96,6 +97,7 @@ Plug 'juleswang/css.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
+Plug 'tomasiser/vim-code-dark'
 Plug 'junegunn/limelight.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/vim-peekaboo'
@@ -122,7 +124,6 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'numirias/semshi'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'osyo-manga/vim-hopping'
-Plug 'pacha/vem-tabline'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'raimon49/requirements.txt.vim'
 Plug 'rbgrouleff/bclose.vim'
@@ -174,11 +175,13 @@ call plug#end()
 " }}}
 " 256 Farben festlegen; muss VOR colorscheme stehen
 set t_Co=256
+set t_ut=
 " colorscheme einstellen
 set termguicolors
 " set notermguicolors
 set background=dark
-colorscheme molokai
+colorscheme codedark
+" colorscheme molokai
 " colorscheme rigel
 " colorscheme gotham
 " colorscheme ayu
@@ -359,7 +362,7 @@ source $HOME/.config/nvim/config_split/misc.vim
 source $HOME/.config/nvim/config_split/nerdtree.vim
 source $HOME/.config/nvim/config_split/startify.vim
 source $HOME/.config/nvim/config_split/ultisnips.vim
-source $HOME/.config/nvim/config_split/vem-tabline.vim
+" source $HOME/.config/nvim/config_split/vem-tabline.vim
 source $HOME/.config/nvim/config_split/vim-colors-xcode.vim
 source $HOME/.config/nvim/config_split/vim-cpp-enhanced-highlight.vim
 source $HOME/.config/nvim/config_split/vim-rainbow.vim
