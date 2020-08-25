@@ -36,6 +36,7 @@ call plug#begin('$HOME/.config/nvim/plugged')
 " Plug 'nathanaelkane/vim-indent-guides'
 " Plug 'pacha/vem-tabline'
 " Plug 'rrethy/vim-hexokinase'
+" Plug 'sirver/ultisnips'
 " Plug 'terryma/vim-multiple-cursors'
 " Plug 'w0rp/ale'
 " Plug 'zenbro/mirror.vim'
@@ -97,7 +98,6 @@ Plug 'juleswang/css.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
-Plug 'tomasiser/vim-code-dark'
 Plug 'junegunn/limelight.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/vim-peekaboo'
@@ -135,10 +135,10 @@ Plug 'scrooloose/nerdtree'
 Plug 'scuilion/markdown-drawer'
 Plug 'sentientmachine/Pretty-Vim-Python'
 Plug 'sickill/vim-pasta'
-Plug 'sirver/ultisnips'
 Plug 'srcery-colors/srcery-vim'
 Plug 'stephpy/vim-yaml'
 Plug 'thalesmello/tabfold'
+Plug 'tomasiser/vim-code-dark'
 Plug 'tomasr/molokai'
 Plug 'tpope/vim-characterize'
 Plug 'tpope/vim-commentary'
@@ -361,7 +361,7 @@ source $HOME/.config/nvim/config_split/limelight.vim
 source $HOME/.config/nvim/config_split/misc.vim
 source $HOME/.config/nvim/config_split/nerdtree.vim
 source $HOME/.config/nvim/config_split/startify.vim
-source $HOME/.config/nvim/config_split/ultisnips.vim
+" source $HOME/.config/nvim/config_split/ultisnips.vim
 " source $HOME/.config/nvim/config_split/vem-tabline.vim
 source $HOME/.config/nvim/config_split/vim-colors-xcode.vim
 source $HOME/.config/nvim/config_split/vim-cpp-enhanced-highlight.vim

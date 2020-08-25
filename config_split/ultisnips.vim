@@ -5,8 +5,8 @@ let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
-" To use python version 3.x: >	
-let g:UltiSnipsUsePythonVersion = 3
+" To use python version 3.x: >
+let g:UltiSnipsUsePythonVersion = 3.8.5
 " wo liegen die Snippets?
-let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
+let g:UltiSnipsSnippetDirectories=['$HOME/.vim/UltiSnips']
 " }}}
