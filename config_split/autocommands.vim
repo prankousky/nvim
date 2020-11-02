@@ -24,13 +24,13 @@ autocmd bufwritepost *.json :CocCommand prettier.formatFile
 autocmd  VimEnter * :call rainbow#load()
 
 " HTML ersetze Umlaute durch entsprechenden Code
-autocmd bufwritepost *.html :%s/Ü/\&Uuml;/g
-autocmd bufwritepost *.html :%s/Ä/\&Auml;/g
-autocmd bufwritepost *.html :%s/Ö/\&Ouml;/g
-autocmd bufwritepost *.html :%s/ß/\&szlig;/g
-autocmd bufwritepost *.html :%s/ä/\&auml;/g
-autocmd bufwritepost *.html :%s/ö/\&ouml;/g
-autocmd bufwritepost *.html :%s/ü/\&uuml;/g
+" autocmd bufwritepost *.html silent :%s/Ü/\&Uuml;/g
+" autocmd bufwritepost *.html silent :%s/Ä/\&Auml;/g
+" autocmd bufwritepost *.html silent :%s/Ö/\&Ouml;/g
+" autocmd bufwritepost *.html silent :%s/ß/\&szlig;/g
+" autocmd bufwritepost *.html silent :%s/ä/\&auml;/g
+" autocmd bufwritepost *.html silent :%s/ö/\&ouml;/g
+" autocmd bufwritepost *.html silent :%s/ü/\&uuml;/g
 
 " Platformio
 " autocmd BufRead platformio.ini NERDTreeToggle | vs src/main.cpp | wincmd l | vertical resize 30 | wincmd h | wincmd h | vertical resize 30 | wincmd l | set filetype=cpp
