@@ -371,7 +371,7 @@ source $HOME/.config/nvim/config_split/vim-which-key.vim
 source $HOME/.config/nvim/config_split/vim-closetag.vim
 source $HOME/.config/nvim/config_split/vim-easymotion.vim
 source $HOME/.config/nvim/config_split/vimhopping.vim
-source $HOME/.config/nvim/config_split/vimwiki.vim
+source $HOME/.config/nvim/config_split/vim-tpipeline.vim
 lua require'colorizer'.setup()
 " NUR für OSX aktivieren
 " source $HOME/.config/nvim/config_split/osx_only.vim
