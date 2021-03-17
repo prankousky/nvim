@@ -38,4 +38,4 @@ autocmd BufRead *.cpp set filetype=cpp
 
 
 " Markdown Table
-autocmd BufEnter *.md TableModeEnable
+" autocmd BufEnter *.md TableModeEnable

@@ -57,6 +57,7 @@ Plug 'Yilin-Yang/vim-markbar'
 Plug 'airblade/vim-gitgutter'
 Plug 'alvan/vim-closetag'
 Plug 'aonemd/kuroi.vim'
+Plug 'jacoborus/tender.vim'
 Plug 'arzg/vim-colors-xcode'
 Plug 'arzg/vim-corvine'
 Plug 'ayu-theme/ayu-vim'
@@ -143,6 +144,7 @@ Plug 'tomasr/molokai'
 Plug 'tpope/vim-characterize'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-dadbod'
+Plug 'nightsense/cosmic_latte'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-speeddating'
@@ -180,8 +182,9 @@ set t_ut=
 set termguicolors
 " set notermguicolors
 set background=dark
-colorscheme codedark
-" colorscheme molokai
+" colorscheme tender
+" colorscheme codedark
+colorscheme molokai
 " colorscheme rigel
 " colorscheme gotham
 " colorscheme ayu
@@ -201,12 +204,13 @@ colorscheme codedark
 "
 " verschiedenes Themes per Filetype
 " autocmd BufEnter * colorscheme molokai
-" autocmd BufEnter *.py colorscheme xcodewwdc
+" autocmd BufEnter *.py colorscheme tender
 " autocmd BufEnter *.yaml colorscheme srcery
 " autocmd BufEnter *.yml colorscheme srcery
 " für csv
 " autocmd BufNewFile,BufRead *.csv set filetype=csv_semicolon
-"
+autocmd BufNewFile,BufRead /home/ben/code/ben/nis_rechnungsscript/files/*.csv :CSVNewDelimiter |
+
 " KEINE Transparenz für vim
 " highlight Normal ctermbg=Black
 " highlight NonText ctermbg=Black
