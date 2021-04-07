@@ -1,3 +1,4 @@
+"
 " {{{ vim-ctrlspace
 let g:CtrlSpaceDefaultMappingKey = "<C-space> "
 " }}}

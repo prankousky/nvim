@@ -341,6 +341,7 @@ set encoding=utf-8
 " für vim-searchindex
 set shortmess-=S
 set number relativenumber
+
 " außerhalb von VIM veränderte Datei automatisch neu laden
 set autoread
 " }}}
@@ -391,4 +392,5 @@ set timeoutlen=1000 ttimeoutlen=0
 " Kommentare kursiv drucken
 " funktioniert wohl nicht mit jedem colorscheme
 " highlight Comment cterm=italic gui=italic
+let g:vimwiki_list = [{'path': '~/documents/vimwiki/wiki'}]
 " }}}
