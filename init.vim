@@ -121,7 +121,7 @@ Plug 'mileszs/ack.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neomake/neomake'
 Plug 'norcalli/nvim-colorizer.lua'
-Plug 'ntpeters/vim-better-whitespace'
+" Plug 'ntpeters/vim-better-whitespace'
 Plug 'numirias/semshi'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'osyo-manga/vim-hopping'
@@ -271,11 +271,20 @@ set wildignore+=.pyc,.swp
 set formatoptions+=j
 " }}}
 " diverse Einstellungen {{{
-" yggdroot / indent
+" yggdroot / indent {{{
+" Farbe durch Colorscheme bestimmen
+let g:indentLine_setColors = 0
+let g:indentLine_setConceal = 0
+" Farbe festlegen
 let g:indentLine_color_term = 239
 " yggdroot / indent
-let g:indentLine_char_list = ['|', '¦', '┆', '┊']
-"
+let g:indentLine_char_list = ['.', '|', '¦', '┆', '┊']
+" Level festlegen
+let g:indentLine_conceallevel = 1
+let g:indentLine_concealcursor = 'inc'
+" }}}
+set list
+set listchars=trail:.,extends:→,precedes:←
 set ts=4 sw=4 et
 set autoindent
 set smartindent
@@ -383,10 +392,6 @@ lua require'colorizer'.setup()
 " }}}
 " Testkram {{{
 autocmd FileType vim let b:vcm_tab_complete = 'vim'
-" Show arrow if line continues rightwards
-set listchars=extends:→
-" Show arrow if line continues leftwards
-set listchars+=precedes:←
 " sofort ESC annehmen ohne Verzögerung
 set timeoutlen=1000 ttimeoutlen=0
 " Kommentare kursiv drucken
