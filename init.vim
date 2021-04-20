@@ -118,6 +118,7 @@ Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'mhinz/vim-signify'
 Plug 'mhinz/vim-startify'
 Plug 'mileszs/ack.vim'
+Plug 'tbastos/vim-lua'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neomake/neomake'
 Plug 'norcalli/nvim-colorizer.lua'

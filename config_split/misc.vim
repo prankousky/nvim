@@ -90,3 +90,7 @@ vmap <leader>f :call sortfolds#SortFolds()<CR>
 "  vim-illuminate {{{
 let g:Illuminate_ftblacklist = ['nerdtree']
 "  }}}
+"  vim-lua {{{
+let g:lua_syntax_someoption = 1
+let g:lua_syntax_fancynotequal = 1
+"  }}}
