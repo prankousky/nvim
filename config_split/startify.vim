@@ -12,6 +12,7 @@
             \ { 't': '~/.vip/notes/todo' },
             \ { 'v': '~/.vimrc' },
             \ { 'x': '~/.exports' },
+            \ { 'w': '~/.config/awesome/rc.lua' },
             \ { 'z': '~/.zshrc' },
             \ ]
 " custom footer
