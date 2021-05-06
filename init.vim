@@ -19,7 +19,7 @@ call plug#begin('$HOME/.config/nvim/plugged')
 " Plug 'aserebryakov/filestyle'
 " Plug 'camspiers/animate.vim'
 " Plug 'camspiers/lens.vim'
-" Plug 'chrisbra/colorizer'
+Plug 'chrisbra/colorizer'
 " Plug 'dhruvasagar/vim-zoom'
 " Plug 'doums/coBra'
 " Plug 'flazz/vim-colorschemes'
@@ -47,7 +47,7 @@ Plug 'Galicarnax/vim-regex-syntax'
 Plug 'Glench/Vim-Jinja2-Syntax'
 Plug 'LandonSchropp/vim-stamp'
 Plug 'MattesGroeger/vim-bookmarks'
-Plug 'MikeDacre/tmux-zsh-vim-titles'
+" Plug 'MikeDacre/tmux-zsh-vim-titles'
 Plug 'Rigellute/rigel'
 Plug 'TaDaa/vimade'
 Plug 'Yggdroot/LeaderF'
@@ -66,7 +66,7 @@ Plug 'brianrodri/vim-sort-folds'
 Plug 'chase/vim-ansible-yaml'
 Plug 'chengzeyi/fzf-preview.vim'
 Plug 'chrisbra/csv.vim'
-Plug 'christoomey/vim-tmux-navigator'
+" Plug 'christoomey/vim-tmux-navigator'
 Plug 'coddingtonbear/neomake-platformio'
 Plug 'crusoexia/vim-monokai'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -185,11 +185,11 @@ set termguicolors
 set background=dark
 " colorscheme tender
 " colorscheme codedark
-colorscheme molokai
+" colorscheme molokai
 " colorscheme rigel
 " colorscheme gotham
-" colorscheme ayu
-" let ayucolor="dark"
+colorscheme ayu
+let ayucolor="dark"
 " colorscheme corvine
 " colorscheme gruvbox
 " colorscheme jummidark
@@ -238,7 +238,7 @@ set softtabstop=4
 " für vim-autoswap
 set title titlestring=
 " für vim-autoswap
-let g:autoswap_detect_tmux = 1
+" let g:autoswap_detect_tmux = 1
 "
 " Folding aktivieren
 set foldenable
@@ -323,7 +323,7 @@ set virtualedit=block
 " Backspace über Intendations, Line Breaks, etc. erlauben
 set backspace=indent,eol,start
 " CSS automatisch highlighten
-" autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 " YAML andere Fold Method
 " autocmd FileType yaml set foldmethod=indent
 " # splits seitlicht
@@ -362,7 +362,7 @@ source $HOME/.config/nvim/config_split/functions.vim
 source $HOME/.config/nvim/config_split/keybindings.vim
 source $HOME/.config/nvim/config_split/macros.vim
 source $HOME/.config/nvim/config_split/templates.vim
-source $HOME/.config/nvim/config_split/tmuxcursor.vim
+" source $HOME/.config/nvim/config_split/tmuxcursor.vim
 " Plugins
 " source $HOME/.config/nvim/config_split/multiplecursors.vim
 source $HOME/.config/nvim/config_split/airline_lightline.vim
