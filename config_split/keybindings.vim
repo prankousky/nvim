@@ -11,7 +11,7 @@ nnoremap 44 :call Nis_energieanlagen("", "")<left><left><left><left><left><left>
 nmap <leader>M <Plug>ToggleMarkbar
 nmap <leader>mA <Plug>OpenMarkbarPeekabooApostrophe
 
-" Mit ctrl+j/k zwischen Panes bewegen
+" Mit ctrl+h/j/k/l zwischen Panes bewegen
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
