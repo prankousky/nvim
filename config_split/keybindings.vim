@@ -176,13 +176,13 @@ inoremap <C-left> <Esc>:tabprevious<CR>
 inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>uO
 " zwischen Splits springen
 " Split nach unten
-nnoremap <A-down> <C-W><C-J>
+nnoremap <leader><down> <C-W><C-J>
 " Split nach oben
-nnoremap <A-up> <C-W><C-K>
+nnoremap <leader><up> <C-W><C-K>
 " Split nach rechts
-nnoremap <A-right> <C-W><C-L>
+nnoremap <leader><right> <C-W><C-L>
 " Split nach links
-nnoremap <A-left> <C-W><C-H>
+nnoremap <leader><left> <C-W><C-H>
 " Toggle filestyle (zeige/verstecke trailing spaces, tabs, etc.)
 nnoremap <leader>9 <Esc>:FileStyleToggle<CR>
     " Python {{{
