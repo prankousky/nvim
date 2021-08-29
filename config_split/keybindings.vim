@@ -1,6 +1,10 @@
 " Leader festlegen
 let mapleader =","
 
+" Shellcheck
+autocmd Filetype sh nnoremap <buffer> <F6> <ESC>:w<CR>:!clear;shellcheck %<CR>
+autocmd Filetype sh inoremap <buffer> <F6> <ESC>:w<CR>:!clear;shellcheck %<CR>
+
 " NIS Mapping {{{
 nnoremap 22 llct,
 nnoremap 00 0ct,
