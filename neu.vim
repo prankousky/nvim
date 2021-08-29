@@ -15,10 +15,16 @@ Plug 'dguo/blood-moon', {'rtp': 'applications/vim'}
 Plug 'folke/trouble.nvim'
 Plug 'nvim-lua/completion-nvim'
 Plug 'neovim/nvim-lspconfig'
-"  }}}
-"  Filetypes {{{
+" }}}
+" ---- Filetypes {{{
 Plug 'chrisbra/csv.vim'
-"  }}}
+" }}}
+" ---- Move {{{
+Plug 'unblevable/quick-scope'
+" }}}
+" ---- Visuelles {{{
+Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+" }}}
 
 call plug#end()
 " }}}
@@ -41,10 +47,11 @@ autocmd VimEnter *
 " 256 Farben; MUSS VOR colorscheme stehen
 set t_Co=256
 set t_ut=
+set termguicolors
 " Farben festlegen
 colorscheme blood-moon
 "  Dunkler Hintergrund
-set background=dark
+" set background=dark
 " indents minimal visualisieren
 set list lcs=tab:\|\
 " Ruler => zeige rechts unten `Zeile,Buchstabe`
@@ -155,6 +162,25 @@ set timeoutlen=1000 ttimeoutlen=0
 " -- completion-nvim {{{
 " Use completion-nvim in every buffer
 autocmd BufEnter * lua require'completion'.on_attach()
+" -- }}}
+" -- unblevable/quick-scope {{{
+" Trigger a highlight in the appropriate direction when pressing these keys:
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+" Farben anpassen
+augroup qs_colors
+  autocmd!
+  autocmd ColorScheme * highlight QuickScopePrimary guifg='#01bb3f' gui=underline ctermfg=155 cterm=underline
+  autocmd ColorScheme * highlight QuickScopeSecondary guifg='#ff0088' gui=underline ctermfg=81 cterm=underline
+augroup END
+" -- }}}
+" -- RRethy/vim-hexokinase {{{
+" Neovim default
+let g:Hexokinase_highlighters = [ 'backgroundfull', 'sign_column', 'virtual' ]
+" let g:Hexokinase_highlighters = [ 'sign_column' ]
+" Patterns to match for all filetypes
+" Can be a comma separated string or a list of strings
+" Default value:
+let g:Hexokinase_optInPatterns = 'full_hex,rgb,rgba,hsl,hsla,colour_names'
 " }}}
 " }}}
 
@@ -173,4 +199,4 @@ set modelines=1
 " }}}
 
 " -- GANZ UNTEN -- 
-highlight Normal ctermbg=black
+" highlight Normal ctermbg=black
