@@ -147,7 +147,7 @@ set title
 set timeoutlen=1000 ttimeoutlen=0
 " Kommentare kursiv drucken
 " funktioniert wohl nicht mit jedem colorscheme
-highlight Comment cterm=italic gui=italic
+" highlight Comment cterm=italic gui=italic
 "  }}}
 
 
@@ -170,5 +170,7 @@ set modelines=1
 " speichern, welche Folds auf/zu sind
 "autocmd BufWrite * mkview
 "autocmd BufRead * silent loadview
-
 " }}}
+
+" -- GANZ UNTEN -- 
+highlight Normal ctermbg=black
