@@ -36,6 +36,10 @@ Plug 'windwp/nvim-spectre'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 " ---- }}}
+" ---- Naviation und Co. {{{
+Plug 'francoiscabrol/ranger.vim'
+Plug 'rbgrouleff/bclose.vim'
+" ---- }}}
 call plug#end()
 " }}}
 " Automatisch fehlende Plugins installieren beim Start {{{
@@ -210,6 +214,12 @@ nnoremap <silent> <leader> :WhichKey<CR>
 " -- }}}
 " -- liuchengxu/vim-which-key {{{
 " nnoremap <silent> <leader> :WhichKey ','<CR>
+" -- }}}
+" -- Ranger {{{
+" ZUERST default bindings entfernen...
+let g:ranger_map_keys = 0
+" DAMIT das Mapping auch in :WhichKey angezeigt wird
+map <leader>f :Ranger<CR>
 " -- }}}
 " ---- }}}
 
