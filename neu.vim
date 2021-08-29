@@ -21,16 +21,19 @@ Plug 'chrisbra/csv.vim'
 " ---- }}}
 " ---- Move {{{
 Plug 'unblevable/quick-scope'
+Plug 'justinmk/vim-sneak'
 " ---- }}}
 " ---- Visuelles {{{
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+Plug 'yazgoo/yank-history'			" History anzeigen
 " ---- }}}
 " ---- Search & Replace {{{
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'windwp/nvim-spectre'
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 " ---- }}}
-
 call plug#end()
 " }}}
 " Automatisch fehlende Plugins installieren beim Start {{{
@@ -71,7 +74,7 @@ set tabstop=2
 set softtabstop=4
 " Lade VIMRC nach speichern neu
 " autocmd BufWritePost init.vim source $MYVIMRC
-autocmd BufWritePost neu.vim source neu.vim
+" autocmd BufWritePost neu.vim source neu.vim
 " letzte Zeile eines Paragraphen IMMER sichtbar
 set display+=lastline
 " immer X Zeilen über und unter dem Cursor anzeigen
@@ -195,6 +198,10 @@ nnoremap <leader>sw :lua require('spectre').open_visual({select_word=true})<CR>
 vnoremap <leader>s :lua require('spectre').open_visual()<CR>
 "  search in current file
 nnoremap <leader>sp viw:lua require('spectre').open_file_search()<cr>
+" -- }}}
+" -- yazgoo/yank-history {{{
+" nnoremap <leader>y :YankHistoryRgYank<CR>
+nnoremap <leader>y :YankHistoryRgPaste<CR>
 " -- }}}
 " ---- }}}
 
