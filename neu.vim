@@ -8,9 +8,8 @@ endif
 " }}}
 " Plugins festlegen {{{
 call plug#begin('$HOME/.config/nvim/neutest')
-" ---- LSP {{{
+" ---- LSP // Completion {{{
 Plug 'folke/lsp-colors.nvim'
-Plug 'kyazdani42/nvim-web-devicons'
 Plug 'dguo/blood-moon', {'rtp': 'applications/vim'}
 Plug 'folke/trouble.nvim'
 Plug 'nvim-lua/completion-nvim'
@@ -19,22 +18,34 @@ Plug 'neovim/nvim-lspconfig'
 " ---- Filetypes {{{
 Plug 'chrisbra/csv.vim'
 " ---- }}}
-" ---- Move {{{
+" ---- Move Around {{{
 Plug 'unblevable/quick-scope'
-Plug 'justinmk/vim-sneak'
+" Plug 'justinmk/vim-sneak'
+Plug 'ggandor/lightspeed.nvim'
 " ---- }}}
 " ---- Visuelles {{{
+" -- Misc
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 Plug 'yazgoo/yank-history'			" History anzeigen
 " Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 Plug 'folke/which-key.nvim'
+Plug 'kyazdani42/nvim-web-devicons' " lua
+Plug 'yamatsum/nvim-nonicons'
+Plug 'ryanoasis/vim-devicons' " vimscript
+Plug 'lukas-reineke/indent-blankline.nvim'
+" -- Status 
+Plug 'ojroques/nvim-hardline'
+Plug 'famiu/feline.nvim'
+Plug 'romgrk/barbar.nvim'
 " ---- }}}
-" ---- Search & Replace {{{
+" ---- Search // Replace // Comment {{{
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'windwp/nvim-spectre'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
 " ---- }}}
 " ---- Naviation und Co. {{{
 Plug 'francoiscabrol/ranger.vim'
@@ -69,7 +80,7 @@ colorscheme blood-moon
 "  Dunkler Hintergrund
 " set background=dark
 " indents minimal visualisieren
-set list lcs=tab:\|\
+" set list lcs=tab:\|\
 " Ruler => zeige rechts unten `Zeile,Buchstabe`
 set ruler
 " Regex Magic
@@ -220,6 +231,104 @@ nnoremap <silent> <leader> :WhichKey<CR>
 let g:ranger_map_keys = 0
 " DAMIT das Mapping auch in :WhichKey angezeigt wird
 map <leader>f :Ranger<CR>
+" -- }}}
+" -- ojroques/nvim-hardline {{{
+" Initialisieren
+" lua require('hardline').setup {}
+" Konfigurieren
+" -- }}}
+" -- Famiu/feline.nvim {{{
+" Initialisieren
+lua require('feline').setup {}
+" Konfigurieren
+" -- }}}
+" -- romgrk/barbar.nvim {{{
+" Move to previous/next Tab / Buffer
+nnoremap <silent> <A-,> :BufferPrevious<CR>
+nnoremap <silent> <A-.> :BufferNext<CR>
+" NOTE: If barbar's option dict isn't created yet, create it
+let bufferline = get(g:, 'bufferline', {})
+" New tabs are opened next to the currently selected tab.
+" Enable to insert them in buffer number order.
+let bufferline.add_in_buffer_number_order = v:false
+" Enable/disable animations
+let bufferline.animation = v:true
+" Enable/disable auto-hiding the tab bar when there is a single buffer
+let bufferline.auto_hide = v:true
+" Enable/disable current/total tabpages indicator (top right corner)
+let bufferline.tabpages = v:true
+" Enable/disable close button
+let bufferline.closable = v:true
+" Enables/disable clickable tabs
+"  - left-click: go to buffer
+"  - middle-click: delete buffer
+let bufferline.clickable = v:true
+" Excludes buffers from the tabline
+let bufferline.exclude_ft = ['javascript']
+let bufferline.exclude_name = ['package.json']
+" Enable/disable icons
+" if set to 'buffer_number', will show buffer number in the tabline
+" if set to 'numbers', will show buffer index in the tabline
+" if set to 'both', will show buffer index and icons in the tabline
+let bufferline.icons = v:true
+" Sets the icon's highlight group.
+" If false, will use nvim-web-devicons colors
+let bufferline.icon_custom_colors = v:false
+" Configure icons on the bufferline.
+let bufferline.icon_separator_active = '▎'
+let bufferline.icon_separator_inactive = '▎'
+let bufferline.icon_close_tab = ''
+let bufferline.icon_close_tab_modified = '●'
+let bufferline.icon_pinned = '車'
+" If true, new buffers will be inserted at the end of the list.
+" Default is to insert after current buffer.
+let bufferline.insert_at_end = v:false
+" Sets the maximum padding width with which to surround each tab.
+let bufferline.maximum_padding = 4
+" Sets the maximum buffer name length.
+let bufferline.maximum_length = 30
+" If set, the letters for each buffer in buffer-pick mode will be
+" assigned based on their name. Otherwise or in case all letters are
+" already assigned, the behavior is to assign letters in order of
+" usability (see order below)
+let bufferline.semantic_letters = v:true
+" New buffer letters are assigned in this order. This order is
+" optimal for the qwerty keyboard layout but might need adjustement
+" for other layouts.
+let bufferline.letters =
+  \ 'asdfjkl;ghnmxcvbziowerutyqpASDFJKLGHNMXCVBZIOWERUTYQP'
+" Sets the name of unnamed buffers. By default format is "[Buffer X]"
+" where X is the buffer number. But only a static string is accepted here.
+let bufferline.no_name_title = v:null
+" -- }}}
+" -- 'lukas-reineke/indent-blankline.nvim' {{{
+" TEST 1
+lua << EOF
+-- require("indent_blankline").setup {
+--    show_end_of_line = true,
+--     space_char_blankline = " ",
+-- }
+EOF
+" TEST 2
+" vim.opt.listchars = {
+"     space = "⋅",
+"     eol = "↴",
+" }
+lua << EOF
+require("indent_blankline").setup {
+    show_end_of_line = true,
+    show_current_context = true,
+    space_char_blankline = " ",
+    char_highlight_list = {
+        "IndentBlanklineIndent1",
+        "IndentBlanklineIndent2",
+        "IndentBlanklineIndent3",
+        "IndentBlanklineIndent4",
+        "IndentBlanklineIndent5",
+        "IndentBlanklineIndent6",
+    },
+}
+EOF
 " -- }}}
 " ---- }}}
 

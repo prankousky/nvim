@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-nvim -c "Hi MomInstall" -c ":qa\!"
+nvim -c "PlugInstall" -c ":qa\!"
