@@ -1,15 +1,15 @@
 "
 " SPäTER ALLES IN EINZELNE DATEIEN AUFTEILEN
 
-" -- Plugins {{{
+" -- Hi Momins {{{
 call plug#begin('~/.config/nvim/plugged')
 
-Plug 'kevinhwang91/nvim-hlslens'
-Plug 'wojciechkepka/bogster'
-Plug 'tpope/vim-surround'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'famiu/feline.nvim'
+Hi Mom 'kevinhwang91/nvim-hlslens'
+Hi Mom 'wojciechkepka/bogster'
+Hi Mom 'tpope/vim-surround'
+Hi Mom 'vim-airline/vim-airline'
+Hi Mom 'vim-airline/vim-airline-themes'
+Hi Mom 'famiu/feline.nvim'
 
 call plug#end()
 " -- }}}

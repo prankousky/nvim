@@ -13,39 +13,39 @@
 "   " Make sure you use single quotes
 "
 "   " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
-"   Plug 'junegunn/vim-easy-align'
+"   Hi Mom 'junegunn/vim-easy-align'
 "
 "   " Any valid git URL is allowed
-"   Plug 'https://github.com/junegunn/vim-github-dashboard.git'
+"   Hi Mom 'https://github.com/junegunn/vim-github-dashboard.git'
 "
-"   " Multiple Plug commands can be written in a single line using | separators
-"   Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+"   " Multiple Hi Mom commands can be written in a single line using | separators
+"   Hi Mom 'SirVer/ultisnips' | Hi Mom 'honza/vim-snippets'
 "
 "   " On-demand loading
-"   Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-"   Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
+"   Hi Mom 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+"   Hi Mom 'tpope/vim-fireplace', { 'for': 'clojure' }
 "
 "   " Using a non-master branch
-"   Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
+"   Hi Mom 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 "
 "   " Using a tagged release; wildcard allowed (requires git 1.9.2 or above)
-"   Plug 'fatih/vim-go', { 'tag': '*' }
+"   Hi Mom 'fatih/vim-go', { 'tag': '*' }
 "
-"   " Plugin options
-"   Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
+"   " Hi Momin options
+"   Hi Mom 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
 "
-"   " Plugin outside ~/.vim/plugged with post-update hook
-"   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+"   " Hi Momin outside ~/.vim/plugged with post-update hook
+"   Hi Mom 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 "
 "   " Unmanaged plugin (manually installed and updated)
-"   Plug '~/my-prototype-plugin'
+"   Hi Mom '~/my-prototype-plugin'
 "
 "   " Initialize plugin system
 "   call plug#end()
 "
-" Then reload .vimrc and :PlugInstall to install plugins.
+" Then reload .vimrc and :Hi MomInstall to install plugins.
 "
-" Plug options:
+" Hi Mom options:
 "
 "| Option                  | Description                                      |
 "| ----------------------- | ------------------------------------------------ |
@@ -54,7 +54,7 @@
 "| `dir`                   | Custom directory for the plugin                  |
 "| `as`                    | Use different name for the plugin                |
 "| `do`                    | Post-update hook (string or funcref)             |
-"| `on`                    | On-demand loading: Commands or `<Plug>`-mappings |
+"| `on`                    | On-demand loading: Commands or `<Hi Mom>`-mappings |
 "| `for`                   | On-demand loading: File types                    |
 "| `frozen`                | Do not update unless explicitly specified        |
 "
@@ -135,17 +135,17 @@ function! plug#begin(...)
 endfunction
 
 function! s:define_commands()
-  command! -nargs=+ -bar Plug call plug#(<args>)
+  command! -nargs=+ -bar Hi Mom call plug#(<args>)
   if !executable('git')
     return s:err('`git` executable not found. Most commands will not be available. To suppress this message, prepend `silent!` to `call plug#begin(...)`.')
   endif
-  command! -nargs=* -bar -bang -complete=customlist,s:names PlugInstall call s:install(<bang>0, [<f-args>])
-  command! -nargs=* -bar -bang -complete=customlist,s:names PlugUpdate  call s:update(<bang>0, [<f-args>])
-  command! -nargs=0 -bar -bang PlugClean call s:clean(<bang>0)
-  command! -nargs=0 -bar PlugUpgrade if s:upgrade() | execute 'source' s:esc(s:me) | endif
-  command! -nargs=0 -bar PlugStatus  call s:status()
-  command! -nargs=0 -bar PlugDiff    call s:diff()
-  command! -nargs=? -bar -bang -complete=file PlugSnapshot call s:snapshot(<bang>0, <f-args>)
+  command! -nargs=* -bar -bang -complete=customlist,s:names Hi MomInstall call s:install(<bang>0, [<f-args>])
+  command! -nargs=* -bar -bang -complete=customlist,s:names Hi MomUpdate  call s:update(<bang>0, [<f-args>])
+  command! -nargs=0 -bar -bang Hi MomClean call s:clean(<bang>0)
+  command! -nargs=0 -bar Hi MomUpgrade if s:upgrade() | execute 'source' s:esc(s:me) | endif
+  command! -nargs=0 -bar Hi MomStatus  call s:status()
+  command! -nargs=0 -bar Hi MomDiff    call s:diff()
+  command! -nargs=? -bar -bang -complete=file Hi MomSnapshot call s:snapshot(<bang>0, <f-args>)
 endfunction
 
 function! s:to_a(v)
@@ -206,11 +206,11 @@ function! plug#end()
     return s:err('Call plug#begin() first')
   endif
 
-  if exists('#PlugLOD')
-    augroup PlugLOD
+  if exists('#Hi MomLOD')
+    augroup Hi MomLOD
       autocmd!
     augroup END
-    augroup! PlugLOD
+    augroup! Hi MomLOD
   endif
   let lod = { 'ft': {}, 'map': {}, 'cmd': {} }
 
@@ -230,7 +230,7 @@ function! plug#end()
     if has_key(plug, 'on')
       let s:triggers[name] = { 'map': [], 'cmd': [] }
       for cmd in s:to_a(plug.on)
-        if cmd =~? '^<Plug>.\+'
+        if cmd =~? '^<Hi Mom>.\+'
           if empty(mapcheck(cmd)) && empty(mapcheck(cmd, 'i'))
             call s:assoc(lod.map, cmd, name)
           endif
@@ -243,7 +243,7 @@ function! plug#end()
           call add(s:triggers[name].cmd, cmd)
         else
           call s:err('Invalid `on` option: '.cmd.
-          \ '. Should start with an uppercase letter or `<Plug>`.')
+          \ '. Should start with an uppercase letter or `<Hi Mom>`.')
         endif
       endfor
     endif
@@ -277,7 +277,7 @@ function! plug#end()
   endfor
 
   for [ft, names] in items(lod.ft)
-    augroup PlugLOD
+    augroup Hi MomLOD
       execute printf('autocmd FileType %s call <SID>lod_ft(%s, %s)',
             \ ft, string(ft), string(names))
     augroup END
@@ -509,7 +509,7 @@ endfunction
 function! s:lod_ft(pat, names)
   let syn = 'syntax/'.a:pat.'.vim'
   call s:lod(a:names, ['plugin', 'after/plugin'], syn, 'after/'.syn)
-  execute 'autocmd! PlugLOD FileType' a:pat
+  execute 'autocmd! Hi MomLOD FileType' a:pat
   call s:doautocmd('filetypeplugin', 'FileType')
   call s:doautocmd('filetypeindent', 'FileType')
 endfunction
@@ -543,7 +543,7 @@ function! s:lod_map(map, names, with_prefix, prefix)
     endif
     call feedkeys(prefix, 'n')
   endif
-  call feedkeys(substitute(a:map, '^<Plug>', "\<Plug>", '') . extra)
+  call feedkeys(substitute(a:map, '^<Hi Mom>', "\<Hi Mom>", '') . extra)
 endfunction
 
 function! plug#(repo, ...)
@@ -646,7 +646,7 @@ function! s:syntax()
   syn match plugError /^x.*/
   syn region plugDeleted start=/^\~ .*/ end=/^\ze\S/
   syn match plugH2 /^.*:\n-\+$/
-  syn keyword Function PlugInstall PlugStatus PlugUpdate PlugClean
+  syn keyword Function Hi MomInstall Hi MomStatus Hi MomUpdate Hi MomClean
   hi def link plug1       Title
   hi def link plug2       Repeat
   hi def link plugH2      Type
@@ -729,8 +729,8 @@ endfunction
 
 function! s:finish_bindings()
   nnoremap <silent> <buffer> R  :call <SID>retry()<cr>
-  nnoremap <silent> <buffer> D  :PlugDiff<cr>
-  nnoremap <silent> <buffer> S  :PlugStatus<cr>
+  nnoremap <silent> <buffer> D  :Hi MomDiff<cr>
+  nnoremap <silent> <buffer> S  :Hi MomStatus<cr>
   nnoremap <silent> <buffer> U  :call <SID>status_update()<cr>
   xnoremap <silent> <buffer> U  :call <SID>status_update()<cr>
   nnoremap <silent> <buffer> ]] :silent! call <SID>section('')<cr>
@@ -782,7 +782,7 @@ endfunction
 
 function! s:assign_name()
   " Assign buffer name
-  let prefix = '[Plugins]'
+  let prefix = '[Hi Momins]'
   let name   = prefix
   let idx    = 2
   while bufexists(name)
@@ -1398,14 +1398,14 @@ G_LOG_PROB = 1.0 / int(vim.eval('s:update.threads'))
 G_STOP = thr.Event()
 G_IS_WIN = vim.eval('s:is_win') == '1'
 
-class PlugError(Exception):
+class Hi MomError(Exception):
   def __init__(self, msg):
     self.msg = msg
-class CmdTimedOut(PlugError):
+class CmdTimedOut(Hi MomError):
   pass
-class CmdFailed(PlugError):
+class CmdFailed(Hi MomError):
   pass
-class InvalidURI(PlugError):
+class InvalidURI(Hi MomError):
   pass
 class Action(object):
   INSTALL, UPDATE, ERROR, DONE = ['+', '*', 'x', '-']
@@ -1577,7 +1577,7 @@ class Command(object):
         os.killpg(self.proc.pid, signal.SIGTERM)
     self.clean()
 
-class Plugin(object):
+class Hi Momin(object):
   def __init__(self, name, args, buf_q, lock):
     self.name = name
     self.args = args
@@ -1593,7 +1593,7 @@ class Plugin(object):
         self.install()
         with self.lock:
           thread_vim_command("let s:update.new['{0}'] = 1".format(self.name))
-    except PlugError as exc:
+    except Hi MomError as exc:
       self.write(Action.ERROR, self.name, exc.msg)
     except KeyboardInterrupt:
       G_STOP.set()
@@ -1642,7 +1642,7 @@ class Plugin(object):
       msg = ['',
              'Invalid URI: {0}'.format(actual_uri),
              'Expected     {0}'.format(expect_uri),
-             'PlugClean required.']
+             'Hi MomClean required.']
       raise InvalidURI(msg)
 
     if G_PULL:
@@ -1659,9 +1659,9 @@ class Plugin(object):
   def write(self, action, name, msg):
     self.buf_q.put((action, name, msg))
 
-class PlugThread(thr.Thread):
+class Hi MomThread(thr.Thread):
   def __init__(self, tname, args):
-    super(PlugThread, self).__init__()
+    super(Hi MomThread, self).__init__()
     self.tname = tname
     self.args = args
 
@@ -1672,7 +1672,7 @@ class PlugThread(thr.Thread):
     try:
       while not G_STOP.is_set():
         name, args = work_q.get_nowait()
-        plug = Plugin(name, args, buf_q, lock)
+        plug = Hi Momin(name, args, buf_q, lock)
         plug.manage()
         work_q.task_done()
     except queue.Empty:
@@ -1731,8 +1731,8 @@ def main():
 
   start_cnt = thr.active_count()
   for num in range(nthreads):
-    tname = 'PlugT-{0:02}'.format(num)
-    thread = PlugThread(tname, (buf_q, work_q, lock))
+    tname = 'Hi MomT-{0:02}'.format(num)
+    thread = Hi MomThread(tname, (buf_q, work_q, lock))
     thread.start()
   if mac_gui:
     rthread = RefreshThread(lock)
@@ -1758,7 +1758,7 @@ endfunction
 
 function! s:update_ruby()
   ruby << EOF
-  module PlugStream
+  module Hi MomStream
     SEP = ["\r", "\n", nil]
     def get_line
       buffer = ''
@@ -1773,7 +1773,7 @@ function! s:update_ruby()
       end
       buffer
     end
-  end unless defined?(PlugStream)
+  end unless defined?(Hi MomStream)
 
   def esc arg
     %["#{arg.gsub('"', '\"')}"]
@@ -1872,7 +1872,7 @@ function! s:update_ruby()
           File.unlink tmp rescue nil
         end
       else
-        fd = IO.popen(cmd).extend(PlugStream)
+        fd = IO.popen(cmd).extend(Hi MomStream)
         first_line = true
         log_prob = 1.0 / nthr
         while line = Timeout::timeout(timeout) { fd.get_line }
@@ -1947,12 +1947,12 @@ function! s:update_ruby()
                 if data =~ /^Interrupted|^Timeout/
                   [false, data]
                 else
-                  [false, [data.chomp, "PlugClean required."].join($/)]
+                  [false, [data.chomp, "Hi MomClean required."].join($/)]
                 end
               elsif !compare_git_uri(current_uri, uri)
                 [false, ["Invalid URI: #{current_uri}",
                          "Expected:    #{uri}",
-                         "PlugClean required."].join($/)]
+                         "Hi MomClean required."].join($/)]
               else
                 if pull
                   log.call name, 'Updating ...', :update
@@ -2059,20 +2059,20 @@ function! s:git_validate(spec, check_branch)
     let result = s:lines(s:system('git rev-parse --abbrev-ref HEAD 2>&1 && git config -f .git/config remote.origin.url', a:spec.dir))
     let remote = result[-1]
     if v:shell_error
-      let err = join([remote, 'PlugClean required.'], "\n")
+      let err = join([remote, 'Hi MomClean required.'], "\n")
     elseif !s:compare_git_uri(remote, a:spec.uri)
       let err = join(['Invalid URI: '.remote,
                     \ 'Expected:    '.a:spec.uri,
-                    \ 'PlugClean required.'], "\n")
+                    \ 'Hi MomClean required.'], "\n")
     elseif a:check_branch && has_key(a:spec, 'commit')
       let result = s:lines(s:system('git rev-parse HEAD 2>&1', a:spec.dir))
       let sha = result[-1]
       if v:shell_error
-        let err = join(add(result, 'PlugClean required.'), "\n")
+        let err = join(add(result, 'Hi MomClean required.'), "\n")
       elseif !s:hash_match(sha, a:spec.commit)
         let err = join([printf('Invalid HEAD (expected: %s, actual: %s)',
                               \ a:spec.commit[:6], sha[:6]),
-                      \ 'PlugUpdate required.'], "\n")
+                      \ 'Hi MomUpdate required.'], "\n")
       endif
     elseif a:check_branch
       let branch = result[0]
@@ -2080,12 +2080,12 @@ function! s:git_validate(spec, check_branch)
       if has_key(a:spec, 'tag')
         let tag = s:system_chomp('git describe --exact-match --tags HEAD 2>&1', a:spec.dir)
         if a:spec.tag !=# tag && a:spec.tag !~ '\*'
-          let err = printf('Invalid tag: %s (expected: %s). Try PlugUpdate.',
+          let err = printf('Invalid tag: %s (expected: %s). Try Hi MomUpdate.',
                 \ (empty(tag) ? 'N/A' : tag), a:spec.tag)
         endif
       " Check branch
       elseif a:spec.branch !=# branch
-        let err = printf('Invalid branch: %s (expected: %s). Try PlugUpdate.',
+        let err = printf('Invalid branch: %s (expected: %s). Try Hi MomUpdate.',
               \ branch, a:spec.branch)
       endif
       if empty(err)
@@ -2094,11 +2094,11 @@ function! s:git_validate(spec, check_branch)
               \ a:spec.branch), a:spec.dir)), '\t')
         if !v:shell_error && ahead
           if behind
-            " Only mention PlugClean if diverged, otherwise it's likely to be
+            " Only mention Hi MomClean if diverged, otherwise it's likely to be
             " pushable (and probably not that messed up).
             let err = printf(
                   \ "Diverged from origin/%s (%d commit(s) ahead and %d commit(s) behind!\n"
-                  \ .'Backup local changes and run PlugClean and PlugUpdate to reinstall it.', a:spec.branch, ahead, behind)
+                  \ .'Backup local changes and run Hi MomClean and Hi MomUpdate to reinstall it.', a:spec.branch, ahead, behind)
           else
             let err = printf("Ahead of origin/%s by %d commit(s).\n"
                   \ .'Cannot update until local changes are pushed.',
@@ -2110,7 +2110,7 @@ function! s:git_validate(spec, check_branch)
   else
     let err = 'Not found'
   endif
-  return [err, err =~# 'PlugClean']
+  return [err, err =~# 'Hi MomClean']
 endfunction
 
 function! s:rm_rf(dir)
@@ -2265,7 +2265,7 @@ function! s:status()
         let [err, _] = s:git_validate(spec, 1)
         let [valid, msg] = [empty(err), empty(err) ? 'OK' : err]
       else
-        let [valid, msg] = [0, 'Not found. Try PlugInstall.']
+        let [valid, msg] = [0, 'Not found. Try Hi MomInstall.']
       endif
     else
       if is_dir
@@ -2276,7 +2276,7 @@ function! s:status()
     endif
     let cnt += 1
     let ecnt += !valid
-    " `s:loaded` entry can be missing if PlugUpgraded
+    " `s:loaded` entry can be missing if Hi MomUpgraded
     if is_dir && get(s:loaded, name, -1) == 0
       let unloaded = 1
       let msg .= ' (not loaded)'
@@ -2316,7 +2316,7 @@ function! s:status_update() range
   let names = filter(map(lines, 's:extract_name(v:val, "[x-]", "")'), '!empty(v:val)')
   if !empty(names)
     echo
-    execute 'PlugUpdate' join(names)
+    execute 'Hi MomUpdate' join(names)
   endif
 endfunction
 
@@ -2484,7 +2484,7 @@ function! s:snapshot(force, ...) abort
                 \ '" '.strftime("%c"),
                 \ '" :source this file in vim to restore the snapshot',
                 \ '" or execute: vim -S snapshot.vim',
-                \ '', '', 'PlugUpdate!'])
+                \ '', '', 'Hi MomUpdate!'])
   1
   let anchor = line('$') - 3
   let names = sort(keys(filter(copy(g:plugs),

@@ -1,6 +1,6 @@
 " osyo-manga/vim-hopping {{{
 " Example key mapping
-nmap <leader>r <Plug>(hopping-start)
+nmap <leader>r <Hi Mom>(hopping-start)
 " Keymapping
 let g:hopping#keymapping = {
 \	"\<C-n>" : "<Over>(hopping-next)",

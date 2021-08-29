@@ -2,7 +2,7 @@
 " -- 2021-05
 
 " ---- Konfiguration aufteilen {{{
-" ------- Plugins 
+" ------- Hi Momins 
 source plugged_plugins.vim
 source airline.vim
 source easyalign.vim

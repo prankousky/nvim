@@ -15,16 +15,21 @@ Plug 'dguo/blood-moon', {'rtp': 'applications/vim'}
 Plug 'folke/trouble.nvim'
 Plug 'nvim-lua/completion-nvim'
 Plug 'neovim/nvim-lspconfig'
-" }}}
+" ---- }}}
 " ---- Filetypes {{{
 Plug 'chrisbra/csv.vim'
-" }}}
+" ---- }}}
 " ---- Move {{{
 Plug 'unblevable/quick-scope'
-" }}}
+" ---- }}}
 " ---- Visuelles {{{
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
-" }}}
+" ---- }}}
+" ---- Search & Replace {{{
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-lua/popup.nvim'
+Plug 'windwp/nvim-spectre'
+" ---- }}}
 
 call plug#end()
 " }}}
@@ -40,10 +45,12 @@ autocmd VimEnter *
 " vim -es -u vimrc -i NONE -c "PlugInstall" -c "qa"
 " neovim
 " nvim -es -u init.vim -i NONE -c "PlugInstall" -c "qa"
-" }}}
-" }}}
+" ---- }}}
+" ---- }}}
 
 " -- Basics {{{
+" Leader festlegen
+let mapleader = ","
 " 256 Farben; MUSS VOR colorscheme stehen
 set t_Co=256
 set t_ut=
@@ -158,7 +165,7 @@ set timeoutlen=1000 ttimeoutlen=0
 "  }}}
 
 
-" -- Plugin  Einstellungen {{{
+" ---- Plugin  Einstellungen {{{
 " -- completion-nvim {{{
 " Use completion-nvim in every buffer
 autocmd BufEnter * lua require'completion'.on_attach()
@@ -181,8 +188,15 @@ let g:Hexokinase_highlighters = [ 'backgroundfull', 'sign_column', 'virtual' ]
 " Can be a comma separated string or a list of strings
 " Default value:
 let g:Hexokinase_optInPatterns = 'full_hex,rgb,rgba,hsl,hsla,colour_names'
-" }}}
-" }}}
+" -- windwp/nvim-spectre {{{
+nnoremap <leader>S :lua require('spectre').open()<CR>
+"search current word
+nnoremap <leader>sw :lua require('spectre').open_visual({select_word=true})<CR>
+vnoremap <leader>s :lua require('spectre').open_visual()<CR>
+"  search in current file
+nnoremap <leader>sp viw:lua require('spectre').open_file_search()<cr>
+" -- }}}
+" ---- }}}
 
 " -- Keybindings {{{
 " mit Pfeiltesten zwischen Panes switchen

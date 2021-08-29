@@ -37,7 +37,7 @@ else
 endif
 
 " Symbol renaming.
-nmap <leader>rn <Plug>(coc-rename)
+nmap <leader>rn <Hi Mom>(coc-rename)
 inoremap <silent><expr> <c-space> coc#refresh()
 
 " Prettier
@@ -53,10 +53,10 @@ else
 endif
 
 " GoTo code navigation.
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
+nmap <silent> gd <Hi Mom>(coc-definition)
+nmap <silent> gy <Hi Mom>(coc-type-definition)
+nmap <silent> gi <Hi Mom>(coc-implementation)
+nmap <silent> gr <Hi Mom>(coc-references)
 
 
 " Use K to show documentation in preview window.

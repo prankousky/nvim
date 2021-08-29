@@ -12,8 +12,8 @@ nnoremap 44 :call Nis_energieanlagen("", "")<left><left><left><left><left><left>
 " }}}
 "
 " zeige / verstecke MarkBar
-nmap <leader>M <Plug>ToggleMarkbar
-nmap <leader>mA <Plug>OpenMarkbarPeekabooApostrophe
+nmap <leader>M <Hi Mom>ToggleMarkbar
+nmap <leader>mA <Hi Mom>OpenMarkbarPeekabooApostrophe
 
 " Mit ctrl+h/j/k/l zwischen Panes bewegen
 nnoremap <C-J> <C-W><C-J>
@@ -216,7 +216,7 @@ nnoremap <C-b> :make upload<CR>:!tmux splitw -h<CR>:!tmux send-keys 'minicom 960
 nnoremap <leader>v <cmd>CHADopen<cr>
 " remap gf to create File if it does not already exist
 map gf :e <cfile><CR>
-" sortiere Plugins in $MYVIMRC
+" sortiere Hi Momins in $MYVIMRC
 nmap <silent>ss :/plug#begin/+1,/plug#end/-1sort<CR>
 " VISUAL SELECTION in `` bringen
 vnoremap <silent><leader>c S`
