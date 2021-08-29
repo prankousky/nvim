@@ -26,6 +26,8 @@ Plug 'justinmk/vim-sneak'
 " ---- Visuelles {{{
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 Plug 'yazgoo/yank-history'			" History anzeigen
+" Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
+Plug 'folke/which-key.nvim'
 " ---- }}}
 " ---- Search & Replace {{{
 Plug 'nvim-lua/plenary.nvim'
@@ -73,8 +75,8 @@ set tabstop=2
 " Tab beim Editieren _auch_ 4 Leerzeichen
 set softtabstop=4
 " Lade VIMRC nach speichern neu
-" autocmd BufWritePost init.vim source $MYVIMRC
-" autocmd BufWritePost neu.vim source neu.vim
+autocmd BufWritePost init.vim source $MYVIMRC
+autocmd BufWritePost neu.vim source neu.vim
 " letzte Zeile eines Paragraphen IMMER sichtbar
 set display+=lastline
 " immer X Zeilen über und unter dem Cursor anzeigen
@@ -203,11 +205,19 @@ nnoremap <leader>sp viw:lua require('spectre').open_file_search()<cr>
 " nnoremap <leader>y :YankHistoryRgYank<CR>
 nnoremap <leader>y :YankHistoryRgPaste<CR>
 " -- }}}
+" -- folke/which-key.nvim {{{
+nnoremap <silent> <leader> :WhichKey<CR>
+" -- }}}
+" -- liuchengxu/vim-which-key {{{
+" nnoremap <silent> <leader> :WhichKey ','<CR>
+" -- }}}
 " ---- }}}
 
-" -- Keybindings {{{
+" ---- Keybindings {{{
 " mit Pfeiltesten zwischen Panes switchen
-" }}}
+" Öffne Plugin in Github
+nnoremap <leader>g yi' :!firefox --new-tab https://github.com/<C-R>"<CR><CR>
+" ---- }}}
 " -- Folding {{{
 set foldenable
 set foldmethod=marker
@@ -217,7 +227,7 @@ set modelines=1
 " speichern, welche Folds auf/zu sind
 "autocmd BufWrite * mkview
 "autocmd BufRead * silent loadview
-" }}}
+" -- }}}
 
 " -- GANZ UNTEN -- 
 " highlight Normal ctermbg=black

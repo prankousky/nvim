@@ -1190,7 +1190,7 @@ function! s:job_exit_cb(self, data) abort
 endfunction
 
 function! s:job_cb(fn, job, ch, data)
-  if !s:plug_window_exists() " plug window closed
+  if !s:plug_window_exists() Plug window closed
     return s:job_abort()
   endif
   call call(a:fn, [a:job, a:data])
