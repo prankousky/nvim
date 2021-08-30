@@ -20,10 +20,12 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 " ---- Filetypes {{{
 Plug 'chrisbra/csv.vim'
 Plug 'freitass/todo.txt-vim'
+Plug 'vimwiki/vimwiki'
 " ---- }}}
 " ---- Move Around {{{
 Plug 'unblevable/quick-scope'
 Plug 'thalesmello/tabfold'
+Plug 'terryma/vim-expand-region'
 " Plug 'justinmk/vim-sneak'
 Plug 'ggandor/lightspeed.nvim'
 Plug 'karb94/neoscroll.nvim'
@@ -31,7 +33,7 @@ Plug 'karb94/neoscroll.nvim'
 " ---- Visuelles {{{
 " -- Misc
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
-Plug 'yazgoo/yank-history'			" History anzeigen
+Plug 'yazgoo/yank-history' " History anzeigen
 " Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 Plug 'folke/which-key.nvim'
 Plug 'kyazdani42/nvim-web-devicons' " lua
@@ -42,8 +44,10 @@ Plug 'itchyny/vim-cursorword' " unterstreiche fokussiertes Wort
 Plug 'TaDaa/vimade'
 Plug 'machakann/vim-highlightedyank'
 " -- Status // Dashboard
-Plug 'ojroques/nvim-hardline'
-Plug 'famiu/feline.nvim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+" Plug 'ojroques/nvim-hardline'
+" Plug 'famiu/feline.nvim'
 Plug 'romgrk/barbar.nvim'
 Plug 'mhinz/vim-startify'
 " ---- }}}
@@ -240,7 +244,7 @@ map <leader>f :Ranger<CR>
 " -- }}}
 " -- Famiu/feline.nvim {{{
 " Initialisieren
-lua require('feline').setup {}
+" lua require('feline').setup {}
 " Konfigurieren
 " -- }}}
 " -- romgrk/barbar.nvim {{{
@@ -376,3 +380,9 @@ set timeoutlen=1000 ttimeoutlen=0
 " -- GANZ UNTEN -- 
 " highlight Normal ctermbg=black
 source $HOME/.config/nvim/config_split/startify.vim
+source $HOME/.config/nvim/config_split/coc.vim
+source $HOME/.config/nvim/config_split/airline_lightline.vim
+source $HOME/.config/nvim/config_split/autocommands.vim
+source $HOME/.config/nvim/config_split/keybindings.vim
+source $HOME/.config/nvim/config_split/backups.vim
+source $HOME/.config/nvim/config_split/fzf.vim
