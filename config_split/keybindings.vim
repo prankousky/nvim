@@ -1,5 +1,7 @@
 " Leader festlegen
 " let mapleader =","
+" Toggle EOL (etc) Symbole
+nnoremap <leader>i :set invlist<CR>
 
 " Shellcheck
 autocmd Filetype sh nnoremap <buffer> <F6> <ESC>:w<CR>:!clear;shellcheck %<CR>

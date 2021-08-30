@@ -7,63 +7,66 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
 endif
 " }}}
 " Plugins festlegen {{{
-call plug#begin('$HOME/.config/nvim/neutest')
+call plug#begin('$HOME/.config/nvim/meine_plugs')
 " ---- LSP // Completion {{{
-Plug 'folke/lsp-colors.nvim'
 Plug 'dguo/blood-moon', {'rtp': 'applications/vim'}
+Plug 'folke/lsp-colors.nvim'
 Plug 'folke/trouble.nvim'
-Plug 'nvim-lua/completion-nvim'
-Plug 'neovim/nvim-lspconfig'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-lua/completion-nvim'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+Plug 'jiangmiao/auto-pairs'
 " ---- }}}
 " ---- Filetypes {{{
 Plug 'chrisbra/csv.vim'
 Plug 'freitass/todo.txt-vim'
 Plug 'vimwiki/vimwiki'
 " ---- }}}
-" ---- Useful {{{
-" ---- }}}
 " ---- Move Around {{{
-Plug 'unblevable/quick-scope'
-Plug 'thalesmello/tabfold'
-Plug 'terryma/vim-expand-region'
 " Plug 'justinmk/vim-sneak'
 Plug 'ggandor/lightspeed.nvim'
 Plug 'karb94/neoscroll.nvim'
+Plug 'terryma/vim-expand-region'
+Plug 'thalesmello/tabfold'
+Plug 'unblevable/quick-scope'
 " ---- }}}
 " ---- Visuelles {{{
 " -- Misc
-Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
-Plug 'yazgoo/yank-history' " History anzeigen
 " Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
-Plug 'folke/which-key.nvim'
-Plug 'kyazdani42/nvim-web-devicons' " lua
-Plug 'yamatsum/nvim-nonicons'
-Plug 'ryanoasis/vim-devicons' " vimscript
-Plug 'lukas-reineke/indent-blankline.nvim'
-Plug 'itchyny/vim-cursorword' " unterstreiche fokussiertes Wort
+Plug 'Yggdroot/hiPairs' " highlighte umrandende Symbole
+" Plug 'Yggdroot/indentLine'
+Plug 'andymass/vim-matchup' " ähnlich wie hiPairs
 Plug 'TaDaa/vimade'
+Plug 'folke/which-key.nvim'
+Plug 'itchyny/vim-cursorword' " unterstreiche fokussiertes Wort
+Plug 'kyazdani42/nvim-web-devicons' " lua
+Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'machakann/vim-highlightedyank'
+Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+Plug 'ryanoasis/vim-devicons' " vimscript
+Plug 'yamatsum/nvim-nonicons'
+Plug 'yazgoo/yank-history' " History anzeigen
 " -- Status // Dashboard
+" Plug 'famiu/feline.nvim'
+" Plug 'ojroques/nvim-hardline'
+Plug 'mhinz/vim-startify'
+Plug 'romgrk/barbar.nvim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-" Plug 'ojroques/nvim-hardline'
-" Plug 'famiu/feline.nvim'
-Plug 'romgrk/barbar.nvim'
-Plug 'mhinz/vim-startify'
 " ---- }}}
 " ---- Search // Replace // Comment // Bookmark {{{
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-lua/popup.nvim'
-Plug 'windwp/nvim-spectre'
-Plug 'chengzeyi/fzf-preview.vim'
-Plug 'junegunn/fzf.vim'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-surround'
 Plug 'LandonSchropp/vim-stamp' " Siw
 Plug 'MattesGroeger/vim-bookmarks'
+Plug 'chengzeyi/fzf-preview.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-lua/popup.nvim'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-speeddating'
+Plug 'windwp/nvim-spectre'
 " ---- }}}
 " ---- Naviation und Co. {{{
 Plug 'francoiscabrol/ranger.vim'
@@ -98,11 +101,8 @@ set t_ut=
 set termguicolors
 " Farben festlegen
 colorscheme blood-moon
-"  Dunkler Hintergrund
-" set background=dark
-" indents minimal visualisieren
-" set list lcs=tab:\|\
-set listchars=tab:▸\ ,eol:¬
+" set cursorcolumn
+" set cursorline
 " Merke Position im Dokument
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 " Vimwiki Path festlegen
@@ -112,9 +112,9 @@ set ruler
 " Regex Magic
 set magic
 " Tab ist 2 Leerzeichen
-set tabstop=2
-set shiftwidth=2
-set expandtab
+set shiftwidth=4
+set tabstop=4
+" set expandtab " MUSS aus für indentZeug
 " Tab beim Editieren _auch_ 4 Leerzeichen
 set softtabstop=4
 " Lade VIMRC nach speichern neu
@@ -123,14 +123,14 @@ autocmd BufWritePost neu.vim source neu.vim
 " letzte Zeile eines Paragraphen IMMER sichtbar
 set display+=lastline
 " immer X Zeilen über und unter dem Cursor anzeigen
-set scrolloff=6
+set scrolloff=10
 " Statusbar: immer anzeigen
 set laststatus=2
 " Tab Completion als Menü anzeigen
 set wildmenu
 " Dialog, falls geänderte Datei geschlossen wird
 set confirm
-"  }}}
+" }}}
 " -- Filetypes {{{
 " Bestimmte Dateien vom Öffnen ausschließen
 set wildignore+=.pyc,.swp
@@ -259,100 +259,125 @@ map <leader>f :Ranger<CR>
 " lua require('feline').setup {}
 " Konfigurieren
 " -- }}}
-" -- romgrk/barbar.nvim {{{
-" Move to previous/next Tab / Buffer
-nnoremap <silent> <A-,> :BufferPrevious<CR>
-nnoremap <silent> <A-.> :BufferNext<CR>
-" NOTE: If barbar's option dict isn't created yet, create it
-let bufferline = get(g:, 'bufferline', {})
-" New tabs are opened next to the currently selected tab.
-" Enable to insert them in buffer number order.
-let bufferline.add_in_buffer_number_order = v:false
-" Enable/disable animations
-let bufferline.animation = v:true
-" Enable/disable auto-hiding the tab bar when there is a single buffer
-let bufferline.auto_hide = v:true
-" Enable/disable current/total tabpages indicator (top right corner)
-let bufferline.tabpages = v:true
-" Enable/disable close button
-let bufferline.closable = v:true
-" Enables/disable clickable tabs
-"  - left-click: go to buffer
-"  - middle-click: delete buffer
-let bufferline.clickable = v:true
-" Excludes buffers from the tabline
-let bufferline.exclude_ft = ['javascript']
-let bufferline.exclude_name = ['package.json']
-" Enable/disable icons
-" if set to 'buffer_number', will show buffer number in the tabline
-" if set to 'numbers', will show buffer index in the tabline
-" if set to 'both', will show buffer index and icons in the tabline
-let bufferline.icons = v:true
-" Sets the icon's highlight group.
-" If false, will use nvim-web-devicons colors
-let bufferline.icon_custom_colors = v:false
-" Configure icons on the bufferline.
-let bufferline.icon_separator_active = '▎'
-let bufferline.icon_separator_inactive = '▎'
-let bufferline.icon_close_tab = ''
-let bufferline.icon_close_tab_modified = '●'
-let bufferline.icon_pinned = '車'
-" If true, new buffers will be inserted at the end of the list.
-" Default is to insert after current buffer.
-let bufferline.insert_at_end = v:false
-" Sets the maximum padding width with which to surround each tab.
-let bufferline.maximum_padding = 4
-" Sets the maximum buffer name length.
-let bufferline.maximum_length = 30
-" If set, the letters for each buffer in buffer-pick mode will be
-" assigned based on their name. Otherwise or in case all letters are
-" already assigned, the behavior is to assign letters in order of
-" usability (see order below)
-let bufferline.semantic_letters = v:true
-" New buffer letters are assigned in this order. This order is
-" optimal for the qwerty keyboard layout but might need adjustement
-" for other layouts.
-let bufferline.letters =
-  \ 'asdfjkl;ghnmxcvbziowerutyqpASDFJKLGHNMXCVBZIOWERUTYQP'
-" Sets the name of unnamed buffers. By default format is "[Buffer X]"
-" where X is the buffer number. But only a static string is accepted here.
-let bufferline.no_name_title = v:null
+" " -- romgrk/barbar.nvim {{{
+" " Move to previous/next Tab / Buffer
+" nnoremap <silent> <A-,> :BufferPrevious<CR>
+" nnoremap <silent> <A-.> :BufferNext<CR>
+" " NOTE: If barbar's option dict isn't created yet, create it
+" let bufferline = get(g:, 'bufferline', {})
+" " New tabs are opened next to the currently selected tab.
+" " Enable to insert them in buffer number order.
+" let bufferline.add_in_buffer_number_order = v:false
+" " Enable/disable animations
+" let bufferline.animation = v:true
+" " Enable/disable auto-hiding the tab bar when there is a single buffer
+" let bufferline.auto_hide = v:true
+" " Enable/disable current/total tabpages indicator (top right corner)
+" let bufferline.tabpages = v:true
+" " Enable/disable close button
+" let bufferline.closable = v:true
+" " Enables/disable clickable tabs
+" "  - left-click: go to buffer
+" "  - middle-click: delete buffer
+" let bufferline.clickable = v:true
+" " Excludes buffers from the tabline
+" let bufferline.exclude_ft = ['javascript']
+" let bufferline.exclude_name = ['package.json']
+" " Enable/disable icons
+" " if set to 'buffer_number', will show buffer number in the tabline
+" " if set to 'numbers', will show buffer index in the tabline
+" " if set to 'both', will show buffer index and icons in the tabline
+" let bufferline.icons = v:true
+" " Sets the icon's highlight group.
+" " If false, will use nvim-web-devicons colors
+" let bufferline.icon_custom_colors = v:false
+" " Configure icons on the bufferline.
+" let bufferline.icon_separator_active = '▎'
+" let bufferline.icon_separator_inactive = '▎'
+" let bufferline.icon_close_tab = ''
+" let bufferline.icon_close_tab_modified = '●'
+" let bufferline.icon_pinned = '車'
+" " If true, new buffers will be inserted at the end of the list.
+" " Default is to insert after current buffer.
+" let bufferline.insert_at_end = v:false
+" " Sets the maximum padding width with which to surround each tab.
+" let bufferline.maximum_padding = 4
+" " Sets the maximum buffer name length.
+" let bufferline.maximum_length = 30
+" " If set, the letters for each buffer in buffer-pick mode will be
+" " assigned based on their name. Otherwise or in case all letters are
+" " already assigned, the behavior is to assign letters in order of
+" " usability (see order below)
+" let bufferline.semantic_letters = v:true
+" " New buffer letters are assigned in this order. This order is
+" " optimal for the qwerty keyboard layout but might need adjustement
+" " for other layouts.
+" let bufferline.letters =
+"   \ 'asdfjkl;ghnmxcvbziowerutyqpASDFJKLGHNMXCVBZIOWERUTYQP'
+" " Sets the name of unnamed buffers. By default format is "[Buffer X]"
+" " where X is the buffer number. But only a static string is accepted here.
+" let bufferline.no_name_title = v:null
+" " -- }}}
+" -- 'Yggdroot/indentLine' {{{
+" Auto Enable
+let g:indentLine_enabled = 0
+let g:indentLine_setColors = 1
+" Farbe festlegen
+let g:indentLine_color_term = 239
+" Anzeige
+let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+let g:indentLine_concealcursor = 'inc'
+let g:indentLine_conceallevel = 2
 " -- }}}
 " -- 'lukas-reineke/indent-blankline.nvim' {{{
-
+"lua << EOF
+"vim.opt.termguicolors = true,
+"vim.cmd [[highlight IndentBlanklineIndent1 guifg=#E06C75 blend=nocombine]]
+"vim.cmd [[highlight IndentBlanklineIndent2 guifg=#E5C07B blend=nocombine]]
+"vim.cmd [[highlight IndentBlanklineIndent3 guifg=#98C379 blend=nocombine]]
+"vim.cmd [[highlight IndentBlanklineIndent4 guifg=#56B6C2 blend=nocombine]]
+"vim.cmd [[highlight IndentBlanklineIndent5 guifg=#61AFEF blend=nocombine]]
+"vim.cmd [[highlight IndentBlanklineIndent6 guifg=#C678DD blend=nocombine]]
+"vim.opt.listchars = {
+"    space = " ",
+"    -- eol = "↴"
+"}
+"require("indent_blankline").setup {
+"    eol = "↴",
+"    char = "|",
+"    show_end_of_line = false,
+"    show_current_context = true,
+"    space_char_blankline = " ",
+"    -- space_char_blankline = "⋅",
+"    char_highlight_list = {
+"       "IndentBlanklineIndent1",
+"       "IndentBlanklineIndent2",
+"       "IndentBlanklineIndent3",
+"       "IndentBlanklineIndent4",
+"       "IndentBlanklineIndent5",
+"       "IndentBlanklineIndent6",
+"    },
+"    -- show_trailing_blankline_indent = true
+"    show_trailing_blankline_indent = false,
+"}
+"EOF
 lua << EOF
-vim.opt.termguicolors = true,
+vim.opt.termguicolors = true
 vim.cmd [[highlight IndentBlanklineIndent1 guifg=#E06C75 blend=nocombine]]
 vim.cmd [[highlight IndentBlanklineIndent2 guifg=#E5C07B blend=nocombine]]
 vim.cmd [[highlight IndentBlanklineIndent3 guifg=#98C379 blend=nocombine]]
 vim.cmd [[highlight IndentBlanklineIndent4 guifg=#56B6C2 blend=nocombine]]
 vim.cmd [[highlight IndentBlanklineIndent5 guifg=#61AFEF blend=nocombine]]
 vim.cmd [[highlight IndentBlanklineIndent6 guifg=#C678DD blend=nocombine]]
-vim.opt.listchars = {
-    space = "⋅",
-    eol = "¬"
-}
-EOF
-lua << EOF
+
 require("indent_blankline").setup {
-    eol = "↴",
-    show_end_of_line = true,
-    show_current_context = true,
-    space_char_blankline = "⋅",
-    char_highlight_list = {
-        "IndentBlanklineIndent1",
-        "IndentBlanklineIndent2",
-        "IndentBlanklineIndent3",
-        "IndentBlanklineIndent4",
-        "IndentBlanklineIndent5",
-        "IndentBlanklineIndent6",
-    },
-    show_trailing_blankline_indent = false,
+    char = "|",
+    buftype_exclude = {"terminal"}
 }
 EOF
-" let g:indentblankLine_char_list = ['|', '¦', '┆', '┊']
-" let g:indentLine_color_term = 239
-" -- }}}
+" let g:indent_blankline_char_list = ['|', '¦', '┆', '┊']
+" let g:indent_blankLine_color_term = 120
+"" -- }}}
 " -- 'karb94/neoscroll.nvim' {{{
 lua require('neoscroll').setup()
 " -- }}}
@@ -363,6 +388,32 @@ let g:bookmark_sign = '♥'
 let g:bookmark_highlight_lines = 1
 " -- }}}
 " ---- }}}
+" -- 'jiangmiao/auto-pairs' {{{
+let g:AutoPairsFlyMode = 1
+let g:AutoPairsShortcutBackInsert = '<M-b>'
+" -- }}}
+" " -- 'Yggdroot/hiPairs' {{{
+" let g:hiPairs_enable_matchParen = 1
+" let g:hiPairs_hl_matchPair = { 'term'    : 'underline,bold',
+"                \                  'cterm'   : 'bold',
+"                \                  'ctermfg' : '0',
+"                \                  'ctermbg' : '180',
+"                \                  'gui'     : 'bold',
+"                \                  'guifg'   : 'Black',
+"                \                  'guibg'   : '#D3B17D' }
+
+" let g:hiPairs_hl_unmatchPair = { 'term'    : 'underline,italic',
+"                 \                    'cterm'   : 'italic',
+"                 \                    'ctermfg' : '15',
+"                 \                    'ctermbg' : '12',
+"                 \                    'gui'     : 'italic',
+"                 \                    'guifg'   : 'White',
+"                 \                    'guibg'   : 'Red' }
+" " -- }}}
+" -- 'andymass/vim-matchup' {{{
+let g:matchup_matchparen_deferred = 1
+let g:matchup_matchparen_hi_surround_always = 1
+" -- }}}
 " -- }}}
 " ---- Keybindings {{{
 " mit Pfeiltesten zwischen Panes switchen
@@ -378,6 +429,9 @@ set modelines=1
 " speichern, welche Folds auf/zu sind
 "autocmd BufWrite * mkview
 "autocmd BufRead * silent loadview
+" AUTOMATISCH Systemclipboard benutzen
+noremap <leader>y "+y
+noremap <leader>p "+p
 " -- }}}
 " --  Aufgeteilte Konfiguration {{{
 source $HOME/.config/nvim/config_split/airline_lightline.vim
@@ -397,9 +451,12 @@ set timeoutlen=1000 ttimeoutlen=0
 " funktioniert wohl nicht mit jedem colorscheme
 " highlight Comment cterm=italic gui=italic
 "  }}}
-
 " -- GANZ UNTEN -- 
-" highlight Normal ctermbg=black
+highlight Normal ctermbg=black
+" indents minimal visualisieren
+set invlist
+" set listchars=eol:↴,tab:▸
+" set listchars=eol:↓,tab:\ \ ┊,trail:●,extends:…,precedes:…,space:·
 " Cursor Shapes
 if empty($TMUX)
   let &t_SI = "\<Esc>]50;CursorShape=1\x7"
