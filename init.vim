@@ -1,298 +1,135 @@
-" - Benjamin Singelmann 2020-06
-" Sources: {{{
-" --> https://vimrcfu.com
-" --> https://vimawesome.com
-" --> https://vim.fandom.com
-" --> https://vi.stackexchange.com
-" --> https://vim.works
-" --> https://vimcolors.com
-" --> http://colorswat.ch/vim (ColorThemes)
-" --> https://vimgifs.com
+" -- Plugins {{{
+" Automatisch vim-plug installieren, sofern es nicht installiert ist {{{
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 " }}}
-" Plugins hier laden {{{
-call plug#begin('$HOME/.config/nvim/plugged')
-Plug 'AlphaMycelium/pathfinder.vim'
-Plug 'Shougo/deoplete.nvim'
-Plug 'Shougo/neosnippet.vim'
-Plug 'ajh17/VimCompletesMe'
-Plug 'andymass/vim-matchup'
-Plug 'aserebryakov/filestyle'
-Plug 'camspiers/animate.vim'
-Plug 'camspiers/lens.vim'
-Plug 'chrisbra/colorizer'
-Plug 'dhruvasagar/vim-zoom'
-Plug 'doums/coBra'
-Plug 'flazz/vim-colorschemes'
-Plug 'garbas/vim-snipmate'
-Plug 'hardcoreplayers/dashboard-nvim'
-Plug 'hardcoreplayers/spaceline.vim'
-Plug 'itchyny/vim-cursorword'
-Plug 'kien/rainbow_parentheses.vim'
-Plug 'lervag/vimtex'
-Plug 'liuchengxu/vim-which-key'
-Plug 'luisdavim/pretty-folds'
-Plug 'luochen1990/rainbow'
-Plug 'mtth/scratch.vim'
-Plug 'nathanaelkane/vim-indent-guides'
-Plug 'pacha/vem-tabline'
-Plug 'rrethy/vim-hexokinase'
-Plug 'sirver/ultisnips'
-Plug 'terryma/vim-multiple-cursors'
-Plug 'w0rp/ale'
-Plug 'zenbro/mirror.vim'
-Plug 'zirrostig/vim-schlepp'
-Plug 'zxqfl/tabnine-vim' " Sowas wie COC
-Plug 'ConradIrwin/vim-bracketed-paste'
-Plug 'Galicarnax/vim-regex-syntax'
-Plug 'Glench/Vim-Jinja2-Syntax'
-Plug 'LandonSchropp/vim-stamp'
-Plug 'MattesGroeger/vim-bookmarks'
-Plug 'MikeDacre/tmux-zsh-vim-titles'
-Plug 'Rigellute/rigel'
-Plug 'TaDaa/vimade'
-Plug 'Yggdroot/LeaderF'
-Plug 'Yggdroot/hiPairs'
-Plug 'Yggdroot/indentLine'
-Plug 'Yilin-Yang/vim-markbar'
-Plug 'airblade/vim-gitgutter'
-Plug 'alvan/vim-closetag'
-Plug 'aonemd/kuroi.vim'
-Plug 'jacoborus/tender.vim'
-Plug 'arzg/vim-colors-xcode'
-Plug 'arzg/vim-corvine'
-Plug 'ayu-theme/ayu-vim'
-Plug 'bling/vim-bufferline'
-Plug 'brianrodri/vim-sort-folds'
-Plug 'chase/vim-ansible-yaml'
-Plug 'chengzeyi/fzf-preview.vim'
-Plug 'chrisbra/csv.vim'
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'coddingtonbear/neomake-platformio'
-Plug 'crusoexia/vim-monokai'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'danilamihailov/beacon.nvim'
-Plug 'davidhalter/jedi-vim'
-Plug 'dhruvasagar/vim-table-mode'
-Plug 'easymotion/vim-easymotion'
-Plug 'ekalinin/Dockerfile.vim'
-Plug 'elzr/vim-json'
-Plug 'embear/vim-localvimrc'
-Plug 'farmergreg/vim-lastplace'
-Plug 'felixhummel/setcolors.vim'
-Plug 'francoiscabrol/ranger.vim'
-Plug 'frazrepo/vim-rainbow'
-Plug 'fszymanski/fzf-gitignore', {'do': ':UpdateRemotePlugins'}
-Plug 'gcmt/wildfire.vim'
-Plug 'gioele/vim-autoswap'
-Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
-Plug 'google/vim-searchindex'
-Plug 'honza/vim-snippets'
-Plug 'https://github.com/adelarsq/vim-matchit'
-Plug 'https://github.com/morhetz/gruvbox'
-Plug 'itchyny/lightline.vim'
-Plug 'jcherven/jummidark.vim'
-Plug 'jeffkreeftmeijer/vim-numbertoggle'
-Plug 'jiangmiao/auto-pairs'
-Plug 'jistr/vim-nerdtree-tabs'
-Plug 'joshdick/onedark.vim'
-Plug 'juleswang/css.vim'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
-Plug 'junegunn/vim-easy-align'
-Plug 'junegunn/vim-peekaboo'
-Plug 'kovetskiy/sxhkd-vim'
-Plug 'kristijanhusak/vim-dadbod-ui'
-Plug 'kshenoy/vim-signature'
-Plug 'lfv89/vim-interestingwords'
-Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] } " nur bei Bedarf laden
-Plug 'machakann/vim-highlightedyank'
-Plug 'markonm/traces.vim'
-Plug 'mattn/emmet-vim'
-Plug 'mbbill/undotree'
-Plug 'mboughaba/i3config.vim'
-Plug 'mechatroner/rainbow_csv'
-Plug 'metakirby5/codi.vim'
-Plug 'mg979/vim-visual-multi', {'branch': 'master'}
-Plug 'mhinz/vim-signify'
-Plug 'mhinz/vim-startify'
-Plug 'mileszs/ack.vim'
-Plug 'tbastos/vim-lua'
+" Plugins festlegen {{{
+call plug#begin('$HOME/.config/nvim/neutest')
+" ---- LSP // Completion {{{
+Plug 'folke/lsp-colors.nvim'
+Plug 'dguo/blood-moon', {'rtp': 'applications/vim'}
+Plug 'folke/trouble.nvim'
+Plug 'nvim-lua/completion-nvim'
+Plug 'neovim/nvim-lspconfig'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'neomake/neomake'
-Plug 'norcalli/nvim-colorizer.lua'
-Plug 'ntpeters/vim-better-whitespace'
-Plug 'numirias/semshi'
-Plug 'octol/vim-cpp-enhanced-highlight'
-Plug 'osyo-manga/vim-hopping'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-Plug 'raimon49/requirements.txt.vim'
-Plug 'rbgrouleff/bclose.vim'
-Plug 'rhysd/clever-f.vim'
-Plug 'roxma/vim-paste-easy'
-Plug 'rrethy/vim-illuminate'
-Plug 'ryanoasis/vim-devicons'
-Plug 'scrooloose/nerdtree'
-Plug 'scuilion/markdown-drawer'
-Plug 'sentientmachine/Pretty-Vim-Python'
-Plug 'sickill/vim-pasta'
-Plug 'srcery-colors/srcery-vim'
-Plug 'stephpy/vim-yaml'
-Plug 'thalesmello/tabfold'
-Plug 'tomasiser/vim-code-dark'
-Plug 'tomasr/molokai'
-Plug 'tpope/vim-characterize'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-dadbod'
-Plug 'nightsense/cosmic_latte'
-Plug 'tpope/vim-eunuch'
-Plug 'tpope/vim-sleuth'
-Plug 'tpope/vim-speeddating'
-Plug 'tpope/vim-surround'
+" ---- }}}
+" ---- Filetypes {{{
+Plug 'chrisbra/csv.vim'
+Plug 'freitass/todo.txt-vim'
+" ---- }}}
+" ---- Move Around {{{
 Plug 'unblevable/quick-scope'
-Plug 'urbainvaes/vim-remembrall'
-Plug 'valloric/MatchTagAlways'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'vim-ctrlspace/vim-ctrlspace'
-Plug 'vim-pandoc/vim-pandoc'
-Plug 'vim-pandoc/vim-pandoc-syntax'
-Plug 'vim-scripts/Arduino-syntax-file'
-Plug 'vim-scripts/vim-auto-save'
-Plug 'vim-syntastic/syntastic'
-Plug 'vimwiki/vimwiki'
-Plug 'voldikss/vim-floaterm'
-Plug 'wellle/targets.vim'
-Plug 'whatyouhide/vim-gotham'
-Plug 'wsdjeg/notifications.vim'
-Plug 'xolox/vim-misc'
-Plug 'xolox/vim-notes'
-Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
-Plug 'ymatz/vim-latex-completion'
+" Plug 'justinmk/vim-sneak'
+Plug 'ggandor/lightspeed.nvim'
+Plug 'karb94/neoscroll.nvim'
+" ---- }}}
+" ---- Visuelles {{{
+" -- Misc
+Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+Plug 'yazgoo/yank-history'			" History anzeigen
+" Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
+Plug 'folke/which-key.nvim'
+Plug 'kyazdani42/nvim-web-devicons' " lua
+Plug 'yamatsum/nvim-nonicons'
+Plug 'ryanoasis/vim-devicons' " vimscript
+Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'itchyny/vim-cursorword' " unterstreiche fokussiertes Wort
+Plug 'TaDaa/vimade'
+Plug 'machakann/vim-highlightedyank'
+" -- Status // Dashboard
+Plug 'ojroques/nvim-hardline'
+Plug 'famiu/feline.nvim'
+Plug 'romgrk/barbar.nvim'
+Plug 'mhinz/vim-startify'
+" ---- }}}
+" ---- Search // Replace // Comment // Bookmark {{{
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-lua/popup.nvim'
+Plug 'windwp/nvim-spectre'
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+Plug 'MattesGroeger/vim-bookmarks'
+" ---- }}}
+" ---- Naviation und Co. {{{
+Plug 'francoiscabrol/ranger.vim'
+Plug 'rbgrouleff/bclose.vim'
+" ---- }}}
 call plug#end()
 " }}}
-" Theming {{{
-" muss für srcery VOR colorscheme stehen {{{
-" let g:srcery_italic = 1
+" Automatisch fehlende Plugins installieren beim Start {{{
+autocmd VimEnter *
+  \  if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+  \|   PlugInstall --sync | q
+  \| endif
 " }}}
-" 256 Farben festlegen; muss VOR colorscheme stehen
+" Wissenswertes {{{
+" -- installiere via CLI
+"  # vim
+" vim -es -u vimrc -i NONE -c "PlugInstall" -c "qa"
+" neovim
+" nvim -es -u init.vim -i NONE -c "PlugInstall" -c "qa"
+" ---- }}}
+" ---- }}}
+
+" -- Basics {{{
+" Leader festlegen
+let mapleader = ","
+" Localleader festlegen
+let localleader = "<space>"
+" 256 Farben; MUSS VOR colorscheme stehen
 set t_Co=256
 set t_ut=
-" colorscheme einstellen
 set termguicolors
-" set notermguicolors
-set background=dark
-" colorscheme tender
-" colorscheme codedark
-" colorscheme molokai
-" colorscheme rigel
-" colorscheme gotham
-colorscheme ayu
-let ayucolor="dark"
-" colorscheme corvine
-" colorscheme gruvbox
-" colorscheme jummidark
-" colorscheme kuroi
-" colorscheme xcodewwdc
-" colorscheme monokai "
-" colorscheme onedark
-" colorscheme srcery
-" colorscheme wal
-"
+" Farben festlegen
+colorscheme blood-moon
+"  Dunkler Hintergrund
+" set background=dark
 " indents minimal visualisieren
 " set list lcs=tab:\|\
-"
-" verschiedenes Themes per Filetype
-" autocmd BufEnter * colorscheme molokai
-" autocmd BufEnter *.py colorscheme tender
-" autocmd BufEnter *.yaml colorscheme srcery
-" autocmd BufEnter *.yml colorscheme srcery
-" für csv
-" autocmd BufNewFile,BufRead *.csv set filetype=csv_semicolon
-autocmd BufNewFile,BufRead /home/ben/code/ben/nis_rechnungsscript/files/*.csv :CSVNewDelimiter |
-
-" KEINE Transparenz für vim
-" highlight Normal ctermbg=Black
-" highlight NonText ctermbg=Black
-" das gilt auch für kitty terminal
-" let &t_ut=''
-" Ruler ==> zeigt rechts unten `Zeile,Buchstabe` an
+" Ruler => zeige rechts unten `Zeile,Buchstabe`
 set ruler
-" Cursorline ==> highlightet die aktuelle Zeile
-" set cursorline
-" Cursorline ==> deaktiveren
-set cursorline&
-" hi CursorLine ctermfg=162
-" magic ==> bei regex muss man so nicht sämtliche Sonderzeichen escapen
+" Regex Magic
 set magic
-" Balken bei 80 Zeichen (Wert auf 80 stellen, is klar)
-" set textwidth=0
-" set colorcolumn=+1
-" Farbe des Balkens
-" hi ColorColumn guibg=#406ef7 ctermbg=3
-" Tab ist 8 Leerzeichen
-set tabstop=4
-" Tab beim Editieren auch 4 Leerzeichen
+" Tab ist 2 Leerzeichen
+set tabstop=2
+" Tab beim Editieren _auch_ 4 Leerzeichen
 set softtabstop=4
-" für vim-autoswap
-set title titlestring=
-" für vim-autoswap
-" let g:autoswap_detect_tmux = 1
-"
-" Folding aktivieren
-set foldenable
-" fold auch nach Einzug erkennen
-set foldmethod=marker
-" beim Öffnen zugeklappt
-set foldlevel=20
-set modelines=1
-" speichern, welche Folds auf/zu sind
-" autocmd BufWrite * mkview
-" autocmd BufRead * silent loadview
-"
-" letzte Zeile eines Paragraphen immer sichtbar
+" Lade VIMRC nach speichern neu
+autocmd BufWritePost init.vim source $MYVIMRC
+autocmd BufWritePost neu.vim source neu.vim
+" letzte Zeile eines Paragraphen IMMER sichtbar
 set display+=lastline
 " immer X Zeilen über und unter dem Cursor anzeigen
-set scrolloff=12
-" immer X Zeichen neben dem Cursor anzeigen (aktuell deaktiviert)
-" set sidescrollof=5
-"
-" immer Statusbar anzeigen
+set scrolloff=6
+" Statusbar: immer anzeigen
 set laststatus=2
-" Tab Completion Optionen als Menü anzeigen
+" Tab Completion als Menü anzeigen
 set wildmenu
-" Name des Fensters ist immer Name der aktuellen Datei
-set title
-" Dialog anzeigen, wenn geänderte Datei ohne zu speichern geschlossen wird
+" Dialog, falls geänderte Datei geschlossen wird
 set confirm
-" bestimmte Dateien vom Öffnen ausschließen (in diesem Fall .pyc und .swp)
+"  }}}
+" -- Filetypes {{{
+" Bestimmte Dateien vom Öffnen ausschließen
 set wildignore+=.pyc,.swp
-" beim Joinen von Zeilen ggf. Kommentarsymbole löschen
+" JOIN: ggf. Kommentarsymbole löschen
 set formatoptions+=j
-" }}}
-" diverse Einstellungen {{{
-" yggdroot / indent {{{
-" Farbe durch Colorscheme bestimmen
-let g:indentLine_setColors = 0
-let g:indentLine_setConceal = 0
-" Farbe festlegen
-let g:indentLine_color_term = 239
-" yggdroot / indent
-let g:indentLine_char_list = ['.', '|', '¦', '┆', '┊']
-" Level festlegen
-let g:indentLine_conceallevel = 1
-let g:indentLine_concealcursor = 'inc'
-" }}}
+" MISC
 set list
 set listchars=trail:.,extends:→,precedes:←
-set ts=4 sw=4 et
+" Indentation
 set autoindent
 set smartindent
-" auf Dateiart basierender Einzug
 filetype indent on
+" -- nach Datei
 autocmd FileType yaml setl indentkeys-=<:>
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+" --
 " Autocompletion bei :-Kommandos
 set wildmode=longest,list,full
 " automatische Kommentare in neuer Zeile deaktivieren
@@ -310,8 +147,6 @@ set smartcase
 set incsearch
 " Suche NICHT case-sensitiv (für mich persönlich einfacher)
 set ignorecase
-" nur redrawen, wenn es Sinn macht (besser für Ressourcen)
-set lazyredraw
 " Suche fängt oben wieder an, wenn unten zuende
 set wrapscan
 " Zeilenumbruch verbieten
@@ -334,15 +169,11 @@ set splitbelow
 autocmd VimResized * wincmd =
 " VIM muss nicht mit VI kompatibel sein
 set nocompatible
-" für ctrlspace
-set hidden
-" Sprache
+" Sprache für Dictionaries festlegen
 set spelllang=de,en_us
 " Maus aktivieren
 set mouse=a
-" erkenne Filetype
-filetype plugin on
-" Syntax highlighten
+" Syntax aktivieren
 syntax on
 syntax enable
 " Encoding Format
@@ -351,52 +182,192 @@ set encoding=utf-8
 " für vim-searchindex
 set shortmess-=S
 set number relativenumber
-
 " außerhalb von VIM veränderte Datei automatisch neu laden
 set autoread
 " }}}
-" SPLIT CONFIG {{{
-source $HOME/.config/nvim/config_split/autocommands.vim
-source $HOME/.config/nvim/config_split/backups.vim
-source $HOME/.config/nvim/config_split/functions.vim
-source $HOME/.config/nvim/config_split/keybindings.vim
-source $HOME/.config/nvim/config_split/macros.vim
-source $HOME/.config/nvim/config_split/templates.vim
-" source $HOME/.config/nvim/config_split/tmuxcursor.vim
-Plugins
-" source $HOME/.config/nvim/config_split/multiplecursors.vim
-source $HOME/.config/nvim/config_split/airline_lightline.vim
-source $HOME/.config/nvim/config_split/coc.vim
-source $HOME/.config/nvim/config_split/dadbod.vim
-source $HOME/.config/nvim/config_split/dashboard-vim.vim
-source $HOME/.config/nvim/config_split/fzf.vim
-source $HOME/.config/nvim/config_split/firenvim.vim
-source $HOME/.config/nvim/config_split/indentguides.vim
-source $HOME/.config/nvim/config_split/limelight.vim
-source $HOME/.config/nvim/config_split/misc.vim
-source $HOME/.config/nvim/config_split/nerdtree.vim
-source $HOME/.config/nvim/config_split/startify.vim
-" source $HOME/.config/nvim/config_split/ultisnips.vim
-" source $HOME/.config/nvim/config_split/vem-tabline.vim
-source $HOME/.config/nvim/config_split/vim-colors-xcode.vim
-source $HOME/.config/nvim/config_split/vim-cpp-enhanced-highlight.vim
-source $HOME/.config/nvim/config_split/vim-rainbow.vim
-source $HOME/.config/nvim/config_split/vim-floatterm.vim
-source $HOME/.config/nvim/config_split/vim-which-key.vim
-source $HOME/.config/nvim/config_split/vim-closetag.vim
-source $HOME/.config/nvim/config_split/vim-easymotion.vim
-source $HOME/.config/nvim/config_split/vimhopping.vim
-source $HOME/.config/nvim/config_split/vim-tpipeline.vim
-lua require'colorizer'.setup()
-" NUR für OSX aktivieren
-" source $HOME/.config/nvim/config_split/osx_only.vim
-" }}}
-" Testkram {{{
-autocmd FileType vim let b:vcm_tab_complete = 'vim'
+" -- NOCH TESTEN {{{
+" Name des Fensters ist immer Name der aktuellen Datei
+set title
 " sofort ESC annehmen ohne Verzögerung
 set timeoutlen=1000 ttimeoutlen=0
 " Kommentare kursiv drucken
 " funktioniert wohl nicht mit jedem colorscheme
 " highlight Comment cterm=italic gui=italic
-let g:vimwiki_list = [{'path': '~/documents/vimwiki/wiki'}]
-" }}}
+"  }}}
+
+
+" ---- Plugin  Einstellungen {{{
+" -- completion-nvim {{{
+" Use completion-nvim in every buffer
+autocmd BufEnter * lua require'completion'.on_attach()
+" -- }}}
+" -- unblevable/quick-scope {{{
+" Trigger a highlight in the appropriate direction when pressing these keys:
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+" Farben anpassen
+augroup qs_colors
+  autocmd!
+  autocmd ColorScheme * highlight QuickScopePrimary guifg='#01bb3f' gui=underline ctermfg=155 cterm=underline
+  autocmd ColorScheme * highlight QuickScopeSecondary guifg='#ff0088' gui=underline ctermfg=81 cterm=underline
+augroup END
+" -- }}}
+" -- RRethy/vim-hexokinase {{{
+" Neovim default
+let g:Hexokinase_highlighters = [ 'backgroundfull', 'sign_column', 'virtual' ]
+" let g:Hexokinase_highlighters = [ 'sign_column' ]
+" Patterns to match for all filetypes
+" Can be a comma separated string or a list of strings
+" Default value:
+let g:Hexokinase_optInPatterns = 'full_hex,rgb,rgba,hsl,hsla,colour_names'
+" -- windwp/nvim-spectre {{{
+nnoremap <leader>S :lua require('spectre').open()<CR>
+"search current word
+nnoremap <leader>sw :lua require('spectre').open_visual({select_word=true})<CR>
+vnoremap <leader>s :lua require('spectre').open_visual()<CR>
+"  search in current file
+nnoremap <leader>sp viw:lua require('spectre').open_file_search()<cr>
+" -- }}}
+" -- yazgoo/yank-history {{{
+" nnoremap <leader>y :YankHistoryRgYank<CR>
+nnoremap <leader>y :YankHistoryRgPaste<CR>
+" -- }}}
+" -- folke/which-key.nvim {{{
+nnoremap <silent> <leader> :WhichKey<CR>
+" -- }}}
+" -- liuchengxu/vim-which-key {{{
+" nnoremap <silent> <leader> :WhichKey ','<CR>
+" -- }}}
+" -- Ranger {{{
+" ZUERST default bindings entfernen...
+let g:ranger_map_keys = 0
+" DAMIT das Mapping auch in :WhichKey angezeigt wird
+map <leader>f :Ranger<CR>
+" -- }}}
+" -- ojroques/nvim-hardline {{{
+" Initialisieren
+" lua require('hardline').setup {}
+" Konfigurieren
+" -- }}}
+" -- Famiu/feline.nvim {{{
+" Initialisieren
+lua require('feline').setup {}
+" Konfigurieren
+" -- }}}
+" -- romgrk/barbar.nvim {{{
+" Move to previous/next Tab / Buffer
+nnoremap <silent> <A-,> :BufferPrevious<CR>
+nnoremap <silent> <A-.> :BufferNext<CR>
+" NOTE: If barbar's option dict isn't created yet, create it
+let bufferline = get(g:, 'bufferline', {})
+" New tabs are opened next to the currently selected tab.
+" Enable to insert them in buffer number order.
+let bufferline.add_in_buffer_number_order = v:false
+" Enable/disable animations
+let bufferline.animation = v:true
+" Enable/disable auto-hiding the tab bar when there is a single buffer
+let bufferline.auto_hide = v:true
+" Enable/disable current/total tabpages indicator (top right corner)
+let bufferline.tabpages = v:true
+" Enable/disable close button
+let bufferline.closable = v:true
+" Enables/disable clickable tabs
+"  - left-click: go to buffer
+"  - middle-click: delete buffer
+let bufferline.clickable = v:true
+" Excludes buffers from the tabline
+let bufferline.exclude_ft = ['javascript']
+let bufferline.exclude_name = ['package.json']
+" Enable/disable icons
+" if set to 'buffer_number', will show buffer number in the tabline
+" if set to 'numbers', will show buffer index in the tabline
+" if set to 'both', will show buffer index and icons in the tabline
+let bufferline.icons = v:true
+" Sets the icon's highlight group.
+" If false, will use nvim-web-devicons colors
+let bufferline.icon_custom_colors = v:false
+" Configure icons on the bufferline.
+let bufferline.icon_separator_active = '▎'
+let bufferline.icon_separator_inactive = '▎'
+let bufferline.icon_close_tab = ''
+let bufferline.icon_close_tab_modified = '●'
+let bufferline.icon_pinned = '車'
+" If true, new buffers will be inserted at the end of the list.
+" Default is to insert after current buffer.
+let bufferline.insert_at_end = v:false
+" Sets the maximum padding width with which to surround each tab.
+let bufferline.maximum_padding = 4
+" Sets the maximum buffer name length.
+let bufferline.maximum_length = 30
+" If set, the letters for each buffer in buffer-pick mode will be
+" assigned based on their name. Otherwise or in case all letters are
+" already assigned, the behavior is to assign letters in order of
+" usability (see order below)
+let bufferline.semantic_letters = v:true
+" New buffer letters are assigned in this order. This order is
+" optimal for the qwerty keyboard layout but might need adjustement
+" for other layouts.
+let bufferline.letters =
+  \ 'asdfjkl;ghnmxcvbziowerutyqpASDFJKLGHNMXCVBZIOWERUTYQP'
+" Sets the name of unnamed buffers. By default format is "[Buffer X]"
+" where X is the buffer number. But only a static string is accepted here.
+let bufferline.no_name_title = v:null
+" -- }}}
+" -- 'lukas-reineke/indent-blankline.nvim' {{{
+" TEST 1
+lua << EOF
+-- require("indent_blankline").setup {
+--    show_end_of_line = true,
+--     space_char_blankline = " ",
+-- }
+EOF
+" TEST 2
+" vim.opt.listchars = {
+"     space = "⋅",
+"     eol = "↴",
+" }
+lua << EOF
+require("indent_blankline").setup {
+    show_end_of_line = true,
+    show_current_context = true,
+    space_char_blankline = " ",
+    char_highlight_list = {
+        "IndentBlanklineIndent1",
+        "IndentBlanklineIndent2",
+        "IndentBlanklineIndent3",
+        "IndentBlanklineIndent4",
+        "IndentBlanklineIndent5",
+        "IndentBlanklineIndent6",
+    },
+}
+EOF
+" -- }}}
+" -- 'karb94/neoscroll.nvim' {{{
+lua require('neoscroll').setup()
+" -- }}}
+" -- 'MattesGroeger/vim-bookmarks' {{{
+highlight BookmarkSign ctermbg=NONE ctermfg=160
+highlight BookmarkLine ctermbg=194 ctermfg=NONE
+let g:bookmark_sign = '♥'
+let g:bookmark_highlight_lines = 1
+" -- }}}
+" ---- }}}
+
+" ---- Keybindings {{{
+" mit Pfeiltesten zwischen Panes switchen
+" Öffne Plugin in Github
+nnoremap <leader>g yi' :!firefox --new-tab https://github.com/<C-R>"<CR><CR>
+" ---- }}}
+" -- Folding {{{
+set foldenable
+set foldmethod=marker
+" Beim Öffnen zugeklkappt
+set foldlevel=20
+set modelines=1
+" speichern, welche Folds auf/zu sind
+"autocmd BufWrite * mkview
+"autocmd BufRead * silent loadview
+" -- }}}
+
+" -- GANZ UNTEN -- 
+" highlight Normal ctermbg=black
+source $HOME/.config/nvim/config_split/startify.vim

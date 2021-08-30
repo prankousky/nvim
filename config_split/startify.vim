@@ -16,21 +16,21 @@
             \ { 'z': '~/.zshrc' },
             \ ]
 " custom footer
-let g:startify_custom_footer = [
-\'', 
-\"\"edit text at the speed of thought\"", 
-\''
-\ ]
+" let g:startify_custom_footer = [
+" \'', 
+" \"\"edit text at the speed of thought\"", 
+" \''
+" \ ]
 " custom header
-let g:startify_custom_header = [
-\ '',
-\ '',
-\'                          .__         ',
-\'   ____   ____  _______  _|__| _____    ',
-\'  /    \_/ __ \/  _ \  \/ /  |/     \  ',
-\' |   |  \  ___(  <_> )   /|  |  Y Y  \',
-\' |___|  /\___  >____/ \_/ |__|__|_|  /',
-\' \/   \/                           \/      ',
-\ '',
-\ '',
-\ ]
+" let g:startify_custom_header = [
+" \ '',
+" \ '',
+" \'                          .__         ',
+" \'   ____   ____  _______  _|__| _____    ',
+" \'  /    \_/ __ \/  _ \  \/ /  |/     \  ',
+" \' |   |  \  ___(  <_> )   /|  |  Y Y  \',
+" \' |___|  /\___  >____/ \_/ |__|__|_|  /',
+" \' \/   \/                           \/      ',
+" \ '',
+" \ '',
+" \ ]
