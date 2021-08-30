@@ -60,6 +60,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
+Plug 'LandonSchropp/vim-stamp' " Siw
 Plug 'MattesGroeger/vim-bookmarks'
 " ---- }}}
 " ---- Naviation und Co. {{{
@@ -110,6 +111,8 @@ set ruler
 set magic
 " Tab ist 2 Leerzeichen
 set tabstop=2
+set shiftwidth=2
+set expandtab
 " Tab beim Editieren _auch_ 4 Leerzeichen
 set softtabstop=4
 " Lade VIMRC nach speichern neu
