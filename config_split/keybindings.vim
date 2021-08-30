@@ -197,17 +197,17 @@ nnoremap <leader>9 <Esc>:FileStyleToggle<CR>
     autocmd FileType bash,sh map <buffer> <F5> :w<CR>:exec '!bash' shellescape(@%, 1)<CR>
     autocmd FileType bash,sh imap <buffer> <F5> <esc>:w<CR>:exec '!bash' shellescape(@%, 1)<CR>
     " }}}
-" vim-rememberall {{{
-" Show ',' normal mode mappings when ',' is pressed.
-nnoremap <silent> <expr> , Remembrall(',')
+" " vim-rememberall {{{
+" " Show ',' normal mode mappings when ',' is pressed.
+" nnoremap <silent> <expr> , Remembrall(',')
 
-" Show ',' normal mode mappings when the key combination ',?' is pressed,
-" so we don't have to wait for the timeout.
-nnoremap <silent> <expr> ,? Remembrall(',')
+" " Show ',' normal mode mappings when the key combination ',?' is pressed,
+" " so we don't have to wait for the timeout.
+" nnoremap <silent> <expr> ,? Remembrall(',')
 
-" Show visual mode mappings.
-vnoremap <silent> <expr> ? Remembrall('v', '')
-" }}}
+" " Show visual mode mappings.
+" vnoremap <silent> <expr> ? Remembrall('v', '')
+" " }}}
 " Platformio {{{
 " erstelle das Projekt und öffne `minicom`, um den Output zu debuggen
 nnoremap <C-b> :make upload<CR>:!tmux splitw -h<CR>:!tmux send-keys 'minicom 9600' Enter<CR>

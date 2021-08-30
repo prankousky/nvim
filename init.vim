@@ -22,6 +22,8 @@ Plug 'chrisbra/csv.vim'
 Plug 'freitass/todo.txt-vim'
 Plug 'vimwiki/vimwiki'
 " ---- }}}
+" ---- Useful {{{
+" ---- }}}
 " ---- Move Around {{{
 Plug 'unblevable/quick-scope'
 Plug 'thalesmello/tabfold'
