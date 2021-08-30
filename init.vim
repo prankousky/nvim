@@ -97,6 +97,8 @@ colorscheme blood-moon
 " indents minimal visualisieren
 " set list lcs=tab:\|\
 set listchars=tab:▸\ ,eol:¬
+" Merke Position im Dokument
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 " Ruler => zeige rechts unten `Zeile,Buchstabe`
 set ruler
 " Regex Magic
@@ -351,7 +353,7 @@ let g:bookmark_sign = '♥'
 let g:bookmark_highlight_lines = 1
 " -- }}}
 " ---- }}}
-
+" -- }}}
 " ---- Keybindings {{{
 " mit Pfeiltesten zwischen Panes switchen
 " Öffne Plugin in Github
@@ -366,7 +368,15 @@ set modelines=1
 " speichern, welche Folds auf/zu sind
 "autocmd BufWrite * mkview
 "autocmd BufRead * silent loadview
-"
+" -- }}}
+" --  Aufgeteilte Konfiguration {{{
+source $HOME/.config/nvim/config_split/airline_lightline.vim
+source $HOME/.config/nvim/config_split/autocommands.vim
+source $HOME/.config/nvim/config_split/backups.vim
+source $HOME/.config/nvim/config_split/coc.vim
+source $HOME/.config/nvim/config_split/fzf.vim
+source $HOME/.config/nvim/config_split/keybindings.vim
+source $HOME/.config/nvim/config_split/startify.vim
 " -- }}}
 " -- NOCH TESTEN {{{
 " Name des Fensters ist immer Name der aktuellen Datei
@@ -377,12 +387,6 @@ set timeoutlen=1000 ttimeoutlen=0
 " funktioniert wohl nicht mit jedem colorscheme
 " highlight Comment cterm=italic gui=italic
 "  }}}
+
 " -- GANZ UNTEN -- 
 " highlight Normal ctermbg=black
-source $HOME/.config/nvim/config_split/startify.vim
-source $HOME/.config/nvim/config_split/coc.vim
-source $HOME/.config/nvim/config_split/airline_lightline.vim
-source $HOME/.config/nvim/config_split/autocommands.vim
-source $HOME/.config/nvim/config_split/keybindings.vim
-source $HOME/.config/nvim/config_split/backups.vim
-source $HOME/.config/nvim/config_split/fzf.vim
