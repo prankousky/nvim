@@ -92,6 +92,7 @@ colorscheme blood-moon
 " set background=dark
 " indents minimal visualisieren
 " set list lcs=tab:\|\
+set listchars=tab:▸\ ,eol:¬
 " Ruler => zeige rechts unten `Zeile,Buchstabe`
 set ruler
 " Regex Magic
@@ -302,23 +303,26 @@ let bufferline.letters =
 let bufferline.no_name_title = v:null
 " -- }}}
 " -- 'lukas-reineke/indent-blankline.nvim' {{{
-" TEST 1
+
 lua << EOF
--- require("indent_blankline").setup {
---    show_end_of_line = true,
---     space_char_blankline = " ",
--- }
+vim.opt.termguicolors = true,
+vim.cmd [[highlight IndentBlanklineIndent1 guifg=#E06C75 blend=nocombine]]
+vim.cmd [[highlight IndentBlanklineIndent2 guifg=#E5C07B blend=nocombine]]
+vim.cmd [[highlight IndentBlanklineIndent3 guifg=#98C379 blend=nocombine]]
+vim.cmd [[highlight IndentBlanklineIndent4 guifg=#56B6C2 blend=nocombine]]
+vim.cmd [[highlight IndentBlanklineIndent5 guifg=#61AFEF blend=nocombine]]
+vim.cmd [[highlight IndentBlanklineIndent6 guifg=#C678DD blend=nocombine]]
+vim.opt.listchars = {
+    space = "⋅",
+    eol = "¬"
+}
 EOF
-" TEST 2
-" vim.opt.listchars = {
-"     space = "⋅",
-"     eol = "↴",
-" }
 lua << EOF
 require("indent_blankline").setup {
+    eol = "↴",
     show_end_of_line = true,
     show_current_context = true,
-    space_char_blankline = " ",
+    space_char_blankline = "⋅",
     char_highlight_list = {
         "IndentBlanklineIndent1",
         "IndentBlanklineIndent2",
@@ -327,8 +331,11 @@ require("indent_blankline").setup {
         "IndentBlanklineIndent5",
         "IndentBlanklineIndent6",
     },
+    show_trailing_blankline_indent = false,
 }
 EOF
+" let g:indentblankLine_char_list = ['|', '¦', '┆', '┊']
+" let g:indentLine_color_term = 239
 " -- }}}
 " -- 'karb94/neoscroll.nvim' {{{
 lua require('neoscroll').setup()

@@ -9,7 +9,7 @@
             \ { 'p': '~/.config/polybar/config' },
             \ { 'q': '~/.config/espanso/default.yml' },
             \ { 's': '~/.ssh/known_hosts' },
-            \ { 't': '~/.vip/notes/todo' },
+            \ { 't': '~/.vip/todosh/todo.txt' },
             \ { 'v': '~/.config/nvim/init.vim' },
             \ { 'x': '~/.exports' },
             \ { 'w': '~/.config/awesome/rc.lua' },
