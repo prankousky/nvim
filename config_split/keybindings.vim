@@ -1,5 +1,5 @@
 " Leader festlegen
-let mapleader =","
+" let mapleader =","
 
 " Shellcheck
 autocmd Filetype sh nnoremap <buffer> <F6> <ESC>:w<CR>:!clear;shellcheck %<CR>
@@ -224,3 +224,13 @@ vnoremap <silent><leader>c S`
 nmap <leader>e :CocCommand explorer<CR>
 " UndoTree
 nmap <leader>u :UndotreeToggle<CR>
+
+" The direction of n and N depends on whether / or ? was used for searching forward or backward respectively. This is pretty confusing to me.
+" If you want n to always search forward and N backward, use this:
+nnoremap <expr> n  'Nn'[v:searchforward]
+xnoremap <expr> n  'Nn'[v:searchforward]
+onoremap <expr> n  'Nn'[v:searchforward]
+
+nnoremap <expr> N  'nN'[v:searchforward]
+xnoremap <expr> N  'nN'[v:searchforward]
+onoremap <expr> N  'nN'[v:searchforward]

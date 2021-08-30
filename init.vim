@@ -55,6 +55,7 @@ Plug 'mhinz/vim-startify'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'windwp/nvim-spectre'
+Plug 'chengzeyi/fzf-preview.vim'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'tpope/vim-commentary'
@@ -86,6 +87,8 @@ autocmd VimEnter *
 let mapleader = ","
 " Localleader festlegen
 let localleader = "<space>"
+" vernünftig einfügen
+set paste
 " 256 Farben; MUSS VOR colorscheme stehen
 set t_Co=256
 set t_ut=
@@ -99,6 +102,8 @@ colorscheme blood-moon
 set listchars=tab:▸\ ,eol:¬
 " Merke Position im Dokument
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+" Vimwiki Path festlegen
+let g:vimwiki_list = [{'path': '~/documents/vimwiki/wiki'}]
 " Ruler => zeige rechts unten `Zeile,Buchstabe`
 set ruler
 " Regex Magic
@@ -390,3 +395,13 @@ set timeoutlen=1000 ttimeoutlen=0
 
 " -- GANZ UNTEN -- 
 " highlight Normal ctermbg=black
+" Cursor Shapes
+if empty($TMUX)
+  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+  let &t_SR = "\<Esc>]50;CursorShape=2\x7"
+else
+  let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+  let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+  let &t_SR = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=2\x7\<Esc>\\"
+endif

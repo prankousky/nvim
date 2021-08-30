@@ -27,6 +27,9 @@ autocmd bufwritepost *.json :CocCommand prettier.formatFile
 " autocmd BufRead platformio.ini NERDTreeToggle | vs src/main.cpp | wincmd l | vertical resize 30 | wincmd h | wincmd h | vertical resize 30 | wincmd l | set filetype=cpp
 autocmd BufRead *.cpp set filetype=cpp
 
+" Benutze Cursorline NUR dann, wenn NICHT in INSERT MODE
+" autocmd InsertLeave,WinEnter * set cursorline
+" autocmd InsertEnter,WinLeave * set nocursorline
 
 " Markdown Table
 " autocmd BufEnter *.md TableModeEnable
