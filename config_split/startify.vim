@@ -10,7 +10,7 @@
             \ { 'q': '~/.config/espanso/default.yml' },
             \ { 's': '~/.ssh/known_hosts' },
             \ { 't': '~/.vip/notes/todo' },
-            \ { 'v': '~/.vimrc' },
+            \ { 'v': '~/.config/nvim/init.vim' },
             \ { 'x': '~/.exports' },
             \ { 'w': '~/.config/awesome/rc.lua' },
             \ { 'z': '~/.zshrc' },

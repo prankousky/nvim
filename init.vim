@@ -23,6 +23,7 @@ Plug 'freitass/todo.txt-vim'
 " ---- }}}
 " ---- Move Around {{{
 Plug 'unblevable/quick-scope'
+Plug 'thalesmello/tabfold'
 " Plug 'justinmk/vim-sneak'
 Plug 'ggandor/lightspeed.nvim'
 Plug 'karb94/neoscroll.nvim'
@@ -76,7 +77,6 @@ autocmd VimEnter *
 " nvim -es -u init.vim -i NONE -c "PlugInstall" -c "qa"
 " ---- }}}
 " ---- }}}
-
 " -- Basics {{{
 " Leader festlegen
 let mapleader = ","
@@ -185,17 +185,6 @@ set number relativenumber
 " außerhalb von VIM veränderte Datei automatisch neu laden
 set autoread
 " }}}
-" -- NOCH TESTEN {{{
-" Name des Fensters ist immer Name der aktuellen Datei
-set title
-" sofort ESC annehmen ohne Verzögerung
-set timeoutlen=1000 ttimeoutlen=0
-" Kommentare kursiv drucken
-" funktioniert wohl nicht mit jedem colorscheme
-" highlight Comment cterm=italic gui=italic
-"  }}}
-
-
 " ---- Plugin  Einstellungen {{{
 " -- completion-nvim {{{
 " Use completion-nvim in every buffer
@@ -366,8 +355,17 @@ set modelines=1
 " speichern, welche Folds auf/zu sind
 "autocmd BufWrite * mkview
 "autocmd BufRead * silent loadview
+"
 " -- }}}
-
+" -- NOCH TESTEN {{{
+" Name des Fensters ist immer Name der aktuellen Datei
+set title
+" sofort ESC annehmen ohne Verzögerung
+set timeoutlen=1000 ttimeoutlen=0
+" Kommentare kursiv drucken
+" funktioniert wohl nicht mit jedem colorscheme
+" highlight Comment cterm=italic gui=italic
+"  }}}
 " -- GANZ UNTEN -- 
 " highlight Normal ctermbg=black
 source $HOME/.config/nvim/config_split/startify.vim
