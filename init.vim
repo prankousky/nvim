@@ -39,6 +39,7 @@ Plug 'karb94/neoscroll.nvim'
 Plug 'terryma/vim-expand-region'
 Plug 'thalesmello/tabfold'
 Plug 'unblevable/quick-scope'
+" Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 " ---- }}}
 " ---- Visuelles {{{
 " -- Themes
