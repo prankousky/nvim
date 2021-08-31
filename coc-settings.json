@@ -1,4 +1,10 @@
-{
+// function! SetupCommandAbbrs(from, to)
+//  exec 'cnoreabbrev <expr> '.a:from
+//        \ .' ((getcmdtype() ==# ":" && getcmdline() ==# "'.a:from.'")'
+//        \ .'? ("'.a:to.'") : ("'.a:from.'"))'
+//
+//endfunction
+
   // suggestions
   // "suggest.echodocSupport": true,
   // TODO add more labels and give them cool glyphs
@@ -39,17 +45,17 @@
   "coc.preferences.hoverTarget": "float",
 
   // python config
-  "python.linting.enabled": true,
-  "python.linting.pylintEnabled": true,
-  "python.formatting.provider": "black",
-  "python.formatting.blackPath": "/home/ben/.local/bin/black",
+  //python.linting.enabled": true,
+  //python.linting.pylintEnabled": true,
+  //python.formatting.provider": "black",
+  //python.formatting.blackPath": "/home/ben/.local/bin/black",
   // "python.linting.pylintPath": "~/.miniconda/envs/neovim/bin/pylint",
-  "python.condaPath": "~/.miniconda/bin/conda",
-  "python.sortImports.path": "~/.miniconda/envs/neovim/bin/isort",
-  "python.jediPath": "~/.miniconda/envs/neovim/lib/python3.8/site-packages",
+  //"python.condaPath": "~/.miniconda/bin/conda",
+//  "python.sortImports.path": "~/.miniconda/envs/neovim/bin/isort",
+//  "python.jediPath": "~/.miniconda/envs/neovim/lib/python3.8/site-packages",
 
   // snippets
-  "snippets.ultisnips.directories": ["UltiSnips", "~/.config/nvim/snips"],
+  "snippets.ultisnips.directories": ["UltiSnips", "~/.config/nvim/UltiSnips"],
   //"snippets.userSnippetsDirectory": "~/.config/nvim/snips",
 
   // emmet
@@ -58,15 +64,15 @@
     "javascript": "javascriptreact"
   },
 
-  // explorer
-  //   "explorer.width": 30,
-  //   "explorer.icon.enableNerdfont": true,
-  //   "explorer.previewAction.onHover": false,
-  // "explorer.icon.enableVimDevicons": false,
-  //"explorer.keyMappings": {
-  //   "<cr>": ["expandable?", "expand", "open"],
-  //   "v": "open:vsplit"
-  // },
+explorer
+  "explorer.width": 30,
+  "explorer.icon.enableNerdfont": true,
+  "explorer.previewAction.onHover": true,
+"explorer.icon.enableVimDevicons": true,
+explorer.keyMappings": {
+  "<cr>": ["expandable?", "expand", "open"],
+  "v": "open:vsplit"
+},
 
   "languageserver": {
     "bash": {
@@ -80,3 +86,5 @@
   // TODO b:coc_suggest_disable=1 GOYO
   // TODO add to paths.vim g:coc_node_path
 }
+
+let g:coc.preferences.extensionUpdateCheck = daily

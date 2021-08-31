@@ -3,15 +3,13 @@
     let g:startify_bookmarks = [
             \ { 'a': '~/.aliases' },
             \ { 'b': '~/.backup/README.md' },
-            \ { 'f': '~/.functions' },
             \ { 'h': '~/.config/helpers/vim.md' },
-            \ { 'i': '~/.config/i3/config' },
             \ { 'p': '~/.config/polybar/config' },
             \ { 'q': '~/.config/espanso/default.yml' },
             \ { 's': '~/.ssh/known_hosts' },
             \ { 't': '~/.vip/todosh/todo.txt' },
             \ { 'v': '~/.config/nvim/init.vim' },
-            \ { 'x': '~/.exports' },
+            \ { 'x': '~/.zshenv' },
             \ { 'w': '~/.config/awesome/rc.lua' },
             \ { 'z': '~/.zshrc' },
             \ ]

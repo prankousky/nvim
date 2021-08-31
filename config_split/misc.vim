@@ -39,9 +39,9 @@ let g:vim_json_warnings = 1
 " }}}
 " vim-easy-align {{{
 " Start interactive EasyAlign in visual mode (e.g. vipga)
-" xmap ga <Hi Mom>(EasyAlign)
+" xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
-" nmap ga <Hi Mom>(EasyAlign)
+" nmap ga <Plug>(EasyAlign)
 " }}}
 " vim-which-key {{{
 " keybinding
@@ -50,7 +50,7 @@ let g:vim_json_warnings = 1
 set timeoutlen=25000
 " }}}
 " vim-easymotion {{{
-" map <Leader>E <Hi Mom>(easymotion-prefix)
+" map <Leader>E <Plug>(easymotion-prefix)
 " -- }}}
 "  vimtex {{{
 " let g:tex_flavor='latex'
@@ -74,9 +74,9 @@ autocmd FileType sh setlocal commentstring=#\ %s
 " }}}
 " vim-schlepp {{{
 vmap h <plug>schleppleft
-vmap j <Hi Mom>SchleppDown
-vmap k <Hi Mom>SchleppUp
-vmap l <Hi Mom>SchleppRightup> 
+vmap j <Plug>SchleppDown
+vmap k <Plug>SchleppUp
+vmap l <Plug>SchleppRightup> 
 "}}}
 " vim-bookmarks {{{
 highlight BookmarkSign ctermbg=NONE ctermfg=160

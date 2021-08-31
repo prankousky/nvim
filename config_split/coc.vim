@@ -1,3 +1,5 @@
+" Festlegen, damit extensions automatisch installiert werden
+let g:coc_global_extensions = [ 'coc-browser', 'coc-css', 'coc-dictionary', 'coc-emmet', 'coc-explorer', 'coc-fzf-preview', 'coc-git', 'coc-highlight', 'coc-html', 'coc-json', 'coc-lists', 'coc-prettier', 'coc-pyright', 'coc-python', 'coc-sh', 'coc-snippets', 'coc-tsserver', 'coc-yaml', 'coc-yank', 'coc-calc', 'coc-cmake', 'coc-dash-complete', 'coc-dot-complete', 'coc-vimlsp', 'coc-markdownlint' ]
 "mehr TextEdit might fail if hidden is not set
 set hidden
 " Mehr Platz für Anzeigen der Nachrichten
@@ -37,7 +39,7 @@ else
 endif
 
 " Symbol renaming.
-nmap <leader>rn <Hi Mom>(coc-rename)
+nmap <leader>rn <Plug>(coc-rename)
 inoremap <silent><expr> <c-space> coc#refresh()
 
 " Prettier
@@ -53,10 +55,10 @@ else
 endif
 
 " GoTo code navigation.
-nmap <silent> gd <Hi Mom>(coc-definition)
-nmap <silent> gy <Hi Mom>(coc-type-definition)
-nmap <silent> gi <Hi Mom>(coc-implementation)
-nmap <silent> gr <Hi Mom>(coc-references)
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 
 
 " Use K to show documentation in preview window.

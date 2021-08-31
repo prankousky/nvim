@@ -13,10 +13,14 @@ Plug 'dguo/blood-moon', {'rtp': 'applications/vim'}
 Plug 'folke/lsp-colors.nvim'
 Plug 'folke/trouble.nvim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'jiangmiao/auto-pairs'
+" Plug 'SirVer/ultisnips'
+" Plug 'honza/vim-snippets' " gehört zu ultisnipts
+Plug 'ycm-core/YouCompleteMe'
 " ---- }}}
 " ---- Filetypes {{{
 Plug 'chrisbra/csv.vim'
@@ -142,6 +146,7 @@ set listchars=trail:.,extends:→,precedes:←
 " Indentation
 set autoindent
 set smartindent
+set smarttab
 filetype indent on
 " -- nach Datei
 autocmd FileType yaml setl indentkeys-=<:>
@@ -441,6 +446,8 @@ source $HOME/.config/nvim/config_split/coc.vim
 source $HOME/.config/nvim/config_split/fzf.vim
 source $HOME/.config/nvim/config_split/keybindings.vim
 source $HOME/.config/nvim/config_split/startify.vim
+source $HOME/.config/nvim/config_split/ultisnips.vim
+source $HOME/.config/nvim/config_split/vim-easymotion.vim
 " -- }}}
 " -- NOCH TESTEN {{{
 " Name des Fensters ist immer Name der aktuellen Datei
