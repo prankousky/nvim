@@ -77,7 +77,7 @@ nnoremap <A-K> :m-2<cr>==
 " pipe wird mir <bar> ersetzt, danach wechselt man in den insert mode (i),
 " dann geht man eine stelle nach rechts (right), dann wird eine neue zeile
 " eingefügt (CR)
-map <leader># 78A-<Esc>d78<bar>i<right><CR>
+" map <leader># 78A-<Esc>d78<bar>i<right><CR>
 
 " markdown-drawer: öffnen und schließen
 nnoremap <Leader>md :MarkDrawer<cr>
@@ -225,6 +225,8 @@ vnoremap <silent><leader>c S`
 " nmap <leader>e :CocCommand explorer<CR>
 " UndoTree
 nmap <leader>u :UndotreeToggle<CR>
+
+nnoremap <leader># I##############################   <Esc>A   ##############################<Esc>yyPVr#jpVr#"
 
 " The direction of n and N depends on whether / or ? was used for searching forward or backward respectively. This is pretty confusing to me.
 " If you want n to always search forward and N backward, use this:
