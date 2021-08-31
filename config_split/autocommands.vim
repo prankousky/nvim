@@ -1,5 +1,3 @@
-" COQ.nvim
-autocmd BufRead,BufNewFile,BufWrite,BufEnter <silent> :COQnow<CR>
 " Polybar Config
 autocmd BufRead,BufNewFile $HOME/.config/polybar/* set syntax=dosini
 " Xresources
