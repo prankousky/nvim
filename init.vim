@@ -45,6 +45,7 @@ Plug 'unblevable/quick-scope'
 " -- Themes
 " Plug 'rakr/vim-one'
 " let g:airline_theme='one'
+Plug 'tomasr/molokai'
 Plug 'joshdick/onedark.vim'
 " -- Misc
 " Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
@@ -118,7 +119,7 @@ set t_ut=
 set termguicolors
 " Farben festlegen
 " colorscheme blood-moon
-colorscheme onedark
+colorscheme molokai
 " set background=dark
 " set cursorcolumn
 " set cursorline
