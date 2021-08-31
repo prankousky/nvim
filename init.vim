@@ -1,3 +1,6 @@
+" #########################################################################
+" ##############################   Plugins   ##############################
+" #########################################################################
 " -- Plugins {{{
 " Automatisch vim-plug installieren, sofern es nicht installiert ist {{{
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
@@ -38,6 +41,10 @@ Plug 'thalesmello/tabfold'
 Plug 'unblevable/quick-scope'
 " ---- }}}
 " ---- Visuelles {{{
+" -- Themes
+" Plug 'rakr/vim-one'
+" let g:airline_theme='one'
+Plug 'joshdick/onedark.vim'
 " -- Misc
 " Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 Plug 'Yggdroot/hiPairs' " highlighte umrandende Symbole
@@ -94,6 +101,9 @@ autocmd VimEnter *
 " nvim -es -u init.vim -i NONE -c "PlugInstall" -c "qa"
 " ---- }}}
 " ---- }}}
+" ########################################################################
+" ##############################   Basics   ##############################
+" ########################################################################
 " -- Basics {{{
 " Leader festlegen
 let mapleader = ","
@@ -106,7 +116,9 @@ set t_Co=256
 set t_ut=
 set termguicolors
 " Farben festlegen
-colorscheme blood-moon
+" colorscheme blood-moon
+colorscheme onedark
+" set background=dark
 " set cursorcolumn
 " set cursorline
 " Merke Position im Dokument
@@ -137,6 +149,9 @@ set wildmenu
 " Dialog, falls geänderte Datei geschlossen wird
 set confirm
 " }}}
+" ###########################################################################
+" ##############################   Filetypes   ##############################
+" ###########################################################################
 " -- Filetypes {{{
 " Bestimmte Dateien vom Öffnen ausschließen
 set wildignore+=.pyc,.swp
@@ -209,6 +224,9 @@ set number relativenumber
 " außerhalb von VIM veränderte Datei automatisch neu laden
 set autoread
 " }}}
+" ####################################################################################
+" ##############################   Plugin Einstellungen   ############################
+" ####################################################################################
 " ---- Plugin  Einstellungen {{{
 " -- completion-nvim {{{
 " Use completion-nvim in every buffer
@@ -437,11 +455,17 @@ ino <silent><expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 ino <silent><expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<BS>"
 " }}}
 " -- }}}
+" #############################################################################
+" ##############################   Keybindings   ##############################
+" #############################################################################
 " ---- Keybindings {{{
 " mit Pfeiltesten zwischen Panes switchen
 " Öffne Plugin in Github
 nnoremap <leader>g yi' :!firefox --new-tab https://github.com/<C-R>"<CR><CR>
 " ---- }}}
+" #########################################################################
+" ##############################   Folding   ##############################
+" #########################################################################
 " -- Folding {{{
 set foldenable
 set foldmethod=marker
@@ -466,6 +490,9 @@ source $HOME/.config/nvim/config_split/startify.vim
 " source $HOME/.config/nvim/config_split/ultisnips.vim
 source $HOME/.config/nvim/config_split/vim-easymotion.vim
 " -- }}}
+" ###########################################################################################
+" ##############################   TODO: alles in eine Datei   ##############################
+" ###########################################################################################
 " -- NOCH TESTEN {{{
 " Name des Fensters ist immer Name der aktuellen Datei
 set title
@@ -475,7 +502,10 @@ set timeoutlen=1000 ttimeoutlen=0
 " funktioniert wohl nicht mit jedem colorscheme
 " highlight Comment cterm=italic gui=italic
 "  }}}
-" -- GANZ UNTEN -- 
+" ######################################################################
+" ##############################   Rest   ##############################
+" ######################################################################
+" -- GANZ UNTEN {{{
 highlight Normal ctermbg=black
 " indents minimal visualisieren
 set invlist
@@ -494,4 +524,4 @@ endif
 " youcompleteme YCM tab raus hauen
 " let g:ycm_key_list_select_completion = ['<C-TAB>', '<Down>']
 " let g:ycm_key_list_previous_completion = ['<S-TAB>', '<Up>']
-
+" }}}

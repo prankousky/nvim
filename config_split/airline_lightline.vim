@@ -1,9 +1,10 @@
 " let g:airline_theme='base16'
 " let g:airline_theme='molokai'
 " let g:airline_theme='minimalist'
-let g:airline_theme='violet'
+" let g:airline_theme='violet'
+let g:airline_theme='onedark'
 " let g:rigel_lightline = 1
-let g:lightline = { 'colorscheme': 'molokai' }
+" let g:lightline = { 'colorscheme': 'molokai' }
 "
 " Airline smarte Tabline
 let g:airline#extensions#tabline#enabled = 1
