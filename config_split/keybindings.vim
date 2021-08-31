@@ -207,8 +207,7 @@ nnoremap <leader>9 <Esc>:FileStyleToggle<CR>
 " " so we don't have to wait for the timeout.
 " nnoremap <silent> <expr> ,? Remembrall(',')
 
-" " Show visual mode mappings.
-" vnoremap <silent> <expr> ? Remembrall('v', '')
+" " Show visual mode mappings.o
 " " }}}
 " Platformio {{{
 " erstelle das Projekt und öffne `minicom`, um den Output zu debuggen
@@ -223,7 +222,7 @@ nmap <silent>ss :/plug#begin/+1,/plug#end/-1sort<CR>
 " VISUAL SELECTION in `` bringen
 vnoremap <silent><leader>c S`
 " CocExplorer
-nmap <leader>e :CocCommand explorer<CR>
+" nmap <leader>e :CocCommand explorer<CR>
 " UndoTree
 nmap <leader>u :UndotreeToggle<CR>
 

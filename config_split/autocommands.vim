@@ -1,3 +1,5 @@
+" COQ.nvim
+autocmd BufRead,BufNewFile,BufWrite,BufEnter <silent> :COQnow<CR>
 " Polybar Config
 autocmd BufRead,BufNewFile $HOME/.config/polybar/* set syntax=dosini
 " Xresources
@@ -17,8 +19,8 @@ autocmd bufwritepost init.vim source $MYVIMRC
 " Lade sxhkd neu, sobald Datei geschrieben wurde
 " autocmd BufWritePost *sxhkdrc !sudo systemctl restart sxhkd.service
 "
-autocmd bufwritepost *.css :CocCommand prettier.formatFile
-autocmd bufwritepost *.json :CocCommand prettier.formatFile
+" autocmd bufwritepost *.css :CocCommand prettier.formatFile
+" autocmd bufwritepost *.json :CocCommand prettier.formatFile
 
 " Immer vim-rainbow nutzen
 " autocmd  VimEnter * :call rainbow#load()

@@ -12,15 +12,17 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 Plug 'dguo/blood-moon', {'rtp': 'applications/vim'}
 Plug 'folke/lsp-colors.nvim'
 Plug 'folke/trouble.nvim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'jiangmiao/auto-pairs'
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets' " gehört zu ultisnipts
+" Plug 'SirVer/ultisnips'
+" Plug 'honza/vim-snippets' " gehört zu ultisnipts
 Plug 'ycm-core/YouCompleteMe'
+Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
+Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
 " ---- }}}
 " ---- Filetypes {{{
 Plug 'chrisbra/csv.vim'
@@ -442,11 +444,11 @@ noremap <leader>p "+p
 source $HOME/.config/nvim/config_split/airline_lightline.vim
 source $HOME/.config/nvim/config_split/autocommands.vim
 source $HOME/.config/nvim/config_split/backups.vim
-source $HOME/.config/nvim/config_split/coc-settings.vim
+" source $HOME/.config/nvim/config_split/coc-settings.vim
 source $HOME/.config/nvim/config_split/fzf.vim
 source $HOME/.config/nvim/config_split/keybindings.vim
 source $HOME/.config/nvim/config_split/startify.vim
-source $HOME/.config/nvim/config_split/ultisnips.vim
+" source $HOME/.config/nvim/config_split/ultisnips.vim
 source $HOME/.config/nvim/config_split/vim-easymotion.vim
 " -- }}}
 " -- NOCH TESTEN {{{
