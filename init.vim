@@ -18,8 +18,8 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'jiangmiao/auto-pairs'
-" Plug 'SirVer/ultisnips'
-" Plug 'honza/vim-snippets' " gehört zu ultisnipts
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets' " gehört zu ultisnipts
 Plug 'ycm-core/YouCompleteMe'
 " ---- }}}
 " ---- Filetypes {{{
@@ -442,7 +442,7 @@ noremap <leader>p "+p
 source $HOME/.config/nvim/config_split/airline_lightline.vim
 source $HOME/.config/nvim/config_split/autocommands.vim
 source $HOME/.config/nvim/config_split/backups.vim
-source $HOME/.config/nvim/config_split/coc.vim
+source $HOME/.config/nvim/config_split/coc-settings.vim
 source $HOME/.config/nvim/config_split/fzf.vim
 source $HOME/.config/nvim/config_split/keybindings.vim
 source $HOME/.config/nvim/config_split/startify.vim

@@ -6,7 +6,7 @@
 //endfunction
 
   // suggestions
-  // "suggest.echodocSupport": true,
+  "suggest.echodocSupport": true,
   // TODO add more labels and give them cool glyphs
   "suggest.completionItemKindLabels": {
     "text": "t",
@@ -20,8 +20,7 @@
   "diagnostic.infoSign": "",
   "diagnostic.hintSign": " ",
   "diagnostic.virtualText": true, // this won't work with codelens when error on same line
-
-  // "diagnostic.displayByAle": true,
+  "diagnostic.displayByAle": true,
 
   // codelens TODO what does this get me?
   // "codeLens.enable": true,
@@ -45,10 +44,10 @@
   "coc.preferences.hoverTarget": "float",
 
   // python config
-  //python.linting.enabled": true,
-  //python.linting.pylintEnabled": true,
-  //python.formatting.provider": "black",
-  //python.formatting.blackPath": "/home/ben/.local/bin/black",
+  python.linting.enabled": true,
+  // python.linting.pylintEnabled": true,
+  python.formatting.provider": "black",
+  python.formatting.blackPath": "/home/ben/.local/bin/black",
   // "python.linting.pylintPath": "~/.miniconda/envs/neovim/bin/pylint",
   //"python.condaPath": "~/.miniconda/bin/conda",
 //  "python.sortImports.path": "~/.miniconda/envs/neovim/bin/isort",
@@ -56,7 +55,7 @@
 
   // snippets
   "snippets.ultisnips.directories": ["UltiSnips", "~/.config/nvim/UltiSnips"],
-  //"snippets.userSnippetsDirectory": "~/.config/nvim/snips",
+  "snippets.userSnippetsDirectory": "~/.config/nvim/snips",
 
   // emmet
   "emmet.includeLanguages": {
@@ -68,10 +67,10 @@ explorer
   "explorer.width": 30,
   "explorer.icon.enableNerdfont": true,
   "explorer.previewAction.onHover": true,
-"explorer.icon.enableVimDevicons": true,
-explorer.keyMappings": {
-  "<cr>": ["expandable?", "expand", "open"],
-  "v": "open:vsplit"
+  "explorer.icon.enableVimDevicons": true,
+  "explorer.keyMappings": {
+    "<cr>": ["expandable?", "expand", "open"],
+    "v": "open:vsplit"
 },
 
   "languageserver": {
@@ -86,5 +85,3 @@ explorer.keyMappings": {
   // TODO b:coc_suggest_disable=1 GOYO
   // TODO add to paths.vim g:coc_node_path
 }
-
-let g:coc.preferences.extensionUpdateCheck = daily
