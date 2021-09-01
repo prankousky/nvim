@@ -3,6 +3,10 @@
 " Toggle EOL (etc) Symbole
 nnoremap <leader>i :set invlist<CR>
 
+" mit i / I immer in die Mitte des Buffers springen
+nnoremap i i<ESC>zzi
+nnoremap I I<ESC>zzI
+
 " Shellcheck
 autocmd Filetype sh nnoremap <buffer> <F6> <ESC>:w<CR>:!clear;shellcheck %<CR>
 autocmd Filetype sh inoremap <buffer> <F6> <ESC>:w<CR>:!clear;shellcheck %<CR>

@@ -12,20 +12,20 @@ endif
 " Plugins festlegen {{{
 call plug#begin('$HOME/.config/nvim/meine_plugs')
 " ---- LSP // Completion {{{
+" Plug 'SirVer/ultisnips'
+" Plug 'honza/vim-snippets' " gehört zu ultisnipts
+" Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dguo/blood-moon', {'rtp': 'applications/vim'}
 Plug 'folke/lsp-colors.nvim'
 Plug 'folke/trouble.nvim'
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
+Plug 'jiangmiao/auto-pairs'
+Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
+Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-Plug 'jiangmiao/auto-pairs'
-" Plug 'SirVer/ultisnips'
-" Plug 'honza/vim-snippets' " gehört zu ultisnipts
 Plug 'ycm-core/YouCompleteMe'
-Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
-Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
 " ---- }}}
 " ---- Filetypes {{{
 Plug 'chrisbra/csv.vim'
@@ -34,12 +34,12 @@ Plug 'vimwiki/vimwiki'
 " ---- }}}
 " ---- Move Around {{{
 " Plug 'justinmk/vim-sneak'
+" Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 Plug 'ggandor/lightspeed.nvim'
 Plug 'karb94/neoscroll.nvim'
 Plug 'terryma/vim-expand-region'
 Plug 'thalesmello/tabfold'
 Plug 'unblevable/quick-scope'
-" Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 " ---- }}}
 " ---- Visuelles {{{
 " -- Themes
@@ -48,11 +48,11 @@ Plug 'unblevable/quick-scope'
 Plug 'tomasr/molokai'
 Plug 'joshdick/onedark.vim'
 " -- Misc
-" Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
-Plug 'Yggdroot/hiPairs' " highlighte umrandende Symbole
 " Plug 'Yggdroot/indentLine'
-Plug 'andymass/vim-matchup' " ähnlich wie hiPairs
+" Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 Plug 'TaDaa/vimade'
+Plug 'Yggdroot/hiPairs' " highlighte umrandende Symbole
+Plug 'andymass/vim-matchup' " ähnlich wie hiPairs
 Plug 'folke/which-key.nvim'
 Plug 'itchyny/vim-cursorword' " unterstreiche fokussiertes Wort
 Plug 'kyazdani42/nvim-web-devicons' " lua
@@ -86,6 +86,8 @@ Plug 'windwp/nvim-spectre'
 " ---- Naviation und Co. {{{
 Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'vim-ctrlspace/vim-ctrlspace'
 " ---- }}}
 call plug#end()
 " }}}
@@ -186,6 +188,8 @@ set hlsearch
 set smartcase
 " Suche während Tippens durchführen
 set incsearch
+" Search/Replace Vorschau
+set inccommand=split
 " Suche NICHT case-sensitiv (für mich persönlich einfacher)
 set ignorecase
 " Suche fängt oben wieder an, wenn unten zuende
@@ -504,6 +508,12 @@ set timeoutlen=1000 ttimeoutlen=0
 " funktioniert wohl nicht mit jedem colorscheme
 " highlight Comment cterm=italic gui=italic
 "  }}}
+" 'vim-ctrlspace/vim-ctrlspace' {{{
+" geht nur hiermit
+set hidden
+" Taste festlegen
+let g:CtrlSpaceDefaultMappingKey = "<C-space> "
+" }}}
 " ######################################################################
 " ##############################   Rest   ##############################
 " ######################################################################
