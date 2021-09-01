@@ -1,7 +1,7 @@
 " Startify Einstellungen {{{
 " feste Bookmarks setzen
     let g:startify_bookmarks = [
-            \ { 'a': '~/.aliases' },
+            \ { 'a': '~/.zshrc' },
             \ { 'b': '~/.backup/README.md' },
             \ { 'h': '~/.config/helpers/vim.md' },
             \ { 'p': '~/.config/polybar/config' },

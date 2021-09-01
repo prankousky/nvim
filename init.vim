@@ -420,7 +420,7 @@ let g:bookmark_highlight_lines = 1
 " -- }}}
 " ---- }}}
 " -- 'jiangmiao/auto-pairs' {{{
-let g:AutoPairsFlyMode = 1
+let g:AutoPairsFlyMode = 1 
 let g:AutoPairsShortcutBackInsert = '<M-b>'
 " -- }}}
 " " -- 'Yggdroot/hiPairs' {{{
@@ -448,9 +448,8 @@ let g:matchup_matchparen_hi_surround_always = 1
 " 'ms-jpq/coq_nvim' {{{
 let g:coq_settings = { 'auto_start': v:true }
 " 🐓 Coq completion settings
-
 " Set recommended to false
-let g:coq_settings = { "keymap.recommended": v:false }
+let g:coq_settings = { "keymap.recommended": v:true }
 
 " Keybindings
 ino <silent><expr> <Esc>   pumvisible() ? "\<C-e><Esc>" : "\<Esc>"
