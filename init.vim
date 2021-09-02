@@ -19,11 +19,13 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 Plug 'dguo/blood-moon', {'rtp': 'applications/vim'}
 Plug 'folke/lsp-colors.nvim'
 Plug 'folke/trouble.nvim'
-Plug 'jiangmiao/auto-pairs'
+" Plug 'jiangmiao/auto-pairs'
+Plug 'windwp/nvim-autopairs'
 Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
 Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
+Plug 'hrsh7th/nvim-compe'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'ycm-core/YouCompleteMe'
 " ---- }}}
@@ -31,6 +33,7 @@ Plug 'ycm-core/YouCompleteMe'
 Plug 'chrisbra/csv.vim'
 Plug 'freitass/todo.txt-vim'
 Plug 'vimwiki/vimwiki'
+Plug 'cespare/vim-toml'
 " ---- }}}
 " ---- Move Around {{{
 " Plug 'justinmk/vim-sneak'
@@ -122,7 +125,7 @@ set termguicolors
 " Farben festlegen
 " colorscheme blood-moon
 colorscheme molokai
-" set background=dark
+set background=dark
 " set cursorcolumn
 " set cursorline
 " Merke Position im Dokument
@@ -174,7 +177,7 @@ autocmd FileType yaml setl indentkeys-=<:>
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 " --
 " Autocompletion bei :-Kommandos
-set wildmode=longest,list,full
+set wildmode=longest:list,full
 " automatische Kommentare in neuer Zeile deaktivieren
 " autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=0
 " unten rechts gedrückte Befehle anzeigen
@@ -419,10 +422,10 @@ let g:bookmark_sign = '♥'
 let g:bookmark_highlight_lines = 1
 " -- }}}
 " ---- }}}
-" -- 'jiangmiao/auto-pairs' {{{
-let g:AutoPairsFlyMode = 1 
-let g:AutoPairsShortcutBackInsert = '<M-b>'
-" -- }}}
+" " -- 'jiangmiao/auto-pairs' {{{
+" let g:AutoPairsFlyMode = 1 
+" let g:AutoPairsShortcutBackInsert = '<M-b>'
+" " -- }}}
 " " -- 'Yggdroot/hiPairs' {{{
 " let g:hiPairs_enable_matchParen = 1
 " let g:hiPairs_hl_matchPair = { 'term'    : 'underline,bold',
@@ -459,6 +462,57 @@ ino <silent><expr> <CR>    pumvisible() ? (complete_info().selected == -1 ? "\<C
 ino <silent><expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 ino <silent><expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<BS>"
 " }}}
+" 'windwp/nvim-autopairs' {{{
+lua << EOF
+require('nvim-autopairs').setup{}
+require('nvim-autopairs').enable()
+local map_bs = true  -- map the <BS> key
+local disable_filetype = { "TelescopePrompt" }
+local ignored_next_char = string.gsub([[ [%w%%%'%[%"%.] ]],"%s+", "")
+local enable_moveright = true
+local enable_afterquote = true  -- add bracket pairs after quote
+local enable_check_bracket_line = true  --- check bracket in same line
+local check_ts = false
+local remap = vim.api.nvim_set_keymap
+local npairs = require('nvim-autopairs')
+
+npairs.setup({ map_bs = false })
+
+vim.g.coq_settings = { keymap = { recommended = false } }
+
+-- these mappings are coq recommended mappings unrelated to nvim-autopairs
+remap('i', '<esc>', [[pumvisible() ? "<c-e><esc>" : "<esc>"]], { expr = true, noremap = true })
+remap('i', '<c-c>', [[pumvisible() ? "<c-e><c-c>" : "<c-c>"]], { expr = true, noremap = true })
+remap('i', '<tab>', [[pumvisible() ? "<c-n>" : "<tab>"]], { expr = true, noremap = true })
+remap('i', '<s-tab>', [[pumvisible() ? "<c-p>" : "<bs>"]], { expr = true, noremap = true })
+
+-- skip it, if you use another global object
+_G.MUtils= {}
+
+MUtils.CR = function()
+  if vim.fn.pumvisible() ~= 0 then
+    if vim.fn.complete_info({ 'selected' }).selected ~= -1 then
+      return npairs.esc('<c-y>')
+    else
+      -- you can change <c-g><c-g> to <c-e> if you don't use other i_CTRL-X modes
+      return npairs.esc('<c-g><c-g>') .. npairs.autopairs_cr()
+    end
+  else
+    return npairs.autopairs_cr()
+  end
+end
+remap('i', '<cr>', 'v:lua.MUtils.CR()', { expr = true, noremap = true })
+
+MUtils.BS = function()
+  if vim.fn.pumvisible() ~= 0 and vim.fn.complete_info({ 'mode' }).mode == 'eval' then
+    return npairs.esc('<c-e>') .. npairs.autopairs_bs()
+  else
+    return npairs.autopairs_bs()
+  end
+end
+remap('i', '<bs>', 'v:lua.MUtils.BS()', { expr = true, noremap = true })
+EOF
+" -- }}}
 " -- }}}
 " #############################################################################
 " ##############################   Keybindings   ##############################
