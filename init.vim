@@ -740,7 +740,7 @@ EOF
 " Folding
 set foldmethod=expr
 set foldexpr=nvim_treesitter#foldexpr()
-
+lua local ts_utils = require 'nvim-treesitter.ts_utils'
 " -- }}}
 " ###########################################################################################
 " ##############################   TODO: alles in eine Datei   ##############################
@@ -783,3 +783,5 @@ endif
 " let g:ycm_key_list_select_completion = ['<C-TAB>', '<Down>']
 " let g:ycm_key_list_previous_completion = ['<S-TAB>', '<Up>']
 " }}}
+
+" vi: filetype=vim
