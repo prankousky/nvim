@@ -12,85 +12,88 @@ endif
 " Plugins festlegen {{{
 call plug#begin('$HOME/.config/nvim/meine_plugs')
 " ---- LSP // Completion {{{
-" Plug 'SirVer/ultisnips'
-" Plug 'honza/vim-snippets' " gehört zu ultisnipts
-" Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'dguo/blood-moon', {'rtp': 'applications/vim'}
-Plug 'folke/lsp-colors.nvim'
-Plug 'folke/trouble.nvim'
-" Plug 'jiangmiao/auto-pairs'
-Plug 'windwp/nvim-autopairs'
-Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
-Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
-Plug 'neovim/nvim-lspconfig'
-Plug 'nvim-lua/completion-nvim'
-Plug 'hrsh7th/nvim-compe'
-Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-Plug 'ycm-core/YouCompleteMe'
+	" Plug 'SirVer/ultisnips'
+	" Plug 'honza/vim-snippets' " gehört zu ultisnipts
+	" Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
+	" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+	Plug 'dguo/blood-moon', {'rtp': 'applications/vim'}
+	Plug 'folke/lsp-colors.nvim'
+	Plug 'folke/trouble.nvim'
+	" Plug 'jiangmiao/auto-pairs'
+	Plug 'windwp/nvim-autopairs'
+	Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
+	Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
+	Plug 'neovim/nvim-lspconfig'
+	Plug 'nvim-lua/completion-nvim'
+	Plug 'hrsh7th/nvim-compe'
+	Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+	Plug 'ycm-core/YouCompleteMe'
 " ---- }}}
-" ---- Filetypes {{{
-Plug 'chrisbra/csv.vim'
-Plug 'freitass/todo.txt-vim'
-Plug 'vimwiki/vimwiki'
-Plug 'cespare/vim-toml'
+" ---- Filetypes/ Coding {{{
+	Plug 'chrisbra/csv.vim'
+	Plug 'freitass/todo.txt-vim'
+	Plug 'vimwiki/vimwiki'
+	Plug 'cespare/vim-toml'
 " ---- }}}
 " ---- Move Around {{{
-" Plug 'justinmk/vim-sneak'
-" Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
-Plug 'ggandor/lightspeed.nvim'
-Plug 'karb94/neoscroll.nvim'
-Plug 'terryma/vim-expand-region'
-Plug 'thalesmello/tabfold'
-Plug 'unblevable/quick-scope'
+	" Plug 'justinmk/vim-sneak'
+	" Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
+	Plug 'ggandor/lightspeed.nvim'
+	Plug 'karb94/neoscroll.nvim'
+	Plug 'terryma/vim-expand-region'
+	Plug 'thalesmello/tabfold'
+	Plug 'unblevable/quick-scope'
 " ---- }}}
 " ---- Visuelles {{{
 " -- Themes
-" Plug 'rakr/vim-one'
-" let g:airline_theme='one'
-Plug 'tomasr/molokai'
-Plug 'joshdick/onedark.vim'
-" -- Misc
-" Plug 'Yggdroot/indentLine'
-" Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
-Plug 'TaDaa/vimade'
-Plug 'Yggdroot/hiPairs' " highlighte umrandende Symbole
-Plug 'andymass/vim-matchup' " ähnlich wie hiPairs
-Plug 'folke/which-key.nvim'
-Plug 'itchyny/vim-cursorword' " unterstreiche fokussiertes Wort
-Plug 'kyazdani42/nvim-web-devicons' " lua
-Plug 'lukas-reineke/indent-blankline.nvim'
-Plug 'machakann/vim-highlightedyank'
-Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
-Plug 'ryanoasis/vim-devicons' " vimscript
-Plug 'yamatsum/nvim-nonicons'
-Plug 'yazgoo/yank-history' " History anzeigen
+	" Plug 'rakr/vim-one'
+	" let g:airline_theme='one'
+	Plug 'tomasr/molokai'
+	Plug 'joshdick/onedark.vim'
+	" -- Misc
+	" Plug 'Yggdroot/indentLine'
+	" Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
+	" Plug 'TaDaa/vimade'
+	Plug 'Yggdroot/hiPairs' " highlighte umrandende Symbole
+	Plug 'andymass/vim-matchup' " ähnlich wie hiPairs
+	Plug 'folke/which-key.nvim'
+	Plug 'itchyny/vim-cursorword' " unterstreiche fokussiertes Wort
+	Plug 'kyazdani42/nvim-web-devicons' " lua
+	Plug 'lukas-reineke/indent-blankline.nvim'
+	Plug 'machakann/vim-highlightedyank'
+	Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+	Plug 'ryanoasis/vim-devicons' " vimscript
+	Plug 'yamatsum/nvim-nonicons'
+	Plug 'yazgoo/yank-history' " History anzeigen
+	Plug 'junegunn/goyo.vim'
+	Plug 'junegunn/limelight.vim'
 " -- Status // Dashboard
-" Plug 'famiu/feline.nvim'
-" Plug 'ojroques/nvim-hardline'
-Plug 'mhinz/vim-startify'
-Plug 'romgrk/barbar.nvim'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+	" Plug 'famiu/feline.nvim'
+	" Plug 'ojroques/nvim-hardline'
+	Plug 'mhinz/vim-startify'
+	Plug 'romgrk/barbar.nvim'
+	Plug 'vim-airline/vim-airline'
+	Plug 'vim-airline/vim-airline-themes'
 " ---- }}}
 " ---- Search // Replace // Comment // Bookmark {{{
-Plug 'LandonSchropp/vim-stamp' " Siw
-Plug 'MattesGroeger/vim-bookmarks'
-Plug 'chengzeyi/fzf-preview.vim'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-lua/popup.nvim'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-speeddating'
-Plug 'windwp/nvim-spectre'
+	Plug 'LandonSchropp/vim-stamp' " Siw
+	Plug 'MattesGroeger/vim-bookmarks'
+	Plug 'chengzeyi/fzf-preview.vim'
+	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+	Plug 'junegunn/fzf.vim'
+	Plug 'nvim-lua/plenary.nvim'
+	Plug 'nvim-lua/popup.nvim'
+	Plug 'tpope/vim-commentary'
+	Plug 'tpope/vim-surround'
+	Plug 'tpope/vim-speeddating'
+	Plug 'windwp/nvim-spectre'
 " ---- }}}
 " ---- Naviation und Co. {{{
-Plug 'francoiscabrol/ranger.vim'
-Plug 'rbgrouleff/bclose.vim'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'vim-ctrlspace/vim-ctrlspace'
+	Plug 'francoiscabrol/ranger.vim'
+	Plug 'rbgrouleff/bclose.vim'
+	Plug 'ctrlpvim/ctrlp.vim'
+	Plug 'vim-ctrlspace/vim-ctrlspace'
+	Plug 'vifm/vifm.vim'
 " ---- }}}
 call plug#end()
 " }}}
@@ -127,7 +130,7 @@ set termguicolors
 colorscheme molokai
 set background=dark
 " set cursorcolumn
-" set cursorline
+set cursorline
 " Merke Position im Dokument
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 " Vimwiki Path festlegen
@@ -537,6 +540,61 @@ set modelines=1
 " AUTOMATISCH Systemclipboard benutzen
 noremap <leader>y "+y
 noremap <leader>p "+p
+" -- }}}
+" 'junegunn/goyo.vim' {{{
+function! s:goyo_enter()
+  if executable('tmux') && strlen($TMUX)
+    silent !tmux set status off
+    silent !tmux list-panes -F '\#F' | grep -q Z || tmux resize-pane -Z
+  endif
+  set noshowmode
+  set noshowcmd
+  set scrolloff=999
+  Limelight
+  " ...
+endfunction
+
+function! s:goyo_leave()
+  if executable('tmux') && strlen($TMUX)
+    silent !tmux set status on
+    silent !tmux list-panes -F '\#F' | grep -q Z && tmux resize-pane -Z
+  endif
+  set showmode
+  set showcmd
+  set scrolloff=5
+  Limelight!
+  " ...
+endfunction
+
+autocmd! User GoyoEnter nested call <SID>goyo_enter()
+autocmd! User GoyoLeave nested call <SID>goyo_leave()
+" -- }}}
+" 'junegunn/limelight.vim' {{{
+" Color name (:help cterm-colors) or ANSI code
+let g:limelight_conceal_ctermfg = 'gray'
+" let g:limelight_conceal_ctermfg = 240
+" let g:limelight_conceal_ctermfg = 'Pink'
+
+" Color name (:help gui-colors) or RGB color
+let g:limelight_conceal_guifg = 'gray'
+" let g:limelight_conceal_guifg = 'Pink'
+
+" Default: 0.5
+let g:limelight_default_coefficient = 0.1
+
+" Number of preceding/following paragraphs to include (default: 0)
+let g:limelight_paragraph_span = 0
+
+" Beginning/end of paragraph
+"   When there's no empty line between the paragraphs
+"   and each paragraph starts with indentation
+let g:limelight_bop = '^\s'
+let g:limelight_eop = '\ze\n^\s'
+
+" Highlighting priority (default: 10)
+"   Set it to -1 not to overrule hlsearch
+" let g:limelight_priority = -1
+let g:limelight_priority = 4
 " -- }}}
 " --  Aufgeteilte Konfiguration {{{
 source $HOME/.config/nvim/config_split/airline_lightline.vim

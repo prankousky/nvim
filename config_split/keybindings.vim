@@ -1,7 +1,15 @@
+" Goyo
+noremap <leader>G :Goyo<CR>
+nnoremap <leader>T :Limelight!!<CR>
+
+
 " Leader festlegen
 " let mapleader =","
 " Toggle EOL (etc) Symbole
 nnoremap <leader>i :set invlist<CR>
+
+" init.vim neu laden
+nnoremap <leader>s :source $MYVIMRC<CR>
 
 " mit i / I immer in die Mitte des Buffers springen
 nnoremap i i<ESC>zzi
@@ -15,7 +23,7 @@ autocmd Filetype sh inoremap <buffer> <F6> <ESC>:w<CR>:!clear;shellcheck %<CR>
 nnoremap 22 llct,
 nnoremap 00 0ct,
 nnoremap 44 :call Nis_energieanlagen("", "")<left><left><left><left><left><left>
-" }}}
+" }}melight!}
 "
 " zeige / verstecke MarkBar
 nmap <leader>M <Plug>ToggleMarkbar
@@ -217,8 +225,8 @@ nnoremap <leader>9 <Esc>:FileStyleToggle<CR>
 " erstelle das Projekt und öffne `minicom`, um den Output zu debuggen
 nnoremap <C-b> :make upload<CR>:!tmux splitw -h<CR>:!tmux send-keys 'minicom 9600' Enter<CR>
 " }}}
-" CHADExplorer
-nnoremap <leader>v <cmd>CHADopen<cr>
+" Vifm
+nnoremap <leader>v :Vifm<CR>
 " remap gf to create File if it does not already exist
 map gf :e <cfile><CR>
 " sortiere Plugins in $MYVIMRC
