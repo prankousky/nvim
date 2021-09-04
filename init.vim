@@ -99,6 +99,18 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'vifm/vifm.vim'
 " ---- }}}
 call plug#end()
+" --  Aufgeteilte Konfiguration {{{
+" source $HOME/.config/nvim/config_split/coc-settings.vim
+" source $HOME/.config/nvim/config_split/ultisnips.vim
+source $HOME/.config/nvim/config_split/airline_lightline.vim
+source $HOME/.config/nvim/config_split/autocommands.vim
+source $HOME/.config/nvim/config_split/backups.vim
+source $HOME/.config/nvim/config_split/fzf.vim
+source $HOME/.config/nvim/config_split/keybindings.vim
+source $HOME/.config/nvim/config_split/startify.vim
+source $HOME/.config/nvim/config_split/vim-easymotion.vim
+" -- }}}
+
 " }}}
 " Automatisch fehlende Plugins installieren beim Start {{{
 autocmd VimEnter *
@@ -681,18 +693,54 @@ vim.api.nvim_set_keymap("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
 vim.api.nvim_set_keymap("i", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
 vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
 EOF
-
 " -- }}}
-" --  Aufgeteilte Konfiguration {{{
-source $HOME/.config/nvim/config_split/airline_lightline.vim
-source $HOME/.config/nvim/config_split/autocommands.vim
-source $HOME/.config/nvim/config_split/backups.vim
-" source $HOME/.config/nvim/config_split/coc-settings.vim
-source $HOME/.config/nvim/config_split/fzf.vim
-source $HOME/.config/nvim/config_split/keybindings.vim
-source $HOME/.config/nvim/config_split/startify.vim
-" source $HOME/.config/nvim/config_split/ultisnips.vim
-source $HOME/.config/nvim/config_split/vim-easymotion.vim
+" -- 'nvim-treesitter/nvim-treesitter' {{{
+" Consistent syntax highlighting.
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+  highlight = {
+    enable = true,
+    custom_captures = {
+      -- Highlight the @foo.bar capture group with the "Identifier" highlight group.
+      ["foo.bar"] = "Identifier",
+    },
+    -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
+    -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
+    -- Using this option may slow down your editor, and you may see some duplicate highlights.
+    -- Instead of true it can also be a list of languages
+    additional_vim_regex_highlighting = false,
+  },
+}
+EOF
+
+" Incremental selection based on the named nodes from the grammar.
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+  incremental_selection = {
+    enable = true,
+    keymaps = {
+      init_selection = "gnn",
+      node_incremental = "grn",
+      scope_incremental = "grc",
+      node_decremental = "grm",
+    },
+  },
+}
+EOF
+
+" Indentation based on treesitter for the = operator. NOTE: This is an experimental feature.
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+  indent = {
+    enable = true
+  }
+}
+EOF
+
+" Folding
+set foldmethod=expr
+set foldexpr=nvim_treesitter#foldexpr()
+
 " -- }}}
 " ###########################################################################################
 " ##############################   TODO: alles in eine Datei   ##############################
