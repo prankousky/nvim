@@ -1,6 +1,6 @@
-" #########################################################################
-" ##############################   Plugins   ##############################
-" #########################################################################
+"******************************************************************************"
+"                            Plugins (via plug.vim)                            "
+"******************************************************************************"
 " -- Plugins {{{
 " Automatisch vim-plug installieren, sofern es nicht installiert ist {{{
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
@@ -696,7 +696,56 @@ vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
 EOF
 " -- }}}
 " -- 's1n7ax/nvim-comment-frame' {{{
-lua require('nvim-comment-frame').setup()
+lua << EOF
+require('nvim-comment-frame').setup({
+    languages = {
+        lua = {
+            -- start the comment with this string
+            start_str = '--[[',
+
+            -- end the comment line with this string
+            end_str = ']]--',
+
+            -- fill the comment frame border with this character
+            fill_char = '*',
+
+            -- width of the comment frame
+            frame_width = 100,
+
+            -- wrap the line after 'n' characters
+            line_wrap_len = 70,
+
+            -- automatically indent the comment frame based on the line
+            auto_indent = false,
+
+            -- add comment above the current line
+            add_comment_above = false,
+        },
+        vim = {
+            -- start the comment with this string
+            start_str = '"',
+
+            -- end the comment line with this string
+            end_str = '"',
+
+            -- fill the comment frame border with this character
+            fill_char = '*',
+
+            -- width of the comment frame
+            frame_width = 80,
+
+            -- wrap the line after 'n' characters
+            line_wrap_len = 70,
+
+            -- automatically indent the comment frame based on the line
+            auto_indent = true,
+
+            -- add comment above the current line
+            add_comment_above = true,
+        },
+    }
+})
+EOF
 " mit <leader>cf oder <leader>cm (mehrere Zeilen) Kommentarbox comment box erstellen
 " -- }}}
 " -- 'nvim-treesitter/nvim-treesitter' {{{
