@@ -89,6 +89,7 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'tpope/vim-commentary'
 	Plug 'tpope/vim-surround'
 	Plug 'tpope/vim-speeddating'
+	Plug 's1n7ax/nvim-comment-frame'
 	Plug 'windwp/nvim-spectre'
 " ---- }}}
 " ---- Naviation und Co. {{{
@@ -693,6 +694,10 @@ vim.api.nvim_set_keymap("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
 vim.api.nvim_set_keymap("i", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
 vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
 EOF
+" -- }}}
+" -- 's1n7ax/nvim-comment-frame' {{{
+lua require('nvim-comment-frame').setup()
+" mit <leader>cf oder <leader>cm (mehrere Zeilen) Kommentarbox comment box erstellen
 " -- }}}
 " -- 'nvim-treesitter/nvim-treesitter' {{{
 " Consistent syntax highlighting.
