@@ -18,6 +18,7 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'dguo/blood-moon', {'rtp': 'applications/vim'}
 	Plug 'folke/lsp-colors.nvim'
+	Plug 'dense-analysis/ale'
 	Plug 'folke/trouble.nvim'
 	Plug 'ray-x/lsp_signature.nvim'
 	" Plug 'jiangmiao/auto-pairs'
@@ -55,6 +56,7 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	" let g:airline_theme='one'
 	Plug 'tomasr/molokai'
 	Plug 'joshdick/onedark.vim'
+	Plug 'gruvbox-community/gruvbox'
 	" -- Misc
 	" Plug 'Yggdroot/indentLine'
 	" Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
@@ -129,14 +131,20 @@ autocmd VimEnter *
 " nvim -es -u init.vim -i NONE -c "PlugInstall" -c "qa"
 " ---- }}}
 " ---- }}}
-" ########################################################################
-" ##############################   Basics   ##############################
-" ########################################################################
+"******************************************************************************"
+"                                    Basics                                    "
+"******************************************************************************"
+
 " -- Basics {{{
 " Leader festlegen
+let leader = ","
 let mapleader = ","
 " Localleader festlegen
 let localleader = "<space>"
+" zu lange Zeilen brechen
+set wrap
+" 80. Zeichen markieren
+set colorcolumn=80
 " vernünftig einfügen
 set paste
 " 256 Farben; MUSS VOR colorscheme stehen
@@ -145,8 +153,19 @@ set t_ut=
 set termguicolors
 " Farben festlegen
 " colorscheme blood-moon
-colorscheme molokai
+" colorscheme molokai
+colorscheme gruvbox
 set background=dark
+" -- gruvbox-community settings {{{
+let g:gruvbox_contrast_dark = 'hard'
+" Markierung bei 80
+let g:gruvbox_color_column = 'green'
+" Italics aktivieren
+let g:gruvbox_italicize_strings = 1
+" Ausprobieren
+let g:gruvbox_improved_strings = 1
+let g:gruvbox_improved_warnings = 1
+" -- }}}
 " set cursorcolumn
 set cursorline
 " Merke Position im Dokument
@@ -177,9 +196,10 @@ set wildmenu
 " Dialog, falls geänderte Datei geschlossen wird
 set confirm
 " }}}
-" ###########################################################################
-" ##############################   Filetypes   ##############################
-" ###########################################################################
+"******************************************************************************"
+"                                  Filetypes                                   "
+"******************************************************************************"
+
 " -- Filetypes {{{
 " Bestimmte Dateien vom Öffnen ausschließen
 set wildignore+=.pyc,.swp
@@ -219,7 +239,7 @@ set ignorecase
 " Suche fängt oben wieder an, wenn unten zuende
 set wrapscan
 " Zeilenumbruch verbieten
-set nowrap
+" set nowrap
 " Highlighte Brackets
 set showmatch
 " virtuelles Editieren im Block Mode zulassen
@@ -293,6 +313,7 @@ nnoremap <leader>sp viw:lua require('spectre').open_file_search()<cr>
 nnoremap <leader>y :YankHistoryRgPaste<CR>
 " -- }}}
 " -- folke/which-key.nvim {{{
+nnoremap <silent> <C-w> :WhichKey<CR>
 nnoremap <silent> <leader> :WhichKey<CR>
 " -- }}}
 " -- liuchengxu/vim-which-key {{{
@@ -444,7 +465,7 @@ let g:bookmark_highlight_lines = 1
 " -- }}}
 " ---- }}}
 " " -- 'jiangmiao/auto-pairs' {{{
-" let g:AutoPairsFlyMode = 1 
+" let g:AutoPairsFlyMode = 1
 " let g:AutoPairsShortcutBackInsert = '<M-b>'
 " " -- }}}
 " " -- 'Yggdroot/hiPairs' {{{
@@ -797,6 +818,22 @@ cfg = {
 require'lsp_signature'.on_attach(cfg, bufnr) -- no need to specify bufnr if you don't use toggle_key
 EOF
 " -- }}}
+" -- 'dense-analysis/ale' {{{
+" automatisch speichern
+highlight ALEWarning ctermbg=DarkMagenta
+let g:airline#extensions#ale#enabled = 1
+let g:ale_sign_column_always = 1
+let g:ale_fix_on_save = 1
+let b:ale_linters = {
+\	'*': ['stylelint', 'eslint'],
+\	'python': ['pylint'],
+\}
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'javascript': ['eslint'],
+\   'python': ['black'],
+\}
+" -- }}}
 " -- 'nvim-treesitter/nvim-treesitter' {{{
 " Consistent syntax highlighting.
 lua <<EOF
@@ -839,10 +876,9 @@ require'nvim-treesitter.configs'.setup {
   }
 }
 EOF
-
 " Folding
-set foldmethod=expr
-set foldexpr=nvim_treesitter#foldexpr()
+" set foldmethod=expr
+" set foldexpr=nvim_treesitter#foldexpr()
 lua local ts_utils = require 'nvim-treesitter.ts_utils'
 " -- }}}
 " ###########################################################################################

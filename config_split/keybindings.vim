@@ -2,6 +2,8 @@
 noremap <leader>G :Goyo<CR>
 nnoremap <leader>T :Limelight!!<CR>
 
+" nnoremap <C-Up> {
+" nnoremap <C-Down> }
 
 " Leader festlegen
 " let mapleader =","
@@ -44,7 +46,7 @@ nnoremap <leader>vv <c-u>:tabedit $MYVIMRC<CR>
 " Lösche gesamten Inhalt des Buffers
 nnoremap <leader>da ggdG
 " AckWindow
-nnoremap <leader>F <c-u>:Rg<CR>
+nnoremap <leader>t <c-u>:Rg<CR>
 " FzfGitignore
 nnoremap <leader>gi <c-u>:FzfGitignore<CR>
 

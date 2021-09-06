@@ -2,7 +2,8 @@
 " let g:airline_theme='molokai'
 " let g:airline_theme='minimalist'
 " let g:airline_theme='violet'
-let g:airline_theme='onedark'
+" let g:airline_theme='onedark'
+let g:airline_theme='gruvbox'
 " let g:rigel_lightline = 1
 " let g:lightline = { 'colorscheme': 'molokai' }
 "
