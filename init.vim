@@ -14,8 +14,6 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 " ---- LSP // Completion {{{
 	" Plug 'SirVer/ultisnips'
 	" Plug 'honza/vim-snippets' " gehört zu ultisnipts
-	" Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
-	" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'dguo/blood-moon', {'rtp': 'applications/vim'}
 	Plug 'folke/lsp-colors.nvim'
 	Plug 'dense-analysis/ale'
@@ -23,16 +21,18 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'ray-x/lsp_signature.nvim'
 	" Plug 'jiangmiao/auto-pairs'
 	Plug 'windwp/nvim-autopairs'
-	Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
-	Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
+	" Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
+	" Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
 	Plug 'neovim/nvim-lspconfig'
 	Plug 'nvim-lua/completion-nvim'
 	Plug 'hrsh7th/nvim-compe'
 	Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 	Plug 'ycm-core/YouCompleteMe'
 	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
+	Plug 'nvim-telescope/telescope.nvim'
 " ---- }}}
 " ---- Filetypes/ Coding {{{
+	Plug 'mbbill/undotree'
 	Plug 'chrisbra/csv.vim'
 	Plug 'freitass/todo.txt-vim'
 	Plug 'vimwiki/vimwiki'
@@ -105,7 +105,6 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 " ---- }}}
 call plug#end()
 " --  Aufgeteilte Konfiguration {{{
-" source $HOME/.config/nvim/config_split/coc-settings.vim
 " source $HOME/.config/nvim/config_split/ultisnips.vim
 source $HOME/.config/nvim/config_split/airline_lightline.vim
 source $HOME/.config/nvim/config_split/autocommands.vim
@@ -163,7 +162,7 @@ let g:gruvbox_color_column = 'green'
 " Italics aktivieren
 let g:gruvbox_italicize_strings = 1
 " Ausprobieren
-let g:gruvbox_improved_strings = 1
+let g:gruvbox_improved_strings = 0
 let g:gruvbox_improved_warnings = 1
 " -- }}}
 " set cursorcolumn
@@ -301,10 +300,10 @@ let g:Hexokinase_highlighters = [ 'backgroundfull', 'sign_column', 'virtual' ]
 " Default value:
 let g:Hexokinase_optInPatterns = 'full_hex,rgb,rgba,hsl,hsla,colour_names'
 " -- windwp/nvim-spectre {{{
-nnoremap <leader>S :lua require('spectre').open()<CR>
+" nnoremap <leader>S :lua require('spectre').open()<CR>
 "search current word
 nnoremap <leader>sw :lua require('spectre').open_visual({select_word=true})<CR>
-vnoremap <leader>s :lua require('spectre').open_visual()<CR>
+" vnoremap <leader>s :lua require('spectre').open_visual()<CR>
 "  search in current file
 nnoremap <leader>sp viw:lua require('spectre').open_file_search()<cr>
 " -- }}}
@@ -491,18 +490,18 @@ let g:matchup_matchparen_deferred = 1
 let g:matchup_matchparen_hi_surround_always = 1
 " -- }}}
 " 'ms-jpq/coq_nvim' {{{
-let g:coq_settings = { 'auto_start': v:true }
+" let g:coq_settings = { 'auto_start': v:true }
 " 🐓 Coq completion settings
 " Set recommended to false
-let g:coq_settings = { "keymap.recommended": v:true }
+" let g:coq_settings = { "keymap.recommended": v:true }
 
 " Keybindings
-ino <silent><expr> <Esc>   pumvisible() ? "\<C-e><Esc>" : "\<Esc>"
-ino <silent><expr> <C-c>   pumvisible() ? "\<C-e><C-c>" : "\<C-c>"
-ino <silent><expr> <BS>    pumvisible() ? "\<C-e><BS>"  : "\<BS>"
-ino <silent><expr> <CR>    pumvisible() ? (complete_info().selected == -1 ? "\<C-e><CR>" : "\<C-y>") : "\<CR>"
-ino <silent><expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
-ino <silent><expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<BS>"
+" ino <silent><expr> <Esc>   pumvisible() ? "\<C-e><Esc>" : "\<Esc>"
+" ino <silent><expr> <C-c>   pumvisible() ? "\<C-e><C-c>" : "\<C-c>"
+" ino <silent><expr> <BS>    pumvisible() ? "\<C-e><BS>"  : "\<BS>"
+" ino <silent><expr> <CR>    pumvisible() ? (complete_info().selected == -1 ? "\<C-e><CR>" : "\<C-y>") : "\<CR>"
+" ino <silent><expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+" ino <silent><expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<BS>"
 " }}}
 " 'windwp/nvim-autopairs' {{{
 lua << EOF
@@ -520,7 +519,7 @@ local npairs = require('nvim-autopairs')
 
 npairs.setup({ map_bs = false })
 
-vim.g.coq_settings = { keymap = { recommended = false } }
+-- vim.g.coq_settings = { keymap = { recommended = false } }
 
 -- these mappings are coq recommended mappings unrelated to nvim-autopairs
 remap('i', '<esc>', [[pumvisible() ? "<c-e><esc>" : "<esc>"]], { expr = true, noremap = true })
@@ -834,6 +833,10 @@ let g:ale_fixers = {
 \   'python': ['black'],
 \}
 " -- }}}
+" -- 'nvim-telescope/telescope.nvim' {{{
+
+
+" -- }}}
 " -- 'nvim-treesitter/nvim-treesitter' {{{
 " Consistent syntax highlighting.
 lua <<EOF
@@ -876,10 +879,69 @@ require'nvim-treesitter.configs'.setup {
   }
 }
 EOF
+
+lua <<EOF
+require('telescope').setup{
+  defaults = {
+    vimgrep_arguments = {
+      'rg',
+      '--color=always',
+      '--no-heading',
+      '--with-filename',
+      '--line-number',
+      '--column',
+      '--smart-case'
+    },
+    prompt_prefix = "> ",
+    selection_caret = "> ",
+    entry_prefix = "  ",
+    initial_mode = "insert",
+    selection_strategy = "reset",
+    sorting_strategy = "descending",
+    layout_strategy = "horizontal",
+    layout_config = {
+      horizontal = {
+        mirror = false,
+      },
+      vertical = {
+        mirror = false,
+      },
+    },
+    file_sorter =  require'telescope.sorters'.get_fuzzy_file,
+    file_ignore_patterns = {},
+    generic_sorter =  require'telescope.sorters'.get_generic_fuzzy_sorter,
+    winblend = 0,
+    border = {},
+    borderchars = { '─', '│', '─', '│', '╭', '╮', '╯', '╰' },
+    color_devicons = true,
+    use_less = true,
+    path_display = {},
+    set_env = { ['COLORTERM'] = 'truecolor' }, -- default = nil,
+    file_previewer = require'telescope.previewers'.vim_buffer_cat.new,
+    grep_previewer = require'telescope.previewers'.vim_buffer_vimgrep.new,
+    qflist_previewer = require'telescope.previewers'.vim_buffer_qflist.new,
+
+    -- Developer configurations: Not meant for general override
+    buffer_previewer_maker = require'telescope.previewers'.buffer_previewer_maker
+  }
+}
+EOF
 " Folding
 " set foldmethod=expr
 " set foldexpr=nvim_treesitter#foldexpr()
 lua local ts_utils = require 'nvim-treesitter.ts_utils'
+
+" Find files using Telescope command-line sugar.
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+" Using Lua functions
+" nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
+" nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
+" nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
+" nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 " -- }}}
 " ###########################################################################################
 " ##############################   TODO: alles in eine Datei   ##############################

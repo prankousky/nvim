@@ -2,11 +2,11 @@
 noremap <leader>G :Goyo<CR>
 nnoremap <leader>T :Limelight!!<CR>
 
-" nnoremap <C-Up> {
-" nnoremap <C-Down> }
+nnoremap <C-Up> {
+nnoremap <C-Down> }
 
 " Leader festlegen
-" let mapleader =","
+let mapleader =","
 " Toggle EOL (etc) Symbole
 nnoremap <leader>i :set invlist<CR>
 
@@ -62,15 +62,14 @@ nnoremap <leader>rr <c-u>:e!<CR>
 " JSON schöner formatieren
 nnoremap <leader>pp <c-u>:%!python -m json.tool<CR>
 " Rechtsschreibung ein/aus (Deutsch)
-map <leader>o :setlocal spell! spelllang=de<CR>
+nnoremap <leader>o :setlocal spell! spelllang=de<CR>
 " Rechtsschreibung ein/aus (Englisch)
-map <leader>O :setlocal spell! spelllang=en_us<CR>
+nnoremap <leader>O :setlocal spell! spelllang=en_us<CR>
 " Suchen und Ersetzen
-nnoremap <leader>S :%s///g<Left><Left><Left>
+nnoremap <leader>s :%s///g<Left><Left><Left>
 " Farbwerte anzeigen
-map <leader>c :ColorToggle<CR>
+nnoremap <leader>c :ColorToggle<CR>
 " gesamten Inhalt kopieren
-map <leader>* ggvG$y:echo "alles kopiert!"<CR>
 
 " NerdTree und Nerdtree-Tabs
 " NerdTree-Tabs
@@ -99,7 +98,7 @@ nnoremap <Leader>md :MarkDrawer<cr>
 map <leader>bb :!bash %:p<CR>
 
 " nach sichtbaren Linien bewegen (wenn eine 'echte' Zeile getrennt wird, und
-" somit auf zwei Zeilen geteilt wird, bewegt man sich hierin so, wie man es 
+" somit auf zwei Zeilen geteilt wird, bewegt man sich hierin so, wie man es
 " erwartet)
 nnoremap j gj
 nnoremap k gk
