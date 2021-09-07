@@ -47,5 +47,5 @@ let g:compe.source.vsnip = v:true
 let g:compe.source.ultisnips = v:true
 let g:compe.source.luasnip = v:true
 
-" inoremap <silent><expr> <CR> :call compe#confirm('<CR>')
-inoremap <expr> <CR> :call compe#confirm('<CR>')
+inoremap <silent><expr> <CR> :call compe#confirm('<CR>')
+" inoremap <expr> <CR> :call compe#confirm('<CR>')
