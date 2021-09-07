@@ -12,17 +12,12 @@ endif
 " Plugins festlegen {{{
 call plug#begin('$HOME/.config/nvim/meine_plugs')
 " ---- LSP // Completion {{{
-	" Plug 'SirVer/ultisnips'
-	" Plug 'honza/vim-snippets' " gehört zu ultisnipts
 	Plug 'dguo/blood-moon', {'rtp': 'applications/vim'}
 	Plug 'folke/lsp-colors.nvim'
 	Plug 'dense-analysis/ale'
 	Plug 'folke/trouble.nvim'
 	Plug 'ray-x/lsp_signature.nvim'
-	" Plug 'jiangmiao/auto-pairs'
 	Plug 'windwp/nvim-autopairs'
-	" Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
-	" Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
 	Plug 'neovim/nvim-lspconfig'
 	Plug 'nvim-lua/completion-nvim'
 	Plug 'hrsh7th/nvim-compe'
@@ -52,16 +47,11 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 " ---- }}}
 " ---- Visuelles {{{
 " -- Themes
-	" Plug 'rakr/vim-one'
-	" let g:airline_theme='one'
 	Plug 'tomasr/molokai'
 	Plug 'luochen1990/rainbow'
 	Plug 'joshdick/onedark.vim'
 	Plug 'gruvbox-community/gruvbox'
 	" -- Misc
-	" Plug 'Yggdroot/indentLine'
-	" Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
-	" Plug 'TaDaa/vimade'
 	Plug 'Yggdroot/hiPairs' " highlighte umrandende Symbole
 	Plug 'andymass/vim-matchup' " ähnlich wie hiPairs
 	Plug 'folke/which-key.nvim'
@@ -76,8 +66,6 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'junegunn/goyo.vim'
 	Plug 'junegunn/limelight.vim'
 " -- Status // Dashboard
-	" Plug 'famiu/feline.nvim'
-	" Plug 'ojroques/nvim-hardline'
 	Plug 'mhinz/vim-startify'
 	Plug 'romgrk/barbar.nvim'
 	Plug 'vim-airline/vim-airline'
@@ -105,17 +93,16 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'vifm/vifm.vim'
 " ---- }}}
 call plug#end()
-" --  Aufgeteilte Konfiguration {{{
-" source $HOME/.config/nvim/config_split/ultisnips.vim
-source $HOME/.config/nvim/config_split/airline_lightline.vim
-source $HOME/.config/nvim/config_split/autocommands.vim
-source $HOME/.config/nvim/config_split/backups.vim
-source $HOME/.config/nvim/config_split/fzf.vim
-source $HOME/.config/nvim/config_split/keybindings.vim
-source $HOME/.config/nvim/config_split/startify.vim
-source $HOME/.config/nvim/config_split/vim-easymotion.vim
-" -- }}}
-
+" " --  Aufgeteilte Konfiguration {{{
+" " source $HOME/.config/nvim/config_split/ultisnips.vim
+" source $HOME/.config/nvim/config_split/airline_lightline.vim
+" source $HOME/.config/nvim/config_split/autocommands.vim
+" source $HOME/.config/nvim/config_split/backups.vim
+" source $HOME/.config/nvim/config_split/fzf.vim
+" source $HOME/.config/nvim/config_split/keybindings.vim
+" source $HOME/.config/nvim/config_split/startify.vim
+" source $HOME/.config/nvim/config_split/vim-easymotion.vim
+" " -- }}}
 " }}}
 " Automatisch fehlende Plugins installieren beim Start {{{
 autocmd VimEnter *
