@@ -2,6 +2,7 @@
 let mapleader =","
 " Wichtigste DIRS mit CtrlP
 nnoremap <leader>P :CtrlPBookmarkDir<CR>
+" zeige Plugins im Firefox
 nnoremap <leader>g yi' :!firefox --new-tab https://github.com/<C-R>"<CR><CR>
 " Mit ctrl+h/j/k/l zwischen Panes bewegen
 nnoremap <C-J> <C-W><C-J>
