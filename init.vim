@@ -30,7 +30,7 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'nvim-lua/completion-nvim'
 	Plug 'hrsh7th/nvim-compe'
 	Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-	Plug 'ycm-core/YouCompleteMe'
+	" Plug 'ycm-core/YouCompleteMe'
 	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 	Plug 'nvim-telescope/telescope.nvim'
 " ---- }}}
@@ -323,8 +323,8 @@ nnoremap <leader>sp viw:lua require('spectre').open_file_search()<cr>
 nnoremap <leader>y :YankHistoryRgPaste<CR>
 " -- }}}
 " -- folke/which-key.nvim {{{
-nnoremap <silent> <C-w> :WhichKey<CR>
-nnoremap <silent> <leader> :WhichKey<CR>
+" nnoremap <silent> <C-w> :WhichKey<CR>
+" nnoremap <silent> <leader> :WhichKey<CR>
 " -- }}}
 " -- liuchengxu/vim-which-key {{{
 " nnoremap <silent> <leader> :WhichKey ','<CR>
@@ -936,6 +936,7 @@ set timeoutlen=1000 ttimeoutlen=0
 set hidden
 " Taste festlegen
 let g:CtrlSpaceDefaultMappingKey = "<C-space> "
+highlight WhichKeyFloat guifg='#01bb3f' gui=underline ctermfg=155 cterm=underline
 " }}}
 "******************************************************************************"
 "                                     REST                                     "

@@ -3,7 +3,7 @@ set t_Co=256
 set t_ut=
 set termguicolors
 " Cursor BLEIBT ein Block
-set guicursor=
+" set guicursor=
 " Cursorzeile markieren
 set cursorline
 " Merke Position im Dokument
