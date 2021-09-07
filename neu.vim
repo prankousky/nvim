@@ -1,37 +1,14 @@
-set path +=**
 " Leader ist Space
 let mapleader = " "
-let loaded_matchparen = 1
-" ctrl+c = ESC
-inoremap <C-c> <esc>
 
-" schöneres Menu bei "find *.py"
-set wildmode=longest,list,full
-set wildmenu
 
-" Datei(typen) ignorieren
-set wildignore+=*.pyc
-set wildignore+=*_build/*
-set wildignore+=**/coverage/*
-set wildignore+=**/node_modules/*
-set wildignore+=**/android/*
-set wildignore+=**/ios/*
-set wildignore+=**/.git/*
 
-" in VISUAL Auswahl verschieben (hoch/runter)
-vnoremap J :m '>+1<CR>gv=gv
-vnoremap K :m '<-2<CR>gv=gv
-
-" greatest remap ever
-xnoremap <leader>p "_dP
 
 " next greatest remap ever : asbjornHaland
 nnoremap <leader>y "+y
 vnoremap <leader>y "+y
 nnoremap <leader>Y gg"+yG
 
-nnoremap <leader>d "_d
-vnoremap <leader>d "_d
 
 call plug#begin('~/.config/nvim/test')
 " Python
@@ -92,14 +69,3 @@ call plug#end()
 nmap <leader>nn :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
 \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
 \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
-
-augroup highlight_yank
-    autocmd!
-    autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank({timeout = 2000})
-augroup END
-
-augroup THE_PRIMEAGEN
-    autocmd!
-    autocmd BufWritePre * %s/\s\+$//e
-    autocmd BufEnter,BufWinEnter,TabEnter *.rs :lua require'lsp_extensions'.inlay_hints{}
-augroup END

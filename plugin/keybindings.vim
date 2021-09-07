@@ -1,45 +1,46 @@
-" Wichtigste DIRS mit CtrlP
-nnoremap <leader>P :CtrlPBookmarkDir
-
-" Goyo
-noremap <leader>G :Goyo<CR>
-nnoremap <leader>T :Limelight!!<CR>
-
-nnoremap <C-Up> {
-nnoremap <C-Down> }
-
 " Leader festlegen
 let mapleader =","
-" Toggle EOL (etc) Symbole
-nnoremap <leader>i :set invlist<CR>
 
-" init.vim neu laden
-nnoremap <leader>s :source $MYVIMRC<CR>
-
-" mit i / I immer in die Mitte des Buffers springen
-nnoremap i i<ESC>zzi
-nnoremap I I<ESC>zzI
-
-" Shellcheck
-autocmd Filetype sh nnoremap <buffer> <F6> <ESC>:w<CR>:!clear;shellcheck %<CR>
-autocmd Filetype sh inoremap <buffer> <F6> <ESC>:w<CR>:!clear;shellcheck %<CR>
-
-" NIS Mapping {{{
-nnoremap 22 llct,
-nnoremap 00 0ct,
-nnoremap 44 :call Nis_energieanlagen("", "")<left><left><left><left><left><left>
-" }}melight!}
-"
-" zeige / verstecke MarkBar
-nmap <leader>M <Plug>ToggleMarkbar
-nmap <leader>mA <Plug>OpenMarkbarPeekabooApostrophe
-
+" Wichtigste DIRS mit CtrlP
+nnoremap <leader>P :CtrlPBookmarkDir<CR>
+nnoremap <leader>g yi' :!firefox --new-tab https://github.com/<C-R>"<CR><CR>
 " Mit ctrl+h/j/k/l zwischen Panes bewegen
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-
+" AUTOMATISCH Systemclipboard benutzen
+nnoremap <leader>y "+y
+nnoremap <leader>p "+p
+" lösche in Black Hole
+" nnoremap <leader>d "_d
+" vnoremap <leader>d "_d
+" Goyo
+nnoremap <leader>G :Goyo<CR>
+nnoremap <leader>T :Limelight!!<CR>
+" Springe innerhalb Klammern
+nnoremap <C-Up> {
+nnoremap <C-Down> }
+" Toggle EOL (etc) Symbole
+nnoremap <leader>i :set invlist!<CR>
+" init.vim neu laden
+nnoremap <leader>S :source $MYVIMRC<CR>:echo "Neu geladen"<CR>
+" mit i / I immer in die Mitte des Buffers springen
+nnoremap i i<ESC>zzi
+nnoremap I I<ESC>zzI
+nnoremap a a<ESC>zza
+nnoremap A A<ESC>zzA
+" Shellcheck
+autocmd Filetype sh nnoremap <buffer> <F6> <ESC>:w<CR>:!clear;shellcheck %<CR>
+autocmd Filetype sh inoremap <buffer> <F6> <ESC>:w<CR>:!clear;shellcheck %<CR>
+" NIS Mapping {{{
+nnoremap 22 llct,
+nnoremap 00 0ct,
+nnoremap 44 :call Nis_energieanlagen("", "")<left><left><left><left><left><left>
+" }}}
+" zeige / verstecke MarkBar
+nmap <leader>mm <Plug>ToggleMarkbar
+nmap <leader>mA <Plug>OpenMarkbarPeekabooApostrophe
 " nach < > Fokus wieder erlangen
 " mehr Geniales hier (https://vim.fandom.com/wiki/Shifting_blocks_visually)
 vnoremap > >gv
@@ -70,17 +71,9 @@ nnoremap <leader>o :setlocal spell! spelllang=de<CR>
 nnoremap <leader>O :setlocal spell! spelllang=en_us<CR>
 " Suchen und Ersetzen
 nnoremap <leader>s :%s///g<Left><Left><Left>
-" Farbwerte anzeigen
-nnoremap <leader>c :ColorToggle<CR>
 " gesamten Inhalt kopieren
-
-" NerdTree und Nerdtree-Tabs
-" NerdTree-Tabs
-nnoremap <leader>N :NERDTreeTabsToggle<CR>
-
 " ersetze Wort unter Cursor
 nnoremap <leader>7 :%s/\<<c-r><c-w>\>//g<left><left>
-
 " Zeilen hin- und her schieben
 " wenn die Zeilen automatisch eingezogen werden sollen,
 " hinter xnoreap (..) gv=gv eintragen, ansonsten nur gv
@@ -88,6 +81,9 @@ xnoremap <A-K> :m-2<cr>gv
 xnoremap <A-J> :m'>+<cr>gv
 nnoremap <A-J> :m+<cr>==
 nnoremap <A-K> :m-2<cr>==
+" in VISUAL Auswahl verschieben (hoch/runter)
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
 
 " Zeile mit Dashes füllen
 " pipe wird mir <bar> ersetzt, danach wechselt man in den insert mode (i),
@@ -152,11 +148,10 @@ imap <C-s> <esc>:w<cr>
 nmap <C-q> <esc>:q<cr>
 " Speichern mit <jk>
 inoremap jk <Esc>:w<cr>
-
-" csv als Tabelle darstellen
-nnoremap <leader>cs :CSVTabularize<CR>
 " <Esc> auf <jj> mappen
 inoremap jj <Esc>
+" ctrl+c = ESC
+inoremap <C-c> <esc>
 " mit <Enter> Search Highlight clearen
 nnoremap <CR> :noh<CR><CR>
 " Navigate between closed folds
@@ -205,16 +200,6 @@ nnoremap <space><up> <C-W><C-K>
 nnoremap <space><right> <C-W><C-L>
 " Split nach links
 nnoremap <space><left> <C-W><C-H>
-" " vim-rememberall {{{
-" " Show ',' normal mode mappings when ',' is pressed.
-" nnoremap <silent> <expr> , Remembrall(',')
-
-" " Show ',' normal mode mappings when the key combination ',?' is pressed,
-" " so we don't have to wait for the timeout.
-" nnoremap <silent> <expr> ,? Remembrall(',')
-
-" " Show visual mode mappings.o
-" " }}}
 " Platformio {{{
 " erstelle das Projekt und öffne `minicom`, um den Output zu debuggen
 nnoremap <C-b> :make upload<CR>:!tmux splitw -h<CR>:!tmux send-keys 'minicom 9600' Enter<CR>
@@ -224,22 +209,17 @@ nnoremap <leader>v :Vifm<CR>
 " remap gf to create File if it does not already exist
 map gf :e <cfile><CR>
 " sortiere Plugins in $MYVIMRC
-nmap <silent>ss :/plug#begin/+1,/plug#end/-1sort<CR>
-" VISUAL SELECTION in `` bringen
-vnoremap <silent><leader>c S`
-" CocExplorer
-" nmap <leader>e :CocCommand explorer<CR>
+" nmap <silent>ss :/plug#begin/+1,/plug#end/-1sort<CR>
 " UndoTree
 nmap <leader>u :UndotreeToggle<CR>
-
-nnoremap <leader># I##############################   <Esc>A   ##############################<Esc>yyPVr#jpVr#"
 
 " The direction of n and N depends on whether / or ? was used for searching forward or backward respectively. This is pretty confusing to me.
 " If you want n to always search forward and N backward, use this:
 nnoremap <expr> n  'Nn'[v:searchforward]
 xnoremap <expr> n  'Nn'[v:searchforward]
 onoremap <expr> n  'Nn'[v:searchforward]
-
 nnoremap <expr> N  'nN'[v:searchforward]
 xnoremap <expr> N  'nN'[v:searchforward]
 onoremap <expr> N  'nN'[v:searchforward]
+" schließe andere Buffer
+nnoremap <leader>x :execute "%bd\|e#"<CR>

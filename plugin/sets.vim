@@ -1,3 +1,8 @@
+" Leader festlegen
+let leader = ","
+let mapleader = ","
+" " Localleader festlegen
+let localleader = "<space>"
 " 256 Farben; muss VOR colorscheme stehen
 set t_Co=256
 set t_ut=
@@ -35,11 +40,10 @@ set wrap
 " Backup / Swap / etc.
 set noswapfile
 set nobackup
-set undodir=~/.vim/undodir
+set undodir=~/.config/nvim/undo
 set undofile
 " immer x Zeilen unter/überhalb anzeigen
 set scrolloff=8
-" set noshowmode
 "
 set signcolumn=yes
 "
@@ -56,11 +60,38 @@ set shortmess+=c
 set colorcolumn=80
 "
 set display+=lastline
-" immer X Zeilen über und unter dem Cursor anzeigen
-set scrolloff=10
 " Statusbar: immer anzeigen
 set laststatus=2
 " Tab Completion als Menü anzeigen
 set wildmenu
 " Dialog, falls geänderte Datei geschlossen wird
 set confirm
+" schöneres Menu bei "find *.py"
+set wildmode=longest,list,full
+set wildmenu
+" Datei(typen) ignorieren
+set wildignore+=*.pyc
+set wildignore+=*_build/*
+set wildignore+=**/coverage/*
+set wildignore+=**/node_modules/*
+set wildignore+=**/android/*
+set wildignore+=**/ios/*
+set wildignore+=**/.git/*
+"
+let loaded_matchparen = 1
+set path +=**
+set foldenable
+set foldmethod=marker
+" Beim Öffnen zugeklkappt
+set foldlevel=20
+set modelines=1
+" -- gruvbox-community settings {{{
+let g:gruvbox_contrast_dark = 'hard'
+" Markierung bei 80
+let g:gruvbox_color_column = 'green'
+" Italics aktivieren
+let g:gruvbox_italicize_strings = 1
+" Ausprobieren
+let g:gruvbox_improved_strings = 0
+let g:gruvbox_improved_warnings = 1
+" " -- }}}

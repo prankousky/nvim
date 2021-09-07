@@ -1,5 +1,3 @@
-nnoremap <leader>w fzf#vim#complete#path('rg --files')
-
 " This is the default option:
 "   - Preview window on the right with 50% width
 "   - CTRL-/ will toggle preview window.

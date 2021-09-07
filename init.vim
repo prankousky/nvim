@@ -16,7 +16,6 @@ endif
 	"******************************************************************************"
 	"                              Plugins festlegen                               "
 	"******************************************************************************"
-
 " Plugins festlegen {{{
 call plug#begin('$HOME/.config/nvim/meine_plugs')
 " ---- LSP // Completion {{{
@@ -30,12 +29,17 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'nvim-lua/completion-nvim'
 	Plug 'hrsh7th/nvim-compe'
 	Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-	" Plug 'ycm-core/YouCompleteMe'
+	Plug 'ycm-core/YouCompleteMe'
 	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
+    Plug 'nvim-treesitter/playground'
 	Plug 'nvim-telescope/telescope.nvim'
+    Plug 'ambv/black'
+    Plug 'glepnir/lspsaga.nvim'
+    Plug 'simrat39/symbols-outline.nvim'
 " ---- }}}
 " ---- Filetypes/ Coding {{{
 	Plug 'mbbill/undotree'
+    Plug 'vim-utils/vim-man' " man Pages in VIM
 	Plug 'chrisbra/csv.vim'
 	Plug 'freitass/todo.txt-vim'
 	Plug 'vimwiki/vimwiki'
@@ -123,57 +127,40 @@ autocmd VimEnter *
 "                                    Basics                                    "
 "******************************************************************************"
 " -- Basics {{{
-" Leader festlegen
-let leader = ","
-let mapleader = ","
-" Localleader festlegen
-let localleader = "<space>"
-" zu lange Zeilen brechen
-set wrap
-" 80. Zeichen markieren
-set colorcolumn=80
-" vernünftig einfügen
-set paste
-" 256 Farben; MUSS VOR colorscheme stehen
-set t_Co=256
-set t_ut=
-set termguicolors
-" Farben festlegen
-" colorscheme blood-moon
-" colorscheme molokai
-colorscheme gruvbox
+" " zu lange Zeilen brechen
+" set wrap
+" " 80. Zeichen markieren
+" set colorcolumn=80
+" " vernünftig einfügen
+" set paste
+" " 256 Farben; MUSS VOR colorscheme stehen
+" set t_Co=256
+" set t_ut=
+" set termguicolors
+" " Farben festlegen
+" " colorscheme blood-moon
+" " colorscheme molokai
+" colorscheme gruvbox
 set background=dark
-" -- gruvbox-community settings {{{
-let g:gruvbox_contrast_dark = 'hard'
-" Markierung bei 80
-let g:gruvbox_color_column = 'green'
-" Italics aktivieren
-let g:gruvbox_italicize_strings = 1
-" Ausprobieren
-let g:gruvbox_improved_strings = 0
-let g:gruvbox_improved_warnings = 1
-" -- }}}
 " set cursorcolumn
-set cursorline
+" set cursorline
 " Merke Position im Dokument
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 " Vimwiki Path festlegen
 let g:vimwiki_list = [{'path': '~/documents/vimwiki/wiki'}]
 " Ruler => zeige rechts unten `Zeile,Buchstabe`
-set ruler
+" set ruler
 " Regex Magic
-set magic
+" set magic
 " Tab ist 2 Leerzeichen
-set shiftwidth=4
-set tabstop=4
+" set shiftwidth=4
+" set tabstop=4
 " set expandtab " MUSS aus für indentZeug
 " Tab beim Editieren _auch_ 4 Leerzeichen
-set softtabstop=4
+" set softtabstop=4
 " Lade VIMRC nach speichern neu
-autocmd BufWritePost init.vim source $MYVIMRC
-autocmd BufWritePost neu.vim source neu.vim
-" letzte Zeile eines Paragraphen IMMER sichtbar
-set display+=lastline
+" autocmd BufWritePost init.vim source $MYVIMRC
+" autocmd BufWritePost neu.vim source neu.vim
 " immer X Zeilen über und unter dem Cursor anzeigen
 set scrolloff=10
 " Statusbar: immer anzeigen
@@ -260,30 +247,6 @@ set number relativenumber
 " außerhalb von VIM veränderte Datei automatisch neu laden
 set autoread
 " }}}
-"******************************************************************************"
-"                                 Keybindings                                  "
-"******************************************************************************"
-" ---- Keybindings {{{
-" mit Pfeiltesten zwischen Panes switchen
-" Öffne Plugin in Github
-nnoremap <leader>g yi' :!firefox --new-tab https://github.com/<C-R>"<CR><CR>
-" ---- }}}
-"******************************************************************************"
-"                                   Folding                                    "
-"******************************************************************************"
-" -- Folding {{{
-set foldenable
-set foldmethod=marker
-" Beim Öffnen zugeklkappt
-set foldlevel=20
-set modelines=1
-" speichern, welche Folds auf/zu sind
-"autocmd BufWrite * mkview
-"autocmd BufRead * silent loadview
-" AUTOMATISCH Systemclipboard benutzen
-noremap <leader>y "+y
-noremap <leader>p "+p
-" -- }}}
 "******************************************************************************"
 "                             Plugin Einstellungen                             "
 "******************************************************************************"
@@ -682,13 +645,13 @@ require('nvim-comment-frame').setup({
             fill_char = '*',
 
             -- width of the comment frame
-            frame_width = 100,
+            frame_width = 80,
 
             -- wrap the line after 'n' characters
             line_wrap_len = 70,
 
             -- automatically indent the comment frame based on the line
-            auto_indent = false,
+            auto_indent = true,
 
             -- add comment above the current line
             add_comment_above = false,
@@ -936,7 +899,6 @@ set timeoutlen=1000 ttimeoutlen=0
 set hidden
 " Taste festlegen
 let g:CtrlSpaceDefaultMappingKey = "<C-space> "
-highlight WhichKeyFloat guifg='#01bb3f' gui=underline ctermfg=155 cterm=underline
 " }}}
 "******************************************************************************"
 "                                     REST                                     "

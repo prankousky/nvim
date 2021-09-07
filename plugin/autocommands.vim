@@ -30,3 +30,13 @@ autocmd BufRead *.cpp set filetype=cpp
 " Benutze Cursorline NUR dann, wenn NICHT in INSERT MODE
 " autocmd InsertLeave,WinEnter * set cursorline
 " autocmd InsertEnter,WinLeave * set nocursorline
+augroup highlight_yank
+    autocmd!
+    autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank({timeout = 2000})
+augroup END
+
+augroup LEERZEILEN
+    autocmd!
+    autocmd BufWritePre * %s/\s\+$//e
+    autocmd BufEnter,BufWinEnter,TabEnter *.rs :lua require'lsp_extensions'.inlay_hints{}
+augroup END

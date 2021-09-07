@@ -26,7 +26,7 @@ augroup END
 let g:compe = {}
 let g:compe.enabled = v:true
 let g:compe.autocomplete = v:true
-let g:compe.debug = v:false
+let g:compe.debug = v:true
 let g:compe.min_length = 1
 let g:compe.preselect = 'enable'
 let g:compe.throttle_time = 80
@@ -47,4 +47,5 @@ let g:compe.source.vsnip = v:true
 let g:compe.source.ultisnips = v:true
 let g:compe.source.luasnip = v:true
 
-inoremap <silent><expr> <CR>      compe#confirm('<CR>')
+" inoremap <silent><expr> <CR> :call compe#confirm('<CR>')
+inoremap <expr> <CR> :call compe#confirm('<CR>')

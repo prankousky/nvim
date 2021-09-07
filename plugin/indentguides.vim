@@ -10,7 +10,7 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=magenta ctermbg=cyan
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=cyan ctermbg=magenta
 " Visuelles
 let g:indentLine_char = '| '
-let g:indentLine_setConceal = 0
+let g:indentLine_setConceal = 1
 
 " nicht in dashboard-vim anzeigen
 let g:indentLine_fileTypeExclude = ['dashboard']
