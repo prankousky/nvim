@@ -2,6 +2,10 @@
 "                            Plugins (via plug.vim)                            "
 "******************************************************************************"
 " -- Plugins {{{
+"******************************************************************************"
+"                                   Plugged                                    "
+"******************************************************************************"
+
 " Automatisch vim-plug installieren, sofern es nicht installiert ist {{{
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
@@ -9,6 +13,10 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 " }}}
+	"******************************************************************************"
+	"                              Plugins festlegen                               "
+	"******************************************************************************"
+
 " Plugins festlegen {{{
 call plug#begin('$HOME/.config/nvim/meine_plugs')
 " ---- LSP // Completion {{{
@@ -93,17 +101,10 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'vifm/vifm.vim'
 " ---- }}}
 call plug#end()
-" " --  Aufgeteilte Konfiguration {{{
-" " source $HOME/.config/nvim/config_split/ultisnips.vim
-" source $HOME/.config/nvim/config_split/airline_lightline.vim
-" source $HOME/.config/nvim/config_split/autocommands.vim
-" source $HOME/.config/nvim/config_split/backups.vim
-" source $HOME/.config/nvim/config_split/fzf.vim
-" source $HOME/.config/nvim/config_split/keybindings.vim
-" source $HOME/.config/nvim/config_split/startify.vim
-" source $HOME/.config/nvim/config_split/vim-easymotion.vim
-" " -- }}}
 " }}}
+"******************************************************************************"
+"                       Plugins automatisch installieren                       "
+"******************************************************************************"
 " Automatisch fehlende Plugins installieren beim Start {{{
 autocmd VimEnter *
   \  if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
@@ -121,7 +122,6 @@ autocmd VimEnter *
 "******************************************************************************"
 "                                    Basics                                    "
 "******************************************************************************"
-
 " -- Basics {{{
 " Leader festlegen
 let leader = ","
@@ -186,7 +186,6 @@ set confirm
 "******************************************************************************"
 "                                  Filetypes                                   "
 "******************************************************************************"
-
 " -- Filetypes {{{
 " Bestimmte Dateien vom Öffnen ausschließen
 set wildignore+=.pyc,.swp
@@ -261,9 +260,33 @@ set number relativenumber
 " außerhalb von VIM veränderte Datei automatisch neu laden
 set autoread
 " }}}
-" ####################################################################################
-" ##############################   Plugin Einstellungen   ############################
-" ####################################################################################
+"******************************************************************************"
+"                                 Keybindings                                  "
+"******************************************************************************"
+" ---- Keybindings {{{
+" mit Pfeiltesten zwischen Panes switchen
+" Öffne Plugin in Github
+nnoremap <leader>g yi' :!firefox --new-tab https://github.com/<C-R>"<CR><CR>
+" ---- }}}
+"******************************************************************************"
+"                                   Folding                                    "
+"******************************************************************************"
+" -- Folding {{{
+set foldenable
+set foldmethod=marker
+" Beim Öffnen zugeklkappt
+set foldlevel=20
+set modelines=1
+" speichern, welche Folds auf/zu sind
+"autocmd BufWrite * mkview
+"autocmd BufRead * silent loadview
+" AUTOMATISCH Systemclipboard benutzen
+noremap <leader>y "+y
+noremap <leader>p "+p
+" -- }}}
+"******************************************************************************"
+"                             Plugin Einstellungen                             "
+"******************************************************************************"
 " ---- Plugin  Einstellungen {{{
 " -- completion-nvim {{{
 " Use completion-nvim in every buffer
@@ -451,47 +474,11 @@ let g:bookmark_sign = '♥'
 let g:bookmark_highlight_lines = 1
 " -- }}}
 " ---- }}}
-" " -- 'jiangmiao/auto-pairs' {{{
-" let g:AutoPairsFlyMode = 1
-" let g:AutoPairsShortcutBackInsert = '<M-b>'
-" " -- }}}
-" " -- 'Yggdroot/hiPairs' {{{
-" let g:hiPairs_enable_matchParen = 1
-" let g:hiPairs_hl_matchPair = { 'term'    : 'underline,bold',
-"                \                  'cterm'   : 'bold',
-"                \                  'ctermfg' : '0',
-"                \                  'ctermbg' : '180',
-"                \                  'gui'     : 'bold',
-"                \                  'guifg'   : 'Black',
-"                \                  'guibg'   : '#D3B17D' }
-
-" let g:hiPairs_hl_unmatchPair = { 'term'    : 'underline,italic',
-"                 \                    'cterm'   : 'italic',
-"                 \                    'ctermfg' : '15',
-"                 \                    'ctermbg' : '12',
-"                 \                    'gui'     : 'italic',
-"                 \                    'guifg'   : 'White',
-"                 \                    'guibg'   : 'Red' }
-" " -- }}}
 " -- 'andymass/vim-matchup' {{{
 let g:matchup_matchparen_deferred = 1
 let g:matchup_matchparen_hi_surround_always = 1
 " -- }}}
-" 'ms-jpq/coq_nvim' {{{
-" let g:coq_settings = { 'auto_start': v:true }
-" 🐓 Coq completion settings
-" Set recommended to false
-" let g:coq_settings = { "keymap.recommended": v:true }
-
-" Keybindings
-" ino <silent><expr> <Esc>   pumvisible() ? "\<C-e><Esc>" : "\<Esc>"
-" ino <silent><expr> <C-c>   pumvisible() ? "\<C-e><C-c>" : "\<C-c>"
-" ino <silent><expr> <BS>    pumvisible() ? "\<C-e><BS>"  : "\<BS>"
-" ino <silent><expr> <CR>    pumvisible() ? (complete_info().selected == -1 ? "\<C-e><CR>" : "\<C-y>") : "\<CR>"
-" ino <silent><expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
-" ino <silent><expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<BS>"
-" }}}
-" 'windwp/nvim-autopairs' {{{
+" -- 'windwp/nvim-autopairs' {{{
 lua << EOF
 require('nvim-autopairs').setup{}
 require('nvim-autopairs').enable()
@@ -542,32 +529,7 @@ end
 remap('i', '<bs>', 'v:lua.MUtils.BS()', { expr = true, noremap = true })
 EOF
 " -- }}}
-" -- }}}
-" #############################################################################
-" ##############################   Keybindings   ##############################
-" #############################################################################
-" ---- Keybindings {{{
-" mit Pfeiltesten zwischen Panes switchen
-" Öffne Plugin in Github
-nnoremap <leader>g yi' :!firefox --new-tab https://github.com/<C-R>"<CR><CR>
-" ---- }}}
-" #########################################################################
-" ##############################   Folding   ##############################
-" #########################################################################
-" -- Folding {{{
-set foldenable
-set foldmethod=marker
-" Beim Öffnen zugeklkappt
-set foldlevel=20
-set modelines=1
-" speichern, welche Folds auf/zu sind
-"autocmd BufWrite * mkview
-"autocmd BufRead * silent loadview
-" AUTOMATISCH Systemclipboard benutzen
-noremap <leader>y "+y
-noremap <leader>p "+p
-" -- }}}
-" 'junegunn/goyo.vim' {{{
+" -- 'junegunn/goyo.vim' {{{
 function! s:goyo_enter()
   if executable('tmux') && strlen($TMUX)
     silent !tmux set status off
@@ -595,7 +557,7 @@ endfunction
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
 " -- }}}
-" 'junegunn/limelight.vim' {{{
+" -- 'junegunn/limelight.vim' {{{{{{
 " Color name (:help cterm-colors) or ANSI code
 let g:limelight_conceal_ctermfg = 'gray'
 " let g:limelight_conceal_ctermfg = 240
@@ -621,8 +583,8 @@ let g:limelight_eop = '\ze\n^\s'
 "   Set it to -1 not to overrule hlsearch
 " let g:limelight_priority = -1
 let g:limelight_priority = 4
-" -- }}}
-" 'lewis6991/gitsigns.vim' {{{
+" -- }}}}}}
+" -- 'lewis6991/gitsigns.vim' {{{
 lua require('gitsigns').setup()
 nnoremap <leader>gg :Gitsigns refresh<CR>
 nnoremap <leader>gh :Gitsigns diffthis<CR>
@@ -934,9 +896,32 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 " nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
 " nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 " -- }}}
-" ###########################################################################################
-" ##############################   TODO: alles in eine Datei   ##############################
-" ###########################################################################################
+" " -- 'jiangmiao/auto-pairs' {{{
+" let g:AutoPairsFlyMode = 1
+" let g:AutoPairsShortcutBackInsert = '<M-b>'
+" " -- }}}
+" " -- 'Yggdroot/hiPairs' {{{
+" let g:hiPairs_enable_matchParen = 1
+" let g:hiPairs_hl_matchPair = { 'term'    : 'underline,bold',
+"                \                  'cterm'   : 'bold',
+"                \                  'ctermfg' : '0',
+"                \                  'ctermbg' : '180',
+"                \                  'gui'     : 'bold',
+"                \                  'guifg'   : 'Black',
+"                \                  'guibg'   : '#D3B17D' }
+
+" let g:hiPairs_hl_unmatchPair = { 'term'    : 'underline,italic',
+"                 \                    'cterm'   : 'italic',
+"                 \                    'ctermfg' : '15',
+"                 \                    'ctermbg' : '12',
+"                 \                    'gui'     : 'italic',
+"                 \                    'guifg'   : 'White',
+"                 \                    'guibg'   : 'Red' }
+" " -- }}}
+" -- }}}
+"******************************************************************************"
+"                                     TEST                                     "
+"******************************************************************************"
 " -- NOCH TESTEN {{{
 " Name des Fensters ist immer Name der aktuellen Datei
 set title
@@ -952,28 +937,16 @@ set hidden
 " Taste festlegen
 let g:CtrlSpaceDefaultMappingKey = "<C-space> "
 " }}}
-" ######################################################################
-" ##############################   Rest   ##############################
-" ######################################################################
+"******************************************************************************"
+"                                     REST                                     "
+"******************************************************************************"
 " -- GANZ UNTEN {{{
 highlight Normal ctermbg=black
 " indents minimal visualisieren
 set invlist
 " set listchars=eol:↴,tab:▸
 " set listchars=eol:↓,tab:\ \ ┊,trail:●,extends:…,precedes:…,space:·
-" Cursor Shapes
-if empty($TMUX)
-  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-  let &t_SR = "\<Esc>]50;CursorShape=2\x7"
-else
-  let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
-  let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
-  let &t_SR = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=2\x7\<Esc>\\"
-endif
-" youcompleteme YCM tab raus hauen
-" let g:ycm_key_list_select_completion = ['<C-TAB>', '<Down>']
-" let g:ycm_key_list_previous_completion = ['<S-TAB>', '<Up>']
-" }}}
-
+"******************************************************************************"
+"                              ALWAYS REMEMBER ;)                              "
+"******************************************************************************"
 " vi: filetype=vim
