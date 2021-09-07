@@ -1,6 +1,5 @@
 " Leader festlegen
 let mapleader =","
-
 " Wichtigste DIRS mit CtrlP
 nnoremap <leader>P :CtrlPBookmarkDir<CR>
 nnoremap <leader>g yi' :!firefox --new-tab https://github.com/<C-R>"<CR><CR>
@@ -72,6 +71,7 @@ nnoremap <leader>O :setlocal spell! spelllang=en_us<CR>
 " Suchen und Ersetzen
 nnoremap <leader>s :%s///g<Left><Left><Left>
 " gesamten Inhalt kopieren
+nnoremap <leader>* gg0VGy :echo 'Alles kopiert :)'<CR>
 " ersetze Wort unter Cursor
 nnoremap <leader>7 :%s/\<<c-r><c-w>\>//g<left><left>
 " Zeilen hin- und her schieben
