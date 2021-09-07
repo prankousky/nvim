@@ -55,6 +55,7 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	" Plug 'rakr/vim-one'
 	" let g:airline_theme='one'
 	Plug 'tomasr/molokai'
+	Plug 'luochen1990/rainbow'
 	Plug 'joshdick/onedark.vim'
 	Plug 'gruvbox-community/gruvbox'
 	" -- Misc
@@ -832,6 +833,9 @@ let g:ale_fixers = {
 \   'javascript': ['eslint'],
 \   'python': ['black'],
 \}
+" -- }}}
+" -- 'luochen1990/rainbow' {{{
+let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 " -- }}}
 " -- 'nvim-telescope/telescope.nvim' {{{
 
