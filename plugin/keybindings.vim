@@ -1,3 +1,6 @@
+" Wichtigste DIRS mit CtrlP
+nnoremap <leader>P :CtrlPBookmarkDir
+
 " Goyo
 noremap <leader>G :Goyo<CR>
 nnoremap <leader>T :Limelight!!<CR>
@@ -202,16 +205,6 @@ nnoremap <space><up> <C-W><C-K>
 nnoremap <space><right> <C-W><C-L>
 " Split nach links
 nnoremap <space><left> <C-W><C-H>
-" Toggle filestyle (zeige/verstecke trailing spaces, tabs, etc.)
-nnoremap <leader>9 <Esc>:FileStyleToggle<CR>
-    " Python {{{
-    autocmd FileType python map <buffer> <F5> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
-    autocmd FileType python imap <buffer> <F5> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
-    " }}}
-    " Bash {{{
-    autocmd FileType bash,sh map <buffer> <F5> :w<CR>:exec '!bash' shellescape(@%, 1)<CR>
-    autocmd FileType bash,sh imap <buffer> <F5> <esc>:w<CR>:exec '!bash' shellescape(@%, 1)<CR>
-    " }}}
 " " vim-rememberall {{{
 " " Show ',' normal mode mappings when ',' is pressed.
 " nnoremap <silent> <expr> , Remembrall(',')
