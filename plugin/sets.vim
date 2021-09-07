@@ -115,7 +115,7 @@ set wildmode=longest:list,full
 " set wildmode=longest,list,full
 set wildmenu
 "
-set list
+" set list
 set listchars=trail:.,extends:→,precedes:←
 " Datei(typen) ignorieren
 set wildignore+=*.pyc

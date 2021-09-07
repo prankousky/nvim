@@ -13,9 +13,9 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 " }}}
-	"******************************************************************************"
-	"                              Plugins festlegen                               "
-	"******************************************************************************"
+"******************************************************************************"
+"                              Plugins festlegen                               "
+"******************************************************************************"
 " Plugins festlegen {{{
 call plug#begin('$HOME/.config/nvim/meine_plugs')
 " ---- LSP // Completion {{{
@@ -782,7 +782,7 @@ let g:CtrlSpaceDefaultMappingKey = "<C-space> "
 " -- GANZ UNTEN {{{
 highlight Normal ctermbg=black
 " indents minimal visualisieren
-set invlist
+" set invlist
 " set listchars=eol:↴,tab:▸
 " set listchars=eol:↓,tab:\ \ ┊,trail:●,extends:…,precedes:…,space:·
 "******************************************************************************"
