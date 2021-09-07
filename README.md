@@ -1,6 +1,8 @@
 # $MYVIMRC
 
-## Hilfreiche Links
+## Read this...
+
+...or don't. I'm just a markdown file...
 
 * https://github.com/rockerBOO/awesome-neovim
 
