@@ -22,9 +22,45 @@ set magic
 " Relative Zeilennummern
 set relativenumber
 set number
+" VIM muss nicht mit VI kompatibel sein
+set nocompatible
+" Sprache für Dictionaries festlegen
+set spelllang=de,en_us
+" Maus aktivieren
+set mouse=a
+" Syntax aktivieren
+syntax on
+syntax enable
+" Encoding Format
+set encoding=utf-8
+" wie werden Zeilennumer dargestellt (number / relativenuber)
+" für vim-searchindex
+set shortmess-=S
+set number relativenumber
+" außerhalb von VIM veränderte Datei automatisch neu laden
+set autoread
+" # splits seitlicht
+set splitright
+" splits unterhalb
+set splitbelow
+" Suche NICHT case-sensitiv (für mich persönlich einfacher)
+set ignorecase
+" Suche fängt oben wieder an, wenn unten zuende
+set wrapscan
+" Zeilenumbruch verbieten
+" set nowrap
+" Highlighte Brackets
+set showmatch
+" virtuelles Editieren im Block Mode zulassen
+set virtualedit=block
+" Backspace über Intendations, Line Breaks, etc. erlauben
+set backspace=indent,eol,start
 " WÄHREND des Suchens markieren
 set nohlsearch
-"
+set smartcase
+" Search/Replace Vorschau
+set inccommand=split
+" Suche während Tippens durchführen
 set incsearch
 "
 set hidden
@@ -34,7 +70,11 @@ set noerrorbells
 set tabstop=4 softtabstop=4
 set shiftwidth=4
 set expandtab
+" Indentation
+set autoindent
 set smartindent
+set smarttab
+filetype indent on
 " Zeilenumbrüche
 set wrap
 " Backup / Swap / etc.
@@ -56,6 +96,10 @@ set cmdheight=1
 set updatetime=50
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
+" unten rechts gedrückte Befehle anzeigen
+set showcmd
+" Ausserhalb VIM Buffer kopieren
+set clipboard=unnamedplus
 " Anzeigen, wo 80 Chars enden
 set colorcolumn=80
 "
@@ -67,8 +111,12 @@ set wildmenu
 " Dialog, falls geänderte Datei geschlossen wird
 set confirm
 " schöneres Menu bei "find *.py"
-set wildmode=longest,list,full
+set wildmode=longest:list,full
+" set wildmode=longest,list,full
 set wildmenu
+"
+set list
+set listchars=trail:.,extends:→,precedes:←
 " Datei(typen) ignorieren
 set wildignore+=*.pyc
 set wildignore+=*_build/*
@@ -77,6 +125,8 @@ set wildignore+=**/node_modules/*
 set wildignore+=**/android/*
 set wildignore+=**/ios/*
 set wildignore+=**/.git/*
+" JOIN: ggf. Kommentarsymbole löschen
+set formatoptions+=j
 "
 let loaded_matchparen = 1
 set path +=**

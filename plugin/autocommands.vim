@@ -40,3 +40,18 @@ augroup LEERZEILEN
     autocmd BufWritePre * %s/\s\+$//e
     autocmd BufEnter,BufWinEnter,TabEnter *.rs :lua require'lsp_extensions'.inlay_hints{}
 augroup END
+
+" automatisch Screen resizen, damit sie immer gleich sind (?)
+autocmd VimResized * wincmd =
+
+" Merke Position im Dokument
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
+" nach Filetype {{{
+autocmd FileType yaml setl indentkeys-=<:>
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+" CSS automatisch highlighten
+" autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+" YAML andere Fold Method
+" autocmd FileType yaml set foldmethod=indent
+" }}}"
