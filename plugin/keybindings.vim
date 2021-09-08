@@ -71,29 +71,16 @@ nnoremap <leader>o :setlocal spell! spelllang=de<CR>
 nnoremap <leader>O :setlocal spell! spelllang=en_us<CR>
 " Suchen und Ersetzen
 nnoremap <leader>s :%s///g<Left><Left><Left>
+vnoremap <leader>s :s///g<Left><Left><Left>
 " gesamten Inhalt kopieren
 nnoremap <leader>* gg0VGy :echo 'Alles kopiert :)'<CR>
 " ersetze Wort unter Cursor
 nnoremap <leader>7 :%s/\<<c-r><c-w>\>//g<left><left>
 " Zeilen hin- und her schieben
-" wenn die Zeilen automatisch eingezogen werden sollen,
-" hinter xnoreap (..) gv=gv eintragen, ansonsten nur gv
-xnoremap <A-K> :m-2<cr>gv
-xnoremap <A-J> :m'>+<cr>gv
-nnoremap <A-J> :m+<cr>==
-nnoremap <A-K> :m-2<cr>==
 " in VISUAL Auswahl verschieben (hoch/runter)
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
-" Zeile mit Dashes füllen
-" pipe wird mir <bar> ersetzt, danach wechselt man in den insert mode (i),
-" dann geht man eine stelle nach rechts (right), dann wird eine neue zeile
-" eingefügt (CR)
-" map <leader># 78A-<Esc>d78<bar>i<right><CR>
-
-" markdown-drawer: öffnen und schließen
-nnoremap <Leader>md :MarkDrawer<cr>
 " geöffnete bash Datei ausführen
 map <leader>bb :!bash %:p<CR>
 
