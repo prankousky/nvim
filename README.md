@@ -8,5 +8,9 @@
 
 ## TODO:
 
-* add content here.
+* `:'<,' > norm A" lesen`
+* `:h r`
+* `:h!`
+* `Abbreviations für NIS`
+* `Cgn change next search term`
 * `h: fillchars`
