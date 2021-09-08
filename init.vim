@@ -54,6 +54,7 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'nvim-lua/plenary.nvim'
 	Plug 'lewis6991/gitsigns.nvim'
 	Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+    Plug 'theniceboy/vim-calc'
 " ---- }}}
 " ---- Move Around {{{
 	" Plug 'justinmk/vim-sneak'
@@ -103,6 +104,8 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'tpope/vim-speeddating'
 	Plug 's1n7ax/nvim-comment-frame'
 	Plug 'windwp/nvim-spectre'
+	Plug 'tpope/vim-sleuth' " Autoindent
+	Plug 'tpope/vim-eunuch' " :Move, :Rename, etc.
 " ---- }}}
 " ---- Naviation und Co. {{{
 	Plug 'francoiscabrol/ranger.vim'

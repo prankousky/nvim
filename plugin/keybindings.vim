@@ -224,3 +224,6 @@ xnoremap <expr> N  'nN'[v:searchforward]
 onoremap <expr> N  'nN'[v:searchforward]
 " schließe andere Buffer
 nnoremap <leader>x :execute "%bd\|e#"<CR>
+" -- 'theniceboy/vim-calc' {{{
+nnoremap <leader>= :call Calc()<CR>
+" -- }}}
