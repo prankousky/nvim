@@ -39,9 +39,8 @@ set shortmess-=S
 set number relativenumber
 " außerhalb von VIM veränderte Datei automatisch neu laden
 set autoread
-" # splits seitlicht
+" # splits rechts und unterhalb
 set splitright
-" splits unterhalb
 set splitbelow
 " Suche NICHT case-sensitiv (für mich persönlich einfacher)
 set ignorecase

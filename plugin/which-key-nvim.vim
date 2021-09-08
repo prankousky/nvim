@@ -6,6 +6,9 @@ highlight WhichKeyGroup guifg='#ff0088' gui=none ctermfg=155 cterm=none
 highlight WhichKeySeparator guifg='#FFFFFF' gui=none ctermfg=155 cterm=none
 highlight WhichKeyValue guifg='#ff0088' gui=none ctermfg=155 cterm=none
 
+" nnoremap <silent> <C-w> :WhichKey<CR>
+" nnoremap <silent> <leader> :WhichKey<CR>
+
 " Default (und abgeänderte) Config
 lua << EOF
   require("which-key").setup {
@@ -48,7 +51,7 @@ lua << EOF
   },
   window = {
     border = "single", -- none, single, double, shadow
-    position = "bottom", -- bottom, top
+    position = "top", -- bottom, top
     margin = { 1, 0, 4, 0 }, -- extra window margin [top, right, bottom, left]
     padding = { 2, 2, 2, 4 }, -- extra window padding [top, right, bottom, left]
   },
@@ -72,4 +75,5 @@ lua << EOF
   },
 }
 EOF
+
 " vi: filetype=vim

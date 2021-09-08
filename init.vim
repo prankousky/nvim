@@ -172,10 +172,6 @@ nnoremap <leader>sp viw:lua require('spectre').open_file_search()<cr>
 " nnoremap <leader>y :YankHistoryRgYank<CR>
 nnoremap <leader>y :YankHistoryRgPaste<CR>
 " -- }}}
-" -- folke/which-key.nvim {{{
-" nnoremap <silent> <C-w> :WhichKey<CR>
-" nnoremap <silent> <leader> :WhichKey<CR>
-" -- }}}
 " -- liuchengxu/vim-which-key {{{
 " nnoremap <silent> <leader> :WhichKey ','<CR>
 " -- }}}
