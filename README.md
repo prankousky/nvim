@@ -1,8 +1,12 @@
 # $MYVIMRC
 
-## Read this...
+## Heads Up
 
-...or don't. I'm just a markdown file...
+*This is my `init.vim`. There are many like it, but this one is mine*.
+
+This may or may not be bloated, senseless, or whatever... but it works for me :)
+
+## Important Links
 
 * https://github.com/rockerBOO/awesome-neovim
 
