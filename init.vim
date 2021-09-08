@@ -55,6 +55,7 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 	Plug 'theniceboy/vim-calc'
 	Plug 'chrisbra/csv.vim',  { 'for' : 'csv' } " genial
+	Plug 'KabbAmine/vCoolor.vim' " <Alt+r|v|w>
 " ---- }}}
 " ---- Move Around {{{
 	" Plug 'justinmk/vim-sneak'
