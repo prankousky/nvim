@@ -38,15 +38,15 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 	Plug 'ycm-core/YouCompleteMe'
 	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
-    Plug 'nvim-treesitter/playground'
+	Plug 'nvim-treesitter/playground'
 	Plug 'nvim-telescope/telescope.nvim'
-    Plug 'ambv/black'
-    Plug 'glepnir/lspsaga.nvim'
-    Plug 'simrat39/symbols-outline.nvim'
+	Plug 'ambv/black'
+	Plug 'glepnir/lspsaga.nvim'
+	Plug 'simrat39/symbols-outline.nvim'
 " ---- }}}
 " ---- Filetypes/ Coding {{{
 	Plug 'mbbill/undotree'
-    Plug 'vim-utils/vim-man' " man Pages in VIM
+	Plug 'vim-utils/vim-man' " man Pages in VIM
 	Plug 'freitass/todo.txt-vim'
 	Plug 'vimwiki/vimwiki'
 	Plug 'cespare/vim-toml'
