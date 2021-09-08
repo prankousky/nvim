@@ -74,6 +74,7 @@ lua << EOF
     v = { "j", "k" },
   },
 }
+
 EOF
 
 " vi: filetype=vim
