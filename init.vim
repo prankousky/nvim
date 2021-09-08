@@ -47,14 +47,14 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 " ---- Filetypes/ Coding {{{
 	Plug 'mbbill/undotree'
     Plug 'vim-utils/vim-man' " man Pages in VIM
-	Plug 'chrisbra/csv.vim'
 	Plug 'freitass/todo.txt-vim'
 	Plug 'vimwiki/vimwiki'
 	Plug 'cespare/vim-toml'
 	Plug 'nvim-lua/plenary.nvim'
 	Plug 'lewis6991/gitsigns.nvim'
 	Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
-    Plug 'theniceboy/vim-calc'
+	Plug 'theniceboy/vim-calc'
+	Plug 'chrisbra/csv.vim',  { 'for' : 'csv' } " genial
 " ---- }}}
 " ---- Move Around {{{
 	" Plug 'justinmk/vim-sneak'
