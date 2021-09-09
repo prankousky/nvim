@@ -10,3 +10,5 @@ let g:csv_no_column_highlight = 0
 let g:csv_highlight_column = 'y'
 let g:csv_hiHeader = 'Pmenu'
 let g:csv_hiGroup = "IncSearch"
+" Linksbündig
+let b:csv_arrange_align = 'l*'

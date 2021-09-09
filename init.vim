@@ -35,7 +35,7 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'nvim-lua/completion-nvim'
 	Plug 'hrsh7th/nvim-compe'
 	Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-	Plug 'ycm-core/YouCompleteMe'
+	" Plug 'ycm-core/YouCompleteMe'
 	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 	Plug 'nvim-treesitter/playground'
 	Plug 'nvim-telescope/telescope.nvim'
