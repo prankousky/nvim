@@ -41,8 +41,8 @@ lua << EOF
     -- override the label used to display some keys. It doesn't effect WK in any other way.
     -- For example:
     -- ["<space>"] = "SPC",
-    -- ["<cr>"] = "RET",
-    -- ["<tab>"] = "TAB",
+    ["<cr>"] = "ENTER",
+    ["<tab>"] = "TAB",
   },
   icons = {
     breadcrumb = "»", -- symbol used in the command line area that shows your active key combo
@@ -74,7 +74,5 @@ lua << EOF
     v = { "j", "k" },
   },
 }
-
 EOF
-
 " vi: filetype=vim
