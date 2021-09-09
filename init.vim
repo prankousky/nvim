@@ -65,6 +65,7 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'terryma/vim-expand-region'
 	Plug 'thalesmello/tabfold'
 	Plug 'unblevable/quick-scope'
+	Plug 'Rasukarusan/nvim-select-multi-line'
 " ---- }}}
 " ---- Visuelles {{{
 " -- Themes

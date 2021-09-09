@@ -1,5 +1,7 @@
 " Leader festlegen
 let mapleader =","
+" 'Rasukarusan/nvim-select-multi-line'
+nnoremap <leader>, :call sml#mode_on()<CR>
 " Wichtigste DIRS mit CtrlP
 nnoremap <leader>P :CtrlPBookmarkDir<CR>
 " zeige Plugins im Firefox
