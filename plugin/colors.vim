@@ -1,3 +1,4 @@
+" let g:benihmsein_colorscheme = "catppuccino"
 let g:benihmsein_colorscheme = "gruvbox"
 
 fun! ColorMyPencils()

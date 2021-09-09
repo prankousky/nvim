@@ -15,8 +15,7 @@
 " Automatisch vim-plug installieren, sofern es nicht installiert ist {{{
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
-    silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+    silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 " }}}
@@ -69,6 +68,7 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 " ---- }}}
 " ---- Visuelles {{{
 " -- Themes
+	Plug 'Pocco81/Catppuccino.nvim'
 	Plug 'tomasr/molokai'
 	Plug 'luochen1990/rainbow'
 	Plug 'joshdick/onedark.vim'
@@ -182,75 +182,6 @@ let g:ranger_map_keys = 0
 " DAMIT das Mapping auch in :WhichKey angezeigt wird
 map <leader>f :Ranger<CR>
 " -- }}}
-" -- ojroques/nvim-hardline {{{
-" Initialisieren
-" lua require('hardline').setup {}
-" Konfigurieren
-" -- }}}
-" -- Famiu/feline.nvim {{{
-" Initialisieren
-" lua require('feline').setup {}
-" Konfigurieren
-" -- }}}
-" " -- romgrk/barbar.nvim {{{
-" " Move to previous/next Tab / Buffer
-" nnoremap <silent> <A-,> :BufferPrevious<CR>
-" nnoremap <silent> <A-.> :BufferNext<CR>
-" " NOTE: If barbar's option dict isn't created yet, create it
-" let bufferline = get(g:, 'bufferline', {})
-" " New tabs are opened next to the currently selected tab.
-" " Enable to insert them in buffer number order.
-" let bufferline.add_in_buffer_number_order = v:false
-" " Enable/disable animations
-" let bufferline.animation = v:true
-" " Enable/disable auto-hiding the tab bar when there is a single buffer
-" let bufferline.auto_hide = v:true
-" " Enable/disable current/total tabpages indicator (top right corner)
-" let bufferline.tabpages = v:true
-" " Enable/disable close button
-" let bufferline.closable = v:true
-" " Enables/disable clickable tabs
-" "  - left-click: go to buffer
-" "  - middle-click: delete buffer
-" let bufferline.clickable = v:true
-" " Excludes buffers from the tabline
-" let bufferline.exclude_ft = ['javascript']
-" let bufferline.exclude_name = ['package.json']
-" " Enable/disable icons
-" " if set to 'buffer_number', will show buffer number in the tabline
-" " if set to 'numbers', will show buffer index in the tabline
-" " if set to 'both', will show buffer index and icons in the tabline
-" let bufferline.icons = v:true
-" " Sets the icon's highlight group.
-" " If false, will use nvim-web-devicons colors
-" let bufferline.icon_custom_colors = v:false
-" " Configure icons on the bufferline.
-" let bufferline.icon_separator_active = '▎'
-" let bufferline.icon_separator_inactive = '▎'
-" let bufferline.icon_close_tab = ''
-" let bufferline.icon_close_tab_modified = '●'
-" let bufferline.icon_pinned = '車'
-" " If true, new buffers will be inserted at the end of the list.
-" " Default is to insert after current buffer.
-" let bufferline.insert_at_end = v:false
-" " Sets the maximum padding width with which to surround each tab.
-" let bufferline.maximum_padding = 4
-" " Sets the maximum buffer name length.
-" let bufferline.maximum_length = 30
-" " If set, the letters for each buffer in buffer-pick mode will be
-" " assigned based on their name. Otherwise or in case all letters are
-" " already assigned, the behavior is to assign letters in order of
-" " usability (see order below)
-" let bufferline.semantic_letters = v:true
-" " New buffer letters are assigned in this order. This order is
-" " optimal for the qwerty keyboard layout but might need adjustement
-" " for other layouts.
-" let bufferline.letters =
-"   \ 'asdfjkl;ghnmxcvbziowerutyqpASDFJKLGHNMXCVBZIOWERUTYQP'
-" " Sets the name of unnamed buffers. By default format is "[Buffer X]"
-" " where X is the buffer number. But only a static string is accepted here.
-" let bufferline.no_name_title = v:null
-" " -- }}}
 " -- 'Yggdroot/indentLine' {{{
 " Auto Enable
 let g:indentLine_enabled = 0
@@ -263,37 +194,37 @@ let g:indentLine_concealcursor = 'inc'
 let g:indentLine_conceallevel = 2
 " -- }}}
 " -- 'lukas-reineke/indent-blankline.nvim' {{{
-"lua << EOF
-"vim.opt.termguicolors = true,
-"vim.cmd [[highlight IndentBlanklineIndent1 guifg=#E06C75 blend=nocombine]]
-"vim.cmd [[highlight IndentBlanklineIndent2 guifg=#E5C07B blend=nocombine]]
-"vim.cmd [[highlight IndentBlanklineIndent3 guifg=#98C379 blend=nocombine]]
-"vim.cmd [[highlight IndentBlanklineIndent4 guifg=#56B6C2 blend=nocombine]]
-"vim.cmd [[highlight IndentBlanklineIndent5 guifg=#61AFEF blend=nocombine]]
-"vim.cmd [[highlight IndentBlanklineIndent6 guifg=#C678DD blend=nocombine]]
-"vim.opt.listchars = {
-"    space = " ",
-"    -- eol = "↴"
-"}
-"require("indent_blankline").setup {
-"    eol = "↴",
-"    char = "|",
-"    show_end_of_line = false,
-"    show_current_context = true,
-"    space_char_blankline = " ",
-"    -- space_char_blankline = "⋅",
-"    char_highlight_list = {
-"       "IndentBlanklineIndent1",
-"       "IndentBlanklineIndent2",
-"       "IndentBlanklineIndent3",
-"       "IndentBlanklineIndent4",
-"       "IndentBlanklineIndent5",
-"       "IndentBlanklineIndent6",
-"    },
-"    -- show_trailing_blankline_indent = true
-"    show_trailing_blankline_indent = false,
-"}
-"EOF
+lua << EOF
+vim.opt.termguicolors = true,
+vim.cmd [[highlight IndentBlanklineIndent1 guifg=#E06C75 blend=nocombine]]
+vim.cmd [[highlight IndentBlanklineIndent2 guifg=#E5C07B blend=nocombine]]
+vim.cmd [[highlight IndentBlanklineIndent3 guifg=#98C379 blend=nocombine]]
+vim.cmd [[highlight IndentBlanklineIndent4 guifg=#56B6C2 blend=nocombine]]
+vim.cmd [[highlight IndentBlanklineIndent5 guifg=#61AFEF blend=nocombine]]
+vim.cmd [[highlight IndentBlanklineIndent6 guifg=#C678DD blend=nocombine]]
+vim.opt.listchars = {
+    space = " ",
+    eol = "↴"
+}
+require("indent_blankline").setup {
+    eol = "↴",
+    char = "|",
+    show_end_of_line = false,
+    show_current_context = true,
+    space_char_blankline = " ",
+    -- space_char_blankline = "⋅",
+    char_highlight_list = {
+       "IndentBlanklineIndent1",
+       "IndentBlanklineIndent2",
+       "IndentBlanklineIndent3",
+       "IndentBlanklineIndent4",
+       "IndentBlanklineIndent5",
+       "IndentBlanklineIndent6",
+    },
+    -- show_trailing_blankline_indent = true
+    show_trailing_blankline_indent = false,
+}
+EOF
 lua << EOF
 vim.opt.termguicolors = true
 vim.cmd [[highlight IndentBlanklineIndent1 guifg=#E06C75 blend=nocombine]]
@@ -743,28 +674,24 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 " nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
 " nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 " -- }}}
-" " -- 'jiangmiao/auto-pairs' {{{
-" let g:AutoPairsFlyMode = 1
-" let g:AutoPairsShortcutBackInsert = '<M-b>'
-" " -- }}}
-" " -- 'Yggdroot/hiPairs' {{{
-" let g:hiPairs_enable_matchParen = 1
-" let g:hiPairs_hl_matchPair = { 'term'    : 'underline,bold',
-"                \                  'cterm'   : 'bold',
-"                \                  'ctermfg' : '0',
-"                \                  'ctermbg' : '180',
-"                \                  'gui'     : 'bold',
-"                \                  'guifg'   : 'Black',
-"                \                  'guibg'   : '#D3B17D' }
+" -- 'Yggdroot/hiPairs' {{{
+let g:hiPairs_enable_matchParen = 1
+let g:hiPairs_hl_matchPair = { 'term'    : 'underline,bold',
+               \                  'cterm'   : 'bold',
+               \                  'ctermfg' : '0',
+               \                  'ctermbg' : '180',
+               \                  'gui'     : 'bold',
+               \                  'guifg'   : 'White',
+               \                  'guibg'   : '#01bb3f' }
 
-" let g:hiPairs_hl_unmatchPair = { 'term'    : 'underline,italic',
-"                 \                    'cterm'   : 'italic',
-"                 \                    'ctermfg' : '15',
-"                 \                    'ctermbg' : '12',
-"                 \                    'gui'     : 'italic',
-"                 \                    'guifg'   : 'White',
-"                 \                    'guibg'   : 'Red' }
-" " -- }}}
+let g:hiPairs_hl_unmatchPair = { 'term'    : 'underline,italic',
+                \                    'cterm'   : 'italic',
+                \                    'ctermfg' : '15',
+                \                    'ctermbg' : '12',
+                \                    'gui'     : 'italic',
+                \                    'guifg'   : 'Black',
+                \                    'guibg'   : '#ff0088' }
+" -- }}}
 " -- }}}
 "******************************************************************************"
 "                                     TEST                                     "
