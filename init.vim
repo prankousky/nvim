@@ -177,7 +177,7 @@ nnoremap <leader>y :YankHistoryRgPaste<CR>
 " ZUERST default bindings entfernen...
 let g:ranger_map_keys = 0
 " DAMIT das Mapping auch in :WhichKey angezeigt wird
-map <leader>f :Ranger<CR>
+map <space>f :Ranger<CR>
 " -- }}}
 " -- 'Yggdroot/indentLine' {{{
 " Auto Enable
