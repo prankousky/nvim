@@ -89,8 +89,7 @@ vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
 " geöffnete bash Datei ausführen
-nnoremap <leader>bb :!bash %:p<CR>
-nnoremap <leader>Bb :BufferPick<CR>
+nnoremap <leader>bb :BufferPick<CR>
 
 " nach sichtbaren Linien bewegen (wenn eine 'echte' Zeile getrennt wird, und
 " somit auf zwei Zeilen geteilt wird, bewegt man sich hierin so, wie man es

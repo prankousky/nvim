@@ -25,7 +25,6 @@ endif
 " Plugins festlegen {{{
 call plug#begin('$HOME/.config/nvim/meine_plugs')
 " ---- LSP // Completion {{{
-	Plug 'dguo/blood-moon', {'rtp': 'applications/vim'}
 	Plug 'folke/lsp-colors.nvim'
 	Plug 'dense-analysis/ale'
 	Plug 'folke/trouble.nvim'
@@ -42,6 +41,8 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'ambv/black'
 	Plug 'glepnir/lspsaga.nvim'
 	Plug 'simrat39/symbols-outline.nvim'
+	Plug 'hrsh7th/vim-vsnip'
+	Plug 'hrsh7th/vim-vsnip-integ'
 " ---- }}}
 " ---- Filetypes/ Coding {{{
 	Plug 'mbbill/undotree'
@@ -72,6 +73,7 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'tomasr/molokai'
 	Plug 'luochen1990/rainbow'
 	Plug 'joshdick/onedark.vim'
+	Plug 'dguo/blood-moon', {'rtp': 'applications/vim'}
 	Plug 'gruvbox-community/gruvbox'
 	" -- Misc
 	Plug 'Yggdroot/hiPairs' " highlighte umrandende Symbole
@@ -562,10 +564,6 @@ let g:ale_fixers = {
 " -- 'luochen1990/rainbow' {{{
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 " -- }}}
-" -- 'nvim-telescope/telescope.nvim' {{{
-
-
-" -- }}}
 " -- 'nvim-treesitter/nvim-treesitter' {{{
 " Consistent syntax highlighting.
 lua <<EOF
@@ -660,17 +658,17 @@ EOF
 " set foldexpr=nvim_treesitter#foldexpr()
 lua local ts_utils = require 'nvim-treesitter.ts_utils'
 
-" Find files using Telescope command-line sugar.
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <leader>fb <cmd>Telescope buffers<cr>
-nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+" " Find files using Telescope command-line sugar.
+" nnoremap <leader>ff <cmd>Telescope find_files<cr>
+" nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+" nnoremap <leader>fb <cmd>Telescope buffers<cr>
+" nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 " Using Lua functions
-" nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
-" nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
-" nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
-" nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
+nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
+nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
+nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 " -- }}}
 " -- 'Yggdroot/hiPairs' {{{
 let g:hiPairs_enable_matchParen = 1
