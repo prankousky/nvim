@@ -25,61 +25,52 @@ endif
 " Plugins festlegen {{{
 call plug#begin('$HOME/.config/nvim/meine_plugs')
 " ---- LSP // Completion {{{
-	Plug 'folke/lsp-colors.nvim'
-	Plug 'dense-analysis/ale'
-	Plug 'folke/trouble.nvim'
-	Plug 'ray-x/lsp_signature.nvim'
-	Plug 'windwp/nvim-autopairs'
-	Plug 'neovim/nvim-lspconfig'
-	Plug 'nvim-lua/completion-nvim'
-	Plug 'hrsh7th/nvim-compe'
-	Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-	" Plug 'ycm-core/YouCompleteMe'
-	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
-	Plug 'nvim-treesitter/playground'
-	Plug 'nvim-telescope/telescope.nvim'
 	Plug 'ambv/black'
+	Plug 'dense-analysis/ale'
+	Plug 'folke/lsp-colors.nvim'
+	Plug 'folke/trouble.nvim'
 	Plug 'glepnir/lspsaga.nvim'
-	Plug 'simrat39/symbols-outline.nvim'
+	Plug 'hrsh7th/nvim-compe'
 	Plug 'hrsh7th/vim-vsnip'
 	Plug 'hrsh7th/vim-vsnip-integ'
+	Plug 'neovim/nvim-lspconfig'
+	Plug 'nvim-lua/completion-nvim'
+	Plug 'nvim-telescope/telescope.nvim'
+	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
+	Plug 'nvim-treesitter/playground'
+	Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+	Plug 'ray-x/lsp_signature.nvim'
+	Plug 'simrat39/symbols-outline.nvim'
+	Plug 'windwp/nvim-autopairs'
 " ---- }}}
 " ---- Filetypes/ Coding {{{
-	Plug 'mbbill/undotree'
-	Plug 'vim-utils/vim-man' " man Pages in VIM
-	Plug 'freitass/todo.txt-vim'
-	Plug 'vimwiki/vimwiki'
+	Plug 'KabbAmine/vCoolor.vim' " <Alt+r|v|w>
 	Plug 'cespare/vim-toml'
-	Plug 'nvim-lua/plenary.nvim'
+	Plug 'chrisbra/csv.vim',  { 'for' : 'csv' } " genial
+	Plug 'freitass/todo.txt-vim'
 	Plug 'lewis6991/gitsigns.nvim'
+	Plug 'mbbill/undotree'
+	Plug 'nvim-lua/plenary.nvim'
 	Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 	Plug 'theniceboy/vim-calc'
-	Plug 'chrisbra/csv.vim',  { 'for' : 'csv' } " genial
-	Plug 'KabbAmine/vCoolor.vim' " <Alt+r|v|w>
-" ---- }}}
-" ---- Move Around {{{
-	" Plug 'justinmk/vim-sneak'
-	" Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
-	Plug 'ggandor/lightspeed.nvim'
-	Plug 'karb94/neoscroll.nvim'
-	Plug 'terryma/vim-expand-region'
-	Plug 'thalesmello/tabfold'
-	Plug 'unblevable/quick-scope'
-	Plug 'Rasukarusan/nvim-select-multi-line'
+	Plug 'vim-utils/vim-man' " man Pages in VIM
+	Plug 'vimwiki/vimwiki'
 " ---- }}}
 " ---- Visuelles {{{
 " -- Themes
 	Plug 'Pocco81/Catppuccino.nvim'
-	Plug 'tomasr/molokai'
-	Plug 'luochen1990/rainbow'
-	Plug 'joshdick/onedark.vim'
 	Plug 'dguo/blood-moon', {'rtp': 'applications/vim'}
 	Plug 'gruvbox-community/gruvbox'
+	Plug 'joshdick/onedark.vim'
+	Plug 'luochen1990/rainbow'
+	Plug 'tomasr/molokai'
 	" -- Misc
 	Plug 'Yggdroot/hiPairs' " highlighte umrandende Symbole
 	Plug 'andymass/vim-matchup' " ähnlich wie hiPairs
 	Plug 'folke/which-key.nvim'
 	Plug 'itchyny/vim-cursorword' " unterstreiche fokussiertes Wort
+	Plug 'junegunn/goyo.vim'
+	Plug 'junegunn/limelight.vim'
 	Plug 'kyazdani42/nvim-web-devicons' " lua
 	Plug 'lukas-reineke/indent-blankline.nvim'
 	Plug 'machakann/vim-highlightedyank'
@@ -87,11 +78,9 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'ryanoasis/vim-devicons' " vimscript
 	Plug 'yamatsum/nvim-nonicons'
 	Plug 'yazgoo/yank-history' " History anzeigen
-	Plug 'junegunn/goyo.vim'
-	Plug 'junegunn/limelight.vim'
 " -- Status // Dashboard
+      " Plug 'romgrk/barbar.nvim'
 	Plug 'mhinz/vim-startify'
-	Plug 'romgrk/barbar.nvim'
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
 " ---- }}}
@@ -103,20 +92,26 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'junegunn/fzf.vim'
 	Plug 'nvim-lua/plenary.nvim'
 	Plug 'nvim-lua/popup.nvim'
-	Plug 'tpope/vim-commentary'
-	Plug 'tpope/vim-surround'
-	Plug 'tpope/vim-speeddating'
 	Plug 's1n7ax/nvim-comment-frame'
-	Plug 'windwp/nvim-spectre'
-	Plug 'tpope/vim-sleuth' " Autoindent
+	Plug 'tpope/vim-commentary'
 	Plug 'tpope/vim-eunuch' " :Move, :Rename, etc.
+	Plug 'tpope/vim-sleuth' " Autoindent
+	Plug 'tpope/vim-speeddating'
+	Plug 'tpope/vim-surround'
+	Plug 'windwp/nvim-spectre'
 " ---- }}}
 " ---- Naviation und Co. {{{
-	Plug 'francoiscabrol/ranger.vim'
-	Plug 'rbgrouleff/bclose.vim'
+	Plug 'Rasukarusan/nvim-select-multi-line'
 	Plug 'ctrlpvim/ctrlp.vim'
-	Plug 'vim-ctrlspace/vim-ctrlspace'
+	Plug 'francoiscabrol/ranger.vim'
+	Plug 'ggandor/lightspeed.nvim'
+	Plug 'karb94/neoscroll.nvim'
+	Plug 'rbgrouleff/bclose.vim'
+	Plug 'terryma/vim-expand-region'
+	Plug 'thalesmello/tabfold'
+	Plug 'unblevable/quick-scope'
 	Plug 'vifm/vifm.vim'
+	Plug 'vim-ctrlspace/vim-ctrlspace'
 " ---- }}}
 call plug#end()
 " }}}
