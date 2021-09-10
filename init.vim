@@ -496,8 +496,6 @@ require('nvim-comment-frame').setup({
     }
 })
 EOF
-" mit <leader>cf oder <leader>cm (mehrere Zeilen) Kommentarbox comment box erstellen
-" -- }}}
 " -- 'ray-x/lsp_signature.nvim' {{{
 lua << EOF
 cfg = {

@@ -56,6 +56,11 @@ nnoremap <leader>t <c-u>:Rg<CR>
 " FzfGitignore
 nnoremap <leader>gi <c-u>:FzfGitignore<CR>
 
+" 's1n7ax/nvim-comment-frame' {{{
+nnoremap <leader>cf :lua require('nvim-comment-frame').add_comment()<CR>
+nnoremap <leader>cg :lua require('nvim-comment-frame').add_multiline_comment()<CR>
+" }}}"
+
 " für Kommentare `#` nutzen
 nnoremap <leader>+ :setlocal commentstring=#\ %s<CR> :echo "Raute wird verwendet!"<CR>
 
@@ -84,7 +89,8 @@ vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
 " geöffnete bash Datei ausführen
-map <leader>bb :!bash %:p<CR>
+nnoremap <leader>bb :!bash %:p<CR>
+nnoremap <leader>Bb :BufferPick<CR>
 
 " nach sichtbaren Linien bewegen (wenn eine 'echte' Zeile getrennt wird, und
 " somit auf zwei Zeilen geteilt wird, bewegt man sich hierin so, wie man es
