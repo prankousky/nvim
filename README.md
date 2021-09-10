@@ -12,9 +12,12 @@ This may or may not be bloated, senseless, or whatever... but it works for me :)
 
 ## TODO:
 
-* `:'<,' > norm A" lesen`
+* `:'<,' > norm A"`
+* `:abbrev` für NIS
 * `:h r`
 * `:h!`
-* `Abbreviations für NIS`
+* `:tab options`
 * `Cgn change next search term`
+* `cgn` key combo
+* `h <begriff>`
 * `h: fillchars`
