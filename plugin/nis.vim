@@ -1,5 +1,6 @@
 " Keybindings
 nnoremap <leader>ns :saveas <C-R>%
+" nnoremap <leader>ns :saveas <C-R>%<ESC> | :e <C-R>%
 nnoremap <leader>np :! ./generieren.sh %<CR>
 nnoremap <leader>na :Cheatsheet<CR>nis
 nnoremap 00 ggj0f,lct,
