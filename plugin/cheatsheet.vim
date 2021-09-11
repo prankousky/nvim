@@ -3,11 +3,11 @@ require("cheatsheet").setup({
     -- Whether to show bundled cheatsheets
 
     -- For generic cheatsheets like default, unicode, nerd-fonts, etc
-    bundled_cheatsheets = false,
-    -- bundled_cheatsheets = {
-    --     enabled = {},
-    --     disabled = {},
-    -- },
+    --  bundled_cheatsheets = true,
+     bundled_cheatsheets = {
+         enabled = {NIS},
+         disabled = {default},
+    },
 
     -- For plugin specific cheatsheets
     bundled_plugin_cheatsheets = false,

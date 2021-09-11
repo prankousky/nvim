@@ -1,3 +1,7 @@
-wrsg2 | Wöchentliche Reinigung Schienensystem GT2
-weet | Wöchentliches Eis Entfernen Tunnelraumverdampfer
-weel | Wöchentliches Eis Entfernen Leybold GT2
+## NIS @abbreviations @nis
+Wöchentliche Reinigung Schienensystem GT2 | wrsg2
+Wöchentliches Eis Entfernen Tunnelraumverdampfer | weet
+Wöchentliches Eis Entfernen Leybold GT2 | seel
+
+## Sets @vim
+Set text width to {n} | :set tw={n}
