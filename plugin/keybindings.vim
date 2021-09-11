@@ -35,11 +35,6 @@ nnoremap A A<ESC>zzA
 " Shellcheck
 autocmd Filetype sh nnoremap <buffer> <F6> <ESC>:w<CR>:!clear;shellcheck %<CR>
 autocmd Filetype sh inoremap <buffer> <F6> <ESC>:w<CR>:!clear;shellcheck %<CR>
-" NIS Mapping {{{
-nnoremap 22 llct,
-nnoremap 00 0ct,
-nnoremap 44 :call Nis_energieanlagen("", "")<left><left><left><left><left><left>
-" }}}
 " zeige / verstecke MarkBar
 nmap <leader>mm <Plug>ToggleMarkbar
 nmap <leader>mA <Plug>OpenMarkbarPeekabooApostrophe
@@ -111,7 +106,7 @@ nnoremap gV `[v`]
 nnoremap Y y$
 
 " .vimrc neu laden
-map <leader>n :source ~/.vimrc<CR>
+" map <leader>n :source ~/.vimrc<CR>
 " als root Schreiben
 nnoremap<leader>su :w !sudo tee %<CR>
 " Limelight toggeln
@@ -169,13 +164,6 @@ nnoremap <leader>lpc <Esc>:VimtexCompile<CR>
 nnoremap <leader>lpv <Esc>:VimtexView<CR>
 " vimtex entferne überschüssige Dateien
 nnoremap <leader>lps <Esc>:VimtexClean<CR>
-
-" vim-notes
-" neue Notiz
-nnoremap <leader>n <Esc>:Note<CR>
-" neue Notiz in Tab **namens todo**
-nnoremap <leader>tn <Esc>:tabedit note:todo<CR>
-
 
 " Tabs mit `<ctrl><-/->` wechseln
 " switch tabs with Ctrl left and right
