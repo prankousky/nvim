@@ -25,6 +25,7 @@ endif
 " Plugins festlegen {{{
 call plug#begin('$HOME/.config/nvim/meine_plugs')
 " ---- LSP // Completion {{{
+	Plug 'sudormrfbin/cheatsheet.nvim'
 	Plug 'ambv/black'
 	Plug 'dense-analysis/ale'
 	Plug 'folke/lsp-colors.nvim'
