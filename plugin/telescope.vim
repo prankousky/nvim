@@ -10,6 +10,7 @@ nnoremap <leader>fk :Telescope oldfiles theme=get_ivy<CR>
 nnoremap <leader>fm :Telescope marks theme=get_ivy<CR>
 nnoremap <leader>fo :Telescope vim_options theme=get_ivy<CR>
 nnoremap <leader>fr :Telescope current_buffer_fuzzy_find theme=get_ivy<CR>
+nnoremap <leader>fs :Telescope spell_suggest theme=get_ivy<CR>
 
 lua << EOF
 require('telescope').setup{

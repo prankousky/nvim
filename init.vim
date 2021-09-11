@@ -34,6 +34,7 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'hrsh7th/nvim-compe'
 	Plug 'hrsh7th/vim-vsnip'
 	Plug 'hrsh7th/vim-vsnip-integ'
+	Plug 'rafamadriz/friendly-snippets'
 	Plug 'neovim/nvim-lspconfig'
 	Plug 'nvim-lua/completion-nvim'
 	Plug 'nvim-telescope/telescope.nvim'

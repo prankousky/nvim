@@ -62,12 +62,15 @@ s | suchen und ersetzen
 ## CTRL @keybindings
 <space> | Buffer wechseln
 i | vorwärts
+j | vsnip-expand
+l | vsnip-expand-or-jump
 n, <C-n> | Completion vorwärts
 n, <C-p> | Completion zurück
 o | rückwärts
 p | suche in aktuellem Path
 w | Fenster
 w, T | schließe andere Fenster
+
 
 ## :
 x | schließe andere Buffer
