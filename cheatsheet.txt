@@ -1,75 +1,77 @@
 ## Abkürzungen @abbreviations @nis
-Wöchentliche Reinigung Schienensystem GT2 | wrsg2
-Wöchentliches Eis Entfernen Tunnelraumverdampfer | weet
-Wöchentliches Eis Entfernen Leybold GT2 | seel
+Wöchentl. Reinigung Schienensystem GT2        | wrsg2
+Wöchentl. Eis Entfernen Tunnelraumverdampfer  | weet
+Wöchentl. Eis Entfernen Leybold GT2           | seel
 
 # Keybindings
 # Leader
 ## LEADER @keybindings
-* | alles kopieren
-, | Multiline Select
-= | Rechne Matheformel in Zeile
-G | Goyo
-L | LaTeX related
-O | toggle EN/US
-P | RG / FZF in festgelegtem Path
-S | $MYVIMRC neu laden
-a | FZF
-bb | Wähle Buffer
-bd | Schließe Buffer
-cf | Kommentar (MULTI)
-cm | Kommentar (SINGLE)
-da | lösches Inhalt des Buffers
-g | Öffne GITHUB (Cursor in Single Quotes)
-h | GitSigns
-i | toggle EOL Charakter
+*   | alles kopieren
+,   | Multiline Select
+=   | Rechne Matheformel in Zeile
+G   | Goyo
+L   | LaTeX related
+O   | toggle EN/US
+P   | RG / FZF in festgelegtem Path
+S   | $MYVIMRC neu laden
+a   | FZF
+bb  | Wähle Buffer
+bd  | Schließe Buffer
+cf  | Kommentar (MULTI)
+cm  | Kommentar (SINGLE)
+da  | lösches Inhalt des Buffers
+g   | Öffne GITHUB (Cursor in Single Quotes)
+h   | GitSigns
+i   | toggle EOL Charakter
 j/k | Position (testen)
-l | toggle Limelight
-n | NIS Related
-o | toggle DE
-r | aktuelle Datei neu laden
-s | search/replace
-s | search/replace (V)
-t | Vertikales Terminal (?)
-u | Undo Tree
-v | ViFM
-vv | $MYVIMRC Edit
-w | Wiki (VimWiki)
-x | Puffer löschen (?)
-y | Yank History Paste
-y | yank history
-z | Folds
+l   | toggle Limelight
+n   | NIS Related
+o   | toggle DE
+r   | aktuelle Datei neu laden
+s   | search/replace
+s   | search/replace (V)
+t   | Vertikales Terminal (?)
+u   | Undo Tree
+v   | ViFM
+vv  | $MYVIMRC Edit
+w   | Wiki (VimWiki)
+x   | Puffer löschen (?)
+y   | Yank History Paste
+y   | yank history
+z   | Folds
 
 # <l>f (leader+f) @telescope
 1 | Find Files
 
 
 ## Direkt @keybindings
-% | springe (), {}, []
-' | Marks
-+/- | Einzug vergrößern/verkleinern (V)
-<raute> | finde Wort unter Cursor
-K | Hilfe Wort unter Cursor
-ci% | im aktuellen Zusammenhang (), {}, []
-f/f | bessere Suche
-s | Sneak
-zj / zk | Springe zwischen Folds
+%            | springe (), {}, []
+'            | Marks
++/-          | Einzug vergrößern/verkleinern (V)
+<raute>      | finde Wort unter Cursor
+K            | Hilfe Wort unter Cursor
+ci%          | im aktuellen Zusammenhang (), {}, []
+f/f          | bessere Suche
+glG<symbol>  | Richte anhand <symbol> bis zum Ende aus
+glip<symbol> | Richte anhand <symbol> im Paragraphen aus
+s            | Sneak
+zj / zk      | Springe zwischen Folds
 
 ## VISUAL @keybindings
 S | sortiere Selektion
 s | suchen und ersetzen
 
 ## CTRL @keybindings
-<space> | Buffer wechseln
-i | vorwärts
-j | vsnip-expand
-l | vsnip-expand-or-jump
+<space>  | Buffer wechseln
+i        | vorwärts
+j        | vsnip-expand
+l        | vsnip-expand-or-jump
 n, <C-n> | Completion vorwärts
 n, <C-p> | Completion zurück
-o | rückwärts
-p | suche in aktuellem Path
-w | Fenster
-w, T | schließe andere Fenster
+o        | rückwärts
+p        | suche in aktuellem Path
+w        | Fenster
+w, T     | schließe andere Fenster
 
 
 ## :

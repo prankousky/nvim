@@ -101,6 +101,7 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'tpope/vim-speeddating'
 	Plug 'tpope/vim-surround'
 	Plug 'windwp/nvim-spectre'
+	Plug 'tommcdo/vim-lion'
 " ---- }}}
 " ---- Naviation und Co. {{{
 	Plug 'Rasukarusan/nvim-select-multi-line'
