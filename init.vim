@@ -50,6 +50,7 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'cespare/vim-toml'
 	Plug 'chrisbra/csv.vim',  { 'for' : 'csv' } " genial
 	Plug 'freitass/todo.txt-vim'
+	Plug 'lervag/vimtex'
 	Plug 'lewis6991/gitsigns.nvim'
 	Plug 'mbbill/undotree'
 	Plug 'nvim-lua/plenary.nvim'
