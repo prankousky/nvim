@@ -58,6 +58,7 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'theniceboy/vim-calc'
 	Plug 'vim-utils/vim-man' " man Pages in VIM
 	Plug 'vimwiki/vimwiki'
+	Plug 'preservim/nerdtree'
 " ---- }}}
 " ---- Visuelles {{{
 " -- Themes

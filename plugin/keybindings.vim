@@ -139,6 +139,8 @@ inoremap <C-left> <Esc>:tabprevious<CR>
 inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>uO
 " }}}
 " SONSTIGES {{{
+" Backspace = File Browser
+nnoremap <backspace> :NERDTreeToggle<CR>
 " remap gf to create File if it does not already exist
 nnoremap gf :e <cfile><CR>
 " Speichern mit <jk>
