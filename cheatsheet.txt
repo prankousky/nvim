@@ -48,6 +48,7 @@ z   | Folds
 %            | springe (), {}, []
 '            | Marks
 +/-          | Einzug vergrößern/verkleinern (V)
+<backspace>  | NERDTree
 <raute>      | finde Wort unter Cursor
 K            | Hilfe Wort unter Cursor
 ci%          | im aktuellen Zusammenhang (), {}, []
