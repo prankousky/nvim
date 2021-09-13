@@ -59,6 +59,7 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'vim-utils/vim-man' " man Pages in VIM
 	Plug 'vimwiki/vimwiki'
 	Plug 'preservim/nerdtree'
+	Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 " ---- }}}
 " ---- Visuelles {{{
 " -- Themes
