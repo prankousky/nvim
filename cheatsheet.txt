@@ -84,3 +84,7 @@ Set text width to {n} | :set tw={n}
 
 ## TMUX
 u | Zeige URLS
+
+## Firefox
+<ctrl+tab> (kurz)   | vorheriger Tab
+<ctrl+tab> (halten) | Tab Übersicht
