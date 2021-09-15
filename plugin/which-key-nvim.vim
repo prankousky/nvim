@@ -89,6 +89,8 @@ wk.register({
   ["<leader>c"] = { name = "CommentFrame" },
   ["<leader>cf"] = { ":lua require('nvim-comment-frame').add_comment()<CR>", "Kommentar Single Line" },
   ["<leader>cg"] = { ":lua require('nvim-comment-frame').add_multiline_comment()<CR>", "Kommentar Multi Line" },
+  ["<leader>m"] = { name = "Markdown Preview" },
+  ["<leader>mp"] = { "<Plug>MarkdownPreviewToggle<CR>", "Toggle Preview" },
 })
 EOF
 " vi: filetype=vim

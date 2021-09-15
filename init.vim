@@ -83,6 +83,7 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'ryanoasis/vim-devicons' " vimscript
 	Plug 'yamatsum/nvim-nonicons'
 	Plug 'yazgoo/yank-history' " History anzeigen
+	Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 " -- Status // Dashboard
       " Plug 'romgrk/barbar.nvim'
 	Plug 'mhinz/vim-startify'
