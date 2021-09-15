@@ -25,7 +25,6 @@ endif
 " Plugins festlegen {{{
 call plug#begin('$HOME/.config/nvim/meine_plugs')
 " ---- LSP // Completion {{{
-	Plug 'sudormrfbin/cheatsheet.nvim'
 	Plug 'ambv/black'
 	Plug 'dense-analysis/ale'
 	Plug 'folke/lsp-colors.nvim'
@@ -34,15 +33,16 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'hrsh7th/nvim-compe'
 	Plug 'hrsh7th/vim-vsnip'
 	Plug 'hrsh7th/vim-vsnip-integ'
-	Plug 'rafamadriz/friendly-snippets'
 	Plug 'neovim/nvim-lspconfig'
 	Plug 'nvim-lua/completion-nvim'
 	Plug 'nvim-telescope/telescope.nvim'
 	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 	Plug 'nvim-treesitter/playground'
 	Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+	Plug 'rafamadriz/friendly-snippets'
 	Plug 'ray-x/lsp_signature.nvim'
 	Plug 'simrat39/symbols-outline.nvim'
+	Plug 'sudormrfbin/cheatsheet.nvim'
 	Plug 'windwp/nvim-autopairs'
 " ---- }}}
 " ---- Filetypes/ Coding {{{
@@ -95,16 +95,17 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'chengzeyi/fzf-preview.vim'
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 	Plug 'junegunn/fzf.vim'
+	Plug 'kurkale6ka/vim-swap' " \x, \cx, etc. zum Switchen um Symbole
 	Plug 'nvim-lua/plenary.nvim'
 	Plug 'nvim-lua/popup.nvim'
 	Plug 's1n7ax/nvim-comment-frame'
+	Plug 'tommcdo/vim-lion'
 	Plug 'tpope/vim-commentary'
 	Plug 'tpope/vim-eunuch' " :Move, :Rename, etc.
 	Plug 'tpope/vim-sleuth' " Autoindent
 	Plug 'tpope/vim-speeddating'
 	Plug 'tpope/vim-surround'
 	Plug 'windwp/nvim-spectre'
-	Plug 'tommcdo/vim-lion'
 " ---- }}}
 " ---- Naviation und Co. {{{
 	Plug 'Rasukarusan/nvim-select-multi-line'

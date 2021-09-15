@@ -76,6 +76,8 @@ lua << EOF
 }
 local wk = require("which-key")
 wk.register({
+  ["<leader>x"] = { "<Plug>SwapWithR_WORD", "Tausche Wort mit dem RECHTS daneben" },
+  ["<leader>X"] = { "<Plug>SwapWithL_WORD", "Tausche Wort mit dem LINKS daneben" },
   ["<leader>?"] = { ":Cheatsheet", "Cheatsheet anzeigen" },
   ["<leader>n"] = { name = "NIS" },
   ["<leader>na"] = { ":Cheatsheet<CR>nis", "Cheatsheet anzeigen" },
