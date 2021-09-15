@@ -74,5 +74,19 @@ lua << EOF
     v = { "j", "k" },
   },
 }
+local wk = require("which-key")
+wk.register({
+  ["<leader>?"] = { ":Cheatsheet", "Cheatsheet anzeigen" },
+  ["<leader>n"] = { name = "NIS" },
+  ["<leader>na"] = { ":Cheatsheet<CR>nis", "Cheatsheet anzeigen" },
+  ["<leader>np"] = { ":! ./generieren.sh %<CR>", "PDF generieren und anzeigen" },
+  ["<leader>ns"] = { ":saveas <C-R>%", "Speichern unter..." },
+  ["<leader>b"] = { name = "Buffer" },
+  ["<leader>bb"] = { ":BufferPick<CR>", "Buffer auswählen" },
+  ["<leader>bd"] = { ":BufferClose<CR>", "Buffer schließen" },
+  ["<leader>c"] = { name = "CommentFrame" },
+  ["<leader>cf"] = { ":lua require('nvim-comment-frame').add_comment()<CR>", "Kommentar Single Line" },
+  ["<leader>cg"] = { ":lua require('nvim-comment-frame').add_multiline_comment()<CR>", "Kommentar Multi Line" },
+})
 EOF
 " vi: filetype=vim
