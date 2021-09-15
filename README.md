@@ -21,3 +21,8 @@ This may or may not be bloated, senseless, or whatever... but it works for me :)
 * `cgn` key combo
 * `h <begriff>`
 * `h: fillchars`
+
+## TO READ:
+
+* <https://vim.help/25-editing-formatted-text#25.2>
+*
