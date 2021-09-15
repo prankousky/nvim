@@ -1,8 +1,4 @@
-" * `:tab options`
-" * `h <begriff>`
-" * `:'<,' > norm A"`
-" * `cgn` key combo
-" * `:abbrev` für NIS
+" 'prankousky/nvim'
 "
 "******************************************************************************"
 "                            Plugins (via plug.vim)                            "
