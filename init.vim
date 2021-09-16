@@ -55,7 +55,8 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'theniceboy/vim-calc'
 	Plug 'vim-utils/vim-man' " man Pages in VIM
 	Plug 'vimwiki/vimwiki'
-	Plug 'preservim/nerdtree'
+	" Plug 'preservim/nerdtree'
+	Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
 	Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 	Plug 'NTBBloodbath/rest.nvim' " REST API inside nvim
 " ---- }}}

@@ -76,6 +76,7 @@ lua << EOF
 }
 local wk = require("which-key")
 wk.register({
+  ["<backspace>"] = { ":CHADopen<CR>", "CHADTree Toggle" },
   ["<leader>x"] = { "<Plug>SwapWithR_WORD", "Tausche Wort mit dem RECHTS daneben" },
   ["<leader>X"] = { "<Plug>SwapWithL_WORD", "Tausche Wort mit dem LINKS daneben" },
   ["<leader>?"] = { ":Cheatsheet", "Cheatsheet anzeigen" },

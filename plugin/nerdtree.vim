@@ -1,1 +1,1 @@
-let NERDTreeCustomOpenArgs={'file':{'where': 't'}}
+" let NERDTreeCustomOpenArgs={'file':{'where': 't'}}
