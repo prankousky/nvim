@@ -104,6 +104,10 @@ wk.register({
   ["<leader>r"] = { name = "REST Requests" },
   ["<leader>rr"] = { "<Plug>RestNvim<CR>", "Run request under the cursor" },
   ["<leader>rt"] = { "<Plug>RestNvimPreview<CR>", "Preview the request cURL Command" },
+  -- VIMWIKI
+  ["<leader>w"] = { name = "VimWiki" },
+  ["<leader>wt"] = { ":VimWikiTabIndex<CR>", "Hauptseite (VimWikiTabIndex)" },
+  ["<leader>wi"] = { ":VimWikiDiaryIndex<CR>", "Tagebuchseite (VimWikiDiaryIndex" },
 })
 EOF
 " vi: filetype=vim
