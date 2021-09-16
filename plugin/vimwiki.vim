@@ -1,6 +1,6 @@
 let g:vimwiki_list = [{
             \'path': '$HOME/documents/vimwiki/wiki',
-            \ 'syntax': 'markdown'
+            \ 'syntax': 'markdown', 'ext': '.md'
             \}]
 
 " für zweifisch/vimwiki-assets

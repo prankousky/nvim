@@ -24,11 +24,14 @@ This may or may not be bloated, senseless, or whatever... but it works for me :)
 
 ## TO READ:
 
+* <http://neovimcraft.com/plugin/lukas-reineke/indent-blankline.nvim/index.html>
 * <http://neovimcraft.com/plugin/tamton-aquib/staline.nvim>
 * <https://github.com/glepnir/spaceline.vim>
 * <https://github.com/lukas-reineke/headlines.nvim>
 * <https://github.com/mhinz/vim-galore#faster-keyword-completion>
 * <https://github.com/mhinz/vim-galore#tips-1>
+* <https://github.com/oberblastmeister/neuron.nvim>
+* <https://neovimcraft.com/guides>
 * <https://thevaluable.dev/vim-expert/>
 * <https://vim.help/12-clever-tricks#12.2>
 * <https://vim.help/21-go-away-and-come-back#21.4>
@@ -38,3 +41,4 @@ This may or may not be bloated, senseless, or whatever... but it works for me :)
 * <https://www.reddit.com/r/neovim/comments/p5eabx/neoclip_a_clipboard_manager_neovim_plugin_with/>
 * <https://www.reddit.com/r/neovim/comments/plbc2u/lsp_for_latex_in_neovim/>
 * <https://www.reddit.com/r/neovim/comments/pluikq/a_jumplist_plugin_complementary_to_ctrlo_and_ctrli/>
+* [Virtual Text in NVIM](https://jdhao.github.io/2021/09/09/nvim_use_virtual_text/)
