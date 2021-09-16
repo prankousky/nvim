@@ -58,7 +58,6 @@ nnoremap <leader>7 :%s/\<<c-r><c-w>\>//g<left><left>
 " als root Schreiben
 nnoremap<leader>su :w !sudo tee %<CR>
 " Vifm
-nnoremap <leader>v :Vifm<CR>
 nnoremap <leader>G :Goyo<CR>
 " Limelight toggeln
 nnoremap <leader>l :Limelight!!<CR>

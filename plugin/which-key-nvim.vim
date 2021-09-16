@@ -91,6 +91,10 @@ wk.register({
   ["<leader>cg"] = { ":lua require('nvim-comment-frame').add_multiline_comment()<CR>", "Kommentar Multi Line" },
   ["<leader>m"] = { name = "Markdown Preview" },
   ["<leader>mp"] = { "<Plug>MarkdownPreviewToggle<CR>", "Toggle Preview" },
+  ["<leader>v"] = { name = "Dotfiles" },
+  ["<leader>va"] = { ":lua require('theprimeagen.telescope').search_dotfiles()<CR>", "~/.config/nvim" },
+  ["<leader>vs"] = { ":lua require('theprimeagen.telescope').bens_dots()<CR>", "~/.config" },
+  ["<leader>vd"] = { ":lua require('theprimeagen.telescope').hass()<CR>", "Home Assistant" },
 })
 EOF
 " vi: filetype=vim

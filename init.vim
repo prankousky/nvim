@@ -32,6 +32,7 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'neovim/nvim-lspconfig'
 	Plug 'nvim-lua/completion-nvim'
 	Plug 'nvim-telescope/telescope.nvim'
+	Plug 'nvim-telescope/telescope-symbols.nvim'
 	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 	Plug 'nvim-treesitter/playground'
 	Plug 'prettier/vim-prettier', { 'do': 'yarn install' }

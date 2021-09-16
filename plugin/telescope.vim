@@ -57,8 +57,21 @@ require('telescope').setup{
     buffer_previewer_maker = require'telescope.previewers'.buffer_previewer_maker
   }
 }
+
+-- Eigenes {{{
+local M = {}
+M.search_dotfiles = function()
+    require("telescope.builtin").find_files({
+        prompt_title = "< DOTFILES >",
+        cwd = "~/.config/",
+        -- hidden = false,
+    })
+end
+-- }}}
 EOF
 
+" nnoremap <leader>vvv :lua require('theprimeagen.telescope').search_dotfiles()<CR>
+" nnoremap <leader>vdd :lua require('theprimeagen.telescope').bens_dots()<CR>
 
 " Farben
 " highlight TelescopeSelection      guifg=#D79921 gui=bold " Selected item
