@@ -79,22 +79,31 @@ wk.register({
   ["<leader>x"] = { "<Plug>SwapWithR_WORD", "Tausche Wort mit dem RECHTS daneben" },
   ["<leader>X"] = { "<Plug>SwapWithL_WORD", "Tausche Wort mit dem LINKS daneben" },
   ["<leader>?"] = { ":Cheatsheet", "Cheatsheet anzeigen" },
+  -- NIS
   ["<leader>n"] = { name = "NIS" },
   ["<leader>na"] = { ":Cheatsheet<CR>nis", "Cheatsheet anzeigen" },
   ["<leader>np"] = { ":! ./generieren.sh %<CR>", "PDF generieren und anzeigen" },
   ["<leader>ns"] = { ":saveas <C-R>%", "Speichern unter..." },
+  -- BUFFER
   ["<leader>b"] = { name = "Buffer" },
   ["<leader>bb"] = { ":BufferPick<CR>", "Buffer auswählen" },
   ["<leader>bd"] = { ":BufferClose<CR>", "Buffer schließen" },
+  -- COMMENT FRAME
   ["<leader>c"] = { name = "CommentFrame" },
   ["<leader>cf"] = { ":lua require('nvim-comment-frame').add_comment()<CR>", "Kommentar Single Line" },
   ["<leader>cg"] = { ":lua require('nvim-comment-frame').add_multiline_comment()<CR>", "Kommentar Multi Line" },
+  -- MARKDOWN
   ["<leader>m"] = { name = "Markdown Preview" },
   ["<leader>mp"] = { "<Plug>MarkdownPreviewToggle<CR>", "Toggle Preview" },
+  -- DOTFILES
   ["<leader>v"] = { name = "Dotfiles" },
   ["<leader>va"] = { ":lua require('theprimeagen.telescope').search_dotfiles()<CR>", "~/.config/nvim" },
-  ["<leader>vs"] = { ":lua require('theprimeagen.telescope').bens_dots()<CR>", "~/.config" },
   ["<leader>vd"] = { ":lua require('theprimeagen.telescope').hass()<CR>", "Home Assistant" },
+  ["<leader>vs"] = { ":lua require('theprimeagen.telescope').bens_dots()<CR>", "~/.config" },
+  -- REQUESTS
+  ["<leader>r"] = { name = "REST Requests" },
+  ["<leader>rr"] = { "<Plug>RestNvim<CR>", "Run request under the cursor" },
+  ["<leader>rt"] = { "<Plug>RestNvimPreview<CR>", "Preview the request cURL Command" },
 })
 EOF
 " vi: filetype=vim

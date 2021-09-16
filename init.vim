@@ -57,6 +57,7 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'vimwiki/vimwiki'
 	Plug 'preservim/nerdtree'
 	Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+	Plug 'NTBBloodbath/rest.nvim' " REST API inside nvim
 " ---- }}}
 " ---- Visuelles {{{
 " -- Themes
