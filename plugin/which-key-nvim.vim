@@ -109,6 +109,19 @@ wk.register({
   ["<leader>w"] = { name = "VimWiki" },
   ["<leader>wt"] = { ":VimWikiTabIndex<CR>", "Hauptseite (VimWikiTabIndex)" },
   ["<leader>wi"] = { ":VimWikiDiaryIndex<CR>", "Tagebuchseite (VimWikiDiaryIndex" },
+  -- TELESCOPE
+  ["<leader>f"] = { name = "Telescope" },
+  ["<leader>ff"] = { ":Telescope find_files theme=get_ivy prompt_prefix=🔍<CR>", "Find Files" },
+  ["<leader>fb"] = { ":Telescope buffers theme=get_ivy<CR>", "Buffers" },
+  ["<leader>fc"] = { ":Telescope file_browser theme=get_ivy<CR>", "Highlights" },
+  ["<leader>fd"] = { ":Telescope file_browser theme=get_ivy<CR>", "File Browser" },
+  ["<leader>fg"] = { ":Telescope buffers theme=get_ivy<CR>", "Buffers" },
+  ["<leader>fh"] = { ":Telescope help_tags theme=get_ivy<CR>", "Help Tags" },
+  ["<leader>fk"] = { ":Telescope oldfiles theme=get_ivy<CR>", "Old Files" },
+  ["<leader>fm"] = { ":Telescope marks theme=get_ivy<CR>", "Marks" },
+  ["<leader>fo"] = { ":Telescope vim_options theme=get_ivy<CR>", "Vim Options" },
+  ["<leader>fr"] = { ":Telescope current_buffer_fuzzy_find theme=get_ivy<CR>", "Fuzzy Find" },
+  ["<leader>fs"] = { ":Telescope spell_suggest theme=get_ivy<CR>", "Wortvorschläge" },
 })
 EOF
 " vi: filetype=vim
