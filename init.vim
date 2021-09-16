@@ -68,6 +68,7 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'joshdick/onedark.vim'
 	Plug 'luochen1990/rainbow'
 	Plug 'tomasr/molokai'
+	Plug 'romgrk/doom-one.vim'
 	" -- Misc
 	Plug 'Yggdroot/hiPairs' " highlighte umrandende Symbole
 	Plug 'andymass/vim-matchup' " ähnlich wie hiPairs
