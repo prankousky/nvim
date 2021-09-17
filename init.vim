@@ -86,6 +86,7 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'yazgoo/yank-history' " History anzeigen
 	Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 	Plug 'edluffy/specs.nvim' " visueller Cursor
+	Plug 'tmhedberg/simpylfold' " Python Folding
 " -- Status // Dashboard
       " Plug 'romgrk/barbar.nvim'
 	Plug 'mhinz/vim-startify'
