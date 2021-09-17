@@ -59,6 +59,7 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 	Plug 'NTBBloodbath/rest.nvim' " REST API inside nvim
 	Plug 'thinca/vim-quickrun' " :QuickRun um Datei (oder Teil der Datei) auszuführen
+	Plug 'ingydotnet/yaml-vim'  " SYNTAX yaml
 " ---- }}}
 " ---- Visuelles {{{
 " -- Themes
@@ -98,6 +99,7 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 	Plug 'junegunn/fzf.vim'
 	Plug 'kurkale6ka/vim-swap' " \x, \cx, etc. zum Switchen um Symbole
+	Plug 'gioele/vim-autoswap' " automatisch mit swap Files umgehen
 	Plug 'nvim-lua/plenary.nvim'
 	Plug 'nvim-lua/popup.nvim'
 	Plug 's1n7ax/nvim-comment-frame'
