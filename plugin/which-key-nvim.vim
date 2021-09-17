@@ -123,6 +123,10 @@ wk.register({
   ["<leader>fr"] = { ":Telescope current_buffer_fuzzy_find theme=get_ivy<CR>", "Fuzzy Find" },
   ["<leader>fr"] = { ":Telescope quickfix theme=get_ivy<CR>", "Quickfixes anzeigen" },
   ["<leader>fs"] = { ":Telescope spell_suggest theme=get_ivy<CR>", "Wortvorschläge" },
+  -- TOOLS
+  ["<leader>t"] = { name = "Tools" },
+  ["<leader>tt"] = { ":QuickRun<CR>", "Datei (oder VISUAL) in Split ausführen" },
+  ["<leader>ta"] = { ":vertical terminal", "Terminal öffnen" },
 })
 EOF
 " vi: filetype=vim
