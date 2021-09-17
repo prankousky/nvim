@@ -199,3 +199,6 @@ onoremap <expr> N  'nN'[v:searchforward]
 " nnoremap <silent> <leader>zk :call NextClosedFold('k')<cr>
 " vim:foldmethod=marker:foldlevel=0
 " }}}}}}
+" besseres vorwärts/zurück springen
+nnoremap n nzz
+nnoremap N Nzz

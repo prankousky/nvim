@@ -82,7 +82,7 @@ set nobackup
 set undodir=~/.config/nvim/undo
 set undofile
 " immer x Zeilen unter/überhalb anzeigen
-set scrolloff=8
+set scrolloff=4
 "
 set signcolumn=yes
 "
