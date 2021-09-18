@@ -61,6 +61,14 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'thinca/vim-quickrun' " :QuickRun um Datei (oder Teil der Datei) auszuführen
 	Plug 'ingydotnet/yaml-vim'  " SYNTAX yaml
 	Plug 'sefeng211/vim-pastebins' " mit `PastebinPasteAll` (u.A.) buffer nach pastebin
+	Plug 'hail2u/vim-css3-syntax'
+	Plug 'gko/vim-coloresque'
+	Plug 'tpope/vim-haml'
+	Plug 'mattn/emmet-vim'
+	Plug 'jelera/vim-javascript-syntax'
+	Plug 'davidhalter/jedi-vim'
+	Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
+
 " ---- }}}
 " ---- Visuelles {{{
 " -- Themes

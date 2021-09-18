@@ -43,3 +43,7 @@ This may or may not be bloated, senseless, or whatever... but it works for me :)
 * <https://www.reddit.com/r/neovim/comments/pluikq/a_jumplist_plugin_complementary_to_ctrlo_and_ctrli/>
 * [CHADTree Keybindings](https://github.com/ms-jpq/chadtree/blob/chad/docs/KEYBIND.md)
 * [Virtual Text in NVIM](https://jdhao.github.io/2021/09/09/nvim_use_virtual_text/)
+
+## MISC LINKS:
+
+* <https://vim-bootstrap.com/>

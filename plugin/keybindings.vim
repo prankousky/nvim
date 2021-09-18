@@ -88,6 +88,8 @@ nnoremap <leader>Lps <Esc>:VimtexClean<CR>
 nnoremap <leader>x :execute "%bd\|e#"<CR>
 " 'theniceboy/vim-calc'
 nnoremap <leader>= :call Calc()<CR>
+" Working Dir zu aktuellem Pfad
+" nnoremap <leader>. :lcd %:p:h<CR>
 " -- }}}
 " -- VISUAL {{{
 " in visueller Selektion suchen/ersetzen
@@ -188,6 +190,18 @@ onoremap <expr> n  'Nn'[v:searchforward]
 nnoremap <expr> N  'nN'[v:searchforward]
 xnoremap <expr> N  'nN'[v:searchforward]
 onoremap <expr> N  'nN'[v:searchforward]
+" Tippfehler vermeiden ;)
+cnoreabbrev W! w!
+cnoreabbrev Q! q!
+cnoreabbrev Qall! qall!
+cnoreabbrev Wq wq
+cnoreabbrev Wa wa
+cnoreabbrev wQ wq
+cnoreabbrev WQ wq
+cnoreabbrev W w
+cnoreabbrev Q q
+cnoreabbrev Qall qall
+
 " }}}
 " DEAKTIVIERT {{{{{{
 " sortiere Plugins in $MYVIMRC
