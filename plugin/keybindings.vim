@@ -13,7 +13,8 @@ nnoremap <leader>, :call sml#mode_on()<CR>
 " Wichtigste DIRS mit CtrlP
 nnoremap <leader>P :CtrlPBookmarkDir<CR>
 " zeige Plugins im Firefox
-nnoremap <leader>g yi' :!firefox --new-tab https://github.com/<C-R>"<CR><CR>
+nnoremap <leader>gg yi' :!firefox --new-tab https://github.com/<C-R>"<CR><CR>
+nnoremap <leader>gf :!firefox --new-tab <C-R>*<CR><CR>
 " AUTOMATISCH Systemclipboard benutzen
 nnoremap <leader>y "+y
 nnoremap <leader>p "+p
@@ -28,7 +29,7 @@ nnoremap <leader>vv <c-u>:tabedit $MYVIMRC<CR>
 " Lösche gesamten Inhalt des Buffers
 nnoremap <leader>da ggdG
 " AckWindow
-nnoremap <leader>t <c-u>:Rg<CR>
+" nnoremap <leader>t <c-u>:Rg<CR>
 " FzfGitignore
 nnoremap <leader>gi <c-u>:FzfGitignore<CR>
 " 's1n7ax/nvim-comment-frame' {{{
@@ -64,7 +65,7 @@ nnoremap <leader>l :Limelight!!<CR>
 " AutoPairs Toggle
 let g:AutoPairsShortcutToggle = '<leader>m'
 " Terminal öffnen
-nnoremap <leader>t :vert term<CR>
+" nnoremap <leader>t :vert term<CR>
 " Startify IN vim noch mal öffnen
 nnoremap <leader>sf :Startify<CR>
 nnoremap <leader>bb :BufferPick<CR>

@@ -60,6 +60,7 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'NTBBloodbath/rest.nvim' " REST API inside nvim
 	Plug 'thinca/vim-quickrun' " :QuickRun um Datei (oder Teil der Datei) auszuführen
 	Plug 'ingydotnet/yaml-vim'  " SYNTAX yaml
+	Plug 'sefeng211/vim-pastebins' " mit `PastebinPasteAll` (u.A.) buffer nach pastebin
 " ---- }}}
 " ---- Visuelles {{{
 " -- Themes

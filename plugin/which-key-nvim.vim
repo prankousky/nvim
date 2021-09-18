@@ -126,7 +126,16 @@ wk.register({
   -- TOOLS
   ["<leader>t"] = { name = "Tools" },
   ["<leader>tt"] = { ":QuickRun<CR>", "Datei (oder VISUAL) in Split ausführen" },
-  ["<leader>ta"] = { ":vertical terminal", "Terminal öffnen" },
+  ["<leader>ta"] = { ":vertical terminal<CR>", "Terminal öffnen" },
+  ["<leader>tp"] = { ":PastebinPasteAll<CR>", "PASTE Buffer" },
+  ["<leader>tL"] = { ":PastebinPaste<CR>", "PASTE Visuelle Selektion" },
+  ["<leader>tl"] = { ":PastebinPasteList<CR>", "PASTE History" },
+  ["<leader>tg"] = { "gg yi' :!firefox --new-tab https://github.com/<C-R>\"<CR><CR>", "Zeige Plugin auf GitHub" },
+  ["<leader>tf"] = { ":!firefox --new-tab <C-R>*<CR><CR>", "Öffne URL im Register in Firefox" },
+  ["<leader>tr"] = { ":Rg<CR>", "RipGrep" },
+  ["<leader>gg"] = { "gg yi' :!firefox --new-tab https://github.com/<C-R>\"<CR><CR>", "Zeige Plugin auf GitHub" },
+  ["<leader>gf"] = { ":!firefox --new-tab <C-R>*<CR><CR>", "Öffne URL im Register in Firefox" },
+
 })
 EOF
 " vi: filetype=vim
