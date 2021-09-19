@@ -11,3 +11,4 @@ nnoremap 22 f,lct,
 abbrev wrsg2 Wöchentliche Reinigung Schienensystem GT2
 abbrev weet Wöchentliches Eis Entfernen Tunnelraumverdampfer
 abbrev weel Wöchentliches Eis Entfernen Leybold GT2
+abbrev eaeb Wartung der Energieanlagen im Energiebereich gemä0 Wartungspläne
