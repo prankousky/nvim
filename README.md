@@ -6,9 +6,11 @@
 
 This may or may not be bloated, senseless, or whatever... but it works for me :)
 
-## Important Links
+## Check these plugins
 
-* https://github.com/rockerBOO/awesome-neovim
+* <https://github.com/ojroques/vim-oscyank>
+* <https://github.com/SidOfc/mkdx>
+* <https://github.com/GustavoKatel/sidebar.nvim>
 
 ## TODO:
 
@@ -22,10 +24,9 @@ This may or may not be bloated, senseless, or whatever... but it works for me :)
 * `h <begriff>`
 * `h: fillchars`
 
-## Plugins noch einrichten
+## Important Links
 
-* <https://github.com/SidOfc/mkdx>
-* <https://github.com/GustavoKatel/sidebar.nvim>
+* https://github.com/rockerBOO/awesome-neovim
 
 ## TO READ:
 
@@ -46,6 +47,8 @@ This may or may not be bloated, senseless, or whatever... but it works for me :)
 * <https://www.reddit.com/r/neovim/comments/p5eabx/neoclip_a_clipboard_manager_neovim_plugin_with/>
 * <https://www.reddit.com/r/neovim/comments/plbc2u/lsp_for_latex_in_neovim/>
 * <https://www.reddit.com/r/neovim/comments/pluikq/a_jumplist_plugin_complementary_to_ctrlo_and_ctrli/>
+* <https://www.tabnine.com/install/vim>
+* <https://www.vim.org/scripts/script.php?script_id=1218>
 * [CHADTree Keybindings](https://github.com/ms-jpq/chadtree/blob/chad/docs/KEYBIND.md)
 * [Virtual Text in NVIM](https://jdhao.github.io/2021/09/09/nvim_use_virtual_text/)
 
