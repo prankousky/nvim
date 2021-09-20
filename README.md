@@ -22,6 +22,11 @@ This may or may not be bloated, senseless, or whatever... but it works for me :)
 * `h <begriff>`
 * `h: fillchars`
 
+## Plugins noch einrichten
+
+* <https://github.com/SidOfc/mkdx>
+* <https://github.com/GustavoKatel/sidebar.nvim>
+
 ## TO READ:
 
 * <http://neovimcraft.com/plugin/lukas-reineke/indent-blankline.nvim/index.html>

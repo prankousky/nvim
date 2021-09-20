@@ -65,6 +65,7 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'gko/vim-coloresque'
 	Plug 'tpope/vim-haml'
 	Plug 'mattn/emmet-vim'
+	Plug 'SidOfc/mkdx'
 	Plug 'jelera/vim-javascript-syntax'
 	Plug 'davidhalter/jedi-vim'
 	Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
