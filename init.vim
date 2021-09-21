@@ -727,12 +727,27 @@ let g:CtrlSpaceDefaultMappingKey = "<C-space> "
 "                                     REST                                     "
 "******************************************************************************"
 " -- GANZ UNTEN {{{
-highlight Normal ctermbg=black
+highlight Normal ctermbg=white
+" highlight Normal ctermbg=black
 " Kommentare in kursiv darstellen
 highlight Comment cterm=italic gui=italic
 " Diese Einstellung für kursiv als Helper
 set t_ZH=[3m
 set t_ZR=[23m
+" LESEN {{{
+" Damit das auch in (n)vim IN tmux funktioniert, zuerst
+" cat <<EOF|tic -x -
+" tmux|tmux terminal multiplexer,
+"     ritm=\E[23m, rmso=\E[27m, sitm=\E[3m, smso=\E[7m, Ms@,
+"     use=xterm+tmux, use=screen,
+
+" tmux-256color|tmux with 256 colors,
+"     use=xterm+256setaf, use=tmux,
+" EOF
+" im Terminal laufen lassen; dann in tmux.conf
+" set -g default-terminal "tmux-256color"
+" eintragen
+" }}}
 " indents minimal visualisieren
 " set invlist
 " set listchars=eol:↴,tab:▸
