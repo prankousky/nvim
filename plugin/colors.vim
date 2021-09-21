@@ -7,7 +7,7 @@ fun! ColorMyPencils()
         let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
         let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
     endif
-    let g:gruvbox_invert_selection='0'
+    let g:gruvbox_invert_selection='1'
 
     set background=dark
     if has('nvim')
@@ -17,16 +17,16 @@ fun! ColorMyPencils()
         colorscheme gruvbox
     endif
 
-    highlight ColorColumn ctermbg=0 guibg=grey
-    hi SignColumn guibg=none
-    hi CursorLineNR guibg=None
-    highlight Normal guibg=none
-    highlight LineNr guifg=#ff8659
-    highlight LineNr guifg=#aed75f
-    highlight LineNr guifg=#5eacd3
-    highlight netrwDir guifg=#5eacd3
-    highlight qfFileName guifg=#aed75f
-    hi TelescopeBorder guifg=#aed75f
+    " highlight ColorColumn ctermbg=0 guibg=grey
+    " hi SignColumn guibg=none
+    " hi CursorLineNR guibg=None
+    " highlight Normal guibg=none
+    " highlight LineNr guifg=#ff8659
+    " highlight LineNr guifg=#aed75f
+    " highlight LineNr guifg=#5eacd3
+    " highlight netrwDir guifg=#5eacd3
+    " highlight qfFileName guifg=#aed75f
+    " hi TelescopeBorder guifg=#aed75f
 endfunction
 call ColorMyPencils()
 
@@ -39,7 +39,8 @@ let g:gruvbox_contrast_dark = 'hard'
 " " Markierung bei 80
 let g:gruvbox_color_column = 'green'
 " " Italics aktivieren
-let g:gruvbox_italicize_strings = 1
+" let g:gruvbox_italicize_strings = 1
+" let g:gruvbox_italic = 1
 " " Ausprobieren
 let g:gruvbox_improved_strings = 0
 let g:gruvbox_improved_warnings = 1
