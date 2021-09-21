@@ -730,8 +730,8 @@ let g:CtrlSpaceDefaultMappingKey = "<C-space> "
 " highlight Normal ctermbg=white
 highlight Normal ctermbg=black
 " Kommentare in kursiv darstellen
-" highlight Comment cterm=italic
-highlight Comment cterm=italic gui=italic
+highlight Comment cterm=italic
+" highlight Comment cterm=italic gui=italic
 " Diese Einstellung für kursiv als Helper
 set t_ZH=[3m
 set t_ZR=[23m
