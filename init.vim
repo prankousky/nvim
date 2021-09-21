@@ -108,10 +108,11 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'LandonSchropp/vim-stamp' " Siw
 	Plug 'MattesGroeger/vim-bookmarks'
 	Plug 'chengzeyi/fzf-preview.vim'
+	Plug 'editorconfig/editorconfig-vim'
+	Plug 'gioele/vim-autoswap' " automatisch mit swap Files umgehen
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 	Plug 'junegunn/fzf.vim'
 	Plug 'kurkale6ka/vim-swap' " \x, \cx, etc. zum Switchen um Symbole
-	Plug 'gioele/vim-autoswap' " automatisch mit swap Files umgehen
 	Plug 'nvim-lua/plenary.nvim'
 	Plug 'nvim-lua/popup.nvim'
 	Plug 's1n7ax/nvim-comment-frame'
@@ -730,6 +731,8 @@ let g:CtrlSpaceDefaultMappingKey = "<C-space> "
 "******************************************************************************"
 " -- GANZ UNTEN {{{
 highlight Normal ctermbg=black
+" Kommentare in kursiv darstellen
+highlight Comment cterm=italic
 " indents minimal visualisieren
 " set invlist
 " set listchars=eol:↴,tab:▸
