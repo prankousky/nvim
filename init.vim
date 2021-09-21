@@ -716,9 +716,6 @@ let g:hiPairs_hl_unmatchPair = { 'term'    : 'underline,italic',
 set title
 " sofort ESC annehmen ohne Verzögerung
 set timeoutlen=1000 ttimeoutlen=0
-" Kommentare kursiv drucken
-" funktioniert wohl nicht mit jedem colorscheme
-" highlight Comment cterm=italic gui=italic
 "  }}}
 " 'vim-ctrlspace/vim-ctrlspace' {{{
 " geht nur hiermit
@@ -732,7 +729,10 @@ let g:CtrlSpaceDefaultMappingKey = "<C-space> "
 " -- GANZ UNTEN {{{
 highlight Normal ctermbg=black
 " Kommentare in kursiv darstellen
-highlight Comment cterm=italic
+highlight Comment cterm=italic gui=italic
+" Diese Einstellung für kursiv als Helper
+set t_ZH=[3m
+set t_ZR=[23m
 " indents minimal visualisieren
 " set invlist
 " set listchars=eol:↴,tab:▸
