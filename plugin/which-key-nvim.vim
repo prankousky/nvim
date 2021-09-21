@@ -113,7 +113,7 @@ wk.register({
   -- TELESCOPE
   ["<leader>f"] = { name = "Telescope" },
   ["<leader>fb"] = { ":Telescope buffers theme=get_ivy<CR>", "Buffers" },
-  ["<leader>fc"] = { ":Telescope file_browser theme=get_ivy<CR>", "Highlights" },
+  ["<leader>fc"] = { ":Telescope colorscheme theme=get_ivy<CR>", "Color Scheme" },
   ["<leader>fd"] = { ":Telescope file_browser theme=get_ivy<CR>", "File Browser" },
   ["<leader>ff"] = { ":Telescope find_files theme=get_ivy prompt_prefix=🔍<CR>", "Find Files" },
   ["<leader>fg"] = { ":Telescope buffers theme=get_ivy<CR>", "Buffers" },
