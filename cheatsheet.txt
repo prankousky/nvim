@@ -2,6 +2,7 @@
 Wöchentl. Reinigung Schienensystem GT2        | wrsg2
 Wöchentl. Eis Entfernen Tunnelraumverdampfer  | weet
 Wöchentl. Eis Entfernen Leybold GT2           | seel
+Wartung der Energieanlagen Energiebereich gem.| eaeb
 
 # Keybindings
 # Leader
