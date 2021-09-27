@@ -21,3 +21,7 @@ function! Nisnext()
     execute 'write' neu
     execute 'edit' neu
 endfunction
+
+" function! Mynext()
+"     execute 'saveas ' .. expand('%')->substitute('\d*\ze\D*$', '\=submatch(0) + 1', '')
+" endfunction
