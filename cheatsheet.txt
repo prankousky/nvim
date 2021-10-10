@@ -86,6 +86,7 @@ Set text width to {n} | :set tw={n}
 
 ## TMUX
 u | Zeige URLS
+f | Dateien aus Buffer in Programm öffnen
 
 ## Firefox
 <ctrl+tab> (kurz)   | vorheriger Tab
