@@ -87,7 +87,7 @@ wk.register({
   ["<leader>na"] = { ":Cheatsheet<CR>nis", "Cheatsheet anzeigen" },
   ["<leader>np"] = { ":! ./generieren.sh %<CR>", "PDF generieren und anzeigen" },
   ["<leader>ns"] = { ":saveas <C-R>%", "Speichern unter..." },
-  ["<leader>nn"] = { ":call Mynext()", "nächste Rechnung" },
+  ["<leader>nn"] = { ":call Mynext()<CR>", "nächste Rechnung" },
   -- BUFFER
   ["<leader>b"] = { name = "Buffer" },
   ["<leader>bb"] = { ":BufferPick<CR>", "Buffer auswählen" },
