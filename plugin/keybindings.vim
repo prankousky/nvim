@@ -18,8 +18,6 @@ nnoremap <leader>gf :!firefox --new-tab <C-R>*<CR><CR>
 " AUTOMATISCH Systemclipboard benutzen
 nnoremap <leader>y "+y
 nnoremap <leader>p "+p
-" Goyo
-nnoremap <leader>G :Goyo<CR>
 " Toggle EOL (etc) Symbole
 nnoremap <leader>i :set invlist!<CR>
 " init.vim neu laden
@@ -59,7 +57,7 @@ nnoremap <leader>7 :%s/\<<c-r><c-w>\>//g<left><left>
 " als root Schreiben
 nnoremap<leader>su :w !sudo tee %<CR>
 " Vifm
-nnoremap <leader>G :Goyo<CR>
+nnoremap <leader>G :Goyo<CR><ESC>:set linebreak<CR>
 " Limelight toggeln
 nnoremap <leader>l :Limelight!!<CR>
 " AutoPairs Toggle
