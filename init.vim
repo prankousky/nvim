@@ -50,7 +50,9 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'lervag/vimtex'
 	Plug 'lewis6991/gitsigns.nvim'
 	Plug 'mbbill/undotree'
+	Plug 'mboughaba/i3config.vim'
 	Plug 'nvim-lua/plenary.nvim'
+	Plug 'jamespeapen/swayconfig.vim'
 	Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 	Plug 'theniceboy/vim-calc'
 	Plug 'vim-utils/vim-man' " man Pages in VIM
