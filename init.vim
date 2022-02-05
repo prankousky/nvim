@@ -77,6 +77,8 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 " ---- }}}
 " ---- Visuelles {{{
 " -- Themes
+	Plug 'petertriho/nvim-scrollbar'
+	Plug 'kevinhwang91/nvim-hlslens'    " benötigt für nvim-scrollbar
 	Plug 'Pocco81/Catppuccino.nvim'
 	Plug 'dguo/blood-moon', {'rtp': 'applications/vim'}
 	Plug 'gruvbox-community/gruvbox'
