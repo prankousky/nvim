@@ -1,0 +1,15 @@
+snippet autom
+  - alias: "$1"
+    id: $2
+    trigger:
+      - platform: $3
+        entity_id: $4
+        to: "idle"
+    condition:
+      condition:
+      entity_id:
+      state:
+    action:
+      - service: $5
+        entity_id: $6
+endsnippet
