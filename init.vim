@@ -73,6 +73,7 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'davidhalter/jedi-vim'
 	Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
 	Plug 'dbeniamine/cheat.sh-vim' " mit <leader>K Cheatsheet (cheatsh) invokieren
+	Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
 " ---- }}}
 " ---- Visuelles {{{
@@ -166,6 +167,14 @@ autocmd VimEnter *
 "                             Plugin Einstellungen                             "
 "******************************************************************************"
 " ---- Plugin  Einstellungen {{{
+" UltiSnipts {{{
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+" }}}
 " -- completion-nvim {{{
 " Use completion-nvim in every buffer
 autocmd BufEnter * lua require'completion'.on_attach()
