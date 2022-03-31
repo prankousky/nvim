@@ -1,4 +1,4 @@
 meine_plugs/**
-!meine_plugs/vim-snippets/UltiSnips/**
+!./meine_plugs/vim-snippets/UltiSnips/**
 undo/**
 .netrwhist
