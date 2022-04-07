@@ -73,7 +73,7 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'davidhalter/jedi-vim'
 	Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
 	Plug 'dbeniamine/cheat.sh-vim' " mit <leader>K Cheatsheet (cheatsh) invokieren
-	" Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+	Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
 " ---- }}}
 " ---- Visuelles {{{
