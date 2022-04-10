@@ -1,0 +1,6 @@
+{
+    "homeassistant.enable": true,
+    "homeassistant.hostUrl": "http://192.168.100.100:8123",
+    "homeassistant.longLivedAccessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiI1OWU3NWVjNTZmZmE0NjJmOWFiYzc4NTNjNWRlZTI5MSIsImlhdCI6MTY0OTQwMDU0MCwiZXhwIjoxOTY0NzYwNTQwfQ.BC9UtCpUfccENguA4V7cWNsvuB8YN89JWzaVscJ220E",
+    "coc.preferences.timeout": 300
+}

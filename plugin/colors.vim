@@ -1,5 +1,6 @@
 " let g:benihmsein_colorscheme = "dark_catppuccino"
-let g:benihmsein_colorscheme = "gruvbox"
+let g:benihmsein_colorscheme = "dracula"
+" let g:benihmsein_colorscheme = "gruvbox"
 
 fun! ColorMyPencils()
     let g:gruvbox_contrast_dark = 'hard'
