@@ -3,13 +3,14 @@ let s:so_save = &g:so | let s:siso_save = &g:siso | setg so=0 siso=0 | setl so=-
 let v:this_session=expand("<sfile>:p")
 silent only
 silent tabonly
-cd ~/
+cd ~/code/px-smarthome-ext/docker/homeassistant/homeassistant/packages
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
 argglobal
 %argdel
+$argadd ~/code/px-smarthome-ext/docker/homeassistant/homeassistant/packages/
 argglobal
 enew
 setlocal fdm=marker
@@ -21,8 +22,10 @@ setlocal fml=1
 setlocal fdn=20
 setlocal nofen
 tabnext 1
-badd +1 code/px-smarthome-ext/docker/homeassistant/homeassistant
-badd +50 code/px-smarthome-ext/docker/homeassistant/homeassistant/packages/haus/haus_remote_broadlink_wohnzimmer.yaml
+badd +0 ~/code/px-smarthome-ext/docker/homeassistant/homeassistant/packages/
+badd +3 ~/code/px-smarthome-ext/docker/homeassistant/homeassistant/packages/modi.yaml
+badd +14 ./haus/haus_arbeitszimmer_buttons.yaml
+badd +105 ~/code/px-smarthome-ext/docker/homeassistant/homeassistant/packages/klima/klima_arbeitszimmer.yaml
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
 endif

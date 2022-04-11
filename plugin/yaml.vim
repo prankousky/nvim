@@ -37,7 +37,7 @@ augroup yaml_fix
 augroup END
 
 function! Hass()
-    set dictionary=/tmp/hassstates
-    set iskeyword+=_
-    set iskeyword +=.
+    setlocal dictionary=/tmp/hassstates
+    setlocal iskeyword+=_
+    setlocal iskeyword +=.
 endfunction
