@@ -127,6 +127,7 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'tommcdo/vim-lion'
 	Plug 'tpope/vim-commentary'
 	Plug 'tpope/vim-eunuch' " :Move, :Rename, etc.
+	Plug 'easymotion/vim-easymotion' " <leader><leader>w etc. einfacher suchen
 	Plug 'tpope/vim-sleuth' " Autoindent
 	Plug 'tpope/vim-speeddating'
 	Plug 'tpope/vim-surround'

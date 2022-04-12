@@ -138,6 +138,8 @@ wk.register({
   ["<leader>tr"] = { ":Rg<CR>", "RipGrep" },
   ["<leader>gg"] = { "gg yi' :!firefox --new-tab https://github.com/<C-R>\"<CR><CR>", "Zeige Plugin auf GitHub" },
   ["<leader>gf"] = { ":!firefox --new-tab <C-R>*<CR><CR>", "Öffne URL im Register in Firefox" },
+  ["<leader><leader>f"] = { "<Plug>(easymotion-bd-f)>", "Suche CHARACTER mit Easymotion" },
+  ["<leader><leader>w"] = { "<Plug>(easymotion-bd-w)>", "Suche WORT mit Easymotion" },
 
 })
 EOF
