@@ -1,5 +1,13 @@
 # $MYVIMRC
 
+## `ftplugin`
+
+Anything here is filetype specific, for example
+
+* *set a different colorscheme for `yaml` files*
+* *change indentation for python files*
+* etc.
+
 ## Heads Up
 
 *This is my `init.vim`. There are many like it, but this one is mine*.
