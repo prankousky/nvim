@@ -140,6 +140,7 @@ wk.register({
   ["<leader>gf"] = { ":!firefox --new-tab <C-R>*<CR><CR>", "Öffne URL im Register in Firefox" },
   ["<leader><leader>f"] = { "<Plug>(easymotion-bd-f)>", "Suche CHARACTER mit Easymotion" },
   ["<leader><leader>w"] = { "<Plug>(easymotion-bd-w)>", "Suche WORT mit Easymotion" },
+  ["<leader>ha"] = { ":! ~/.config/benvironment/bin/vimhass.py<CR>", "HOME ASSISTANT HELPER" },
 
 })
 EOF
