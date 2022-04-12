@@ -1,6 +1,10 @@
-" Begrenzung nicht anzeigen
-autocmd FileType csv setlocal colorcolumn=
-" automatisch Zellen 'aufpumpen'
+" anderes Colorscheme
+colorscheme onedark
+
+" Keine Colorcolumn anzeigen
+setlocal colorcolumn=
+
+" Zellen automatisch aufpumpen
 let g:csv_autocmd_arrange = 1
 " funzt nicht
 highlight link CSVColumnOdd MoreMsg
