@@ -30,7 +30,7 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'hrsh7th/vim-vsnip'
 	Plug 'hrsh7th/vim-vsnip-integ'
 	Plug 'neovim/nvim-lspconfig'
-	Plug 'neoclide/coc.nvim', {'branch': 'release'}
+	" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'nvim-lua/completion-nvim'
 	Plug 'nvim-telescope/telescope.nvim'
 	Plug 'nvim-telescope/telescope-symbols.nvim'
