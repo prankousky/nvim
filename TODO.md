@@ -1,0 +1,26 @@
+
+# TESTEN
+
+## Befehle
+
+* `set laststatus=3` wenn man Splits offen hat, wird **lediglich eine** Statuszeile angezeigt; genial!
+
+## Plugins
+
+* [`AckslD/nvim-neoclip.lua`](https://github.com/AckslD/nvim-neoclip.lua) - eine Art history der yanks
+* [`chipsenkbeil/distant.nvim`](https://github.com/chipsenkbeil/distant.nvim) - edit files, run programs, and work with LSP on a remote machine (noch alpha)
+* [`gennaro-tedesco/nvim-jqx`](https://github.com/gennaro-tedesco/nvim-jqx) - `jq` **innerhalb** von nvim
+* [`gennaro-tedesco/nvim-peekup`](https://github.com/gennaro-tedesco/nvim-peekup) - eine Übersicht der registers
+* [`ggandor/lightspeed.nvim`](https://github.com/ggandor/lightspeed.nvim) - noch bessere Movements als mit easymotion?
+* [`mileszs/ack.vim`](https://github.com/mileszs/ack.vim) **BZW.** `ag` / `silversurfer` - macht das, was ich mir von `rg` erhofft hatte: durchsucht Datei- und Pfadnamen, *aber auch* Dateiinhalte
+* [`unblevable/quick-scope`](https://github.com/unblevable/quick-scope) - super-schnelle Movements
+
+## Sonstiges
+
+    * wenn eine Zeile in Anführungsstrichen geschrieben ist, kann man sie anscheinend mit Zeilenumbruch anzeigen lassen; ausprobieren!
+* !! https://youtu.be/indguFY7wJ0 !!
+* `chrisbra/csv.vim` noch mal durchlesen:
+* https://dev.to/elvessousa/my-basic-neovim-setup-253l
+* https://www.arthurkoziel.com/setting-up-vim-for-yaml/
+* https://www.reddit.com/r/vim/comments/tyz4yg/any_idea_which_extensionplugin_this_is_that_shows/
+* https://www.reddit.com/r/vim/comments/u2qen0/-/i4ptvjl
