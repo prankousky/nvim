@@ -14,6 +14,18 @@
 * [`ggandor/lightspeed.nvim`](https://github.com/ggandor/lightspeed.nvim) - noch bessere Movements als mit easymotion?
 * [`mileszs/ack.vim`](https://github.com/mileszs/ack.vim) **BZW.** `ag` / `silversurfer` - macht das, was ich mir von `rg` erhofft hatte: durchsucht Datei- und Pfadnamen, *aber auch* Dateiinhalte
 * [`unblevable/quick-scope`](https://github.com/unblevable/quick-scope) - super-schnelle Movements
+* [`folke/todo-comments`](https://github.com/folke/todo-comments.nvim) - Dinge wie "TODO" einfärben; das kann man bestimmt in den Home Assistant `yaml` übernehmen und `service:`, `condition`, etc. einfärben
+* https://github.com/rcarriga/vim-ultest
+* https://github.com/nvim-telescope/telescope-project.nvim
+* https://github.com/catppuccin/catppuccin#%EF%B8%8F-gratitude
+* https://github.com/LunarVim/Neovim-from-scratch/blob/master/lua/user/whichkey.lua
+* https://icyphox.sh/blog/nvim-lua/
+* https://youtu.be/RtNPfJKNr_8
+* https://khushmeen.com/icons.html
+* https://github.com/ryanoasis/nerd-fonts
+* https://github.com/ThePrimeagen/.dotfiles/blob/master/nvim/.config/nvim/lua/theprimeagen/lsp.lua
+* https://github.com/chengwei920412/awesome-neovim-vim
+
 
 ## Sonstiges
 
