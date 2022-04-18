@@ -1,6 +1,10 @@
 
 # TESTEN
 
+## Vorlage
+
+* https://github.com/LunarVim/Neovim-from-scratch/tree/22-autocommands
+
 ## Befehle
 
 * `set laststatus=3` wenn man Splits offen hat, wird **lediglich eine** Statuszeile angezeigt; genial!
