@@ -142,6 +142,10 @@ wk.register({
   ["<leader><leader>w"] = { "<Plug>(easymotion-bd-w)>", "Suche WORT mit Easymotion" },
   ["<leader>ha"] = { ":! ~/.config/benvironment/bin/vimhass.py<CR>", "HOME ASSISTANT HELPER" },
   ["<leader>mg"] = { ":Glow<CR>", "Preview in Glow (im Buffer)" },
+  ["<leader>Ss"] = { ":HopWord<CR>", "HOP Suche per Wort" },
+  ["<leader>SS"] = { ":HopChar1<CR>", "HOP Suche Buchstabe" },
+  ["<leader>Sd"] = { ":HopLine<CR>", "HOP Suche Zeile" },
+
 
 
 })

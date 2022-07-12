@@ -104,6 +104,7 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'yamatsum/nvim-nonicons'
 	Plug 'yazgoo/yank-history' " History anzeigen
 	Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+	Plug 'dhruvasagar/vim-table-mode'
 	Plug 'ellisonleao/glow.nvim', {'branch': 'main'}
 	Plug 'edluffy/specs.nvim' " visueller Cursor
 	Plug 'tmhedberg/simpylfold' " Python Folding
@@ -128,7 +129,9 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'tommcdo/vim-lion'
 	Plug 'tpope/vim-commentary'
 	Plug 'tpope/vim-eunuch' " :Move, :Rename, etc.
-	Plug 'easymotion/vim-easymotion' " <leader><leader>w etc. einfacher suchen
+	" Plug 'easymotion/vim-easymotion' " <leader><leader>w etc. einfacher suchen
+	" Plug 'justinmk/vim-sneak''
+	Plug 'phaazon/hop.nvim'
 	Plug 'tpope/vim-sleuth' " Autoindent
 	Plug 'tpope/vim-speeddating'
 	Plug 'tpope/vim-surround'
