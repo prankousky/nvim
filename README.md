@@ -39,6 +39,7 @@ Anything here is filetype specific, for example
 
 ## TO READ:
 
+* https://www.reddit.com/r/vim/comments/vxc0ca/question_about_dictionaries/
 * <http://neovimcraft.com/plugin/lukas-reineke/indent-blankline.nvim/index.html>
 * <http://neovimcraft.com/plugin/tamton-aquib/staline.nvim>
 * <https://github.com/glepnir/spaceline.vim>
