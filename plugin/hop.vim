@@ -1,3 +1,6 @@
 lua << EOF
-require'hop'.setup()
+require'hop'.setup {
+    -- keys = 'etovxqpdygfblzhckisuran'
+    keys = 'adgj'
+    }
 EOF
