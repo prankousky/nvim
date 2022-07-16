@@ -1,3 +1,12 @@
+"******************************************************************************"
+"                                     TODO                                     " {{{
+"******************************************************************************"
+" anderen Browser (bsp. qute) **ausschließlich** für markdown-preview
+" verwenden;
+" WM dann so einrichten, dass dieser Browser immer auf dem selben Workspace
+" wie das Terminal angezeigt wird, anstatt im "Hauptbrowser"
+" }}}
+
 " set to 1, nvim will open the preview window after entering the markdown buffer
 " default: 0
 let g:mkdp_auto_start = 0
