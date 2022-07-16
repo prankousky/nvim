@@ -90,6 +90,7 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'romgrk/doom-one.vim'
 	Plug 'dracula/vim', { 'as': 'dracula' }
 	" -- Misc
+	Plug 'gpanders/editorconfig.nvim' " schlankes Plugin für editorconfig
 	Plug 'Yggdroot/hiPairs' " highlighte umrandende Symbole
 	Plug 'andymass/vim-matchup' " ähnlich wie hiPairs
 	Plug 'folke/which-key.nvim'
