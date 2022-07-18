@@ -129,12 +129,6 @@ imap <C-s> <esc>:w<cr>
 nmap <C-q> <esc>:q<cr>
 " ctrl+c = ESC
 inoremap <C-c> <esc>
-" Tabs mit `<ctrl><-/->` wechseln
-nnoremap <C-right> :tabnext<CR>
-nnoremap <C-left> :tabprevious<CR>
-" Tabs mit `<ctrl><-/->` wechseln (Insert Mode)
-inoremap <C-right> <Esc>:tabnext<CR>
-inoremap <C-left> <Esc>:tabprevious<CR>
 " Rechtsschreibung mit `<Ctrl>+l` fixen
 inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>uO
 " }}}
@@ -215,3 +209,25 @@ cnoreabbrev Qall qall
 " besseres vorwärts/zurück springen
 nnoremap n nzz
 nnoremap N Nzz
+
+" Tabs {{{
+" Tabs mit `<ctrl><-/->` wechseln
+nnoremap <C-right> :tabnext<CR>
+nnoremap <C-left> :tabprevious<CR>
+" Tabs mit `<ctrl><-/->` wechseln (Insert Mode)
+inoremap <C-right> <Esc>:tabnext<CR>
+inoremap <C-left> <Esc>:tabprevious<CR>
+nnoremap <leader>tc :tabclose<CR>
+nnoremap <leader>tn :tabnew<CR>
+nnoremap <leader>to :tabonly<cr>
+nnoremap <leader>tm :tabmove<Space>
+nnoremap <leader>1 1gt
+nnoremap <leader>2 2gt
+nnoremap <leader>3 3gt
+nnoremap <leader>4 4gt
+nnoremap <leader>5 5gt
+nnoremap <leader>6 6gt
+nnoremap <leader>7 7gt
+nnoremap <leader>8 8gt
+nnoremap <leader>9 9gt
+nnoremap <leader>0 10gt "}}}
