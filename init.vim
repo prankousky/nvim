@@ -21,6 +21,7 @@ endif
 " Plugins festlegen {{{
 call plug#begin('$HOME/.config/nvim/meine_plugs')
 " ---- LSP // Completion {{{
+	" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'ambv/black'
 	Plug 'dense-analysis/ale'
 	Plug 'folke/lsp-colors.nvim'
@@ -30,10 +31,9 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'hrsh7th/vim-vsnip'
 	Plug 'hrsh7th/vim-vsnip-integ'
 	Plug 'neovim/nvim-lspconfig'
-	" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'nvim-lua/completion-nvim'
-	Plug 'nvim-telescope/telescope.nvim'
 	Plug 'nvim-telescope/telescope-symbols.nvim'
+	Plug 'nvim-telescope/telescope.nvim'
 	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 	Plug 'nvim-treesitter/playground'
 	Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
@@ -44,72 +44,74 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'windwp/nvim-autopairs'
 " ---- }}}
 " ---- Filetypes/ Coding {{{
-	Plug 'KabbAmine/vCoolor.vim' " <Alt+r|v|w>
+	Plug 'NTBBloodbath/rest.nvim' " REST API inside nvim
+	Plug 'SidOfc/mkdx'
+	Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 	Plug 'cespare/vim-toml'
 	Plug 'chrisbra/csv.vim',  { 'for' : 'csv' } " genial
+	Plug 'davidhalter/jedi-vim'
+	Plug 'dbeniamine/cheat.sh-vim' " mit <leader>K Cheatsheet (cheatsh) invokieren
 	Plug 'freitass/todo.txt-vim'
+	Plug 'gko/vim-coloresque'
+	Plug 'hail2u/vim-css3-syntax'
+	Plug 'ingydotnet/yaml-vim'  " SYNTAX yaml
+	Plug 'jamespeapen/swayconfig.vim'
+	Plug 'jelera/vim-javascript-syntax'
+	Plug 'jmcantrell/vim-virtualenv'
 	Plug 'lervag/vimtex'
 	Plug 'lewis6991/gitsigns.nvim'
+	Plug 'mattn/emmet-vim'
 	Plug 'mbbill/undotree'
 	Plug 'mboughaba/i3config.vim'
+	Plug 'mrk21/yaml-vim'	    " Indent yaml
+	Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
 	Plug 'nvim-lua/plenary.nvim'
-	Plug 'jamespeapen/swayconfig.vim'
 	Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+	Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
+	Plug 'sefeng211/vim-pastebins' " mit `PastebinPasteAll` (u.A.) buffer nach pastebin
 	Plug 'theniceboy/vim-calc'
+	Plug 'thinca/vim-quickrun' " :QuickRun um Datei (oder Teil der Datei) auszuführen
+	Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+	Plug 'tpope/vim-haml'
 	Plug 'vim-utils/vim-man' " man Pages in VIM
 	Plug 'vimwiki/vimwiki'
-	Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
-	Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-	Plug 'NTBBloodbath/rest.nvim' " REST API inside nvim
-	Plug 'thinca/vim-quickrun' " :QuickRun um Datei (oder Teil der Datei) auszuführen
-	Plug 'mrk21/yaml-vim'	    " Indent yaml
-	Plug 'ingydotnet/yaml-vim'  " SYNTAX yaml
-	Plug 'sefeng211/vim-pastebins' " mit `PastebinPasteAll` (u.A.) buffer nach pastebin
-	Plug 'hail2u/vim-css3-syntax'
-	Plug 'gko/vim-coloresque'
-	Plug 'tpope/vim-haml'
-	Plug 'mattn/emmet-vim'
-	Plug 'SidOfc/mkdx'
-	Plug 'jelera/vim-javascript-syntax'
-	Plug 'davidhalter/jedi-vim'
-	Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
-	Plug 'dbeniamine/cheat.sh-vim' " mit <leader>K Cheatsheet (cheatsh) invokieren
-	Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
 " ---- }}}
 " ---- Visuelles {{{
 " -- Themes
-	Plug 'petertriho/nvim-scrollbar'
-	Plug 'kevinhwang91/nvim-hlslens'    " benötigt für nvim-scrollbar
+	Plug 'kevinhwang91/nvim-ufo' | Plug 'kevinhwang91/promise-async'
+	Plug 'KabbAmine/vCoolor.vim' " <Alt+r|v|w>
 	Plug 'Pocco81/Catppuccino.nvim'
 	Plug 'dguo/blood-moon', {'rtp': 'applications/vim'}
+	Plug 'dracula/vim', { 'as': 'dracula' }
 	Plug 'gruvbox-community/gruvbox'
 	Plug 'joshdick/onedark.vim'
+	Plug 'kevinhwang91/nvim-hlslens'    " benötigt für nvim-scrollbar
 	Plug 'luochen1990/rainbow'
-	Plug 'tomasr/molokai'
+	Plug 'petertriho/nvim-scrollbar'
 	Plug 'romgrk/doom-one.vim'
-	Plug 'dracula/vim', { 'as': 'dracula' }
+	Plug 'tomasr/molokai'
 	" -- Misc
-	Plug 'gpanders/editorconfig.nvim' " schlankes Plugin für editorconfig
 	Plug 'Yggdroot/hiPairs' " highlighte umrandende Symbole
 	Plug 'andymass/vim-matchup' " ähnlich wie hiPairs
+	Plug 'dhruvasagar/vim-table-mode'
+	Plug 'edluffy/specs.nvim' " visueller Cursor
+	Plug 'ellisonleao/glow.nvim', {'branch': 'main'}
 	Plug 'folke/which-key.nvim'
+	Plug 'gpanders/editorconfig.nvim' " schlankes Plugin für editorconfig
+	Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 	Plug 'itchyny/vim-cursorword' " unterstreiche fokussiertes Wort
 	Plug 'junegunn/goyo.vim'
 	Plug 'junegunn/limelight.vim'
 	Plug 'kyazdani42/nvim-web-devicons' " lua
+	Plug 'lukas-reineke/headlines.nvim'
 	Plug 'lukas-reineke/indent-blankline.nvim'
 	Plug 'machakann/vim-highlightedyank'
 	Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 	Plug 'ryanoasis/vim-devicons' " vimscript
+	Plug 'tmhedberg/simpylfold' " Python Folding
 	Plug 'yamatsum/nvim-nonicons'
 	Plug 'yazgoo/yank-history' " History anzeigen
-	Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
-	Plug 'lukas-reineke/headlines.nvim'
-	Plug 'dhruvasagar/vim-table-mode'
-	Plug 'ellisonleao/glow.nvim', {'branch': 'main'}
-	Plug 'edluffy/specs.nvim' " visueller Cursor
-	Plug 'tmhedberg/simpylfold' " Python Folding
 " -- Status // Dashboard
       " Plug 'romgrk/barbar.nvim'
 	Plug 'mhinz/vim-startify'
@@ -117,6 +119,8 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'vim-airline/vim-airline-themes'
 " ---- }}}
 " ---- Search // Replace // Comment // Bookmark {{{
+	" Plug 'easymotion/vim-easymotion' " <leader><leader>w etc. einfacher suchen
+	" Plug 'justinmk/vim-sneak'
 	Plug 'LandonSchropp/vim-stamp' " Siw
 	Plug 'MattesGroeger/vim-bookmarks'
 	Plug 'chengzeyi/fzf-preview.vim'
@@ -127,13 +131,11 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'kurkale6ka/vim-swap' " \x, \cx, etc. zum Switchen um Symbole
 	Plug 'nvim-lua/plenary.nvim'
 	Plug 'nvim-lua/popup.nvim'
+	Plug 'phaazon/hop.nvim'
 	Plug 's1n7ax/nvim-comment-frame'
 	Plug 'tommcdo/vim-lion'
 	Plug 'tpope/vim-commentary'
 	Plug 'tpope/vim-eunuch' " :Move, :Rename, etc.
-	" Plug 'easymotion/vim-easymotion' " <leader><leader>w etc. einfacher suchen
-	" Plug 'justinmk/vim-sneak'
-	Plug 'phaazon/hop.nvim'
 	Plug 'tpope/vim-sleuth' " Autoindent
 	Plug 'tpope/vim-speeddating'
 	Plug 'tpope/vim-surround'
