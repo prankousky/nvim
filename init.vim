@@ -40,7 +40,7 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'rafamadriz/friendly-snippets'
 	Plug 'ray-x/lsp_signature.nvim'
 	Plug 'simrat39/symbols-outline.nvim'
-	Plug 'sudormrfbin/cheatsheet.nvim'
+	" Plug 'sudormrfbin/cheatsheet.nvim'
 	Plug 'windwp/nvim-autopairs'
 " ---- }}}
 " ---- Filetypes/ Coding {{{
@@ -79,6 +79,7 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 " ---- }}}
 " ---- Visuelles {{{
 " -- Themes
+	Plug 'sidebar-nvim/sidebar.nvim'
 	Plug 'kevinhwang91/nvim-ufo' | Plug 'kevinhwang91/promise-async'
 	Plug 'KabbAmine/vCoolor.vim' " <Alt+r|v|w>
 	Plug 'Pocco81/Catppuccino.nvim'
@@ -119,7 +120,7 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'vim-airline/vim-airline-themes'
 " ---- }}}
 " ---- Search // Replace // Comment // Bookmark {{{
-	" Plug 'easymotion/vim-easymotion' " <leader><leader>w etc. einfacher suchen
+	Plug 'easymotion/vim-easymotion' " <leader><leader>w etc. einfacher suchen
 	" Plug 'justinmk/vim-sneak'
 	Plug 'LandonSchropp/vim-stamp' " Siw
 	Plug 'MattesGroeger/vim-bookmarks'

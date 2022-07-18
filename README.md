@@ -20,6 +20,7 @@ Anything here is filetype specific, for example
 * <https://github.com/ojroques/vim-oscyank>
 * <https://github.com/SidOfc/mkdx>
 * <https://github.com/GustavoKatel/sidebar.nvim>
+* https://github.com/glepnir/template.nvim
 
 ## TODO:
 

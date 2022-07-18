@@ -45,7 +45,14 @@ end
 M.hass = function()
     require("telescope.builtin").find_files({
         prompt_title = "< Home Assistant >",
-        cwd = "~/code/px-smarthome/docker/homeassistant/data/",
+        cwd = "~/code/px-smarthome-ext/docker/homeassistant/homeassistant/packages/",
+        hidden = true,
+    })
+end
+M.benvironment = function()
+    require("telescope.builtin").find_files({
+        prompt_title = "< benvironment >",
+        cwd = "/home/ben/code/vm/vagrant/arch/benvironment/benvironment_stow",
         hidden = true,
     })
 end

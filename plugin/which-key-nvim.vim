@@ -77,43 +77,45 @@ lua << EOF
 }
 local wk = require("which-key")
 wk.register({
-  ["."] = { ":lcd %:p:h<CR>", "Setze Workingpath HIER" },
-  ["<backspace>"] = { ":CHADopen<CR>", "CHADTree Toggle" },
-  ["<leader>x"] = { "<Plug>SwapWithR_WORD", "Tausche Wort mit dem RECHTS daneben" },
-  ["<leader>X"] = { "<Plug>SwapWithL_WORD", "Tausche Wort mit dem LINKS daneben" },
+  -- ["<backspace>"] = { ":CHADopen<CR>", "CHADTree Toggle" },
+  ["<leader>."] = { ":lcd %:p:h<CR>", "Setze Workingpath HIER" },
   ["<leader>?"] = { ":Cheatsheet", "Cheatsheet anzeigen" },
+ -- ["<leader>X"] = { "<Plug>SwapWithL_WORD", "Tausche Wort mit dem LINKS daneben" },
+ -- ["<leader>x"] = { "<Plug>SwapWithR_WORD", "Tausche Wort mit dem RECHTS daneben" },
   -- NIS
   ["<leader>n"] = { name = "NIS" },
   ["<leader>na"] = { ":Cheatsheet<CR>nis", "Cheatsheet anzeigen" },
+  ["<leader>nn"] = { ":call Mynext()<CR>", "nächste Rechnung" },
   ["<leader>np"] = { ":! ./generieren.sh %<CR>", "PDF generieren und anzeigen" },
   ["<leader>ns"] = { ":saveas <C-R>%", "Speichern unter..." },
-  ["<leader>nn"] = { ":call Mynext()<CR>", "nächste Rechnung" },
   -- BUFFER
   ["<leader>b"] = { name = "Buffer" },
   ["<leader>bb"] = { ":BufferPick<CR>", "Buffer auswählen" },
   ["<leader>bd"] = { ":BufferClose<CR>", "Buffer schließen" },
+  -- ["<leader>bD"] = { ":execute '%bd\|e#'<CR>", "Schließe ANDERE Buffer" },
   -- COMMENT FRAME
   ["<leader>c"] = { name = "CommentFrame" },
   ["<leader>cf"] = { ":lua require('nvim-comment-frame').add_comment()<CR>", "Kommentar Single Line" },
   ["<leader>cg"] = { ":lua require('nvim-comment-frame').add_multiline_comment()<CR>", "Kommentar Multi Line" },
   -- MARKDOWN
   ["<leader>m"] = { name = "Markdown Preview" },
-  ["<leader>mp"] = { "<Plug>MarkdownPreviewToggle<CR>", "Toggle Preview" },
-  -- DOTFILES
-  ["<leader>v"] = { name = "Dotfiles" },
-  ["<leader>va"] = { ":lua require('theprimeagen.telescope').search_dotfiles()<CR>", "~/.config/nvim" },
-  ["<leader>vd"] = { ":lua require('theprimeagen.telescope').hass()<CR>", "Home Assistant" },
-  ["<leader>vs"] = { ":lua require('theprimeagen.telescope').bens_dots()<CR>", "~/.config" },
+  ["<leader>mp"] = { "<Plug>MarkdownPreviewToggle<CR>", "Toggle Markdown Preview" },
+  ["<leader>mt"] = { ":TableModeToggle<CR>", "Toggle Table Mode" },
+  ["<leader>mg"] = { ":Glow<CR>", "Preview in Glow (im Buffer)" },
   -- REQUESTS
   ["<leader>r"] = { name = "REST Requests" },
   ["<leader>rr"] = { "<Plug>RestNvim<CR>", "Run request under the cursor" },
   ["<leader>rt"] = { "<Plug>RestNvimPreview<CR>", "Preview the request cURL Command" },
   -- VIMWIKI
   ["<leader>w"] = { name = "VimWiki" },
-  ["<leader>wt"] = { ":VimWikiTabIndex<CR>", "Hauptseite (VimWikiTabIndex)" },
   ["<leader>wi"] = { ":VimWikiDiaryIndex<CR>", "Tagebuchseite (VimWikiDiaryIndex" },
-  -- TELESCOPE
+  ["<leader>wt"] = { ":VimWikiTabIndex<CR>", "Hauptseite (VimWikiTabIndex)" },
+  -- TELESCOPE // Suchen
   ["<leader>f"] = { name = "Telescope" },
+  ["<leader>f,"] = { "<Plug>(easymotion-bd-f)>", "Suche CHARACTER mit Easymotion" },
+  ["<leader>f."] = { "<Plug>(easymotion-bd-w)>", "Suche WORT mit Easymotion" },
+  ["<leader>fa"] = { ":FZF<CR>", "FZF" },
+  ["<leader>fA"] = { ":Rg<CR>", "Rg" },
   ["<leader>fb"] = { ":Telescope buffers theme=get_ivy<CR>", "Buffers" },
   ["<leader>fc"] = { ":Telescope colorscheme theme=get_ivy<CR>", "Color Scheme" },
   ["<leader>fd"] = { ":Telescope file_browser theme=get_ivy<CR>", "File Browser" },
@@ -126,28 +128,43 @@ wk.register({
   ["<leader>fr"] = { ":Telescope current_buffer_fuzzy_find theme=get_ivy<CR>", "Fuzzy Find" },
   ["<leader>fr"] = { ":Telescope quickfix theme=get_ivy<CR>", "Quickfixes anzeigen" },
   ["<leader>fs"] = { ":Telescope spell_suggest theme=get_ivy<CR>", "Wortvorschläge" },
+  ["<leader>ft"] = { ":HopWord<CR>", "HOP Suche per Wort" },
+  ["<leader>fu"] = { ":HopChar1<CR>", "HOP Suche Buchstabe" },
+  ["<leader>fz"] = { ":HopLine<CR>", "HOP Suche Zeile" },
   -- TOOLS
   ["<leader>t"] = { name = "Tools" },
-  ["<leader>tt"] = { ":QuickRun<CR>", "Datei (oder VISUAL) in Split ausführen" },
-  ["<leader>ta"] = { ":vertical terminal<CR>", "Terminal öffnen" },
-  ["<leader>tp"] = { ":PastebinPasteAll<CR>", "PASTE Buffer" },
-  ["<leader>tL"] = { ":PastebinPaste<CR>", "PASTE Visuelle Selektion" },
-  ["<leader>tl"] = { ":PastebinPasteList<CR>", "PASTE History" },
-  ["<leader>tg"] = { "gg yi' :!firefox --new-tab https://github.com/<C-R>\"<CR><CR>", "Zeige Plugin auf GitHub" },
   ["<leader>tf"] = { ":!firefox --new-tab <C-R>*<CR><CR>", "Öffne URL im Register in Firefox" },
+  ["<leader>tg"] = { "gg yi' :!firefox --new-tab https://github.com/<C-R>\"<CR><CR>", "Zeige Plugin auf GitHub" },
+  ["<leader>th"] = { ":! ~/.config/benvironment/bin/vimhass.py<CR>", "HOME ASSISTANT HELPER" },
+  ["<leader>tpb"] = { ":PastebinPasteAll<CR>", "PASTE Buffer" },
+  ["<leader>tph"] = { ":PastebinPasteList<CR>", "PASTE History" },
+  ["<leader>tpv"] = { ":PastebinPaste<CR>", "PASTE Visuelle Selektion" },
   ["<leader>tr"] = { ":Rg<CR>", "RipGrep" },
-  ["<leader>gg"] = { "gg yi' :!firefox --new-tab https://github.com/<C-R>\"<CR><CR>", "Zeige Plugin auf GitHub" },
-  ["<leader>gf"] = { ":!firefox --new-tab <C-R>*<CR><CR>", "Öffne URL im Register in Firefox" },
-  ["<leader><leader>f"] = { "<Plug>(easymotion-bd-f)>", "Suche CHARACTER mit Easymotion" },
-  ["<leader><leader>w"] = { "<Plug>(easymotion-bd-w)>", "Suche WORT mit Easymotion" },
-  ["<leader>ha"] = { ":! ~/.config/benvironment/bin/vimhass.py<CR>", "HOME ASSISTANT HELPER" },
-  ["<leader>mg"] = { ":Glow<CR>", "Preview in Glow (im Buffer)" },
-  ["<leader>Ss"] = { ":HopWord<CR>", "HOP Suche per Wort" },
-  ["<leader>SS"] = { ":HopChar1<CR>", "HOP Suche Buchstabe" },
-  ["<leader>Sd"] = { ":HopLine<CR>", "HOP Suche Zeile" },
-
-
-
+  ["<leader>tt"] = { ":QuickRun<CR>", "Datei (oder VISUAL) in Split ausführen" },
+  -- HELPER
+  ["<leader>v"] = { name = "Helper" },
+  ["<leader>vG"] = { ":Goyo<CR><ESC>:set linebreak<CR>", "Goyo"},
+  ["<leader>vO"] = { ":setlocal spell! spelllang=en_us<CR>", "Rechtsschreibung ENGLISCH"},
+  ["<leader>vS"] = { ":Startify<CR>", "Öffne Startpage"},
+  ["<leader>va"] = { ":lua require('theprimeagen.telescope').search_dotfiles()<CR>", "~/.config/nvim" },
+  ["<leader>vb"] = { ":lua require('theprimeagen.telescope').benvironment()<CR>", "benvironment" },
+  ["<leader>vd"] = { ":lua require('theprimeagen.telescope').bens_dots()<CR>", "~/.config" },
+  ["<leader>vf"] = { ":CHADopen<CR>", "CHAD Toggle" },
+  ["<leader>vg"] = { ":SidebarNvimToggle<CR>", "Sidebar Toggle" },
+  ["<leader>vh"] = { ":lua require('theprimeagen.telescope').hass()<CR>", "Home Assistant" },
+  ["<leader>vi"] = { ":set iinvlist!<CR>", "Toggle Visuelle Symbole"},
+  ["<leader>vj"] = { ":%!python -m json.tool", "Prettify JSON"},
+  ["<leader>vl"] = { ":LimteLight!!", "Toggle Limelight"},
+  ["<leader>vo"] = { ":setlocal spell! spelllang=de<CR>", "Rechtsschreibung DEUTSCH"},
+  ["<leader>vp"] = { ":CtrlBookmarkDir<CR>", "Wichtigste Paths"},
+  ["<leader>vs"] = { ":source $MYVIMRC<CR>:echo '$MYVIMRC neu geladen!'", "$MYVIMRC Neu Laden"},
+  ["<leader>vu"] = { ":UndotreeToggle<CR>", "UndoTree Toggle" },
+  ["<leader>vy"] = { "<c-u>y']<CR>", "Yank & zurück zum Ausgangspunkt VOR Yank"},
+  -- VERSCHIEDENES
+  ["<leader>s"] = { ":%s///g<Left><Left><Left>", "Suchen & Ersetzen"},
+  ["<leader>*"] = { "gg0VGy :echo 'Alles kopiert :)'<CR>", "gesamten Dateiinhalt kopieren"},
+  ["<leader>!"] = { ":w !sudo tee %<CR>", "Schreibe Datei als Root"},
+  ["<leader>gf"] = { ":e <cfile><CR>", "Falls Datei unter Cursor nicht existiert, erstelle sie!"}
 })
 EOF
 " vi: filetype=vim

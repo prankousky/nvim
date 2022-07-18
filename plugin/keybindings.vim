@@ -6,89 +6,74 @@ autocmd Filetype sh inoremap <buffer> <F6> <ESC>:w<CR>:!clear;shellcheck %<CR>
 
 " LEADER {{{
 " -- NORMAL {{{
-" UndoTree
-nnoremap <leader>u :UndotreeToggle<CR>
 " 'Rasukarusan/nvim-select-multi-line'
-nnoremap <leader>, :call sml#mode_on()<CR>
-" Wichtigste DIRS mit CtrlP
-nnoremap <leader>P :CtrlPBookmarkDir<CR>
+" nnoremap <leader>, :call sml#mode_on()<CR>
 " zeige Plugins im Firefox
-nnoremap <leader>gg yi' :!firefox --new-tab https://github.com/<C-R>"<CR><CR>
-nnoremap <leader>gf :!firefox --new-tab <C-R>*<CR><CR>
+" nnoremap <leader>gg yi' :!firefox --new-tab https://github.com/<C-R>"<CR><CR>
+" nnoremap <leader>gf :!firefox --new-tab <C-R>*<CR><CR>
 " AUTOMATISCH Systemclipboard benutzen
-nnoremap <leader>y "+y
-nnoremap <leader>p "+p
+" nnoremap <leader>y "+y
+" nnoremap <leader>p "+p
 " Toggle EOL (etc) Symbole
-nnoremap <leader>i :set invlist!<CR>
+" nnoremap <leader>i :set invlist!<CR>
 " init.vim neu laden
-nnoremap <leader>S :source $MYVIMRC<CR>:echo "Neu geladen"<CR>
+" nnoremap <leader>S :source $MYVIMRC<CR>:echo "Neu geladen"<CR>
 " edit vimrc
-nnoremap <leader>vv <c-u>:tabedit $MYVIMRC<CR>
+" nnoremap <leader>vv <c-u>:tabedit $MYVIMRC<CR>
 " Lösche gesamten Inhalt des Buffers
 nnoremap <leader>da ggdG
 " AckWindow
 " nnoremap <leader>t <c-u>:Rg<CR>
-" FzfGitignore
-nnoremap <leader>gi <c-u>:FzfGitignore<CR>
-" 's1n7ax/nvim-comment-frame' {{{
-nnoremap <leader>cf :lua require('nvim-comment-frame').add_comment()<CR>
-nnoremap <leader>cg :lua require('nvim-comment-frame').add_multiline_comment()<CR>
-" }}}"
 " für Kommentare `#` nutzen
 nnoremap <leader>+ :setlocal commentstring=#\ %s<CR> :echo "Raute wird verwendet!"<CR>
-" nach Yank dorthin, wo vorher gewesen
-nnoremap <leader>vy <c-u>y']<CR>
-" fzf
-nnoremap <leader>a <c-u>:FZF<CR>
 " aktuelle Datei neu laden
 nnoremap <leader>rr <c-u>:e!<CR>
-" JSON schöner formatieren
-nnoremap <leader>pp <c-u>:%!python -m json.tool<CR>
+" " JSON schöner formatieren
+" nnoremap <leader>pp <c-u>:%!python -m json.tool<CR>
 " Rechtsschreibung ein/aus (Deutsch)
-nnoremap <leader>o :setlocal spell! spelllang=de<CR>
-" Rechtsschreibung ein/aus (Englisch)
-nnoremap <leader>O :setlocal spell! spelllang=en_us<CR>
+" nnoremap <leader>o :setlocal spell! spelllang=de<CR>
+" " Rechtsschreibung ein/aus (Englisch)
+" nnoremap <leader>O :setlocal spell! spelllang=en_us<CR>
 " Suchen und Ersetzen
-nnoremap <leader>s :%s///g<Left><Left><Left>
+" nnoremap <leader>s :%s///g<Left><Left><Left>
 " gesamten Inhalt kopieren
-nnoremap <leader>* gg0VGy :echo 'Alles kopiert :)'<CR>
+" nnoremap <leader>* gg0VGy :echo 'Alles kopiert :)'<CR>
 " ersetze Wort unter Cursor
-nnoremap <leader>7 :%s/\<<c-r><c-w>\>//g<left><left>
+" nnoremap <leader>7 :%s/\<<c-r><c-w>\>//g<left><left>
 " als root Schreiben
-nnoremap<leader>su :w !sudo tee %<CR>
+" nnoremap<leader>su :w !sudo tee %<CR>
 " Vifm
-nnoremap <leader>G :Goyo<CR><ESC>:set linebreak<CR>
+" nnoremap <leader>G :Goyo<CR><ESC>:set linebreak<CR>
 " Limelight toggeln
-nnoremap <leader>l :Limelight!!<CR>
+" nnoremap <leader>l :Limelight!!<CR>
 " AutoPairs Toggle
 let g:AutoPairsShortcutToggle = '<leader>m'
 " Terminal öffnen
 " nnoremap <leader>t :vert term<CR>
 " Startify IN vim noch mal öffnen
-nnoremap <leader>sf :Startify<CR>
-nnoremap <leader>bb :BufferPick<CR>
+" nnoremap <leader>sf :Startify<CR>
+" nnoremap <leader>bb :BufferPick<CR>
 " in Markdown ersetzen nach folgendem Schema
 " * `hier steht was` hier auch
 " wird zu
 " * [`hier steht was`](hier steht was) hier auch
 " so werden in einer README.md alle gelisteten Files auch verlinkt
 " nnoremap <leader>mdr <Esc>:%s/^\* `\([.a-zA-Z0-9]\+\)`/* [`\1`](\1)/<CR>
-nnoremap <leader>mdr <Esc>:%s/^\* `\([.a-zA-Z0-9_]\+\)`/* [`\1`](\1)/<CR>
+nnoremap <leader>hmdr <Esc>:%s/^\* `\([.a-zA-Z0-9_]\+\)`/* [`\1`](\1)/<CR>
 " LaTeX / vimtex {{{
 " vimtex erzeuge PDF
-nnoremap <leader>Lpc <Esc>:VimtexCompile<CR>
+nnoremap <leader>hLpc <Esc>:VimtexCompile<CR>
 " vimtex zeige PDF an
-nnoremap <leader>Lpv <Esc>:VimtexView<CR>
+nnoremap <leader>hLpv <Esc>:VimtexView<CR>
 " vimtex entferne überschüssige Dateien
-nnoremap <leader>Lps <Esc>:VimtexClean<CR>
+nnoremap <leader>hLps <Esc>:VimtexClean<CR>
 " -- }}}"
 " schließe andere Buffer
-nnoremap <leader>x :execute "%bd\|e#"<CR>
-" 'theniceboy/vim-calc'
-nnoremap <leader>= :call Calc()<CR>
+" nnoremap <leader>x :execute "%bd\|e#"<CR>
 " Working Dir zu aktuellem Pfad
 " nnoremap <leader>. :lcd %:p:h<CR>
 " -- }}}
+"
 " -- VISUAL {{{
 " in visueller Selektion suchen/ersetzen
 vnoremap <leader>V :s/\%V//g<left><left><left>
@@ -109,6 +94,7 @@ vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 " -- }}}
 " }}}
+"
 " CTRL {{{
 " Mit ctrl+h/j/k/l zwischen Panes bewegen
 nnoremap <C-J> <C-W><C-J>
@@ -134,9 +120,9 @@ inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>uO
 " }}}
 " SONSTIGES {{{
 " Backspace = File Browser
-nnoremap <backspace> :NERDTreeToggle<CR>
+" nnoremap <backspace> :NERDTreeToggle<CR>
 " remap gf to create File if it does not already exist
-nnoremap gf :e <cfile><CR>
+" nnoremap gf :e <cfile><CR>
 " Speichern mit <jk>
 inoremap jk <Esc>:w<cr>
 " <Esc> auf <jj> mappen
