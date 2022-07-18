@@ -138,7 +138,8 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'tpope/vim-eunuch' " :Move, :Rename, etc.
 	Plug 'tpope/vim-sleuth' " Autoindent
 	Plug 'tpope/vim-speeddating'
-	Plug 'tpope/vim-surround'
+	" Plug 'tpope/vim-surround'
+	Plug 'kylechui/nvim-surround'
 	Plug 'windwp/nvim-spectre'
 " ---- }}}
 " ---- Naviation und Co. {{{
