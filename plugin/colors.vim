@@ -1,6 +1,21 @@
+" sonstiges visuelles {{{
+lua << EOF
+vim.opt.listchars = {
+    eol = '¬',
+    space = '·',
+    lead = '\\',
+    trail = '·',
+    nbsp = '◇',
+    tab = '→-',
+    extends = '▸',
+    precedes = '◂',
+}
+EOF
+" }}}
 " let g:benihmsein_colorscheme = "dark_catppuccino"
 " let g:benihmsein_colorscheme = "dracula"
-let g:benihmsein_colorscheme = "gruvbox"
+" let g:benihmsein_colorscheme = "gruvbox"
+let g:benihmsein_colorscheme = "molokai"
 
 fun! ColorMyPencils()
     let g:gruvbox_contrast_dark = 'hard'
@@ -15,10 +30,10 @@ fun! ColorMyPencils()
         call luaeval('vim.cmd("colorscheme " .. _A[1])', [g:benihmsein_colorscheme])
     else
         " TODO: What the way to use g:benihmsein_colorscheme
-        colorscheme gruvbox
+        colorscheme molokai
     endif
 
-    highlight ColorColumn ctermbg=0 guibg=grey
+    highlight ColorColumn ctermbg=0 guibg=#aed75f
     hi SignColumn guibg=none
     hi CursorLineNR guibg=None
     highlight Normal guibg=none
