@@ -5,10 +5,12 @@ lua << EOF
 -- i = insert mode
 -- SSS = Tastenkombination
 -- dann der Befehl
-vim.api.nvim_set_keymap('i', 'SSS', '<ESC>:echo "Hallo"<CR>', {
-    noremap = true
-    }
-)
+-- dieses Beispiel funktioniert
+--
+--vim.api.nvim_set_keymap('i', 'SSS', '<ESC>:echo "Hallo"<CR>', {
+--    noremap = true
+--    }
+--)
 EOF
 " }}}
 " Leader festlegen
