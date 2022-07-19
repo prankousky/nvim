@@ -100,7 +100,7 @@ set showcmd
 " Ausserhalb VIM Buffer kopieren
 set clipboard=unnamedplus
 " Anzeigen, wo 80 Chars enden
-set colorcolumn=80
+" set colorcolumn=80
 "
 set display+=lastline
 " Statusbar: immer anzeigen
