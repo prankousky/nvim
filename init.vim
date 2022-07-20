@@ -64,6 +64,7 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'mattn/emmet-vim'
 	Plug 'mbbill/undotree'
 	Plug 'mboughaba/i3config.vim'
+	Plug 'nmac427/guess-indent.nvim'
 	Plug 'mrk21/yaml-vim'	    " Indent yaml
 	Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
 	Plug 'nvim-lua/plenary.nvim'

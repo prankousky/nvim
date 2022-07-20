@@ -166,7 +166,9 @@ wk.register({
   ["<leader>s"] = { ":%s///g<Left><Left><Left>", "Suchen & Ersetzen"},
   ["<leader>*"] = { "gg0VGy :echo 'Alles kopiert :)'<CR>", "gesamten Dateiinhalt kopieren"},
   ["<leader>!"] = { ":w !sudo tee %<CR>", "Schreibe Datei als Root"},
-  ["<leader>gf"] = { ":e <cfile><CR>", "Falls Datei unter Cursor nicht existiert, erstelle sie!"}
+  ["<leader>gf"] = { ":e <cfile><CR>", "Falls Datei unter Cursor nicht existiert, erstelle sie!"},
+  -- OHNE LEADER
+  ["ge"] = { ":GuessIndent<CR>", "Automatischer Einzug"},
 })
 EOF
 " vi: filetype=vim
