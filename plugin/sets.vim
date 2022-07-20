@@ -5,7 +5,7 @@ let mapleader = ","
 let localleader = "<space>"
 " 256 Farben; muss VOR colorscheme stehen
 set t_Co=256
-set t_ut=
+" set t_ut=
 set termguicolors
 " Cursor BLEIBT ein Block
 " set guicursor=
@@ -19,9 +19,8 @@ let g:vimwiki_list = [{'path': '~/documents/vimwiki/wiki'}]
 set ruler
 " Regex Magic
 set magic
-" Relative Zeilennummern
-set relativenumber
-set number
+" hybridge Zeilennummern: relative und normale
+set relativenumber number
 " VIM muss nicht mit VI kompatibel sein
 set nocompatible
 " Sprache für Dictionaries festlegen

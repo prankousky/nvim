@@ -1,5 +1,0 @@
-# Halmo
-
-* Okay
-
-## Ja usw.
