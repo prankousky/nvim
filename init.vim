@@ -20,6 +20,12 @@ endif
 "******************************************************************************"
 " Plugins festlegen {{{
 call plug#begin('$HOME/.config/nvim/meine_plugs')
+" ---- Treesitter {{{
+	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
+	Plug 'nvim-treesitter/playground'
+	Plug 'nvim-treesitter/nvim-treesitter-textobjects'
+	Plug 'm-demare/hlargs.nvim'
+" ----}}}
 " ---- LSP // Completion {{{
 	" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'ambv/black'
@@ -34,8 +40,6 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'nvim-lua/completion-nvim'
 	Plug 'nvim-telescope/telescope-symbols.nvim'
 	Plug 'nvim-telescope/telescope.nvim'
-	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
-	Plug 'nvim-treesitter/playground'
 	Plug 'haringsrob/nvim_context_vt' " zeigt Kontext von bsp. schließenden Klammern an
 	Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 	Plug 'rafamadriz/friendly-snippets'
@@ -105,6 +109,7 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'nacro90/numb.nvim'
 	Plug 'gpanders/editorconfig.nvim' " schlankes Plugin für editorconfig
 	Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+	Plug 'jubnzv/mdeval.nvim' " mit :MdEval einen Codeblock innerhalb von Markdown ausführen
 	Plug 'itchyny/vim-cursorword' " unterstreiche fokussiertes Wort
 	Plug 'junegunn/goyo.vim'
 	Plug 'junegunn/limelight.vim'
@@ -152,6 +157,7 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'Rasukarusan/nvim-select-multi-line'
 	Plug 'ctrlpvim/ctrlp.vim'
 	Plug 'francoiscabrol/ranger.vim'
+	Plug 'sQVe/sort.nvim'
 	Plug 'ggandor/lightspeed.nvim'
 	Plug 'karb94/neoscroll.nvim'
 	Plug 'rbgrouleff/bclose.vim'

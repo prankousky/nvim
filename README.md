@@ -22,6 +22,7 @@ Anything here is filetype specific, for example
 * <https://github.com/GustavoKatel/sidebar.nvim>
 * https://github.com/glepnir/template.nvim
 * https://github.com/glepnir/cosynvim
+* https://github.com/frabjous/knap
 
 ## TODO:
 

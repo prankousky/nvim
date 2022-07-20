@@ -99,9 +99,10 @@ wk.register({
   ["<leader>cg"] = { ":lua require('nvim-comment-frame').add_multiline_comment()<CR>", "Kommentar Multi Line" },
   -- MARKDOWN
   ["<leader>m"] = { name = "Markdown Preview" },
+  ["<leader>me"] = { ":MdEval<CR>", "Codeblock in Markdown evaluieren" },
+  ["<leader>mg"] = { ":Glow<CR>", "Preview in Glow (im Buffer)" },
   ["<leader>mp"] = { "<Plug>MarkdownPreviewToggle<CR>", "Toggle Markdown Preview" },
   ["<leader>mt"] = { ":TableModeToggle<CR>", "Toggle Table Mode" },
-  ["<leader>mg"] = { ":Glow<CR>", "Preview in Glow (im Buffer)" },
   -- REQUESTS
   ["<leader>r"] = { name = "REST Requests" },
   ["<leader>rr"] = { "<Plug>RestNvim<CR>", "Run request under the cursor" },
@@ -159,17 +160,20 @@ wk.register({
   ["<leader>vl"] = { ":LimteLight!!", "Toggle Limelight"},
   ["<leader>vo"] = { ":setlocal spell! spelllang=de<CR>", "Rechtsschreibung DEUTSCH"},
   ["<leader>vp"] = { ":CtrlBookmarkDir<CR>", "Wichtigste Paths"},
-  ["<leader>vs"] = { ":source $MYVIMRC<CR>:echo '$MYVIMRC neu geladen!'<CR>", "$MYVIMRC Neu Laden"},
+  ["<leader>vs"] = { ":source $MYVIMRC<CR>:echoerr '$MYVIMRC neu geladen!'<CR>", "$MYVIMRC Neu Laden"},
   ["<leader>vu"] = { ":UndotreeToggle<CR>", "UndoTree Toggle" },
   ["<leader>vy"] = { "<c-u>y']<CR>", "Yank & zurück zum Ausgangspunkt VOR Yank"},
   -- VERSCHIEDENES
-  ["<leader>s"] = { ":%s///g<Left><Left><Left>", "Suchen & Ersetzen"},
-  ["<leader>*"] = { "gg0VGy :echo 'Alles kopiert :)'<CR>", "gesamten Dateiinhalt kopieren"},
   ["<leader>!"] = { ":w !sudo tee %<CR>", "Schreibe Datei als Root"},
+  ["<leader>*"] = { "gg0VGy :echoerr 'Alles kopiert :)'<CR>", "gesamten Dateiinhalt kopieren"},
+  ["<leader>S"] = { ":Sort<CR>", "(besseres) Sortieren, auch innerhalb von Zeilen"},
   ["<leader>gf"] = { ":e <cfile><CR>", "Falls Datei unter Cursor nicht existiert, erstelle sie!"},
+  ["<leader>s"] = { ":%s///g<Left><Left><Left>", "Suchen & Ersetzen"},
   -- OHNE LEADER
   ["ge"] = { ":GuessIndent<CR>", "Automatischer Einzug"},
   ["tt"] = { ":TSCaptureUnderCursor<CR>", "Treesitter unter Cursor"},
+  ["th"] = { ":lua require('hlargs').toggle()<CR>:echoerr 'hlargs getoggelt'<CR>", "hlargs Toggle"},
+
 })
 EOF
 " vi: filetype=vim

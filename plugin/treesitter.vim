@@ -1,10 +1,11 @@
 " TODO:
 " vim.treesitter.require_language("python", "/path/to/python.so")
 
+" ---- TREESITTER REGULÄR {{{
 lua <<EOF
 require 'nvim-treesitter.configs'.setup {
   -- ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
-  ensure_installed = {"bash", "python", "json", "vim", "latex", "regex", "yaml", "dockerfile", "html" }, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+  ensure_installed = {"bash", "dockerfile", "html", "javascript", "json", "latex", "markdown", "norg", "org", "python", "regex", "vim", "yaml" }, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
   -- ignore_install = { "javascript" }, -- List of parsers to ignore installing
   highlight = {
     enable = true,              -- false will disable the whole extension
@@ -29,3 +30,34 @@ require 'nvim-treesitter.configs'.setup {
   }
 }
 EOF
+" }}}
+" TREESITTER-TEXTOBJECTS {{{
+lua << EOF
+require'nvim-treesitter.configs'.setup {
+  textobjects = {
+    select = {
+      enable = true,
+
+      -- Automatically jump forward to textobj, similar to targets.vim
+      lookahead = true,
+
+      keymaps = {
+        -- You can use the capture groups defined in textobjects.scm
+        ["af"] = "@function.outer",
+        ["if"] = "@function.inner",
+        ["ac"] = "@class.outer",
+        ["ic"] = "@class.inner",
+      },
+    },
+  },
+}
+EOF
+" }}}
+" m-demare/hlargs.nvim {{{
+lua << EOF
+-- initialisieren
+require('hlargs').setup()
+-- aktivieren
+require('hlargs').enable()
+EOF
+" -- }}}
