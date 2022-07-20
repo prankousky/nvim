@@ -83,6 +83,7 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'sidebar-nvim/sidebar.nvim'
 	Plug 'kevinhwang91/nvim-ufo' | Plug 'kevinhwang91/promise-async'
 	Plug 'KabbAmine/vCoolor.vim' " <Alt+r|v|w>
+	Plug 'chrisbra/NrrwRgn'  " visuelle Selektion mit :NR unten anheften
 	Plug 'Pocco81/Catppuccino.nvim'
 	Plug 'dguo/blood-moon', {'rtp': 'applications/vim'}
 	Plug 'dracula/vim', { 'as': 'dracula' }
