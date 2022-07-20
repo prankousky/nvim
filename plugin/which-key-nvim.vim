@@ -169,6 +169,7 @@ wk.register({
   ["<leader>gf"] = { ":e <cfile><CR>", "Falls Datei unter Cursor nicht existiert, erstelle sie!"},
   -- OHNE LEADER
   ["ge"] = { ":GuessIndent<CR>", "Automatischer Einzug"},
+  ["tt"] = { ":TSCaptureUnderCursor<CR>", "Treesitter unter Cursor"},
 })
 EOF
 " vi: filetype=vim
