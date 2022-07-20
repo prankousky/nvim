@@ -36,6 +36,7 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'nvim-telescope/telescope.nvim'
 	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 	Plug 'nvim-treesitter/playground'
+	Plug 'haringsrob/nvim_context_vt' " zeigt Kontext von bsp. schließenden Klammern an
 	Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 	Plug 'rafamadriz/friendly-snippets'
 	Plug 'ray-x/lsp_signature.nvim'
@@ -99,6 +100,7 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'edluffy/specs.nvim' " visueller Cursor
 	Plug 'ellisonleao/glow.nvim', {'branch': 'main'}
 	Plug 'folke/which-key.nvim'
+	Plug 'nacro90/numb.nvim'
 	Plug 'gpanders/editorconfig.nvim' " schlankes Plugin für editorconfig
 	Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 	Plug 'itchyny/vim-cursorword' " unterstreiche fokussiertes Wort
@@ -106,6 +108,7 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'junegunn/limelight.vim'
 	Plug 'kyazdani42/nvim-web-devicons' " lua
 	Plug 'lukas-reineke/headlines.nvim'
+	Plug 'bennypowers/nvim-regexplainer' | Plug 'MunifTanjim/nui.nvim' " regex in floating window erklären
 	Plug 'lukas-reineke/indent-blankline.nvim'
 	Plug 'machakann/vim-highlightedyank'
 	Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }

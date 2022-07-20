@@ -133,6 +133,7 @@ wk.register({
   ["<leader>fz"] = { ":HopLine<CR>", "HOP Suche Zeile" },
   -- TOOLS
   ["<leader>t"] = { name = "Tools" },
+  ["<leader>tR"] = { ":RegexplainerShowPopup<CR>", "RegEx unter Cursor als Plain Text ausgeben" },
   ["<leader>tf"] = { ":!firefox --new-tab <C-R>*<CR><CR>", "Öffne URL im Register in Firefox" },
   ["<leader>tg"] = { "gg yi' :!firefox --new-tab https://github.com/<C-R>\"<CR><CR>", "Zeige Plugin auf GitHub" },
   ["<leader>th"] = { ":! ~/.config/benvironment/bin/vimhass.py<CR>", "HOME ASSISTANT HELPER" },
@@ -148,6 +149,7 @@ wk.register({
   ["<leader>vS"] = { ":Startify<CR>", "Öffne Startpage"},
   ["<leader>va"] = { ":lua require('theprimeagen.telescope').search_dotfiles()<CR>", "~/.config/nvim" },
   ["<leader>vb"] = { ":lua require('theprimeagen.telescope').benvironment()<CR>", "benvironment" },
+  ["<leader>vc"] = { ":NvimContextVtToggle<CR>", "NvimContextVt Toggle"},
   ["<leader>vd"] = { ":lua require('theprimeagen.telescope').bens_dots()<CR>", "~/.config" },
   ["<leader>vf"] = { ":CHADopen<CR>", "CHAD Toggle" },
   ["<leader>vg"] = { ":SidebarNvimToggle<CR>", "Sidebar Toggle" },
@@ -157,7 +159,7 @@ wk.register({
   ["<leader>vl"] = { ":LimteLight!!", "Toggle Limelight"},
   ["<leader>vo"] = { ":setlocal spell! spelllang=de<CR>", "Rechtsschreibung DEUTSCH"},
   ["<leader>vp"] = { ":CtrlBookmarkDir<CR>", "Wichtigste Paths"},
-  ["<leader>vs"] = { ":source $MYVIMRC<CR>:echo '$MYVIMRC neu geladen!'", "$MYVIMRC Neu Laden"},
+  ["<leader>vs"] = { ":source $MYVIMRC<CR>:echo '$MYVIMRC neu geladen!'<CR>", "$MYVIMRC Neu Laden"},
   ["<leader>vu"] = { ":UndotreeToggle<CR>", "UndoTree Toggle" },
   ["<leader>vy"] = { "<c-u>y']<CR>", "Yank & zurück zum Ausgangspunkt VOR Yank"},
   -- VERSCHIEDENES
