@@ -101,6 +101,7 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'tomasr/molokai'
 	" -- Misc
 	Plug 'Yggdroot/hiPairs' " highlighte umrandende Symbole
+	Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
 	Plug 'andymass/vim-matchup' " ähnlich wie hiPairs
 	Plug 'dhruvasagar/vim-table-mode'
 	Plug 'edluffy/specs.nvim' " visueller Cursor
