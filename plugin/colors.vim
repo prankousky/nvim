@@ -72,3 +72,9 @@ let g:gruvbox_improved_warnings = 1
  endif
 
 colorscheme spaceduck
+
+let g:lightline = {
+      \ 'colorscheme': 'spaceduck',
+      \ }
+
+let g:airline_theme = 'spaceduck'

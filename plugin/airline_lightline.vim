@@ -1,4 +1,4 @@
-let g:airline_theme='gruvbox'
+" let g:airline_theme='gruvbox'
 let g:airline_powerline_fonts = 1
 let g:spaceline_seperate_style = 'slant-cons'
 " Airline smarte Tabline
