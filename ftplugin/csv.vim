@@ -1,5 +1,5 @@
 " anderes Colorscheme
-" colorscheme onedark
+colorscheme molokai
 
 " Keine Colorcolumn anzeigen
 setlocal colorcolumn=

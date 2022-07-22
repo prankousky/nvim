@@ -95,6 +95,7 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'gruvbox-community/gruvbox'
 	Plug 'joshdick/onedark.vim'
 	Plug 'kevinhwang91/nvim-hlslens'    " benötigt für nvim-scrollbar
+	Plug 'shaeinst/roshnivim-cs'
 	Plug 'luochen1990/rainbow'
 	Plug 'petertriho/nvim-scrollbar'
 	Plug 'romgrk/doom-one.vim'
@@ -110,6 +111,8 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'nacro90/numb.nvim'
 	Plug 'gpanders/editorconfig.nvim' " schlankes Plugin für editorconfig
 	Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+	Plug 'nvim-neorg/neorg' | Plug 'nvim-lua/plenary.nvim' " norg statt Markdown? Mal schauen
+	Plug 'akinsho/org-bullets.nvim'
 	Plug 'jubnzv/mdeval.nvim' " mit :MdEval einen Codeblock innerhalb von Markdown ausführen
 	Plug 'itchyny/vim-cursorword' " unterstreiche fokussiertes Wort
 	Plug 'junegunn/goyo.vim'
