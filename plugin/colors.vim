@@ -72,10 +72,11 @@ let g:gruvbox_improved_warnings = 1
    set termguicolors
  endif
 
-colorscheme rvcs
+colorscheme molokai
+" colorscheme rvcs
 
-let g:lightline = {
-      \ 'colorscheme': 'spaceduck',
-      \ }
+" let g:lightline = {
+"       \ 'colorscheme': 'spaceduck',
+"       \ }
 
-let g:airline_theme = 'spaceduck'
+" let g:airline_theme = 'spaceduck'

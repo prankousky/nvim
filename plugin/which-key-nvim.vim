@@ -173,6 +173,8 @@ wk.register({
   ["ge"] = { ":GuessIndent<CR>", "Automatischer Einzug"},
   ["tt"] = { ":TSCaptureUnderCursor<CR>", "Treesitter unter Cursor"},
   ["th"] = { ":lua require('hlargs').toggle()<CR>:echoerr 'hlargs getoggelt'<CR>", "hlargs Toggle"},
+  ["_"] = { ":m -2<CR>", "Verschiebe Zeile nach oben"},
+  ["-"] = { ":m +1<CR>", "Verschiebe Zeile nach unten"},
 
 })
 EOF

@@ -11,3 +11,5 @@ setlocal complete+=k
 if filereadable('/tmp/hassstates')
 	setlocal dictionary=/tmp/hassstates
 endif
+
+setlocal expandtab
