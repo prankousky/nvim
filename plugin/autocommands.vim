@@ -22,7 +22,7 @@ autocmd BufRead,BufNewFile filetype detect
 autocmd bufwritepost init.vim source $MYVIMRC
 " -- }}}
 " Immer vim-rainbow nutzen
-autocmd  VimEnter * :call rainbow_main#load()
+" autocmd  VimEnter * :call rainbow_main#load()
 
 " Platformio
 " autocmd BufRead platformio.ini NERDTreeToggle | vs src/main.cpp | wincmd l | vertical resize 30 | wincmd h | wincmd h | vertical resize 30 | wincmd l | set filetype=cpp

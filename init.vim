@@ -111,7 +111,7 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'nacro90/numb.nvim'
 	Plug 'gpanders/editorconfig.nvim' " schlankes Plugin für editorconfig
 	Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
-	Plug 'nvim-neorg/neorg' | Plug 'nvim-lua/plenary.nvim' " norg statt Markdown? Mal schauen
+	" Plug 'nvim-neorg/neorg' | Plug 'nvim-lua/plenary.nvim' " norg statt Markdown? Mal schauen
 	Plug 'akinsho/org-bullets.nvim'
 	Plug 'jubnzv/mdeval.nvim' " mit :MdEval einen Codeblock innerhalb von Markdown ausführen
 	Plug 'itchyny/vim-cursorword' " unterstreiche fokussiertes Wort
