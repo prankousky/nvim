@@ -4,7 +4,7 @@
 " ---- TREESITTER REGULÄR {{{
 lua <<EOF
 require 'nvim-treesitter.configs'.setup {
-  -- ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+   -- ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
   -- ensure_installed = {"bash", "dockerfile", "html", "javascript", "json", "latex", "markdown", "norg", "org", "python", "regex", "vim", "yaml" }, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
   -- ignore_install = { "javascript" }, -- List of parsers to ignore installing
   highlight = {
@@ -31,28 +31,28 @@ require 'nvim-treesitter.configs'.setup {
 }
 EOF
 " }}}
-" TREESITTER-TEXTOBJECTS {{{
-lua << EOF
-require'nvim-treesitter.configs'.setup {
-  textobjects = {
-    select = {
-      enable = true,
+" " TREESITTER-TEXTOBJECTS {{{
+" lua << EOF
+" require'nvim-treesitter.configs'.setup {
+"   textobjects = {
+"     select = {
+"       enable = true,
 
-      -- Automatically jump forward to textobj, similar to targets.vim
-      lookahead = true,
+"       -- Automatically jump forward to textobj, similar to targets.vim
+"       lookahead = true,
 
-      keymaps = {
-        -- You can use the capture groups defined in textobjects.scm
-        ["af"] = "@function.outer",
-        ["if"] = "@function.inner",
-        ["ac"] = "@class.outer",
-        ["ic"] = "@class.inner",
-      },
-    },
-  },
-}
-EOF
-" }}}
+"       keymaps = {
+"         -- You can use the capture groups defined in textobjects.scm
+"         ["af"] = "@function.outer",
+"         ["if"] = "@function.inner",
+"         ["ac"] = "@class.outer",
+"         ["ic"] = "@class.inner",
+"       },
+"     },
+"   },
+" }
+" EOF
+" " }}}
 " m-demare/hlargs.nvim {{{
 lua << EOF
 -- initialisieren
