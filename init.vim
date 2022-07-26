@@ -27,7 +27,7 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'm-demare/hlargs.nvim'
 " ----}}}
 " ---- LSP // Completion {{{
-	" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'ambv/black'
 	Plug 'dense-analysis/ale'
 	Plug 'folke/lsp-colors.nvim'
