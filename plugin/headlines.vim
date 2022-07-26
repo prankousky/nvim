@@ -26,4 +26,5 @@ require("headlines").setup {
         quote_string = ">> ",
         --
         dash_highlight = "Dash",
+        },}
 EOF
