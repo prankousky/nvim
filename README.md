@@ -33,8 +33,8 @@ Anything here is filetype specific, for example
 * `:tab options`
 * `Cgn change next search term`
 * `cgn` key combo
-* `h <begriff>`
-* `h: fillchars`
+* `:h <begriff>`
+* `:h fillchars`
 
 ## Important Links
 
@@ -42,7 +42,6 @@ Anything here is filetype specific, for example
 
 ## TO READ:
 
-* https://www.reddit.com/r/vim/comments/vxc0ca/question_about_dictionaries/
 * <http://neovimcraft.com/plugin/lukas-reineke/indent-blankline.nvim/index.html>
 * <http://neovimcraft.com/plugin/tamton-aquib/staline.nvim>
 * <https://github.com/glepnir/spaceline.vim>
@@ -64,8 +63,9 @@ Anything here is filetype specific, for example
 * <https://www.vim.org/scripts/script.php?script_id=1218>
 * [CHADTree Keybindings](https://github.com/ms-jpq/chadtree/blob/chad/docs/KEYBIND.md)
 * [Virtual Text in NVIM](https://jdhao.github.io/2021/09/09/nvim_use_virtual_text/)
+* https://github.com/kaddkaka/vim_examples
+* https://www.reddit.com/r/vim/comments/vxc0ca/question_about_dictionaries/
 
 ## MISC LINKS:
 
 * <https://vim-bootstrap.com/>
-*
