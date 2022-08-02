@@ -1,11 +1,11 @@
 let g:vimwiki_list = [{
-            \'path': '$HOME/documents/vimwiki/wiki',
+            \'path': '$HOME/nextcloud/Documents/vimwiki/',
             \ 'syntax': 'markdown', 'ext': '.md'
             \}]
 
 " für zweifisch/vimwiki-assets
-let vimwiki_path="$HOME/documents/vimwiki/wiki"
-let vimwiki_export_path="$HOME/documents/vimwiki/html"
+let vimwiki_path="$HOME/nextcloud/Documents/vimwiki/"
+let vimwiki_export_path="$HOME/nextcloud/Documents/vimwiki/html_export"
 let wiki_settings={
 \ 'template_path': vimwiki_export_path.'vimwiki-assets/',
 \ 'template_default': 'default',
