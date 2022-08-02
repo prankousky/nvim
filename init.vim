@@ -110,7 +110,8 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'folke/which-key.nvim'
 	Plug 'nacro90/numb.nvim'
 	Plug 'gpanders/editorconfig.nvim' " schlankes Plugin für editorconfig
-	Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+	Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
+	" Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 	" Plug 'nvim-neorg/neorg' | Plug 'nvim-lua/plenary.nvim' " norg statt Markdown? Mal schauen
 	Plug 'akinsho/org-bullets.nvim'
 	Plug 'jubnzv/mdeval.nvim' " mit :MdEval einen Codeblock innerhalb von Markdown ausführen
@@ -138,7 +139,7 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	" Plug 'justinmk/vim-sneak'
 	Plug 'LandonSchropp/vim-stamp' " Siw
 	Plug 'MattesGroeger/vim-bookmarks'
-	Plug 'chengzeyi/fzf-preview.vim'
+	" Plug 'chengzeyi/fzf-preview.vim'
 	Plug 'editorconfig/editorconfig-vim'
 	Plug 'gioele/vim-autoswap' " automatisch mit swap Files umgehen
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
