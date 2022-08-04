@@ -100,6 +100,7 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'petertriho/nvim-scrollbar'
 	Plug 'romgrk/doom-one.vim'
 	Plug 'tomasr/molokai'
+	Plug 'srcery-colors/srcery-vim'
 	" -- Misc
 	Plug 'Yggdroot/hiPairs' " highlighte umrandende Symbole
 	Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }

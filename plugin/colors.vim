@@ -15,7 +15,8 @@ EOF
 " let g:benihmsein_colorscheme = "dark_catppuccino"
 " let g:benihmsein_colorscheme = "dracula"
 " let g:benihmsein_colorscheme = "gruvbox"
-let g:benihmsein_colorscheme = "rvcs"
+let g:benihmsein_colorscheme = "srcery"
+" let g:benihmsein_colorscheme = "rvcs"
 " let g:benihmsein_colorscheme = "molokai"
 
 fun! ColorMyPencils()
@@ -72,7 +73,8 @@ let g:gruvbox_improved_warnings = 1
    set termguicolors
  endif
 
-colorscheme molokai
+" colorscheme molokai
+colorscheme srcery
 " colorscheme rvcs
 
 " let g:lightline = {
