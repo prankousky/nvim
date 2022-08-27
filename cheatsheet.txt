@@ -1,9 +1,11 @@
 ## Abkürzungen @abbreviations @nis
-Wartung der Energieanlagen Energiebereich gem.| eaeb
-Wöchentl. Eis Entfernen Leybold GT2           | seel
-Wöchentl. Eis Entfernen Tunnelraumverdampfer  | weet
-Wöchentl. Reinigung Schienensystem GT2        | wrsg2
-Wöchentliche Reinigung Schienensystem         | wrss
+Wartung der Energieanlagen Energiebereich gem.                    | eaeb
+Wöchentl. Eis Entfernen Leybold GT2                               | seel
+Wöchentl. Eis Entfernen Tunnelraumverdampfer                      | weet
+Wöchentl. Reinigung Schienensystem GT2                            | wrsg2
+Wöchentliche Reinigung Schienensystem                             | wrss
+Aufräum-; Pflege-; und Reinigungsarbeiten Grundstücke und Gebäude | ggb
+
 
 # Keybindings
 # Leader

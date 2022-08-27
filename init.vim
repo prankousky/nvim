@@ -119,6 +119,7 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'itchyny/vim-cursorword' " unterstreiche fokussiertes Wort
 	Plug 'junegunn/goyo.vim'
 	Plug 'junegunn/limelight.vim'
+	Plug 'junegunn/vim-easy-align'
 	Plug 'kyazdani42/nvim-web-devicons' " lua
 	Plug 'lukas-reineke/headlines.nvim'
 	Plug 'bennypowers/nvim-regexplainer' | Plug 'MunifTanjim/nui.nvim' " regex in floating window erklären
