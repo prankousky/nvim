@@ -45,7 +45,7 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'rafamadriz/friendly-snippets'
 	Plug 'ray-x/lsp_signature.nvim'
 	Plug 'simrat39/symbols-outline.nvim'
-	" Plug 'sudormrfbin/cheatsheet.nvim'
+	Plug 'sudormrfbin/cheatsheet.nvim'
 	Plug 'windwp/nvim-autopairs'
 " ---- }}}
 " ---- Filetypes/ Coding {{{
