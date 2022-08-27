@@ -27,9 +27,6 @@ set nocompatible
 set spelllang=de,en_us
 " Maus aktivieren
 set mouse=a
-" Syntax aktivieren
-syntax on
-syntax enable
 " Encoding Format
 set encoding=utf-8
 " wie werden Zeilennumer dargestellt (number / relativenuber)
@@ -72,6 +69,7 @@ set expandtab
 set autoindent
 set smartindent
 set smarttab
+filetype plugin on
 filetype indent on
 " Zeilenumbrüche
 set wrap
@@ -133,6 +131,9 @@ set foldmethod=marker
 " Beim Öffnen zugeklkappt
 set foldlevel=20
 set modelines=1
+" Syntax aktivieren
+syntax on
+syntax enable
 " -- gruvbox-community settings {{{
 let g:gruvbox_contrast_dark = 'hard'
 " Markierung bei 80

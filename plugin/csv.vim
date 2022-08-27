@@ -1,11 +1,27 @@
-" Farben
-" entweder
-" hi link CSVColumnOdd MoreMsg
-" hi link CSVColumnEven Question
-" oder
-hi CSVColumnEven term=bold ctermbg=2 guibg=DarkBlue
-hi CSVColumnOdd  term=bold ctermbg=7 guibg=DarkMagenta
-hi CSVColumnHeaderEven term=bold ctermbg=7 guibg=DarkBlue
-hi CSVColumnHeaderOdd term=bold ctermbg=7 guibg=DarkMagenta
-" Column automatisch highlighten
-let g:csv_highlight_column = 'y'
+" welches Zeichen trennt
+let g:csv__default_delim=','
+" anderes Colorscheme
+colorscheme dracula
+
+" Keine Colorcolumn anzeigen
+" setlocal colorcolumn=
+
+" Zellen automatisch aufpumpen
+let g:csv_autocmd_arrange = 1
+" funzt nicht
+highlight link CSVColumnOdd MoreMsg
+highlight link CSVColumnEven Question
+" Test
+let g:csv_no_column_highlight = 1
+let g:csv_highlight_column = 0
+let g:csv_hiHeader = 'Pmenu'
+" let g:csv_hiGroup = "IncSearch"
+" Linksbündig
+let b:csv_arrange_align = 'l*'
+
+aug CSV_Editing
+		au!
+		au BufRead,BufWritePost *.csv :%ArrangeColumn
+		au BufWritePre *.csv :%UnArrangeColumn
+		au BufRead,BufWritePost *.csv :%CSVInit
+aug end
