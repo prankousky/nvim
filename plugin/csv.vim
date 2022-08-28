@@ -1,7 +1,5 @@
 " welches Zeichen trennt
 let g:csv__default_delim=','
-" anderes Colorscheme
-colorscheme dracula
 
 " Keine Colorcolumn anzeigen
 " setlocal colorcolumn=

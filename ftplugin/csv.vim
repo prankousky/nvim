@@ -1,0 +1,2 @@
+" anderes Colorscheme
+colorscheme dracula

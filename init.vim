@@ -243,17 +243,17 @@ let g:ranger_map_keys = 0
 " DAMIT das Mapping auch in :WhichKey angezeigt wird
 map <space>f :Ranger<CR>
 " -- }}}
-" -- 'Yggdroot/indentLine' {{{
-" Auto Enable
-let g:indentLine_enabled = 0
-let g:indentLine_setColors = 1
-" Farbe festlegen
-let g:indentLine_color_term = 239
-" Anzeige
-let g:indentLine_char_list = ['|', '¦', '┆', '┊']
-let g:indentLine_concealcursor = 'inc'
-let g:indentLine_conceallevel = 2
-" -- }}}
+" " -- 'Yggdroot/indentLine' {{{
+" " Auto Enable
+" let g:indentLine_enabled = 0
+" let g:indentLine_setColors = 1
+" " Farbe festlegen
+" let g:indentLine_color_term = 239
+" " Anzeige
+" let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+" let g:indentLine_concealcursor = 'inc'
+" let g:indentLine_conceallevel = 2
+" " -- }}}
 " -- 'lukas-reineke/indent-blankline.nvim' {{{
 lua << EOF
 vim.opt.termguicolors = true,
@@ -264,12 +264,22 @@ vim.cmd [[highlight IndentBlanklineIndent4 guifg=#56B6C2 blend=nocombine]]
 vim.cmd [[highlight IndentBlanklineIndent5 guifg=#61AFEF blend=nocombine]]
 vim.cmd [[highlight IndentBlanklineIndent6 guifg=#C678DD blend=nocombine]]
 vim.opt.listchars = {
-    space = " ",
+    space = "•",
     eol = "↴"
 }
+
+vim.opt.listchars:append "space:⋅"
+vim.opt.listchars:append "eol:↴"
+vim.opt.listchars:append "trail:•"
+vim.opt.listchars:append "extends:>"
+vim.opt.listchars:append "precedes:<"
+
 require("indent_blankline").setup {
     eol = "↴",
     char = "|",
+    trail = "!",
+    extendss = ">",
+    precedes = "<",
     show_end_of_line = false,
     show_current_context = true,
     space_char_blankline = " ",
@@ -282,8 +292,8 @@ require("indent_blankline").setup {
        "IndentBlanklineIndent5",
        "IndentBlanklineIndent6",
     },
-    -- show_trailing_blankline_indent = true
-    show_trailing_blankline_indent = false,
+    show_trailing_blankline_indent = true,
+    -- show_trailing_blankline_indent = false,
 }
 EOF
 lua << EOF
@@ -300,8 +310,8 @@ require("indent_blankline").setup {
     buftype_exclude = {"terminal"}
 }
 EOF
-" let g:indent_blankline_char_list = ['|', '¦', '┆', '┊']
-" let g:indent_blankLine_color_term = 120
+let g:indent_blankline_char_list = ['|', '¦', '┆', '┊']
+let g:indent_blankLine_color_term = 120
 "" -- }}}
 " -- 'karb94/neoscroll.nvim' {{{
 lua require('neoscroll').setup()
