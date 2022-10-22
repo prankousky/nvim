@@ -11,6 +11,7 @@ nnoremap 22 f,lct,
 " Abbreviations
 abbrev eaeb Wartung der Energieanlagen im Energiebereich gemäß Wartungspläne
 abbrev ggb Aufräum-; Pflege-; und Reinigungsarbeiten Grundstücke und Gebäude
+abbrev weeb Wartung der Energieanlagen im Energiebereich gemäß Wartungspläne
 abbrev weel Wöchentliches Eis Entfernen Leybold GT2
 abbrev weet Wöchentliches Eis Entfernen Tunnelraumverdampfer
 abbrev wrsg2 Wöchentliche Reinigung Schienensystem GT2

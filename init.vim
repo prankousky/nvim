@@ -85,7 +85,7 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 " ---- }}}
 " ---- Visuelles {{{
 " -- Themes
-	Plug 'sidebar-nvim/sidebar.nvim'
+	" Plug 'sidebar-nvim/sidebar.nvim'
 	Plug 'kevinhwang91/nvim-ufo' | Plug 'kevinhwang91/promise-async'
 	Plug 'KabbAmine/vCoolor.vim' " <Alt+r|v|w>
 	Plug 'chrisbra/NrrwRgn'  " visuelle Selektion mit :NR unten anheften

@@ -1,11 +1,11 @@
 " welches Zeichen trennt
-let g:csv__default_delim=','
+" let g:csv__default_delim=','
 
 " Keine Colorcolumn anzeigen
 " setlocal colorcolumn=
 
 " Zellen automatisch aufpumpen
-let g:csv_autocmd_arrange = 1
+" let g:csv_autocmd_arrange = 1
 " funzt nicht
 highlight link CSVColumnOdd MoreMsg
 highlight link CSVColumnEven Question
@@ -19,7 +19,7 @@ let b:csv_arrange_align = 'l*'
 
 aug CSV_Editing
 		au!
-		au BufRead,BufWritePost *.csv :%ArrangeColumn
-		au BufWritePre *.csv :%UnArrangeColumn
+		" au BufRead,BufWritePost *.csv :%ArrangeColumn
+		" au BufWritePre *.csv :%UnArrangeColumn
 		au BufRead,BufWritePost *.csv :%CSVInit
 aug end

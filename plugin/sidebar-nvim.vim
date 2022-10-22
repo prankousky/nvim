@@ -1,5 +1,5 @@
-lua << EOF
-require("sidebar-nvim").setup({
-    side = "right",
-})
-EOF
+" lua << EOF
+" require("sidebar-nvim").setup({
+"     side = "right",
+" })
+" EOF
