@@ -40,7 +40,6 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'nvim-lua/completion-nvim'
 	Plug 'nvim-telescope/telescope-symbols.nvim'
 	Plug 'nvim-telescope/telescope.nvim'
-	Plug 'haringsrob/nvim_context_vt' " zeigt Kontext von bsp. schließenden Klammern an
 	Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 	Plug 'rafamadriz/friendly-snippets'
 	Plug 'ray-x/lsp_signature.nvim'
@@ -69,7 +68,7 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'mbbill/undotree'
 	Plug 'mboughaba/i3config.vim'
 	Plug 'nmac427/guess-indent.nvim'
-	Plug 'mrk21/yaml-vim'	    " Indent yaml
+	Plug 'mrk21/yaml-vim'    " Indent yaml
 	Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
 	Plug 'nvim-lua/plenary.nvim'
 	Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
