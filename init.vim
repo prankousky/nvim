@@ -71,7 +71,7 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'mrk21/yaml-vim'    " Indent yaml
 	Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
 	Plug 'nvim-lua/plenary.nvim'
-	Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+	" Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 	Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
 	Plug 'sefeng211/vim-pastebins' " mit `PastebinPasteAll` (u.A.) buffer nach pastebin
 	Plug 'theniceboy/vim-calc'
@@ -623,11 +623,11 @@ let b:ale_linters = {
 \	'*': ['stylelint', 'eslint'],
 \	'python': ['pylint'],
 \}
-let g:ale_fixers = {
-\   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'javascript': ['eslint'],
-\   'python': ['black'],
-\}
+" let g:ale_fixers = {
+" \   '*': ['remove_trailing_lines', 'trim_whitespace'],
+" \   'javascript': ['eslint'],
+" \   'python': ['black'],
+" \}
 " -- }}}
 " -- 'luochen1990/rainbow' {{{
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
