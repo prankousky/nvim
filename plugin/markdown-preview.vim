@@ -107,6 +107,7 @@ let g:mkdp_filetypes = ['markdown']
 let g:mkdp_theme = 'dark'
 
 function OpenMarkdownPreview (url)
-  execute "silent ! qutebrowser --target tab " . a:url
+  execute "silent ! firefox --target tab " . a:url
+  " execute "silent ! qutebrowser --target tab " . a:url
 endfunction
 let g:mkdp_browserfunc = 'OpenMarkdownPreview'

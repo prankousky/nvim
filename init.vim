@@ -78,6 +78,8 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'thinca/vim-quickrun' " :QuickRun um Datei (oder Teil der Datei) auszuführen
 	Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 	Plug 'tpope/vim-haml'
+	Plug 'tpope/vim-repeat'
+	Plug 'ralismark/opsort.vim'
 	Plug 'vim-utils/vim-man' " man Pages in VIM
 	Plug 'vimwiki/vimwiki'
 
