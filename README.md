@@ -17,12 +17,13 @@ Anything here is filetype specific, for example
 
 ## Check these plugins
 
-* <https://github.com/ojroques/vim-oscyank>
-* <https://github.com/SidOfc/mkdx>
 * <https://github.com/GustavoKatel/sidebar.nvim>
-* https://github.com/glepnir/template.nvim
-* https://github.com/glepnir/cosynvim
+* <https://github.com/SidOfc/mkdx>
+* <https://github.com/ojroques/vim-oscyank>
+* <https://github.com/ralismark/opsort.vim>
 * https://github.com/frabjous/knap
+* https://github.com/glepnir/cosynvim
+* https://github.com/glepnir/template.nvim
 
 ## TODO:
 
