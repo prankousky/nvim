@@ -85,7 +85,7 @@ let g:mkdp_preview_options = {
 
 " use a custom markdown style must be absolute path
 " like '/Users/username/markdown.css' or expand('~/markdown.css')
-let g:mkdp_markdown_css = ''
+let g:mkdp_markdown_css = '/home/ben/code/vm/vagrant/arch/benvironment/benvironment_stow/vimwiki/.local/vimwiki/vimwiki.css'
 
 " use a custom highlight style must absolute path
 " like '/Users/username/highlight.css' or expand('~/highlight.css')
