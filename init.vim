@@ -32,6 +32,7 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'dense-analysis/ale'
 	Plug 'folke/lsp-colors.nvim'
 	Plug 'folke/trouble.nvim'
+	Plug 'makerj/vim-pdf'
 	Plug 'glepnir/lspsaga.nvim'
 	Plug 'hrsh7th/nvim-compe'
 	Plug 'hrsh7th/vim-vsnip'

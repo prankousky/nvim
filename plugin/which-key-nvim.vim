@@ -142,7 +142,8 @@ wk.register({
   ["<leader>tph"] = { ":PastebinPasteList<CR>", "PASTE History" },
   ["<leader>tpv"] = { ":PastebinPaste<CR>", "PASTE Visuelle Selektion" },
   ["<leader>tr"]  = { ":Rg<CR>", "RipGrep" },
-  ["<leader>tt"]  = { ":QuickRun<CR>", "Datei (oder VISUAL) in Split ausführen" },
+  ["<leader>tr"]  = { ":Rg<CR>", "RipGrep" },
+  ["<leader>ts"]  = { ":TodoSort<CR>", "Sortiere, behalte Nestings" },
   -- HELPER
   ["<leader>v"]   = { name = "Helper" },
   ["<leader>vG"]  = { ":Goyo<CR><ESC>:set linebreak<CR>", "Goyo"},
