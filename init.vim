@@ -129,6 +129,7 @@ call plug#begin('$HOME/.config/nvim/meine_plugs')
 	Plug 'machakann/vim-highlightedyank'
 	Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 	Plug 'ryanoasis/vim-devicons' " vimscript
+	Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 	Plug 'tmhedberg/simpylfold' " Python Folding
 	Plug 'yamatsum/nvim-nonicons'
 	Plug 'yazgoo/yank-history' " History anzeigen

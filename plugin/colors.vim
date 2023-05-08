@@ -73,8 +73,8 @@ let g:gruvbox_improved_warnings = 1
    set termguicolors
  endif
 
-" colorscheme molokai
-colorscheme srcery
+colorscheme molokai
+" colorscheme srcery
 " colorscheme rvcs
 
 " let g:lightline = {

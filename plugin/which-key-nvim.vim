@@ -103,6 +103,7 @@ wk.register({
   ["<leader>mg"]  = { ":Glow<CR>", "Preview in Glow (im Buffer)" },
   ["<leader>mp"]  = { "<Plug>MarkdownPreviewToggle<CR>", "Toggle Markdown Preview" },
   ["<leader>mt"]  = { ":TableModeToggle<CR>", "Toggle Table Mode" },
+  ["<leader>mi"]  = { ":call InsertMarkdownURL()<CR>", "URL inkl. Titel einfügen" },
   -- REQUESTS
   ["<leader>r"]   = { name = "REST Requests" },
   ["<leader>rr"]  = { "<Plug>RestNvim<CR>", "Run request under the cursor" },
